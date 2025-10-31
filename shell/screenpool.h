@@ -39,6 +39,9 @@ public:
 Q_SIGNALS:
     void screenRemoved(QScreen *screen); // TODO: necessary?
     void screenOrderChanged(const QList<QScreen *> &screens);
+    
+public Q_SLOTS:
+    void reconsiderOutputOrder(); 
 
 private:
     void insertScreenMapping(int id, const QString &connector);
@@ -46,7 +49,6 @@ private:
 
     QScreen *outputRedundantTo(QScreen *screen) const;
     void reconsiderOutputs();
-    void reconsiderOutputOrder();
     bool isOutputFake(QScreen *screen) const;
 
     void insertSortedScreen(QScreen *screen);
