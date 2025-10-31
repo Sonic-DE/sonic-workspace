@@ -12,6 +12,7 @@
 #include <QDebug>
 #include <QGuiApplication>
 #include <QScreen>
+#include <QTimer>
 
 #ifndef NDEBUG
 #define CHECK_SCREEN_INVARIANTS screenInvariants();
@@ -277,11 +278,22 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
     }
 
     // We can't call CHECK_SCREEN_INVARIANTS here, but on handleOutputOrderChanged which is about to arrive
+    QTimer::singleShot(0, this, &ScreenPool::reconsiderOutputOrder);
 }
 
 void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 {
     qCDebug(SCREENPOOL) << "handleOutputOrderChanged" << newOrder;
+    
+    QStringList qtScreenNames;
+    for (auto s : qGuiApp->screens()) {
+        qtScreenNames << s->name();
+    }
+
+    if (QSet<QString>(newOrder.begin(), newOrder.end()) != QSet<QString>(qtScreenNames.begin(), qtScreenNames.end())) {
+        qCDebug(SCREENPOOL) << "Inconsistent screen sets, ignoring screen order change:" << newOrder << qtScreenNames;
+        return;
+    }
 
     QHash<QString, QScreen *> connMap;
     for (auto s : qApp->screens()) {
