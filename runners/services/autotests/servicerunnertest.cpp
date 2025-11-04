@@ -60,6 +60,9 @@ private Q_SLOTS:
     void testDiscover();
     void testDolphinShortQuery();
     void testNumbersQuery();
+    void testGimpVsImpress();
+    void testTerm();
+    void testCmd();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -261,9 +264,9 @@ void ServiceRunnerTest::testCodeVsKateVsEmojier()
              QStringList({
                  u"Code - OSS ServiceRunnerTest"_s,
                  u"Visual Studio Code ServiceRunnerTest"_s,
+                 u"Kate ServiceRunnerTest"_s, // keyword match
                  u"Discover ServiceRunnerTest"_s, // fuzzy match... disCO*Er
-                 // keyword match
-                 u"Kate ServiceRunnerTest"_s,
+                 u"Welcome Center ServiceRunnerTest"_s, // nobody knows why this matches, but it is a very poor match
              }));
 }
 
@@ -351,6 +354,51 @@ void ServiceRunnerTest::testNumbersQuery()
     }
 
     QCOMPARE(texts.first(), u"Set Resolution 3440x1440 ServiceRunnerTest"_s);
+}
+
+void ServiceRunnerTest::testGimpVsImpress()
+{
+    auto matches = launchQueryAndSort(u"gimp"_s);
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        texts.push_back(match.text());
+    }
+
+    QCOMPARE(texts, QStringList({u"GNU Image Manipulation Program ServiceRunnerTest"_s, u"LibreOffice Impress ServiceRunnerTest"_s}));
+}
+
+void ServiceRunnerTest::testTerm()
+{
+    auto matches = launchQueryAndSort(u"term"_s);
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        texts.push_back(match.text());
+    }
+
+    qDebug() << texts;
+
+    QCOMPARE(texts,
+             QStringList({u"Konsole ServiceRunnerTest"_s,
+                          u"Yakuake ServiceRunnerTest"_s,
+                          u"Welcome Center ServiceRunnerTest"_s,
+                          u"System Settings ServiceRunnerTest"_s,
+                          u"Discover ServiceRunnerTest"_s}));
+}
+
+void ServiceRunnerTest::testCmd()
+{
+    auto matches = launchQueryAndSort(u"cmd"_s);
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        texts.push_back(match.text());
+    }
+
+    QCOMPARE(texts,
+             QStringList(
+                 {u"Konsole ServiceRunnerTest"_s, u"Code - OSS ServiceRunnerTest"_s, u"Visual Studio Code ServiceRunnerTest"_s, u"Kate ServiceRunnerTest"_s}));
 }
 
 QTEST_MAIN(ServiceRunnerTest)
