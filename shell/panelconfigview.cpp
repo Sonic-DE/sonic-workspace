@@ -69,7 +69,14 @@ void PanelRulerView::syncPanelLocation()
     if (!mainItem()) {
         return;
     }
-    const QRect available = m_containment->corona()->availableScreenRect(m_containment->screen());
+
+    QScreen *screen = m_panelView->screen();
+    const int screenId = m_panelView->containment()->screen();
+    if (screenId == -1) {
+        return;
+    }
+
+    const QRect available = m_containment->corona()->availableScreenRect(screenId);
 
     switch (m_containment->location()) {
     case Plasma::Types::TopEdge:
@@ -86,44 +93,55 @@ void PanelRulerView::syncPanelLocation()
         setBorders(Qt::TopEdge);
     }
 
-    switch (m_containment->location()) {
-    case Plasma::Types::LeftEdge:
-    case Plasma::Types::RightEdge:
-        setMaximumWidth(mainItem()->implicitWidth());
-        setWidth(mainItem()->implicitWidth());
-        setMaximumHeight(available.height());
-        setHeight(available.height());
-        break;
-    case Plasma::Types::TopEdge:
-    case Plasma::Types::BottomEdge:
-    default:
-        setMaximumWidth(available.width());
-        setWidth(available.width());
-        setMaximumHeight(mainItem()->implicitHeight());
-        setHeight(mainItem()->implicitHeight());
-        break;
-    }
-
     if (KWindowSystem::isPlatformX11()) {
 #if HAVE_X11
         KX11Extras::setType(winId(), NET::Dock);
         KX11Extras::setState(winId(), NET::KeepAbove);
+
+        switch (m_containment->location()) {
+        case Plasma::Types::LeftEdge:
+        case Plasma::Types::RightEdge:
+            setWidth(mainItem()->implicitWidth());
+            setHeight(available.height());
+            break;
+        case Plasma::Types::TopEdge:
+        case Plasma::Types::BottomEdge:
+        default:
+            setWidth(available.width());
+            setHeight(mainItem()->implicitHeight());
+            break;
+        }
+
         switch (m_containment->location()) {
         case Plasma::Types::TopEdge:
-            setPosition(available.topLeft() + screen()->geometry().topLeft());
+            setPosition(available.topLeft() + screen->geometry().topLeft());
             break;
         case Plasma::Types::LeftEdge:
-            setPosition(available.topLeft() + screen()->geometry().topLeft());
+            setPosition(available.topLeft() + screen->geometry().topLeft());
             break;
         case Plasma::Types::RightEdge:
-            setPosition(available.topLeft() + screen()->geometry().topRight() - QPoint(width(), 0));
+            setPosition(available.topLeft() + screen->geometry().topRight() - QPoint(width(), 0));
             break;
         case Plasma::Types::BottomEdge:
         default:
-            setPosition(available.bottomLeft() + screen()->geometry().topLeft() - QPoint(0, height()));
+            setPosition(available.bottomLeft() + screen->geometry().topLeft() - QPoint(0, height()));
         }
 #endif
     } else if (m_layerWindow) {
+        switch (m_containment->location()) {
+        case Plasma::Types::LeftEdge:
+        case Plasma::Types::RightEdge:
+            m_layerWindow->setDesiredSize(QSize(mainItem()->implicitWidth(), available.height()));
+            break;
+        case Plasma::Types::TopEdge:
+        case Plasma::Types::BottomEdge:
+        default:
+            m_layerWindow->setDesiredSize(QSize(available.width(), mainItem()->implicitHeight()));
+            break;
+        }
+
+        setScreen(screen);
+
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         LayerShellQt::Window::Anchors anchors;
 
