@@ -23,7 +23,7 @@ K_PLUGIN_CLASS_WITH_JSON(KdedDeviceNotifications, "devicenotifications.json")
 using namespace std::chrono_literals;
 
 // TODO Can we put this in KStringHandler?
-static QString decodePropertyValue(const QByteArray &encoded)
+static QString decodePropertyValue(QByteArrayView encoded)
 {
     const int len = encoded.length();
     QByteArray decoded;
@@ -38,7 +38,7 @@ static QString decodePropertyValue(const QByteArray &encoded)
                 decoded.append('\\');
                 ++i;
             } else if (i + 3 < len && encoded.at(i + 1) == 'x') {
-                QByteArray hex = encoded.mid(i + 2, 2);
+                QByteArrayView hex = encoded.mid(i + 2, 2);
                 bool ok;
                 const int code = hex.toInt(&ok, 16);
                 if (ok) {
@@ -120,7 +120,18 @@ QString UdevDevice::deviceProperty(const char *name) const
     if (m_device) {
         const auto *value = udev_device_get_property_value(m_device, name);
         if (value) {
-            return QString::fromLatin1(value);
+            return QString::fromUtf8(value);
+        }
+    }
+    return {};
+}
+
+QByteArray UdevDevice::devicePropertyRaw(const char *name) const
+{
+    if (m_device) {
+        const auto *value = udev_device_get_property_value(m_device, name);
+        if (value) {
+            return value;
         }
     }
     return {};
@@ -131,7 +142,7 @@ QString UdevDevice::sysfsProperty(const char *name) const
     if (m_device) {
         const auto *value = udev_device_get_sysattr_value(m_device, name);
         if (value) {
-            return QString::fromLatin1(value);
+            return QString::fromUtf8(value);
         }
     }
     return {};
@@ -140,7 +151,7 @@ QString UdevDevice::sysfsProperty(const char *name) const
 QString UdevDevice::getDeviceString(const char *(*getter)(udev_device *)) const
 {
     if (m_device) {
-        return QString::fromLatin1((*getter)(m_device));
+        return QString::fromUtf8((*getter)(m_device));
     }
     return QString();
 }
@@ -152,7 +163,7 @@ QString UdevDevice::model() const
         name = deviceProperty("ID_MODEL_FROM_DATABASE");
     }
     if (name.isEmpty()) {
-        name = decodePropertyValue(deviceProperty("ID_MODEL_ENC").toLatin1());
+        name = decodePropertyValue(devicePropertyRaw("ID_MODEL_ENC"));
     }
     if (name.isEmpty()) {
         name = deviceProperty("ID_MODEL");
@@ -167,7 +178,7 @@ QString UdevDevice::vendor() const
         vendor = deviceProperty("ID_VENDOR_FROM_DATABASE");
     }
     if (vendor.isEmpty()) {
-        vendor = decodePropertyValue(deviceProperty("ID_VENDOR_ENC").toLatin1());
+        vendor = decodePropertyValue(devicePropertyRaw("ID_VENDOR_ENC"));
     }
     if (vendor.isEmpty()) {
         vendor = deviceProperty("ID_VENDOR");
