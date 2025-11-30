@@ -17,11 +17,11 @@ Makefile
 avail
 random_seed
 /build*/
+/_build*/
 CMakeLists.txt.user*
 *.unc-backup*
 .idea
 .clang-format
-/build*/
 /compile_commands.json
 .clangd
 /cmake-build*
