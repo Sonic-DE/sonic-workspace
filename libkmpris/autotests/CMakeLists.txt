@@ -28,7 +28,6 @@ set_tests_properties(
 
 if(WITH_X11)
     find_program(xdotool_PATH xdotool REQUIRED)
-    find_program(kglobalacceld_PATH kglobalacceld PATHS ${KDE_INSTALL_FULL_LIBEXECDIR} REQUIRED)
     add_test(NAME mediakeystest
         COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/mediakeystest.py ${KDE_INSTALL_FULL_LIBEXECDIR}/kglobalacceld
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../appiumtests
