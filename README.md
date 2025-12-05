@@ -1,7 +1,14 @@
-## Plasma Workspace
+# Plasma Workspace
 
 Plasma Workspace is used as the base for Plasma Desktop, Mobile, and Bigscreen.
 It contains shared KCMs, applets as well as multiple libraries.
+
+## Contacting the SonicDE development team
+
+* `#sonicde` on irc.libera.chat 
+* [Telegram](https://t.me/sonic_de)
+* [`#sonicdesktop:matrix.org`](https://matrix.to/#/#sonicdesktop:matrix.org)
+* [Discord](https://discord.gg/cNZMQ62u5S)
 
 ### TaskManager Library
 
