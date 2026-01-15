@@ -1,16 +1,18 @@
-# Copyright (C) 2026 This file is copyright:
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 02:47+0000\n"
-"PO-Revision-Date: 2026-02-01 16:45+0000\n"
-"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
-"Language-Team: Irish\n"
-"Language: ga\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,19 +72,16 @@ msgstr ""
 msgctxt "@item:valuesuffix transition duration"
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 nóiméad"
-msgstr[1] "%1 nóiméad"
-msgstr[2] "%1 nóiméad"
-msgstr[3] "%1 nóiméad"
-msgstr[4] "%1 nóiméad"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ui/main.qml:118
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -92,7 +91,7 @@ msgid ""
 "privacy/'>GeoIP</link>."
 msgstr ""
 
-#: ui/main.qml:146
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -102,19 +101,19 @@ msgid ""
 "detailed description of what this service will do."
 msgstr ""
 
-#: ui/main.qml:163
+#: ui/main.qml:164
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr ""
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr ""
 
-#: ui/main.qml:195
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -172,7 +171,7 @@ msgstr ""
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ":"
+msgstr ""
 
 #: ui/WorldMap.qml:76
 #, kde-format
@@ -191,12 +190,12 @@ msgstr ""
 #: ui/WorldMap.qml:189
 #, kde-format
 msgid "Zoom in"
-msgstr "Zúmáil isteach"
+msgstr ""
 
 #: ui/WorldMap.qml:206
 #, kde-format
 msgid "Zoom out"
-msgstr "Zúmáil amach"
+msgstr ""
 
 #: ui/WorldMap.qml:235
 #, kde-kuit-format
