@@ -3,21 +3,20 @@
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
-# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 02:39+0000\n"
-"PO-Revision-Date: 2026-01-15 19:53+0100\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"POT-Creation-Date: 2026-01-16 00:45+0000\n"
+"PO-Revision-Date: 2023-11-11 15:13+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,10 +29,11 @@ msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Otvoriť obrázok"
+msgstr "Otvoriť obrázok tapety"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:71
 #, kde-format
@@ -42,71 +42,78 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Adresár s tapetou na zobrazenie snímok"
 
 #: imagepackage/contents/ui/config.qml:146
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Umiestnenie:"
 
 #: imagepackage/contents/ui/config.qml:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Zväčšený a orezaný"
 
 #: imagepackage/contents/ui/config.qml:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Zväčšený"
 
 #: imagepackage/contents/ui/config.qml:157
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Zväčšený, zachovať proporcie"
 
 #: imagepackage/contents/ui/config.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Na stred"
 
 #: imagepackage/contents/ui/config.qml:189
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Set as Wallpaper"
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Prepínanie dynamických tapiet:"
+msgstr "Nastaviť ako tapetu"
 
 #: imagepackage/contents/ui/config.qml:197
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "Na základe toho, či je štýl Plasma svetlý alebo tmavý "
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr "Na základe denného a nočného cyklu"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr "Vždy používať svetlú variantu"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr "Vždy používať tmavú variantu"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:221
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr "Nastaviť..."
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:232
 #, kde-format
@@ -145,10 +152,11 @@ msgid "Add…"
 msgstr "Pridať…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Pridať obrázok tapety..."
+msgstr "Otvoriť obrázok tapety"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:99
 #, kde-format
@@ -157,34 +165,35 @@ msgid "Get New…"
 msgstr "Získať nové..."
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Next Wallpaper Image"
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Získať nové obrázky tapety..."
+msgstr "Nasledujúci obrázok tapety"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr "Vybrať všetko"
+msgstr ""
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr "Vybrať všetky snímky"
+msgstr ""
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr "Zrušiť výber"
+msgstr ""
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr "Zrušiť výber všetkých snímok"
+msgstr ""
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
@@ -220,7 +229,6 @@ msgstr ""
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
-"Určite režim vyplnenia (napr. roztiahnutie, zachovanie pomeru strán atď.)."
 
 #: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
@@ -236,7 +244,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr "Neplatný režim vyplnenia: %1"
+msgstr ""
 
 #: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
@@ -270,9 +278,10 @@ msgstr "Nasledujúci obrázok tapety"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:382
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Image Files"
 msgid "Media Files"
-msgstr "Mediálne súbory"
+msgstr "Súbory obrázkov"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
@@ -350,7 +359,8 @@ msgid "Add…"
 msgstr "Pridať…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Folder…"
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Pridať priečinok..."
