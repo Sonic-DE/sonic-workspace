@@ -6,27 +6,26 @@
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022, 2023.
-# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 02:39+0000\n"
-"PO-Revision-Date: 2026-01-15 20:02+0100\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"POT-Creation-Date: 2026-01-17 00:46+0000\n"
+"PO-Revision-Date: 2023-12-02 19:50+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 24.01.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: actions/checkaction.cpp:72
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr "Kontrola chýb"
+msgstr ""
 
 #: actions/mountaction.cpp:97
 #, kde-format
@@ -41,7 +40,7 @@ msgstr "Otvoriť v správcovi súborov"
 #: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Try to Fix"
-msgstr "Skúsiť opraviť"
+msgstr ""
 
 #: actions/mountandopenaction.cpp:181
 #, kde-format
@@ -61,126 +60,141 @@ msgstr "Bezpečne odstrániť"
 #: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "This device has file system errors."
-msgstr "Toto zariadenie má chyby v súborovom systéme."
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This device is not currently accessible."
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Toto zariadenie nemá žiadne chyby."
+msgstr "Toto zariadenie nie je teraz prístupné."
 
 #: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "Successfully repaired!"
-msgstr "Úspešne opravené!"
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
-msgstr "Stav zariadení"
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr "Zariadenie môže byť teraz bezpečne odstránené"
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr "Toto zariadenie môže byť teraz bezpečne odstránené."
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:192
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
 msgid "You are not authorized to mount this device."
-msgstr "Nemáte oprávnenie na pripojenie tohto zariadenia."
+msgstr "Kliknite na pripojenie tohto zariadenia."
 
 #: devicemessagemonitor_p.cpp:196
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
-msgstr "Nemáte oprávnenie na vysunutie tohto disku."
+msgstr "Kliknutím vysuniete tento disk."
 
 #: devicemessagemonitor_p.cpp:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Nemáte oprávnenie na odstránenie tohto zariadenia."
+msgstr "Toto zariadenie je možné teraz bezpečne odstrániť."
 
 #: devicemessagemonitor_p.cpp:202
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
 msgid "You are not authorized to repair this device."
-msgstr "Nie ste oprávnení opravovať toto zariadenie."
+msgstr "Toto zariadenie je možné teraz bezpečne odstrániť."
 
 #: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
-msgstr "Neznámy typ chyby"
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
 msgid "Could not mount this device as it is busy."
-msgstr "Nepodarilo sa pripojiť toto zariadenie, pretože je zaneprázdnené."
+msgstr "Kliknite na pripojenie tohto zariadenia."
 
 #: devicemessagemonitor_p.cpp:235
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
 msgid "One or more files on this device are open within an application."
-msgstr ""
-"Jeden alebo viac súborov na tomto zariadení sú stále otvorené v nejakej "
-"aplikácii."
+msgstr "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
 
 #: devicemessagemonitor_p.cpp:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] ""
-"Jeden alebo viac súborov na tomto zariadení sú otvorené v aplikácii \"%2\"."
-msgstr[1] ""
-"Jeden alebo viac súborov na tomto zariadení sú otvorené v aplikáciách: %2."
-msgstr[2] ""
-"Jeden alebo viac súborov na tomto zariadení sú otvorené v aplikáciách: %2."
+msgstr[0] "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
+msgstr[1] "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
+msgstr[2] "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
 
 #: devicemessagemonitor_p.cpp:240
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ", "
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:258
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
 msgid "Could not mount this device."
-msgstr "Toto zariadenie sa nepodarilo pripojiť."
+msgstr "Kliknite na pripojenie tohto zariadenia."
 
 #: devicemessagemonitor_p.cpp:262
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
-msgstr "Tento disk sa nepodarilo vysunúť."
+msgstr "Kliknutím vysuniete tento disk."
 
 #: devicemessagemonitor_p.cpp:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Toto zariadenie sa nepodarilo odstrániť."
+msgstr "Kliknutím bezpečne odstránite toto zariadenie."
 
 #: devicemessagemonitor_p.cpp:267
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
 msgid "Could not repair this device: %1"
-msgstr "Toto zariadenie sa nepodarilo opraviť: %1"
+msgstr "Kliknutím bezpečne odstránite toto zariadenie."
 
 #: qml/DeviceItem.qml:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Kontrola…"
+msgstr "Odstraňuje sa…"
 
 #: qml/DeviceItem.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Opravuje sa..."
+msgstr "Odstraňuje sa…"
 
 #: qml/DeviceItem.qml:104
 #, kde-format
@@ -264,10 +278,6 @@ msgstr "Všetky zariadenia"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Otvoriť vyskakovacie okno po pripojení nového zariadenia"
-
-#~ msgctxt "@action:button Mount a disk without verifying for errors"
-#~ msgid "Mount without verifying"
-#~ msgstr "Inštalovať bez overenia"
 
 #~ msgid "Show:"
 #~ msgstr "Zobraziť:"

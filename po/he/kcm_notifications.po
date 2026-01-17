@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-04-13 08:11+0300\n"
+"PO-Revision-Date: 2026-01-13 14:58+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "יישומים אחרים"
 #: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
-msgstr "להציג חלוניות קופצות"
+msgstr "הצגת חלוניות קופצות"
 
 #: ui/ApplicationConfiguration.qml:119
 #, kde-format
@@ -41,12 +41,12 @@ msgstr "הצגה במצב ‚לא להפריע’"
 #: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
 #, kde-format
 msgid "Show in history"
-msgstr "להציג בהיסטוריה"
+msgstr "הצגה בהיסטוריה"
 
 #: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
-msgstr "להציג עיטורי התראה"
+msgstr "הצגת עיטורי התראה"
 
 #: ui/ApplicationConfiguration.qml:180
 #, kde-format
@@ -64,7 +64,7 @@ msgstr "היישום הזה לא תומך בהגדרת התראות בהתאם �
 #: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr "להציג הודעה בחלונית קופצת"
+msgstr "הצגת הודעה בחלונית קופצת"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "התראות בעדיפות נמוכה:"
 #: ui/main.qml:196
 #, kde-format
 msgid "Show popup"
-msgstr "להציג חלונית קופצת"
+msgstr "הצגת חלונית קופצת"
 
 #: ui/main.qml:225
 #, kde-format
@@ -229,7 +229,7 @@ msgstr "להסתיר לאחר:"
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "להציג מחוון תום זמן"
+msgstr "הצגת מחוון תום זמן"
 
 #: ui/main.qml:318
 #, kde-format
@@ -241,7 +241,7 @@ msgstr "משוב נוסף"
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
-msgstr "להציג בהתראות"
+msgstr "הצגה בהתראות"
 
 #: ui/main.qml:325
 #, kde-format
@@ -262,7 +262,7 @@ msgstr "עיטורי התראות:"
 #: ui/main.qml:353
 #, kde-format
 msgid "Show in task manager"
-msgstr "להציג במנהל המשימות"
+msgstr "הצגה במנהל המשימות"
 
 #: ui/PopupPositionDialog.qml:15
 #, kde-format
