@@ -42,9 +42,6 @@ Q_SIGNALS:
     void accepted();
     void rejected();
 
-protected:
-    void resizeEvent(QResizeEvent *e) override;
-
 private:
     void cancelSoftwareUpdate();
     bool updateTriggered() const;
