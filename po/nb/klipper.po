@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 02:38+0000\n"
-"PO-Revision-Date: 2026-02-05 11:33+0100\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"PO-Revision-Date: 2026-01-18 20:35+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -349,7 +349,7 @@ msgstr "All historikk"
 #: declarative/qml/ClipboardMenu.qml:334
 #, kde-format
 msgid "Starred Only"
-msgstr "Bare stjernemerkede"
+msgstr "Bare stjerne"
 
 #: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
@@ -371,25 +371,25 @@ msgstr "Utfør handling"
 msgid "Show QR code"
 msgstr "Vis QR-kode"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:47
 #, kde-format
 msgid "Edit contents"
 msgstr "Rediger innhold"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "Fjern fra historikk"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Remove Star"
-msgstr "Fjern stjernemerkede"
+msgstr "Fjern stjerne"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Star"
-msgstr "Stjernemerket"
+msgstr "Stjerneversjon"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
@@ -606,46 +606,47 @@ msgstr "Tilbakestill ikonet til standard for kommandoen"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:281
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Utklippshistorikken inneholder stjernemerkede. Tøm dem også?"
+msgstr "Utklippshistorikken inneholder stjerneversjoner. Tøm dem også?"
 
-#: historymodel.cpp:284 historymodel.cpp:304
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Tøm utklippshistorikken"
 
-#: historymodel.cpp:285
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr "Tøm alt"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:284
 #, kde-format
 msgid "Keep Starred Items"
-msgstr "Behold stjernemerkede"
+msgstr "Behold stjerneversjoner"
 
-#: historymodel.cpp:303
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Er du sikker på at du vil tømme og slette hele utklippshistorikken?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 x %2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr "Dette er stjernemerket. Vil du virkelig fjerne den fra historikken?"
+msgstr ""
+"Denne er en stjerneversjon. Vil du virkelig fjerne den fra historikken?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
-msgstr "Fjern stjernemerket"
+msgstr "Fjern stjerneversjon"
 
 #: klipper.cpp:78
 #, kde-format
