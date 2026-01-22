@@ -3,8 +3,17 @@ ecm_add_qml_module(keyboardlayoutplugin URI "org.kde.plasma.workspace.keyboardla
 set_source_files_properties(org.kde.KeyboardLayouts.xml
         PROPERTIES INCLUDE layoutnames.h)
 
-qt_add_dbus_interface(keyboardlayoutplugin_SRCS "org.kde.KeyboardLayouts.xml" keyboard_layout_interface)
-qt_add_dbus_interface(keyboardlayoutplugin_SRCS "${KWIN_VIRTUALKEYBOARD_INTERFACE}" virtualkeyboard_interface)
+qt_add_dbus_interface(
+    keyboardlayoutplugin_SRCS
+    "org.kde.KeyboardLayouts.xml"
+    keyboard_layout_interface
+)
+
+qt_add_dbus_interface(
+    keyboardlayoutplugin_SRCS
+    "${CMAKE_SOURCE_DIR}/src/dbus/org.kde.kwin.VirtualKeyboard.xml"
+    virtualkeyboard_interface
+)
 
 target_sources(keyboardlayoutplugin PRIVATE
     keyboardlayout.cpp keyboardlayout.h
@@ -21,8 +30,10 @@ ecm_qt_declare_logging_category(keyboardlayoutplugin HEADER debug.h
     EXPORT PLASMAWORKSPACE
 )
 
-target_link_libraries(keyboardlayoutplugin PRIVATE Qt::Core
-                                           Qt::DBus
-                                           Qt::Qml)
+target_link_libraries(keyboardlayoutplugin PRIVATE
+    Qt::Core
+    Qt::DBus
+    Qt::Qml
+)
 
 ecm_finalize_qml_module(keyboardlayoutplugin)
