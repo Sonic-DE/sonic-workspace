@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 02:47+0000\n"
-"PO-Revision-Date: 2025-08-18 17:19+0300\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-01-19 16:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -25,7 +25,7 @@ msgid ""
 "Time-based features such as Night Light and dynamic wallpapers can be "
 "synchronized with the day-night cycle. Choose your preferred cycle here."
 msgstr ""
-"Iespējas, kuru darbības pamatār diennakts laiks, kā arī dinamiskās "
+"Iespējas, kuru darbības pamatā ir diennakts laiks, kā arī dinamiskās "
 "ekrāntapetes iespējams sinhronizēt ar diennakts ciklu. Izvēlieties vēlamo "
 "ciklu."
 
@@ -38,10 +38,7 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Noteikt saullēkta un saulrieta laikus:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
@@ -81,13 +78,13 @@ msgstr[0] "%1 minūte"
 msgstr[1] "%1 minūtes"
 msgstr[2] "%1 minūšu"
 
-#: ui/main.qml:118
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Atrašanās vietu noteikt automātiski"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -102,7 +99,7 @@ msgstr ""
 "GPS vai saziņu ar mobilo sakaru torņiem, tiks nosūtīta tās IP adrese uz "
 "<link url='https://geoip.com/privacy/'>„GeoIP“</link>."
 
-#: ui/main.qml:146
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -116,34 +113,29 @@ msgstr ""
 "url='https://bugs.kde.org'>https://bugs.kde.org</link>, lūdzot KDE "
 "izstrādātājiem sīkāk izskaidrot šī pakalpojuma darbību."
 
-#: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#: ui/main.qml:164
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Pēc manuāli norādītas vietas"
+msgstr "Manuāli norādīt atrašanās vietu:"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Platums:"
 
-#: ui/main.qml:195
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
 msgstr "Garums:"
 
 #: ui/SunPath.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunrise starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr "Saulēkts sākas %1 un beidzas %2"
+msgstr "Saullēkts sākas %1 un beidzas %2"
 
 #: ui/SunPath.qml:57
 #, kde-format
@@ -152,9 +144,7 @@ msgid "Sunrise"
 msgstr "Saullēkts"
 
 #: ui/SunPath.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunset starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
 msgstr "Saulriets sākas %1 un beidzas %2"
