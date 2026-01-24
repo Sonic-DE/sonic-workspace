@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 02:47+0000\n"
-"PO-Revision-Date: 2026-01-18 08:43+0100\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-01-23 20:41+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -75,13 +75,13 @@ msgid_plural "%1 minutes"
 msgstr[0] "%1 minut"
 msgstr[1] "%1 minuter"
 
-#: ui/main.qml:118
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr "Detektera plats automatiskt"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 "tillgängligt, eller annars genom att skicka dess IP-adress till <link "
 "url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:146
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -109,19 +109,19 @@ msgstr ""
 "org'>https://bugs.kde.org</link> för att be KDE-utvecklarna att skriva en "
 "detaljerad beskrivning av vad tjänsten gör."
 
-#: ui/main.qml:163
+#: ui/main.qml:164
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Använd manuell plats:"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Latitud:"
 
-#: ui/main.qml:195
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
