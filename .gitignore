@@ -28,3 +28,6 @@ CMakeLists.txt.user*
 .cache
 .vscode
 .qmlls.ini
+.ccls
+.ccls-cache
+.claude
