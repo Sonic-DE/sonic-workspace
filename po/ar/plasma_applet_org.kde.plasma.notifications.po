@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2015, 2017.
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-04 02:42+0000\n"
-"PO-Revision-Date: 2026-03-08 09:46+0400\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
+"PO-Revision-Date: 2025-08-03 22:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -19,7 +19,7 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: components/ActionContainer.qml:96
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -135,9 +135,9 @@ msgstr "%1 من %2"
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] "%2 من %1 ملف"
-msgstr[1] "%2 من %1 ملف"
-msgstr[2] "%2 من %1 ملف"
+msgstr[0] "%2 من 0 ملف"
+msgstr[1] "%2 من ملف واحد"
+msgstr[2] "%2 من ملفّين"
 msgstr[3] "%2 من %1 ملفّات"
 msgstr[4] "%2 من %1 ملفًّا"
 msgstr[5] "%2 من %1 ملفّ"
@@ -147,11 +147,11 @@ msgstr[5] "%2 من %1 ملفّ"
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
-msgstr[0] ""
-msgstr[1] "%2 من %1 مجلد"
-msgstr[2] "%2 من %1 مجلد"
+msgstr[0] "%2 من 0 مجلد"
+msgstr[1] "%2 من 0 ملف"
+msgstr[2] "%2 من مجلدين"
 msgstr[3] "%2 من %1 مجلدات"
-msgstr[4] "%2 من %1 مجلدًا"
+msgstr[4] "%2 من %1 مجلدا"
 msgstr[5] "%2 من %1 مجلد"
 
 #: components/JobDetails.qml:126
@@ -159,14 +159,14 @@ msgstr[5] "%2 من %1 مجلد"
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 من %1 عنصر"
-msgstr[1] "%2 من %1 عنصر"
-msgstr[2] "%2 من %1 عنصر"
+msgstr[0] "%2 من %1 "
+msgstr[1] "%2 من عنصر واحد"
+msgstr[2] "%2 من عنصرين"
 msgstr[3] "%2 من %1 عناصر"
-msgstr[4] "%2 من %1 عنصرًا"
+msgstr[4] "%2 من %1 عنصرا"
 msgstr[5] "%2 من %1 عنصر"
 
-#: components/JobDetails.qml:135
+#: components/JobDetails.qml:134
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -177,7 +177,7 @@ msgstr[3] "%1 ملفّات"
 msgstr[4] "%1 ملفًّا"
 msgstr[5] "%1 ملفّ"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:136
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -188,7 +188,7 @@ msgstr[3] "%1 مجلّدات"
 msgstr[4] "%1 مجلّدًا"
 msgstr[5] "%1 مجلّد"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -199,7 +199,7 @@ msgstr[3] "%1 عناصر"
 msgstr[4] "%1 عنصرًا"
 msgstr[5] "%1 عنصر"
 
-#: components/JobDetails.qml:156 components/SpeedChart.qml:72
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:98 components/SpeedChart.qml:193
 #: components/SpeedChart.qml:204
 #, kde-format
@@ -431,21 +431,36 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "الإشعارات تزود حاليا بواسطة '%1 %2' "
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "بدل وضع عدم الإزعاج"
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clear All Notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "امحُ جميع الإشعارات"
+
+#: globalshortcuts.cpp:52
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "الإشعارات متوقفة"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "الإشعارات مفعلة"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "OSD popup, keep short"
+#| msgid "Notifications On"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "الإشعارات مفعلة"
 
 #: main.qml:61
@@ -513,12 +528,12 @@ msgstr "نمط عدم الإزعاج نشط، انقر الزر الأوسط ل�
 msgid "Middle-click to enter do not disturb mode"
 msgstr "انقر بالزر الأوسط للدخول إلى نمط عدم الإزعاج"
 
-#: main.qml:238
+#: main.qml:245
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "امحُ جميع الإشعارات"
 
-#: main.qml:257
+#: main.qml:264
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "ا&ضبط إشعارات الأحداث والإجراءات..."

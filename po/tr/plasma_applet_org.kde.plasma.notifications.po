@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-04 02:42+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2025-08-27 09:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Generator: Lokalize 25.08.0\n"
 "X-POOTLE-MTIME: 1413102238.000000\n"
 
-#: components/ActionContainer.qml:96
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -141,28 +141,28 @@ msgid_plural "%2 of %1 items"
 msgstr[0] "%2/%1 öge"
 msgstr[1] "%2/%1 öge"
 
-#: components/JobDetails.qml:135
+#: components/JobDetails.qml:134
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 dosya"
 msgstr[1] "%1 dosya"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:136
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 klasör"
 msgstr[1] "%1 klasör"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 öge"
 msgstr[1] "%1 öge"
 
-#: components/JobDetails.qml:156 components/SpeedChart.qml:72
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:98 components/SpeedChart.qml:193
 #: components/SpeedChart.qml:204
 #, kde-format
@@ -394,21 +394,36 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Bildirimler şu anda “%1 %2” tarafından sağlanıyor"
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Rahatsız Etmeyin Kipini Aç/Kapat"
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clear All Notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "Tüm bildirimleri temizle"
+
+#: globalshortcuts.cpp:52
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "Bildirimler Kapalı"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "Bildirimler Açık"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "OSD popup, keep short"
+#| msgid "Notifications On"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "Bildirimler Açık"
 
 #: main.qml:61
@@ -460,12 +475,12 @@ msgstr "Rahatsız etmeyin kipi etkin; çıkmak için orta tıklayın"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Rahatsız etmeyin kipine girmek için orta tıklayın"
 
-#: main.qml:238
+#: main.qml:245
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Tüm bildirimleri temizle"
 
-#: main.qml:257
+#: main.qml:264
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Olay bildirimlerini ve eylemlerini yapılandır…"

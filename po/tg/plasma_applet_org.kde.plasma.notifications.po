@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-04 02:42+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2019-09-30 16:21+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: components/ActionContainer.qml:96
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -142,28 +142,28 @@ msgid_plural "%2 of %1 items"
 msgstr[0] "%2 аз %1 файл"
 msgstr[1] "%2 аз %1 файл"
 
-#: components/JobDetails.qml:135
+#: components/JobDetails.qml:134
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 файл"
 msgstr[1] "%1 файл"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:136
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 ҷузвадон"
 msgstr[1] "%1 ҷузвадон"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: components/JobDetails.qml:156 components/SpeedChart.qml:72
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:98 components/SpeedChart.qml:193
 #: components/SpeedChart.qml:204
 #, kde-format
@@ -400,24 +400,38 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr ""
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, fuzzy, kde-format
 #| msgid "Do not disturb"
 msgid "Toggle do not disturb"
 msgstr "Ба ман халал нарасонед"
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "No unread notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "Ягон огоҳии хонданашуда нест"
+
+#: globalshortcuts.cpp:52
 #, fuzzy, kde-format
 #| msgid "No unread notifications"
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "Ягон огоҳии хонданашуда нест"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, fuzzy, kde-format
 #| msgid "No unread notifications"
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "Ягон огоҳии хонданашуда нест"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgid "No unread notifications"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "Ягон огоҳии хонданашуда нест"
 
 #: main.qml:61
@@ -474,13 +488,13 @@ msgstr ""
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: main.qml:238
+#: main.qml:245
 #, fuzzy, kde-format
 #| msgid "No unread notifications"
 msgid "Clear All Notifications"
 msgstr "Ягон огоҳии хонданашуда нест"
 
-#: main.qml:257
+#: main.qml:264
 #, fuzzy, kde-format
 #| msgid "&Configure Event Notifications and Actions..."
 msgid "&Configure Event Notifications and Actions…"

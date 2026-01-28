@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-04 02:42+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2011-03-01 13:40+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: components/ActionContainer.qml:96
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -154,7 +154,7 @@ msgstr[0] "%2 / %1 datoteka"
 msgstr[1] "%2 / %1 datoteke"
 msgstr[2] "%2 / %1 datoteka"
 
-#: components/JobDetails.qml:135
+#: components/JobDetails.qml:134
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -164,7 +164,7 @@ msgstr[0] "%2 / %1 datoteka"
 msgstr[1] "%2 / %1 datoteke"
 msgstr[2] "%2 / %1 datoteka"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:136
 #, fuzzy, kde-format
 #| msgid "%2 / 1 folder"
 #| msgid_plural "%2 / %1 folders"
@@ -174,7 +174,7 @@ msgstr[0] "%2 / %1 mapa"
 msgstr[1] "%2 / %1 mape"
 msgstr[2] "%2 / %1 mapa"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -182,7 +182,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: components/JobDetails.qml:156 components/SpeedChart.qml:72
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:98 components/SpeedChart.qml:193
 #: components/SpeedChart.qml:204
 #, kde-format
@@ -428,12 +428,20 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr ""
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr ""
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "%1 notification"
+#| msgid_plural "%1 notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "%1 obavijest"
+
+#: globalshortcuts.cpp:52
 #, fuzzy, kde-format
 #| msgid "%1 notification"
 #| msgid_plural "%1 notifications"
@@ -441,12 +449,20 @@ msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "%1 obavijest"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, fuzzy, kde-format
 #| msgid "%1 notification"
 #| msgid_plural "%1 notifications"
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "%1 obavijest"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgid "%1 notification"
+#| msgid_plural "%1 notifications"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "%1 obavijest"
 
 #: main.qml:61
@@ -509,14 +525,14 @@ msgstr ""
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: main.qml:238
+#: main.qml:245
 #, fuzzy, kde-format
 #| msgid "%1 notification"
 #| msgid_plural "%1 notifications"
 msgid "Clear All Notifications"
 msgstr "%1 obavijest"
 
-#: main.qml:257
+#: main.qml:264
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr ""
