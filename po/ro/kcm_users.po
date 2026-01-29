@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 03:19+0000\n"
-"PO-Revision-Date: 2026-02-05 15:21+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-01-28 20:44+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -98,14 +98,18 @@ msgid "Change Wallet Password?"
 msgstr "Schimbați parola portofelului?"
 
 #: src/ui/ChangeWalletPassword.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Now that you have changed your login password, you may also want to "
+#| "change the password on your default KWallet to match it."
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"Acum că v-ați schimbat parola de autentificare, aveți în vedere schimbarea "
-"parolei pentru portofelul implicit KWallet ca să se potrivească."
+"Acum că v-ați schimbat parola de autentificare, s-ar putea să doriți "
+"schimbarea parolei pentru portofelul implicit KWallet ca să se potrivească."
 
 #: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
@@ -183,7 +187,7 @@ msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Creează"
 
-#: src/ui/CreateUser.qml:111
+#: src/ui/CreateUser.qml:109
 #, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
@@ -590,9 +594,6 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
-"Nu vă puteți schimba numele de utilizator cât sunteți autentificat. Ieșiți "
-"din sistem și autentificați-vă ca alt utilizator pentru a schimba numele de "
-"utilizator al acestul cont."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -601,8 +602,6 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
-"Numele de utilizator al unui utilizator autentificat nu poate fi schimbat. "
-"Așteptați ca utilizatorul să iasă din sistem."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -611,9 +610,6 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
-"Tipul contului nu se poate schimba la „standard” decât dacă există cel puțin "
-"un alt cont de administrator în sistem. În lipsa acestuia, autentificarea ar "
-"deveni imposibilă sau ar necesita folosirea nesigură a parolei pentru „root”."
 
 #: src/ui/UserDetailsPage.qml:222
 #, kde-format
@@ -642,8 +638,6 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
-"Nu vă puteți șterge! Ieșiți din cont și autentificați-vă ca alt utilizator "
-"pentru a șterge acest cont."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
@@ -668,7 +662,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr "Decuparea imaginii a eșuat: %1"
+msgstr ""
 
 #: src/user.cpp:337
 #, kde-format
