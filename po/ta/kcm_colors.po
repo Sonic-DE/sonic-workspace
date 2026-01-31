@@ -1,13 +1,13 @@
 # Copyright (C).
 #
 # ஆமாச்சு <amachu@ubuntu.com>, 2008.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-03-12 20:44+0530\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"PO-Revision-Date: 2025-11-30 11:13+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -717,9 +717,10 @@ msgstr "நிறம்:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: editor/scmeditoreffects.ui:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Intensity"
 msgid "Intensity:"
-msgstr "செறிவு:"
+msgstr "உக்கிரம்"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:37
@@ -813,15 +814,15 @@ msgstr "முடங்கிய உக்கிர தாக்க அளவு
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
-#, kde-format
+#, fuzzy, kde-format
 msgid "Disabled color"
-msgstr "முடங்கியவற்றிற்கான நிறம்"
+msgstr "முடங்கிய நிறம்"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:181
-#, kde-format
+#, fuzzy, kde-format
 msgid "Disabled contrast type"
-msgstr "முடங்கியவற்றிற்கான நிறவேறுபாட்டு வகை"
+msgstr "முடங்கிய நிறவேறுபாட்டு வகை"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
@@ -847,9 +848,9 @@ msgstr "டின்ட்"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
 #: editor/scmeditoreffects.ui:222
-#, kde-format
+#, fuzzy, kde-format
 msgid "Disabled contrast amount"
-msgstr "முடங்கியவற்றிற்கான நிறவேறுபாட்டு அளவு"
+msgstr "முடங்கிய நிறவேறுபாட்டு அளவு"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
@@ -1166,8 +1167,6 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
-"தவறுதலாக, இல்லாத ஒன்றையொ ஏற்கனவே செயலில் உள்ளதையோ தேர்ந்தெடுக்காமல், தற்போதைய பிளாஸ்மா "
-"அமர்வின் நிறத்திட்டத்தை நீங்கள் மாற்ற இந்த கருவி உதவும்."
 
 #: plasma-apply-colorscheme.cpp:45
 #, kde-format
@@ -1175,8 +1174,6 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
-"தற்போதைய பிளாஸ்மா அமர்வில் நீங்கள் பயன்படுத்த விரும்பும் நிறத்திட்டத்தின் பெயர் (ஒரு பாதையை "
-"வழங்கினால், அதன் கடைசி பாகம் மட்டுமே பயன்படுத்தப்படும்)"
 
 #: plasma-apply-colorscheme.cpp:48
 #, kde-format
@@ -1184,8 +1181,6 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
-"கணினியில் கிட்டுகின்ற அனைத்து நிறத்திட்டங்களை (மற்றும் இப்போது எது செயலில் உள்ளதென) "
-"காட்டும்"
 
 #: plasma-apply-colorscheme.cpp:53
 #, kde-format
@@ -1194,10 +1189,6 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
-"அமைக்க விரும்பும் சிறப்பு நிறத்தின் பெயர். SVG நிறப்பெயர்கள் (https://www.w3.org/TR/"
-"SVG11/types.html#ColorKeywords) மற்றும் பதினறும நிறக் குறியீடுகள் ஆதரிக்கப்படுவன. "
-"பதினறும குறியீடு முனையநிரலால் நிரலாற்றப்படுவதைத் தடுக்க அதை மேற்கோள் குறிகளுக்குள் "
-"இடவும்."
 
 #: plasma-apply-colorscheme.cpp:80
 #, kde-format
@@ -1205,13 +1196,11 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
-"கோரப்பட்டுள்ள \"%1\" என்ற நிறத்திட்டம், தற்போதைய பிளாஸ்மா அமர்வில் ஏற்கனவே செயலில் உள்ளது."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
-"தற்போதைய பிளாஸ்மா அமர்வுக்கு %1 எனும் நிறத்திட்டம் வெற்றிகரமாக செயல்படுத்தப்பட்டுள்ளது"
 
 #: plasma-apply-colorscheme.cpp:115
 #, kde-format
@@ -1219,15 +1208,13 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
-"\"%1\" என்ற நிறத்திட்டத்தை கண்டுபிடிக்க முடியவில்லை. நிறத்திட்டம் பின்வருபவற்றில் ஒன்றாக "
-"இருக்க வேண்டும்: %2"
 
 #: plasma-apply-colorscheme.cpp:123
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
-msgstr "காலியான நிறத்திட்டப்பெயர் ஆதரிக்கப்படாதது"
+msgstr ""
 
 #: plasma-apply-colorscheme.cpp:127
 #, kde-format
@@ -1356,25 +1343,43 @@ msgstr "முடக்கப்பட்டதன் உரை"
 msgid "Edit Color Scheme…"
 msgstr "நிறத்திட்டத்தை திருத்து…"
 
-#: ui/main.qml:323
-#, kde-format
-msgid "Remove Color Scheme"
+#: ui/main.qml:324
+#, fuzzy, kde-format
+#| msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
 msgstr "நிறத்திட்டத்தை நீக்கு"
 
-#: ui/main.qml:330
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "நிறத்திட்டத்தை மீட்டெடு"
+#: ui/main.qml:326
+#, fuzzy, kde-format
+#| msgid "Utility to edit and create color schemes"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
+msgstr "நிறத்திட்டங்களை திருத்தவும் உருவாக்கவும் உதவும் நிரல்"
 
-#: ui/main.qml:374
+#: ui/main.qml:328
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
+msgstr ""
+
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "நிறத்திட்டத்தை திற"
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "நிறத்திட்ட கோப்புகள் (*.colors)"
+
+#~ msgid "Restore Color Scheme"
+#~ msgstr "நிறத்திட்டத்தை மீட்டெடு"
 
 #~ msgid "Shading of frames and lighting (\"3D\") effects"
 #~ msgstr "நிழலிடுவதும் ஒளித்தாக்கங்களும் (3D போல் காட்சியளிக்க செய்வது)"

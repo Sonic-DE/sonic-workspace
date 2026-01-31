@@ -1,27 +1,26 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
-# SPDX-FileCopyrightText: 2026 Luc Castermans <luc.castermans@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-04-12 10:09+0200\n"
-"Last-Translator: Luc Castermans <luc.castermans@gmail.com>\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"PO-Revision-Date: 2025-11-08 11:19+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2020-2026"
+msgstr "Freek de Kruijf - 2020-2025"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -68,7 +67,7 @@ msgstr "Naam kleurenschema"
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr "Accentkleur"
+msgstr "Accentuatiekleur"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -77,15 +76,16 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
-"De laatst gebruikte aangepaste accentkleur voordat de gebruiker omschakelde "
-"naar uit achtergrondafbeelding gegenereerde kleur of de standaard kleur"
+"De laatst gebruikte aangepaste accentuatiekleur voordat de gebruiker "
+"omschakelde naar uit achtergrondafbeelding gegenereerde kleur of de "
+"standaard kleur"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
-"Of de accentkleur uit achtergrondafbeelding zou moeten worden toegepast"
+"Of de accentuatiekleur uit achtergrondafbeelding zou moeten worden toegepast"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -861,7 +861,7 @@ msgstr "Gesorteerde kolom &in lijsten van schaduw voorzien"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr "Titelbalken van vensters kleuren met de a&ccentkleur"
+msgstr "Titelbalken van vensters kleuren met de a&ccentuatiekleur"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
@@ -1346,25 +1346,43 @@ msgstr "Uitgeschakelde tekst"
 msgid "Edit Color Scheme…"
 msgstr "Kleurenschema bewerken…"
 
-#: ui/main.qml:323
-#, kde-format
-msgid "Remove Color Scheme"
+#: ui/main.qml:324
+#, fuzzy, kde-format
+#| msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
 msgstr "Kleurenschema verwijderen"
 
-#: ui/main.qml:330
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "Kleurenschema herstellen"
+#: ui/main.qml:326
+#, fuzzy, kde-format
+#| msgid "Utility to edit and create color schemes"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
+msgstr "Hulpmiddel om kleurenschema's te bewerken en aan te maken"
 
-#: ui/main.qml:374
+#: ui/main.qml:328
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
+msgstr ""
+
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Kleurenschema openen"
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Kleurenschemabestanden (*.colors)"
+
+#~ msgid "Restore Color Scheme"
+#~ msgstr "Kleurenschema herstellen"
 
 #~ msgid "Shading of frames and lighting (\"3D\") effects"
 #~ msgstr "Arceren van frames en oplichten van \"3D\"-effecten"

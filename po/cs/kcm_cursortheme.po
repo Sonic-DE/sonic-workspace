@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2014, 2015, 2016, 2018, 2019, 2026 Vít Pelčák <vit@pelcak.org>
+# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2014, 2015, 2016, 2018, 2019.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
@@ -9,22 +9,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-03-30 12:55+0200\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"PO-Revision-Date: 2023-06-14 14:52+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current cursor theme"
-msgstr "Název nynějšího motivu kurzoru"
+msgstr "Uložit aktuálního motivu kurzorů"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
@@ -162,15 +162,30 @@ msgstr "Ve vašem systému jsou dostupné následující motivy kurzorů:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Současný motiv pro toto sezení Plasma)"
 
-#: ui/Delegate.qml:43
-#, kde-format
-msgid "Remove Theme"
-msgstr "Odstranit motiv"
+#: ui/Delegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Restore Cursor Theme"
+msgctxt "@info:tooltip"
+msgid "Remove cursor theme"
+msgstr "Obnovit motiv kurzoru"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:46
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active cursor theme"
+msgstr "Uložit aktuálního motivu kurzorů"
+
+#: ui/Delegate.qml:48
 #, kde-format
-msgid "Restore Cursor Theme"
-msgstr "Obnovit motiv kurzorů"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed cursor themes"
+msgstr ""
+
+#: ui/Delegate.qml:56
+#, kde-format
+msgid "Don’t delete this cursor theme"
+msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -279,3 +294,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Dostupné velikosti: %1)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Odstranit motiv"
