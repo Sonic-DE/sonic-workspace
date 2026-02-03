@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-08-30 13:41+0200\n"
+"PO-Revision-Date: 2026-02-01 10:41+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -160,30 +160,28 @@ msgid "Edit Theme…"
 msgstr "Modifier un thème..."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "Style Plasma"
+msgstr "Supprimer un style de Plasma"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "Ce module vous permet de choisir votre style Plasma."
+msgstr "Impossible de supprimer le style actif de Plasma"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "Impossible de supprimer les styles de Plasma installés par le système"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Ne pas supprimer ce style de Plasma"
 
 #: ui/main.qml:205
 #, kde-format
