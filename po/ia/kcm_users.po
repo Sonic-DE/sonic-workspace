@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 03:19+0000\n"
-"PO-Revision-Date: 2026-04-30 17:02+0200\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-02-03 18:10+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -184,7 +184,7 @@ msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Crea"
 
-#: src/ui/CreateUser.qml:111
+#: src/ui/CreateUser.qml:109
 #, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
@@ -633,8 +633,6 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
-"Non pote cambiar tu proprie nomine quando tu es accedite; abandona session "
-"eaccede comoaltere ustorper cambiar le nomine de ustor de iste conto."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -643,8 +641,6 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
-"Non pote cambiar le nomine de un usator qui es accedente; prime attende "
-"usque iste usator abandona le session. "
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -685,8 +681,6 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
-"Non pote deler te mesme!Abandona session e accede como altere usator per "
-"deler iste conto de usator."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
