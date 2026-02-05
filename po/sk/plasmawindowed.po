@@ -1,19 +1,18 @@
 # translation of plasmawindowed.po to Slovak
 # SPDX-FileCopyrightText: 2023 Roman Paholík <wizzardsk@gmail.com>
-# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmawindowed\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 03:19+0000\n"
-"PO-Revision-Date: 2026-01-14 18:28+0100\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
+"PO-Revision-Date: 2023-12-09 09:40+0100\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: main.cpp:53 plasmawindowedcorona.cpp:104
@@ -32,8 +31,6 @@ msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr ""
-"Spôsobí, že plasmoid zostane v oznamovacej oblasti živý, aj keď je okno je "
-"zatvorené."
 
 #: main.cpp:60
 #, kde-format
@@ -43,12 +40,12 @@ msgstr "Vynútiť načítanie daného pluginu shellu"
 #: main.cpp:64 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "The applet to open."
-msgstr "Applet, ktorý sa má otvoriť."
+msgstr ""
 
 #: main.cpp:65 plasmawindowedcorona.cpp:108
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr "Argumenty, ktoré sa majú odovzdať plasmoidu."
+msgstr ""
 
 #: plasmawindowedview.cpp:119
 #, kde-format
