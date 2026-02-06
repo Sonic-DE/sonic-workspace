@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-12-12 11:17+0000\n"
+"PO-Revision-Date: 2026-02-05 15:24+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -149,30 +149,28 @@ msgid "Edit Theme…"
 msgstr "Modifică tematica…"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "Stilul Plasma"
+msgstr "Elimină stilul Plasma"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "Acest modul vă permite să alegeți stilul Plasma."
+msgstr "Stilul Plasma activ nu poate fi șters"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "Stilurile Plasma instalate în sistem nu pot fi șterse"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Nu ștergeți acest stil Plasma"
 
 #: ui/main.qml:205
 #, kde-format
