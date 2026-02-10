@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 02:38+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2009-02-12 09:10-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -38,9 +38,10 @@ msgid "Lock the screen"
 msgstr "Cuir an scáileán faoi ghlas"
 
 #: data.js:12
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch user"
 msgid "Switch user…"
-msgstr ""
+msgstr "athraigh an t-úsáideoir"
 
 #: data.js:13
 #, kde-format
@@ -78,15 +79,17 @@ msgid "End the session"
 msgstr "Críochnaigh an seisiún"
 
 #: data.js:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show logout button"
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr ""
+msgstr "Taispeáin cnaipe logála amach"
 
 #: data.js:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Logout, turn off or restart the computer"
 msgid "Log out, turn off, or restart the computer"
-msgstr ""
+msgstr "Logáil amach, múch nó atosaigh an ríomhaire"
 
 #: data.js:47
 #, kde-format
@@ -108,3 +111,62 @@ msgstr "Geimhrigh"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Geimhriú (cuir ar fionraí ar an diosca)"
+
+#, fuzzy
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Gníomhartha"
+
+#, fuzzy
+#~| msgid "Show lock button"
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Taispeáin cnaipe glasála"
+
+#, fuzzy
+#~| msgid "Show logout button"
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Taispeáin cnaipe logála amach"
+
+#, fuzzy
+#~| msgid "Switch user"
+#~ msgid "Switch User"
+#~ msgstr "athraigh an t-úsáideoir"
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr ""
+#~ "An bhfuil fonn ort an córas a chur ar fionraí ar an diosca (geimhriú)?"
+
+#~ msgid "Yes"
+#~ msgstr "Tá"
+
+#~ msgid "No"
+#~ msgstr "Níl"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "An bhfuil fonn ort an córas a chur ar fionraí i RAM (codladh)?"
+
+#~ msgid "Leave"
+#~ msgstr "Fág"
+
+#~ msgid "Leave..."
+#~ msgstr "Fág..."
+
+#~ msgid "Suspend"
+#~ msgstr "Cuir ar fionraí"
+
+#~ msgid "Configure Lock/Logout"
+#~ msgstr "Cumraigh Glasáil/Logáil Amach"
+
+#~ msgid "Please select one or more items on the list below."
+#~ msgstr "Roghnaigh mír nó míreanna ón liosta thíos."
+
+#~ msgid "Show hibernate button"
+#~ msgstr "Taispeáin cnaipe geimhrithe"
+
+#~ msgid "Show sleep button"
+#~ msgstr "Taispeáin cnaipe codlata"

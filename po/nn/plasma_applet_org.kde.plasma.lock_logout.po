@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 02:38+0000\n"
-"PO-Revision-Date: 2026-03-05 20:23+0100\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"PO-Revision-Date: 2024-07-06 15:01+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 24.05.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -27,7 +27,7 @@ msgstr "Generelt"
 #: ConfigGeneral.qml:119
 #, kde-format
 msgid "Unavailable"
-msgstr "Ikkje tilgjengeleg"
+msgstr ""
 
 #: data.js:5
 #, kde-format
@@ -40,9 +40,10 @@ msgid "Lock the screen"
 msgstr "Lås skjermen"
 
 #: data.js:12
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch user"
 msgid "Switch user…"
-msgstr "Byt brukar …"
+msgstr "Byt brukar"
 
 #: data.js:13
 #, kde-format
@@ -50,7 +51,8 @@ msgid "Start a parallel session as a different user"
 msgstr "Start ei parallell økt som ein annan brukar"
 
 #: data.js:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shut Down"
 msgid "Shut down"
 msgstr "Slå av"
 
@@ -70,7 +72,8 @@ msgid "Reboot the computer"
 msgstr "Start datamaskina på nytt"
 
 #: data.js:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Log Out"
 msgid "Log out"
 msgstr "Logg ut"
 

@@ -2,20 +2,19 @@
 # Roman Paholik <wizzardsk@gmail.com>, 2013, 2014, 2015, 2017.
 # Mthw <jari_45@hotmail.com>, 2018.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022, 2023.
-# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-19 02:48+0000\n"
-"PO-Revision-Date: 2026-01-31 17:16+0100\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"PO-Revision-Date: 2023-01-11 21:30+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: qml/config.qml:13
@@ -24,13 +23,15 @@ msgid "General"
 msgstr "Všeobecné"
 
 #: qml/ConfigGeneral.qml:43
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Zobraziť, ak je to relevantné"
+msgstr "Zobraziť, keď je to relevantné"
 
 #: qml/ConfigGeneral.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always shown"
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Vždy zobraziť"
@@ -39,13 +40,13 @@ msgstr "Vždy zobraziť"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr "Zobraziť len v popup okne"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr "Nikdy nezobrazovať (vypnuté)"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -82,18 +83,12 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
-"Predtým, ako to urobíte tu, vyhľadajte nastavenie v <application>%1</"
-"application>, aby ste deaktivovali ikonu v paneli úloh. Ikony niektorých "
-"aplikácií v paneli úloh neboli navrhnuté tak, aby sa dali deaktivovať, a "
-"použitie tohto nastavenia môže spôsobiť ich neočakávané správanie.<nl/><nl/"
-">Toto nastavenie používajte na vlastné riziko a nehláste problémy KDE ani "
-"autorovi aplikácie."
 
 #: qml/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr "Rozumiem rizikám"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:187
 #, kde-kuit-format
@@ -106,12 +101,6 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Deaktivácia schránky sa neodporúča, pretože to spôsobí stratu skopírovaných "
-"údajov po zatvorení aplikácie, z ktorej boli skopírované.<nl/><nl/>Urobte to "
-"len v prípade, ak ste ručne pridali samostatný widget schránky niekde inde "
-"alebo používate správcu schránky tretej strany. Zvážte tiež konfiguráciu "
-"schránky tak, aby neukladala históriu alebo si pamätala len jednu položku "
-"naraz."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -122,25 +111,25 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
-"Deaktivácia widgetu Oznámenia sa neodporúča, pretože oznámenia odoslané "
-"aplikáciami sa už nebudú zobrazovať.<nl/><nl/>Toto urobte len v prípade, ak "
-"ste ručne pridali samostatný widget Oznámenia niekde inde alebo zámerne "
-"používate správcu oznámení tretej strany na spracovanie oznámení."
 
 #: qml/ConfigGeneral.qml:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scale with Panel height"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr "Prispôsobiť výške panela"
+msgstr "Prispôsobiť výške panelu"
 
 #: qml/ConfigGeneral.qml:209
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scale with Panel width"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr "Prispôsobiť šírke panela"
+msgstr "Prispôsobiť šírke panelu"
 
 #: qml/ConfigGeneral.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Veľkosť ikon panelu:"
@@ -181,16 +170,18 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automaticky nastaviť na Veľké v dotykovom režime"
 
 #: qml/ConfigGeneral.qml:315
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Položky"
 
 #: qml/ConfigGeneral.qml:319
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always shown"
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Vždy zobraziť všetko"
+msgstr "Vždy zobraziť"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
@@ -203,12 +194,12 @@ msgstr "Návrat"
 msgid "Status and Notifications"
 msgstr "Stav a upozornenia"
 
-#: qml/ExpandedRepresentation.qml:169
+#: qml/ExpandedRepresentation.qml:145
 #, kde-format
 msgid "More actions"
 msgstr "Viac akcií"
 
-#: qml/ExpandedRepresentation.qml:255
+#: qml/ExpandedRepresentation.qml:246
 #, kde-format
 msgid "Keep Open"
 msgstr "Držať otvorené"
@@ -232,13 +223,13 @@ msgstr "Zobraziť skryté ikony"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr "Tabuľka s %1 položkami v %2 stĺpcoch"
+msgstr ""
 
 #: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr "AILlmyjgGJP"
+msgstr ""
 
 #~ msgid "Always hidden"
 #~ msgstr "Vždy skryť"
