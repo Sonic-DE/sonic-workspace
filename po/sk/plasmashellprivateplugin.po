@@ -2,20 +2,19 @@
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
 # Mthw <jari_45@hotmail.com>, 2018.
 # SPDX-FileCopyrightText: 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
-# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-17 02:42+0000\n"
-"PO-Revision-Date: 2026-01-15 19:51+0100\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
+"PO-Revision-Date: 2023-11-11 14:56+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -32,12 +31,12 @@ msgstr "matejm98mthw@gmail.com"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Batéria %1"
+msgstr ""
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:47
 #, kde-format
 msgid "Battery"
-msgstr "Batéria"
+msgstr ""
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -139,7 +138,8 @@ msgid "Next Decade"
 msgstr "Nasledovná dekáda"
 
 #: calendar/qml/MonthViewHeader.qml:283
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep Open"
 msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "Ponechať otvorené"
@@ -190,9 +190,6 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
-"Tento widget bol napísaný pre neznámu staršiu verziu Plasmy a nie je "
-"kompatibilný s Plasmou %1. Pre aktualizovanú verziu prosím kontaktujte "
-"autora widgetu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
@@ -200,8 +197,6 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
-"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s Plasmou %2. "
-"Ak chcete získať aktualizovanú verziu widgetu, obráťte sa na jeho autora."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
@@ -209,8 +204,6 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
-"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s Plasmou %2. "
-"Ak chcete widget používať, aktualizujte Plasmu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
@@ -218,8 +211,6 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
-"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s najnovšou "
-"verziou Plasmy. Ak chcete widget používať, aktualizujte Plasmu."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
@@ -302,9 +293,12 @@ msgid "Online Services"
 msgstr "Online služby"
 
 #: shellprivate/widgetexplorer.cpp:126
+#, fuzzy
+#| msgctxt "applet category"
+#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Osobné informácie"
+msgstr "Systémové informácie"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
@@ -347,13 +341,18 @@ msgid "Running"
 msgstr "Beží"
 
 #: shellprivate/widgetexplorer.cpp:158
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
+#| "installed from the system, which are usually installed by the user to a "
+#| "local place."
+#| msgid "Uninstallable"
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Nainštalované používateľom"
+msgstr "Odinštalovateľné"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -361,7 +360,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr "Nedávno nainštalované"
+msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:166
 #, kde-format
@@ -379,10 +378,11 @@ msgid "Install Widget From Local File…"
 msgstr "Inštalovať widget z lokálneho súboru..."
 
 #: shellprivate/widgetexplorer.cpp:484
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Widgets"
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Získať nové miniaplikácie"
+msgstr "Všetky widgety"
 
 #: shellprivate/widgetexplorer.cpp:503
 #, kde-format
@@ -390,10 +390,11 @@ msgid "Select Plasmoid File"
 msgstr "Vybrať súbor plazmoidu"
 
 #: shellprivate/widgetexplorer.cpp:519
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Installing the package %1 failed."
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Inštalácia balíčka %1 zlyhala: %2."
+msgstr "Inštalácia balíčka %1 zlyhala."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format
@@ -407,47 +408,46 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
-"Aktuálne vybrané časové pásmo nie je k dispozícii na zobrazenie na tejto mape"
 
 #: timezoneselector/TimezoneSelector.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr "Priblížiť"
+msgstr ""
 
 #: timezoneselector/TimezoneSelector.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr "Oddialiť"
+msgstr ""
 
 #: timezoneselector/TimezoneSelector.qml:239
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr "Región:"
+msgstr ""
 
 #: timezoneselector/TimezoneSelector.qml:246
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr "Vybrať..."
+msgstr ""
 
 #: timezoneselector/TimezoneSelector.qml:250
 #, kde-format
 msgid "Timezone region selector"
-msgstr "Výber časového pásma"
+msgstr ""
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr "Časové pásmo:"
+msgstr ""
 
 #: timezoneselector/TimezoneSelector.qml:281
 #, kde-format
 msgid "Timezone location selector"
-msgstr "Výber časového pásma"
+msgstr ""
 
 #~ msgid "&Execute"
 #~ msgstr "S&pustiť"

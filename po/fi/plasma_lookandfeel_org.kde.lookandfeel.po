@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 02:42+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2025-01-12 17:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -21,42 +21,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: contents/logout/Logout.qml:152
+#: contents/logout/Logout.qml:149
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] "1 sekunti sovellusten asentamiseen ja käynnistykseen"
 msgstr[1] "%1 sekuntia sovellusten asentamiseen ja käynnistykseen"
 
-#: contents/logout/Logout.qml:153
+#: contents/logout/Logout.qml:150
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Käynnistetään uudelleen sekunnin kuluttua"
 msgstr[1] "Käynnistetään uudelleen %1 sekunnissa"
 
-#: contents/logout/Logout.qml:155
+#: contents/logout/Logout.qml:152
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Uloskirjautuminen 1 sekunnin kuluttua"
 msgstr[1] "Uloskirjautuminen %1 sekunnin kuluttua"
 
-#: contents/logout/Logout.qml:158
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] "1 sekunti sovellusten asentamiseen ja sammutukseen"
 msgstr[1] "%1 sekuntia sovellusten asentamiseen ja sammutukseen"
 
-#: contents/logout/Logout.qml:159
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Sammutus 1 sekunnin kuluttua"
 msgstr[1] "Sammutus %1 sekunnin kuluttua"
 
-#: contents/logout/Logout.qml:174
+#: contents/logout/Logout.qml:171
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -71,20 +71,27 @@ msgstr[1] ""
 "Kirjautuneena on %1 muutakin käyttäjää. Jos tietokone sammutetaan tai "
 "käynnistetään uudelleen, he voivat menettää työnsä."
 
-#: contents/logout/Logout.qml:189
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr ""
+"Uudelleenkäynnistettäessä tietokone siirtyy laiteohjelmiston asetusnäyttöön."
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Uudelleenkäynnistettäessä tietokone siirtyy laiteohjelmiston asetusnäyttöön."
 
-#: contents/logout/Logout.qml:202
+#: contents/logout/Logout.qml:205
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr ""
 "Uudelleenkäynnistettäessä tietokone siirtyy laiteohjelmiston "
 "käynnistysvalikkoon."
 
-#: contents/logout/Logout.qml:215
+#: contents/logout/Logout.qml:218
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the boot loader menu."
 msgctxt "%1 is a boot loader entry"
@@ -93,71 +100,71 @@ msgstr ""
 "Uudelleenkäynnistettäessä tietokone siirtyy laiteohjelmiston "
 "käynnistysvalikkoon."
 
-#: contents/logout/Logout.qml:237
+#: contents/logout/Logout.qml:240
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&Valmiustila"
 
-#: contents/logout/Logout.qml:238
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "&Valmiustila nyt"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "&Hibernate"
 msgstr "L&epotila"
 
-#: contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "L&epotila nyt"
 
-#: contents/logout/Logout.qml:259
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Asenna päivitykset ja käynnistä uudelleen"
 
-#: contents/logout/Logout.qml:261 contents/logout/Logout.qml:280
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
 msgid "&Restart"
 msgstr "Käynnistä &uudelleen"
 
-#: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart Now"
 msgstr "Käynnistä &uudelleen nyt"
 
-#: contents/logout/Logout.qml:294
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Asenna päivitykset ja sammuta"
 
-#: contents/logout/Logout.qml:296 contents/logout/Logout.qml:315
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, kde-format
 msgid "&Shut Down"
 msgstr "&Sammuta"
 
-#: contents/logout/Logout.qml:297 contents/logout/Logout.qml:316
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "&Sammuta nyt"
 
-#: contents/logout/Logout.qml:328
+#: contents/logout/Logout.qml:331
 #, kde-format
 msgid "&Log Out"
 msgstr "Ki&rjaudu ulos"
 
-#: contents/logout/Logout.qml:329
+#: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out Now"
 msgstr "Ki&rjaudu ulos nyt"
 
-#: contents/logout/Logout.qml:339
+#: contents/logout/Logout.qml:342
 #, kde-format
 msgid "&Cancel"
 msgstr "&Peru"
