@@ -188,7 +188,7 @@ msgstr "Görsel görüntüleyicisi:"
 #: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
-msgstr "Müzik çalar:"
+msgstr "Müzikçalar:"
 
 #: ui/main.qml:144
 #, kde-format

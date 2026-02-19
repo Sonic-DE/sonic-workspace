@@ -2,20 +2,19 @@
 # Roman Paholík <wizzardsk@gmail.com>, 2020.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
-# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 03:19+0000\n"
-"PO-Revision-Date: 2026-01-15 20:11+0100\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
+"PO-Revision-Date: 2023-11-11 14:50+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
@@ -98,14 +97,18 @@ msgid "Change Wallet Password?"
 msgstr "Zmeniť heslo peňaženky?"
 
 #: src/ui/ChangeWalletPassword.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Now that you have changed your login password, you may also want to "
+#| "change the password on your default KWallet to match it."
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"Teraz, keď ste zmenili svoje prihlasovacie heslo, zvážte zmenu hesla vo "
-"vašom predvolenom KWallet, aby sa zhodovalo s novým heslom."
+"Teraz, keď ste zmenili svoje prihlasovacie heslo, môžete tiež zmeniť heslo "
+"svojej predvoleného KWallet, aby sa s ním zhodovalo."
 
 #: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
@@ -177,13 +180,15 @@ msgid "Confirm password:"
 msgstr "Potvrďte heslo:"
 
 #: src/ui/CreateUser.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create"
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Vytvoriť"
 
 #: src/ui/CreateUser.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -192,10 +197,11 @@ msgstr "Zrušiť"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr "Vyberte oblasť obrázku"
+msgstr ""
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Finger Enrolled"
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Odtlačok pridaný"
@@ -357,16 +363,20 @@ msgid "Users"
 msgstr "Používatelia"
 
 #: src/ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button As in, 'add new user'"
+#| msgid "Add New"
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Pridať nového..."
+msgstr "Pridať nového"
 
 #: src/ui/main.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button As in, 'add new user'"
+#| msgid "Add New"
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Pridať nového používateľa..."
+msgstr "Pridať nového"
 
 #: src/ui/main.qml:137
 #, kde-format
@@ -522,8 +532,6 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
-"Obrázkové súbory (všetky hlavné typy súborov) (*.avif *.bmp *.gif *.jp2 *."
-"jpeg *.jpg *.pbm * .pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:201
 #, kde-format
@@ -541,13 +549,14 @@ msgstr "Používať dočasnú ikonu pre používateľa"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr "Odstrániť prihláseného používateľa bez odstránenia súborov?"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:115
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete User…"
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Odstrániť prihláseného používateľa?"
+msgstr "Vymazať používateľa..."
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -557,9 +566,6 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
-"%1 je momentálne prihlásený, takže jeho súbory nemožno odstrániť. Chcete "
-"namiesto toho odstrániť len účet?<nl/><nl/>Týmto krokom sa %1 nebude môcť "
-"znovu prihlásiť a až do odhlásenia sa môže stretnúť s neobvyklým správaním."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -568,14 +574,13 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
-"%1 je momentálne prihlásený. Vymazaním účtu sa mu znemožní opätovné "
-"prihlásenie a až do odhlásenia sa môže stretnúť s nezvyčajným správaním."
 
 #: src/ui/UserDetailsPage.qml:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete files"
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Odstrániť %1"
+msgstr "Vymazať súbory"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -589,9 +594,6 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
-"Po prihlásení nemôžete zmeniť svoje používateľské meno; odhláste sa a potom "
-"sa prihláste ako iný používateľ, aby ste mohli zmeniť používateľské meno "
-"tohto účtu."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -600,8 +602,6 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
-"Nemôžete zmeniť používateľské meno prihláseného používateľa; počkajte, kým "
-"sa tento používateľ najskôr odhlási."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -610,9 +610,6 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
-"Typ účtu nemožno zmeniť na štandardný, pokiaľ v systéme nie je aspoň jeden "
-"ďalší účet správcu. Bez neho by overenie bolo nemožné alebo by vyžadovalo "
-"nebezpečné použitie hesla root."
 
 #: src/ui/UserDetailsPage.qml:222
 #, kde-format
@@ -641,8 +638,6 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
-"Nemôžete sa odstrániť! Odhláste sa a potom sa prihláste ako iný používateľ, "
-"aby ste mohli odstrániť tento používateľský účet."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
@@ -667,7 +662,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr "Nepodarilo sa orezať obrázok: %1"
+msgstr ""
 
 #: src/user.cpp:337
 #, kde-format
