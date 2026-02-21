@@ -35,16 +35,16 @@ void NotificationWindow::setTakeFocus(bool takeFocus)
 
 bool NotificationWindow::isCritical() const
 {
-    return m_critial;
+    return m_critical;
 }
 
 void NotificationWindow::setIsCritical(bool critical)
 {
-    if (m_critial == critical) {
+    if (m_critical == critical) {
         return;
     }
 
-    m_critial = critical;
+    m_critical = critical;
 
     KX11Extras::setType(winId(), critical ? NET::CriticalNotification : NET::Notification);
 
