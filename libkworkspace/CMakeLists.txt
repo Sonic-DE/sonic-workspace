@@ -1,5 +1,4 @@
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-outputorder.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-outputorder.h)
 
 set(kworkspace_LIB_SRCS kdisplaymanager.cpp
     sessionmanagement.cpp

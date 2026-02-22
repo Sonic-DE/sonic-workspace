@@ -8,6 +8,8 @@
 #include "outputorderwatcher.h"
 #include "screenpool-debug.h"
 
+#include <config-X11.h>
+
 #include <KWindowSystem>
 #include <QDebug>
 #include <QGuiApplication>
