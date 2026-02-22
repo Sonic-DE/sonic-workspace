@@ -127,7 +127,7 @@ set_package_properties(QALCULATE PROPERTIES
    TYPE REQUIRED)
 pkg_check_modules(DBus dbus-1 REQUIRED IMPORTED_TARGET)
 
-find_package(KWinDBusInterface CONFIG REQUIRED)
+find_package(KWinX11DBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 
 # Used in kcm_autostart
