@@ -85,6 +85,7 @@ Q_SIGNALS:
     void enabledChanged();
     void favoritesChanged();
     void maxFavoritesChanged();
+    void favoriteAdded(const QString &id);
 
 private:
     class Private;

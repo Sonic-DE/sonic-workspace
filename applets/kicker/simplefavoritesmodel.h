@@ -61,6 +61,7 @@ Q_SIGNALS:
     void favoritesChanged() const;
     void maxFavoritesChanged() const;
     void dropPlaceholderIndexChanged();
+    void favoriteAdded(const QString &id);
 
 private:
     AbstractEntry *favoriteFromId(const QString &id);

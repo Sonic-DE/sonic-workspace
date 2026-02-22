@@ -673,6 +673,7 @@ void KAStatsFavoritesModel::addFavoriteTo(const QString &id, const Activity &act
     QStringList matchers{d->m_activities.currentActivity(), QStringLiteral(":global"), QStringLiteral(":current")};
     if (std::find_first_of(activity.values.cbegin(), activity.values.cend(), matchers.cbegin(), matchers.cend()) != activity.values.cend()) {
         d->addResult(id, index);
+        Q_EMIT favoriteAdded(id);
     }
 
     const auto url = d->normalizedId(id).value();

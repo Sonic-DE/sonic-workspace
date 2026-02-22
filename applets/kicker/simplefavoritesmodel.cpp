@@ -181,6 +181,7 @@ void SimpleFavoritesModel::addFavorite(const QString &id, int index)
 
     Q_EMIT countChanged();
     Q_EMIT favoritesChanged();
+    Q_EMIT favoriteAdded(id);
 }
 
 void SimpleFavoritesModel::removeFavorite(const QString &id)
