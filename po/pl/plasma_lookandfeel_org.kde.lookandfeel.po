@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-18 16:13+0100\n"
+"PO-Revision-Date: 2026-02-21 09:06+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -80,12 +80,11 @@ msgstr[2] ""
 "czym pracowali."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
 "Po ponownym uruchomieniu, komputer przejdzie do ekranu ustawiania "
-"oprogramowania układowego."
+"oprogramowania układowego UEFI."
 
 #: contents/logout/Logout.qml:190
 #, kde-format

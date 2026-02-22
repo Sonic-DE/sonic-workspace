@@ -1,25 +1,26 @@
 # translation of kcmicons.po to Polish
-# Version: $Revision: 1729009 $
+# Version: $Revision: 1730402 $
 # translation of kcmicons.po to
+# SPDX-FileCopyrightText: 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2008, 2009.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008.
 # Marta Rybczynska <kde-i18n@rybczynska.net>, 2009.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2023-09-17 12:58+0200\n"
+"PO-Revision-Date: 2026-02-21 08:39+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -77,30 +78,28 @@ msgid "Get New…"
 msgstr "Pobierz nowe…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Icon Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
 msgstr "Usuń zestaw ikon"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Name of the current icon theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr "Nazwa bieżącego zestawu ikon"
+msgstr "Nie można usunąć używanego zestawu ikon"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed icon themes"
-msgstr ""
+msgstr "Nie można usunąć zestawu ikon wgranych na całym systemie"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "Nie usuwaj tego zestawu ikon"
 
 #: ui/main.qml:250
 #, kde-format

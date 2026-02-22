@@ -2,14 +2,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008, 2009, 2010.
-# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:48+0000\n"
-"PO-Revision-Date: 2025-08-17 12:08+0200\n"
+"PO-Revision-Date: 2026-02-21 08:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: actions/checkaction.cpp:71
 #, kde-format
@@ -166,11 +166,7 @@ msgid "Could not repair this device: %1"
 msgstr "Nie można naprawić tego urządzenia: %1"
 
 #: qml/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Checking…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
 "filesystem errors'"
@@ -178,11 +174,7 @@ msgid "Checking…"
 msgstr "Sprawdzanie…"
 
 #: qml/DeviceItem.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Repairing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
 "errors and is being repaired'"

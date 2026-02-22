@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-18 00:48+0000\n"
-"PO-Revision-Date: 2025-11-01 09:24+0100\n"
+"PO-Revision-Date: 2026-02-21 08:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -76,7 +76,7 @@ msgstr "Ustawienia…"
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
-msgstr ""
+msgstr "%1 K"
 
 #: ui/main.qml:123
 #, kde-format

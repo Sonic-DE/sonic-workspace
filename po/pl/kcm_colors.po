@@ -1,7 +1,7 @@
 # translation of kcmcolors.po to Polish
 # translation of kcmcolors.po to
-# Version: $Revision: 1729009 $
-# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# Version: $Revision: 1730402 $
+# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Norbert Popiołek <norbert@kde.com.pl>\n"
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-11-14 08:51+0100\n"
+"PO-Revision-Date: 2026-02-21 08:47+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -859,7 +859,7 @@ msgstr "Użyj innych barw dla nie&aktywnych zaznaczeń"
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "Wy&cieniuj sortowaną kolumnę w listach"
+msgstr "Wyc&ieniuj sortowaną kolumnę w listach"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:38
@@ -1356,29 +1356,27 @@ msgid "Edit Color Scheme…"
 msgstr "Edytuj zestaw kolorów..."
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Usuń zestaw kolorów"
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Narzędzie do edycji i tworzenia zestawów kolorów"
+msgstr "Nie można usunąć używanego zestawów kolorów"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Nie można usunąć zestawu kolorów wgranych na całym systemie"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Nie usuwaj tego zestawu kolorów"
 
 #: ui/main.qml:380
 #, kde-format
