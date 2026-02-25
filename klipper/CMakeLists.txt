@@ -46,7 +46,7 @@ target_link_libraries(klipper
     KF6::WindowSystem
     KF6::XmlGui
     Plasma::PlasmaQuick
-    ${ZLIB_LIBRARY}
+    ZLIB::ZLIB
 )
 
 target_link_libraries(klipper XCB::XCB XCB::AUX)
