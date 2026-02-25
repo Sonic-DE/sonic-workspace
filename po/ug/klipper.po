@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2026-02-25 00:49+0000\n"
 "PO-Revision-Date: 2026-02-09 18:14-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -604,46 +604,46 @@ msgstr "سىنبەلگە بۇيرۇقنىڭ كۆڭۈلدىكى قىممىتىگ�
 msgid "Icon:"
 msgstr "سىنبەلگە:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
 "چاپلاش تاختىسى تارىخ خاتىرىسى يۇلتۇزلۇق تۈرنى ئۆز ئىچىگە ئالىدۇ. ئۇلارنىمۇ "
 "تازىلامدۇ؟"
 
-#: historymodel.cpp:282 historymodel.cpp:302
+#: historymodel.cpp:284 historymodel.cpp:304
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "چاپلاش تاختىسى تارىخىنى تازىلا"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:285
 #, kde-format
 msgid "Clear Everything"
 msgstr "ھەممىنى تازىلا"
 
-#: historymodel.cpp:284
+#: historymodel.cpp:286
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "يۇلتۇزلانغان تۈرنى ساقلاپ قال"
 
-#: historymodel.cpp:301
+#: historymodel.cpp:303
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "پۈتكۈل چاپلاش تاختىسىنىڭ تارىخى خاتىرىسىنى راستتىنلا تازىلاپ ۋە ئۆچۈرەمسىز؟"
 
-#: historymodel.cpp:385
+#: historymodel.cpp:387
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:565
+#: historymodel.cpp:567
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "بۇ تۈر يۇلتۇزلانغان. ئۇنى راستتىنلا تارىخ خاتىرىسىدىن چىقىرىۋېتەمسىز؟"
 
-#: historymodel.cpp:566
+#: historymodel.cpp:568
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "يۇلتۇزلانغان تۈرنى چىقىرىۋەت"

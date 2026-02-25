@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 02:38+0000\n"
+"POT-Creation-Date: 2026-02-25 00:49+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/klipper.pot\n"
-"X-Crowdin-File-ID: 50888\n"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/klipper.pot\n"
+"X-Crowdin-File-ID: 42995\n"
 
 #: configdialog.cpp:84
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "仅在明确复制时"
 #: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "是否将选中的文本内容保存到剪贴板的历史记录。"
+msgstr "是否将选中的文字内容保存到剪贴板的历史记录。"
 
 #: configdialog.cpp:177
 #, kde-format
@@ -93,7 +93,7 @@ msgstr "永不保存到历史记录"
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
-msgstr "是否将选中的非文本内容 (如图像) 保存到剪贴板的历史记录。"
+msgstr "是否将选中的非文字内容 (如图像) 保存到剪贴板的历史记录。"
 
 #: configdialog.cpp:263
 #, kde-format
@@ -353,22 +353,22 @@ msgstr "调用操作"
 msgid "Show QR code"
 msgstr "显示二维码"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:47
 #, kde-format
 msgid "Edit contents"
 msgstr "编辑内容"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "移出历史记录"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Remove Star"
 msgstr "移除星标"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Star"
 msgstr "星标"
@@ -774,7 +774,7 @@ msgstr "仅接受纯文本选中内容"
 msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
-msgstr "仅保存选中的文本内容到剪贴板历史记录，不保存图像或者其他类型的数据。"
+msgstr "仅保存选中的文字内容到剪贴板历史记录，不保存图像或者其他类型的数据。"
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
