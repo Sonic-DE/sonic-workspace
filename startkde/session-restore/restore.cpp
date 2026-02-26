@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < count; i++) {
         const QString app = sessionGroup.readEntry(QStringLiteral("program%1").arg(QString::number(i + 1)), QString());
 
-        auto apps = KApplicationTrader::query([&app](const KService::Ptr &service) {
+        const auto apps = KApplicationTrader::query([&app](const KService::Ptr &service) {
             const QString binary = KIO::DesktopExecParser::executablePath(service->exec());
             return !service->noDisplay() && !binary.isEmpty() && app.endsWith(binary);
         });
