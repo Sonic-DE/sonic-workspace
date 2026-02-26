@@ -353,7 +353,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
                 settingsChanged();
             }
 
-            m_model->setSelectedScheme(savedThemes.last());
+            m_model->setSelectedScheme(savedThemes.constLast());
         }
 
         m_editDialogProcess->deleteLater();
