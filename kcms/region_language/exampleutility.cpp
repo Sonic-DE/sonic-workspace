@@ -326,8 +326,8 @@ QStringList Utility::getLangCodeFromLocale(const QLocale &locale)
         languages += language;
     }
     // `uiLanguages` don't offer the minimal version for some locale, such as fr_DZ.
-    if (auto pos = languages.last().indexOf(QLatin1Char('_')); pos >= 0) {
-        languages += languages.last().left(pos);
+    if (auto pos = languages.constLast().indexOf(QLatin1Char('_')); pos >= 0) {
+        languages += languages.constLast().left(pos);
     }
     return languages;
 }
