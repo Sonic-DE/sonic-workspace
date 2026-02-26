@@ -406,7 +406,7 @@ void CKCmFontInst::fontsSelected(const QModelIndexList &list)
     if (!m_previewHidden) {
         if (!list.isEmpty()) {
             if (list.count() < 2) {
-                auto *mi = static_cast<CFontModelItem *>(list.last().internalPointer());
+                auto *mi = static_cast<CFontModelItem *>(list.constLast().internalPointer());
                 CFontItem *font = mi->parent() ? static_cast<CFontItem *>(mi) : (static_cast<CFamilyItem *>(mi))->regularFont();
 
                 if (font) {
@@ -611,7 +611,7 @@ void CKCmFontInst::deleteFonts()
                 == KMessageBox::warningContinueCancel(widget(),
                                                       i18n("<p>Do you really want to "
                                                            "delete</p><p>\'<b>%1</b>\'?</p>",
-                                                           fontNames.first()),
+                                                           fontNames.constFirst()),
                                                       i18n("Delete Font"),
                                                       KStandardGuiItem::del());
             break;
@@ -653,7 +653,7 @@ void CKCmFontInst::moveFonts()
                 == KMessageBox::warningContinueCancel(widget(),
                                                       i18n("<p>Do you really want to "
                                                            "move</p><p>\'<b>%1</b>\'</p><p>from <i>%2</i> to <i>%3</i>?</p>",
-                                                           fontNames.first(),
+                                                           fontNames.constFirst(),
                                                            m_groupListView->isSystem() ? KFI_KIO_FONTS_SYS.toString() : KFI_KIO_FONTS_USER.toString(),
                                                            m_groupListView->isSystem() ? KFI_KIO_FONTS_USER.toString() : KFI_KIO_FONTS_SYS.toString()),
                                                       i18n("Move Font"),

@@ -1754,7 +1754,7 @@ void CFontListView::startDrag(Qt::DropActions supportedActions)
             return;
         }
 
-        QModelIndex index(m_proxy->mapToSource(indexes.first()));
+        QModelIndex index(m_proxy->mapToSource(indexes.constFirst()));
         QStringView icon = u"application-x-font-pcf";
 
         if (index.isValid()) {

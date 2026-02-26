@@ -811,8 +811,8 @@ CGroupListItem::EType CGroupListView::getType()
 {
     QModelIndexList selectedItems(selectedIndexes());
 
-    if (!selectedItems.isEmpty() && selectedItems.last().isValid()) {
-        auto *grp = static_cast<CGroupListItem *>(selectedItems.last().internalPointer());
+    if (!selectedItems.isEmpty() && selectedItems.constLast().isValid()) {
+        auto *grp = static_cast<CGroupListItem *>(selectedItems.constLast().internalPointer());
 
         return grp->type();
     }
@@ -841,9 +841,9 @@ void CGroupListView::selectionChanged(const QItemSelection &selected, const QIte
     QModelIndexList selectedItems(selectedIndexes());
 
     if (0 == selectedItems.count() && 1 == deselectedItems.count()) {
-        selectionModel()->select(deselectedItems.last(), QItemSelectionModel::Select);
+        selectionModel()->select(deselectedItems.constLast(), QItemSelectionModel::Select);
     } else {
-        Q_EMIT itemSelected(selectedItems.count() ? selectedItems.last() : QModelIndex());
+        Q_EMIT itemSelected(selectedItems.count() ? selectedItems.constLast() : QModelIndex());
     }
 }
 
