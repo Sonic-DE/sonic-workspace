@@ -82,7 +82,7 @@ QRectF AbstractLayoutManager::candidateGeometry(ItemContainer *item) const
         // Failure to layout, completely full
         return originalItemRect;
     } else {
-        return distances.first();
+        return std::as_const(distances).first();
     }
 }
 
