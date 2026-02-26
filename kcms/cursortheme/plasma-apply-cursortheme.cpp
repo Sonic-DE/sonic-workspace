@@ -85,7 +85,7 @@ int main(int argc, char **argv)
             // and since one of the main purposes of this tool is to allow adopting things from a KNS dialog,
             // we handle that little weirdness here.
             splitTheme.removeAll(QStringLiteral("*"));
-            requestedTheme = splitTheme.last();
+            requestedTheme = splitTheme.constLast();
         }
 
         if (settings->cursorTheme() == requestedTheme) {

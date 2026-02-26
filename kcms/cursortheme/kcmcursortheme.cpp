@@ -348,10 +348,10 @@ void CursorThemeConfig::ghnsEntryChanged(const KNSCore::Entry &entry)
     if (entry.status() == KNSCore::Entry::Deleted) {
         for (const QString &deleted : entry.uninstalledFiles()) {
             auto list = QStringView(deleted).split(QLatin1Char('/'));
-            if (list.last() == QLatin1Char('*')) {
+            if (list.constLast() == QLatin1Char('*')) {
                 list.takeLast();
             }
-            QModelIndex idx = m_themeModel->findIndex(list.last().toString());
+            QModelIndex idx = m_themeModel->findIndex(list.constLast().toString());
             if (idx.isValid()) {
                 m_themeModel->removeTheme(idx);
             }
