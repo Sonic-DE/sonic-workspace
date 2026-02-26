@@ -554,11 +554,11 @@ void AppsModel::refreshInternal()
                     m_entryList << new AppEntry(this, service, m_appNameFormat);
                 }
             } else if (p->isType(KST_KServiceSeparator) && m_showSeparators && m_showTopLevelItems) {
-                if (!m_entryList.count()) {
+                if (m_entryList.empty()) {
                     continue;
                 }
 
-                if (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+                if (m_entryList.constLast()->type() == AbstractEntry::SeparatorType) {
                     continue;
                 }
 
@@ -568,7 +568,7 @@ void AppsModel::refreshInternal()
         }
 
         if (m_entryList.count()) {
-            while (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+            while (m_entryList.constLast()->type() == AbstractEntry::SeparatorType) {
                 m_entryList.removeLast();
                 --m_separatorCount;
             }
@@ -581,8 +581,8 @@ void AppsModel::refreshInternal()
         KServiceGroup::Ptr group = KServiceGroup::group(m_entryPath);
         processServiceGroup(group);
 
-        if (m_entryList.count()) {
-            while (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+        if (!m_entryList.empty()) {
+            while (m_entryList.constLast()->type() == AbstractEntry::SeparatorType) {
                 m_entryList.removeLast();
                 --m_separatorCount;
             }
@@ -720,7 +720,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 continue;
             }
 
-            if (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+            if (m_entryList.constLast()->type() == AbstractEntry::SeparatorType) {
                 continue;
             }
 
