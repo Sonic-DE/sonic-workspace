@@ -49,7 +49,7 @@ int main(int argc, char **argv)
         QString requestedTheme{parser->positionalArguments().constFirst()};
         constexpr QLatin1Char dirSplit{'/'};
         if (requestedTheme.contains(dirSplit)) {
-            requestedTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts).last();
+            requestedTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts).constLast();
         }
         if (themeGroup.readEntry("name", u"default"_s) == requestedTheme) {
             ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedTheme) << Qt::endl;
