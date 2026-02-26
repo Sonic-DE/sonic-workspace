@@ -719,10 +719,11 @@ void ShellCorona::sanitizeScreenLayout(const QString &configFileName)
     QHash<int, int> screenMapping;
 
     // Ensure desktops screens are progressive
-    for (auto activityIt = savedContainmentScreens.begin(); activityIt != savedContainmentScreens.end(); activityIt++) {
+    for (auto activityIt = savedContainmentScreens.cbegin(); activityIt != savedContainmentScreens.cend(); activityIt = std::next(activityIt)) {
         const QString &activity = activityIt.key();
         int progressiveScreen = 0;
-        for (auto originalScreenIt = activityIt.value().begin(); originalScreenIt != activityIt.value().end(); originalScreenIt++) {
+        for (auto originalScreenIt = activityIt.value().cbegin(); originalScreenIt != activityIt.value().cend();
+             originalScreenIt = std::next(originalScreenIt)) {
             KConfigGroup contCg(&cg, originalScreenIt.value());
             screenMapping[originalScreenIt.key()] = progressiveScreen;
             contCg.writeEntry(QStringLiteral("lastScreen"), progressiveScreen++);
@@ -1002,7 +1003,7 @@ void ShellCorona::slotCyclePanelFocus()
     auto *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
     if (!activePanel) {
         // Activate the first panel and save the previous window
-        activePanel = m_panelViews.begin().value();
+        activePanel = m_panelViews.cbegin().value();
     }
 
     if (activePanel->containment()->status() != Plasma::Types::AcceptingInputStatus) {
@@ -1010,7 +1011,7 @@ void ShellCorona::slotCyclePanelFocus()
     } else {
         // Cancel focus on the current panel
         // Block focus on the panel if it's not the last panel
-        if (activePanel != m_panelViews.last()) {
+        if (activePanel != std::as_const(m_panelViews).last()) {
             m_blockRestorePreviousWindow = true;
         }
         activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
@@ -1018,8 +1019,8 @@ void ShellCorona::slotCyclePanelFocus()
 
         // More than one panel and the current panel is not the last panel,
         // move focus to next panel.
-        if (activePanel != m_panelViews.last()) {
-            auto viewIt = std::ranges::find_if(m_panelViews, [activePanel](const PanelView *panel) {
+        if (activePanel != std::as_const(m_panelViews).last()) {
+            auto viewIt = std::ranges::find_if(std::as_const(m_panelViews), [activePanel](const PanelView *panel) {
                 return activePanel == panel;
             });
 
@@ -2518,7 +2519,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     if (availableLocations.isEmpty()) {
         loc = Plasma::Types::TopEdge;
     } else {
-        loc = availableLocations.first();
+        loc = availableLocations.constFirst();
     }
 
     panel->setLocation(loc);
