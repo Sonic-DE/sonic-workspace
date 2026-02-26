@@ -110,7 +110,7 @@ QIcon FaviconFromBlob::iconFor(const QString &url)
         if (faviconFound.isEmpty())
             return defaultIcon();
 
-        QByteArray iconData = faviconFound.first().value(m_blobcolumn).toByteArray();
+        QByteArray iconData = faviconFound.constFirst().value(m_blobcolumn).toByteArray();
         // qDebug() << "Favicon found: " << iconData.size() << " bytes";
         if (iconData.size() <= 0)
             return defaultIcon();

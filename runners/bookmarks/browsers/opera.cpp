@@ -31,7 +31,7 @@ QList<BookmarkMatch> Opera::match(const QString &term, bool addEverything)
     // search
     for (const QString &entry : std::as_const(m_operaBookmarkEntries)) {
         QStringList entryLines = entry.split(QStringLiteral("\n"));
-        if (!entryLines.first().startsWith(QLatin1String("#URL"))) {
+        if (!entryLines.constFirst().startsWith(QLatin1String("#URL"))) {
             continue; // skip folder entries
         }
         entryLines.pop_front();
