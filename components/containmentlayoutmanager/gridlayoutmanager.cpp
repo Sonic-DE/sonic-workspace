@@ -229,9 +229,9 @@ bool GridLayoutManager::assignSpaceImpl(ItemContainer *item, QRectF geometry)
 
 void GridLayoutManager::releaseSpaceImpl(ItemContainer *item)
 {
-    auto it = m_pointsForItem.find(item);
+    auto it = m_pointsForItem.constFind(item);
 
-    if (it == m_pointsForItem.end()) {
+    if (it == m_pointsForItem.cend()) {
         return;
     }
 
