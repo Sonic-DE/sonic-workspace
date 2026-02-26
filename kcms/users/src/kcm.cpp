@@ -111,8 +111,8 @@ QString KCMUser::initializeString(const QString &stringToGrabInitialsOf)
     auto normalized = stringToGrabInitialsOf.normalized(QString::NormalizationForm_D);
     if (normalized.contains(u' ')) {
         QStringList split = normalized.split(u' ');
-        auto first = split.first();
-        auto last = split.last();
+        auto first = split.constFirst();
+        auto last = split.constLast();
         if (first.isEmpty()) {
             return {last.front()};
         }
