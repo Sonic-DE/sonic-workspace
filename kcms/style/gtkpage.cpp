@@ -60,7 +60,7 @@ void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
         Q_EMIT showErrorMessage(i18n("%1 is not a valid GTK Theme archive.", fileUrl.fileName()));
     };
 
-    QString firstEntryName = themeArchive.directory()->entries().first();
+    QString firstEntryName = themeArchive.directory()->entries().constFirst();
     const KArchiveEntry *possibleThemeDirectory = themeArchive.directory()->entry(firstEntryName);
     if (possibleThemeDirectory->isDirectory()) {
         const auto *themeDirectory = static_cast<const KArchiveDirectory *>(possibleThemeDirectory);
