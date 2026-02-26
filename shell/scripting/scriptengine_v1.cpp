@@ -515,7 +515,7 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
     }
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
-    KPluginMetaData pluginData(offers.first());
+    KPluginMetaData pluginData(offers.constFirst());
 
     QString path;
     {
