@@ -43,7 +43,7 @@ Firefox::Firefox(const QString &firefoxConfigDir)
     QString profilePath;
     if (profilesList.size() == 1) {
         // There is only 1 profile so we select it
-        KConfigGroup fGrp = firefoxProfile.group(profilesList.first());
+        KConfigGroup fGrp = firefoxProfile.group(profilesList.constFirst());
         profilePath = fGrp.readEntry("Path");
     } else {
         const QStringList installConfig = firefoxProfile.groupList().filter(QRegularExpression(u"^Install.*"_s));
