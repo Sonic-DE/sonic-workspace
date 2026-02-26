@@ -59,7 +59,7 @@ static QIcon componentIcon(const AppStream::Component &comp)
                 break;
             }
             if (ret.isNull() && !stock.isEmpty()) {
-                ret = QIcon::fromTheme(stock.first());
+                ret = QIcon::fromTheme(stock.constFirst());
             }
         }
     return ret;
