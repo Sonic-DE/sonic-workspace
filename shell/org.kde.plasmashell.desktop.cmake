@@ -1,7 +1,7 @@
 [Desktop Entry]
 Exec=@CMAKE_INSTALL_PREFIX@/bin/plasmashell
 X-DBUS-StartupType=Unique
-Name=Plasma Desktop Workspace
+Name=Plasma
 Name[ar]=مساحة عمل سطح مكتب بلازما
 Name[az]=Plasma İş masası Mühiti
 Name[be]=Працоўныя прасторы Plasma
