@@ -240,7 +240,7 @@ KLookAndFeelManifest KLookAndFeelManifest::snapshot()
                                                                 QStringLiteral("dumpCurrentLayoutJS"));
     const QDBusMessage reply = QDBusConnection::sessionBus().call(message);
     if (reply.type() == QDBusMessage::ReplyMessage) {
-        manifest.setDesktopLayout(reply.arguments().first().toString());
+        manifest.setDesktopLayout(reply.arguments().constFirst().toString());
     }
 
     return manifest;
