@@ -83,8 +83,8 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
                                      << "notifications";
         q->beginRemoveRows(QModelIndex(), 0, cleanupCount - 1);
         for (int i = 0; i < cleanupCount; ++i) {
-            Notification::Private::s_imageCache.remove(notifications.at(0).id());
-            q->stopTimeout(notifications.first().id());
+            Notification::Private::s_imageCache.remove(notifications.constFirst().id());
+            q->stopTimeout(notifications.constFirst().id());
             notifications.removeAt(0);
             // TODO close gracefully?
         }
@@ -222,7 +222,7 @@ void AbstractNotificationsModel::Private::removeRows(const QList<int> &rows)
 
     QList<QPair<int, int>> clearQueue;
 
-    QPair<int, int> clearRange{rowsToBeRemoved.first(), rowsToBeRemoved.first()};
+    QPair<int, int> clearRange{rowsToBeRemoved.constFirst(), rowsToBeRemoved.constFirst()};
 
     for (int row : rowsToBeRemoved) {
         if (row > clearRange.second + 1) {
@@ -233,7 +233,7 @@ void AbstractNotificationsModel::Private::removeRows(const QList<int> &rows)
         clearRange.second = row;
     }
 
-    if (clearQueue.isEmpty() || clearQueue.last() != clearRange) {
+    if (clearQueue.isEmpty() || clearQueue.constLast() != clearRange) {
         clearQueue.append(clearRange);
     }
 
