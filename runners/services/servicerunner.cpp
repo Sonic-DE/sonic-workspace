@@ -282,7 +282,7 @@ private:
         if (KIO::DesktopExecParser::executableName(service->exec()) == QLatin1String("env")) {
             resultingArgs.removeFirst(); // remove "env".
 
-            while (!resultingArgs.isEmpty() && resultingArgs.first().contains(QLatin1Char('='))) {
+            while (!resultingArgs.isEmpty() && resultingArgs.constFirst().contains(QLatin1Char('='))) {
                 resultingArgs.removeFirst();
             }
 
