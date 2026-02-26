@@ -69,7 +69,7 @@ StartupNotify=false
 X-DBUS-ServiceName=org.kde.plasmashell
 OnlyShowIn=KDE;
 X-KDE-autostart-phase=0
-Icon=plasmashell
+Icon=plasma-symbolic
 NoDisplay=true
 X-systemd-skip=true
 
