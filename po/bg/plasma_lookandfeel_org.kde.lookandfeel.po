@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2026-01-19 19:11+0100\n"
+"PO-Revision-Date: 2026-02-25 19:22+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -68,11 +68,10 @@ msgstr[1] ""
 "рестартиран, тези потребители може да загубят данни."
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"Когато се рестартира, компютърът ще влезе в екрана за настройка на фърмуера."
+"Когато се рестартира, компютърът ще влезе в екрана за настройка на UEFI."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
