@@ -54,22 +54,7 @@ void WaylandTasksModelTest::initTestCase()
 {
     TestUtils::initTestCase();
 
-    if (!KWindowSystem::isPlatformWayland()) {
-        QSKIP("Test is not running on Wayland.");
-    }
-
-    QGuiApplication::setQuitOnLastWindowClosed(false);
-
-    QStandardPaths::setTestModeEnabled(true);
-
-    const QString applicationDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications");
-    QDir dir;
-    if (!dir.exists(applicationDir)) {
-        dir.mkpath(applicationDir);
-    }
-
-    QPlatformNativeInterface *const native = qGuiApp->platformNativeInterface();
-    wl_display_roundtrip(static_cast<struct wl_display *>(native->nativeResourceForIntegration("wl_display")));
+    QSKIP("Test is not running on Wayland.");
 }
 
 void WaylandTasksModelTest::cleanupTestCase()

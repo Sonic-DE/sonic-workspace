@@ -80,15 +80,6 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     setColor(QColor(Qt::transparent));
     setScreen(screen);
 
-    if (KWindowSystem::isPlatformWayland() && !m_windowed) {
-        if (auto w = LayerShellQt::Window::get(this)) {
-            w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
-            w->setExclusiveZone(-1);
-            w->setLayer(LayerShellQt::Window::LayerOverlay);
-            w->setScreen(screen);
-        }
-    }
-
     setResizeMode(PlasmaQuick::QuickViewSharedEngine::SizeRootObjectToView);
 
     // Qt doesn't set this on unmanaged windows

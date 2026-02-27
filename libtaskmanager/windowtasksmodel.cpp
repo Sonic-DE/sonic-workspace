@@ -52,10 +52,6 @@ WindowTasksModel::Private::~Private()
 
 void WindowTasksModel::Private::initSourceTasksModel()
 {
-    if (!sourceTasksModel && KWindowSystem::isPlatformWayland()) {
-        sourceTasksModel = new WaylandTasksModel();
-    }
-
 #if HAVE_X11
     if (!sourceTasksModel && KWindowSystem::isPlatformX11()) {
         sourceTasksModel = new XWindowTasksModel();

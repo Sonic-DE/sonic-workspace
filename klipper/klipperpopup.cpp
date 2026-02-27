@@ -124,25 +124,6 @@ void KlipperPopup::positionOnScreen()
         setPosition(QCursor::pos(shownOnScreen));
         setScreen(shownOnScreen);
         KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
-    } else if (m_plasmashell && KWindowSystem::isPlatformWayland()) {
-        auto surface = KWayland::Client::Surface::fromWindow(this);
-        auto plasmaSurface = m_plasmashell->createSurface(surface, this);
-        plasmaSurface->openUnderCursor();
-        plasmaSurface->setSkipTaskbar(true);
-        plasmaSurface->setSkipSwitcher(true);
-        plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::AppletPopup);
-
-        if (screens.size() > 1) {
-            auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
-            QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
-            if (reply.isValid()) {
-                const QString activeOutputName = reply.value();
-                auto screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
-                    return screen->name() == activeOutputName;
-                });
-                setScreen(screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen());
-            }
-        }
     }
 }
 

@@ -489,30 +489,6 @@ void WaylandTasksModel::Private::init()
 
 void WaylandTasksModel::Private::initWayland()
 {
-    if (!KWindowSystem::isPlatformWayland()) {
-        return;
-    }
-
-    windowManagement = std::make_unique<PlasmaWindowManagement>();
-
-    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::activeChanged, q, [this] {
-        q->beginResetModel();
-        windows.clear();
-        q->endResetModel();
-    });
-
-    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::windowCreated, q, [this](PlasmaWindow *window) {
-        connect(window, &PlasmaWindow::initialStateDone, q, [this, window] {
-            addWindow(window);
-        });
-    });
-
-    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::stackingOrderChanged, q, [this](const QList<QString> &order) {
-        stackingOrder = order;
-        for (const auto &window : std::as_const(windows)) {
-            this->dataChanged(window.get(), StackingOrder);
-        }
-    });
 }
 
 auto WaylandTasksModel::Private::findWindow(PlasmaWindow *window) const

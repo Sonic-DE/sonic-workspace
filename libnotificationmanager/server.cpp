@@ -76,16 +76,6 @@ void Server::invokeAction(uint notificationId,
                           Notifications::InvokeBehavior behavior,
                           QWindow *window)
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        auto tokenFuture = KWaylandExtras::xdgActivationToken(window, xdgActivationAppId);
-        tokenFuture.then(this, [this, actionName, notificationId, behavior](const QString &token) {
-            Q_EMIT d->ActivationToken(notificationId, token);
-            Q_EMIT d->ActionInvoked(notificationId, actionName);
-            if (behavior & Notifications::Close) {
-                Q_EMIT d->CloseNotification(notificationId);
-            }
-        });
-    } else {
         KStartupInfoId startupId;
         startupId.initId();
 
@@ -95,7 +85,6 @@ void Server::invokeAction(uint notificationId,
         if (behavior & Notifications::Close) {
             Q_EMIT d->CloseNotification(notificationId);
         }
-    }
 }
 
 void Server::reply(const QString &dbusService, uint notificationId, const QString &text, Notifications::InvokeBehavior behavior)

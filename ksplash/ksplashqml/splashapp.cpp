@@ -72,10 +72,6 @@ SplashApp::SplashApp(int &argc, char **argv)
 
     setStage(QStringLiteral("initial"));
 
-    if (KWindowSystem::isPlatformWayland()) {
-        setStage(QStringLiteral("wm"));
-    }
-
     if (m_testing) {
         m_timer.start(TEST_STEP_INTERVAL, this);
     }
@@ -141,10 +137,6 @@ void SplashApp::adoptScreen(QScreen *screen)
 
 void SplashApp::setupWaylandIntegration()
 {
-    if (!KWindowSystem::isPlatformWayland()) {
-        return;
-    }
-    LayerShellQt::Shell::useLayerShell();
 }
 
 #include "moc_splashapp.cpp"

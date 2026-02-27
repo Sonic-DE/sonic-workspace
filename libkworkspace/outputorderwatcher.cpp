@@ -93,11 +93,8 @@ OutputOrderWatcher *OutputOrderWatcher::instance(QObject *parent)
 #if HAVE_X11
     if (KWindowSystem::isPlatformX11()) {
         return new X11OutputOrderWatcher(parent);
-    } else
-#endif
-        if (KWindowSystem::isPlatformWayland()) {
-        return new WaylandOutputOrderWatcher(parent);
     }
+#endif
     // return default impl that does something at least
     return new OutputOrderWatcher(parent);
 }

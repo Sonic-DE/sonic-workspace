@@ -40,10 +40,6 @@ Greeter::~Greeter()
 
 void Greeter::setupWaylandIntegration()
 {
-    if (!KWindowSystem::isPlatformWayland() || m_windowed) {
-        return;
-    }
-    LayerShellQt::Shell::useLayerShell();
 }
 
 void Greeter::init()

@@ -66,13 +66,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_lengthMode(FillAvailable)
     , m_backgroundHints(Plasma::Types::StandardBackground)
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        m_layerWindow = LayerShellQt::Window::get(this);
-        m_layerWindow->setLayer(LayerShellQt::Window::LayerTop);
-        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
-        m_layerWindow->setScope(QStringLiteral("dock"));
-        m_layerWindow->setCloseOnDismissed(false);
-    }
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
         setScreenToFollow(targetScreen);
@@ -1577,23 +1570,7 @@ void PanelView::updateExclusiveZone()
         return;
     }
 
-    if (KWindowSystem::isPlatformWayland()) {
-        switch (m_visibilityMode) {
-        case NormalPanel:
-            if (m_corona->shouldPanelReserveSpace(this)) {
-                m_layerWindow->setExclusiveZone(thickness());
-            } else {
-                m_layerWindow->setExclusiveZone(-1);
-            }
-            break;
-        case AutoHide:
-        case DodgeWindows:
-        case WindowsGoBelow:
-            m_layerWindow->setExclusiveZone(-1);
-            break;
-        }
-        requestUpdate();
-    } else {
+    {
 #if HAVE_X11
         qreal top_width = 0, top_start = 0, top_end = 0;
         qreal bottom_width = 0, bottom_start = 0, bottom_end = 0;

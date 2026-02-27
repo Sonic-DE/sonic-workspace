@@ -53,10 +53,6 @@ StartupTasksModel::Private::~Private()
 
 void StartupTasksModel::Private::initSourceTasksModel()
 {
-    if (!sourceTasksModel && KWindowSystem::isPlatformWayland()) {
-        sourceTasksModel = new WaylandStartupTasksModel();
-    }
-
 #if HAVE_X11
     if (!sourceTasksModel && KWindowSystem::isPlatformX11()) {
         sourceTasksModel = new XStartupTasksModel();

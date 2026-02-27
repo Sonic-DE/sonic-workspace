@@ -78,39 +78,6 @@ AppMenuModel::AppMenuModel(QObject *parent)
             Q_EMIT modelNeedsUpdate();
         }
     });
-
-    // X11 has funky menu behaviour that prevents this from working properly.
-    if (KWindowSystem::isPlatformWayland()) {
-        m_searchAction = new QAction(this);
-        m_searchAction->setText(i18n("Search"));
-        m_searchAction->setObjectName(QStringLiteral("appmenu"));
-
-        m_searchMenu.reset(new QMenu);
-        auto searchAction = new QWidgetAction(this);
-        auto searchBar = new QLineEdit;
-        searchBar->setClearButtonEnabled(true);
-        searchBar->setPlaceholderText(i18n("Search…"));
-        searchBar->setMinimumWidth(200);
-        searchBar->setContentsMargins(4, 4, 4, 4);
-        connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, searchBar, [searchBar]() {
-            searchBar->setText(QString());
-        });
-        connect(searchBar, &QLineEdit::textChanged, this, [searchBar, this]() mutable {
-            insertSearchActionsIntoMenu(searchBar->text());
-        });
-        connect(searchBar, &QLineEdit::returnPressed, this, [this]() mutable {
-            if (!m_currentSearchActions.empty()) {
-                m_currentSearchActions.constFirst()->trigger();
-            }
-        });
-        connect(this, &AppMenuModel::modelNeedsUpdate, searchBar, [this, searchBar]() mutable {
-            insertSearchActionsIntoMenu(searchBar->text());
-        });
-        searchAction->setDefaultWidget(searchBar);
-        m_searchMenu->addAction(searchAction);
-        m_searchMenu->addSeparator();
-        m_searchAction->setMenu(m_searchMenu.get());
-    }
 }
 
 AppMenuModel::~AppMenuModel() = default;
