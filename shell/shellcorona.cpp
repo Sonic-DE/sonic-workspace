@@ -114,8 +114,6 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_strutManager(new StrutManager(this))
     , m_shellContainmentConfig(nullptr)
 {
-    setupWaylandIntegration();
-
     qDBusRegisterMetaType<QColor>();
 
     setupLookAndFeel();
@@ -2870,10 +2868,6 @@ bool DismissPopupEventFilter::eventFilter(QObject *watched, QEvent *event)
     }
 
     return false;
-}
-
-void ShellCorona::setupWaylandIntegration()
-{
 }
 
 ScreenPool *ShellCorona::screenPool() const

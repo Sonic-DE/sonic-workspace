@@ -273,7 +273,6 @@ private:
     void updateStruts();
     void configurationChanged(const QString &path);
     DesktopView *desktopForScreen(QScreen *screen) const;
-    void setupWaylandIntegration();
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
     void checkAllDesktopsUiReady();
     void activateLauncherMenu(const QString &screenName);
