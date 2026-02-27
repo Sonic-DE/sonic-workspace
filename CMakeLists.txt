@@ -55,7 +55,6 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 
 if (Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
     find_package(Qt6GuiPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
-    find_package(Qt6WaylandClientPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 endif()
 
 find_package(QCoro6 REQUIRED COMPONENTS Core)
@@ -67,7 +66,6 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     OPTIONAL_COMPONENTS DocTools)
 find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaQuick ${PROJECT_DEP_VERSION} REQUIRED)
-find_package(KWayland ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(KSysGuard ${PROJECT_DEP_VERSION} CONFIG)
@@ -81,7 +79,6 @@ find_package(LayerShellQt ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 if (BUILD_TESTING)
     include(ECMAddTests)
     find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test QuickTest)
-    find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
 endif()
 
 find_package(KF6Kirigami ${KF6_MIN_VERSION} CONFIG)
@@ -204,10 +201,6 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
         set(HAVE_CRYPT_GENSALT true)
     endif()
 endif()
-
-find_package(Qt6WaylandClient COMPONENTS Private)
-find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
-find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
 
 if(FONTCONFIG_FOUND)
   # kfontinst
