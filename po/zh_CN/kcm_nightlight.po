@@ -96,7 +96,3 @@ msgstr "暖"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "夜间色温："
-
-#~ msgctxt "Color temperature in Kelvin"
-#~ msgid "%1K"
-#~ msgstr "%1K"

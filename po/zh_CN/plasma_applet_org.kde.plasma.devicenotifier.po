@@ -156,28 +156,20 @@ msgid "Could not repair this device: %1"
 msgstr "无法修复此设备：%1"
 
 #: qml/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Checking…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
 "filesystem errors'"
 msgid "Checking…"
-msgstr "正在检查…"
+msgstr ""
 
 #: qml/DeviceItem.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Repairing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
 "errors and is being repaired'"
 msgid "Repairing…"
-msgstr "正在修复…"
+msgstr ""
 
 #: qml/DeviceItem.qml:104
 #, kde-format
