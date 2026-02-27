@@ -38,10 +38,6 @@ Greeter::~Greeter()
     qDeleteAll(m_dialogs);
 }
 
-void Greeter::setupWaylandIntegration()
-{
-}
-
 void Greeter::init()
 {
     // If we're already shutting down we don't need another prompt,
@@ -51,8 +47,6 @@ void Greeter::init()
         QApplication::quit();
         return;
     }
-
-    setupWaylandIntegration();
 
     if (!m_windowed) {
         // Quit if we lost focus or failed to gain it after 1 second
