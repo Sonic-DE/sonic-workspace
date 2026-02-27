@@ -267,15 +267,11 @@ AutoHideScreenEdge::AutoHideScreenEdge(PanelView *view)
 
 AutoHideScreenEdge *AutoHideScreenEdge::create(PanelView *view)
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        return new WaylandAutoHideScreenEdge(view);
-    } else {
 #if HAVE_X11
         return new X11AutoHideScreenEdge(view);
 #else
         Q_UNREACHABLE();
 #endif
-    }
 }
 
 #include "autohidescreenedge.moc"

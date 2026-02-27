@@ -34,16 +34,6 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
     , m_window(window)
     , m_theme(theme)
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        if (auto layerShellWindow = LayerShellQt::Window::get(this)) {
-            layerShellWindow->setScope(QStringLiteral("ksplashqml"));
-            layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
-            layerShellWindow->setExclusiveZone(-1);
-            layerShellWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
-            layerShellWindow->setScreen(screen);
-        }
-    }
-
     setCursor(Qt::BlankCursor);
     setScreen(screen);
     setColor(Qt::transparent);
@@ -58,14 +48,14 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
         if (KWindowSystem::isPlatformX11()) {
             // X11 specific hint only on X11
             setFlags(Qt::BypassWindowManagerHint);
-        } else if (!KWindowSystem::isPlatformWayland()) {
+        } else {
             // on other platforms go fullscreen
             // on Wayland we cannot go fullscreen due to QTBUG 54883
             setWindowState(Qt::WindowFullScreen);
         }
     }
 
-    if (m_testing && !m_window && !KWindowSystem::isPlatformWayland()) {
+    if (m_testing && !m_window) {
         setWindowState(Qt::WindowFullScreen);
     }
 

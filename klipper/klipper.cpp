@@ -146,22 +146,6 @@ Klipper::Klipper(QObject *parent)
             m_notification->setHint(QStringLiteral("desktop-entry"), QStringLiteral("org.kde.klipper"));
         }
     });
-
-    if (KWindowSystem::isPlatformWayland()) {
-        auto registry = new KWayland::Client::Registry(this);
-        auto connection = KWayland::Client::ConnectionThread::fromApplication(qGuiApp);
-        connect(registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [registry, this](quint32 name, quint32 version) {
-            if (!m_plasmashell) {
-                m_plasmashell = registry->createPlasmaShell(name, version);
-                m_popup->setPlasmaShell(m_plasmashell);
-            }
-        });
-        connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, registry, [registry] {
-            delete registry; // Avoid freeing resource when gui is deleted
-        });
-        registry->create(connection);
-        registry->setup();
-    }
 }
 
 Klipper::~Klipper()

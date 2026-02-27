@@ -2874,22 +2874,6 @@ bool DismissPopupEventFilter::eventFilter(QObject *watched, QEvent *event)
 
 void ShellCorona::setupWaylandIntegration()
 {
-    if (!KWindowSystem::isPlatformWayland()) {
-        return;
-    }
-    using namespace KWayland::Client;
-    ConnectionThread *connection = ConnectionThread::fromApplication(this);
-    if (!connection) {
-        return;
-    }
-    auto *registry = new Registry(this);
-    registry->create(connection);
-    connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, this, [this, registry](quint32 name, quint32 version) {
-        m_waylandWindowManagement = registry->createPlasmaWindowManagement(name, version, this);
-    });
-    registry->setup();
-    connection->roundtrip();
-    qApp->installEventFilter(new DismissPopupEventFilter(this));
 }
 
 ScreenPool *ShellCorona::screenPool() const

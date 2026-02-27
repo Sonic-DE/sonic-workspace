@@ -360,18 +360,7 @@ void CFontViewPart::install()
             m_proc->start(Misc::app(KFI_INSTALLER), args);
             m_installButton->setEnabled(false);
         };
-
-        if (KWindowSystem::isPlatformWayland()) {
-            connect(
-                KWaylandExtras::self(),
-                &KWaylandExtras::windowExported,
-                this,
-                [runFontInst](QWindow * /*window*/, const QString &handle) {
-                    runFontInst(handle);
-                },
-                Qt::SingleShotConnection);
-            KWaylandExtras::exportWindow(m_frame->window()->windowHandle());
-        } else {
+        {
             runFontInst(QStringLiteral("0x%1").arg((unsigned int)m_frame->window()->winId(), 0, 16));
         }
     }

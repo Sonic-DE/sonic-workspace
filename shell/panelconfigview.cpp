@@ -47,14 +47,6 @@ PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *pane
     , m_panelView(panelView)
     , m_mainConfigView(mainConfigView)
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        m_layerWindow = LayerShellQt::Window::get(this);
-        m_layerWindow->setLayer(LayerShellQt::Window::LayerTop);
-        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        m_layerWindow->setScope(QStringLiteral("dock"));
-        m_layerWindow->setCloseOnDismissed(false);
-        m_layerWindow->setScreen(m_panelView->screen());
-    }
     setScreen(m_panelView->screen());
 
     connect(this, &PanelRulerView::mainItemChanged, this, &PanelRulerView::syncPanelLocation);

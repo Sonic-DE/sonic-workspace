@@ -330,15 +330,8 @@ int xftDpi()
     KConfig cfg(QStringLiteral("kcmfonts"));
     int dpi = 0;
 
-    if (KWindowSystem::isPlatformWayland()) {
-        KConfig cfg(QStringLiteral("kwinrc"));
-        KConfigGroup xwaylandGroup = cfg.group(QStringLiteral("Xwayland"));
-        qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
-        dpi = scale * 96;
-    } else {
-        KConfigGroup fontsCfg(&cfg, u"General"_s);
-        dpi = fontsCfg.readEntry(QStringLiteral("forceFontDPI"), 96);
-    }
+    KConfigGroup fontsCfg(&cfg, u"General"_s);
+    dpi = fontsCfg.readEntry(QStringLiteral("forceFontDPI"), 96);
 
     return dpi;
 }
@@ -386,12 +379,6 @@ void runRdb(unsigned int flags)
     KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), u"Mouse"_s);
     QString theme = mousecfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
     int cursorSize = mousecfg.readEntry("cursorSize", 24);
-
-    if (KWindowSystem::isPlatformWayland()) {
-        KConfig kwinConfig(QStringLiteral("kwinrc"));
-        KConfigGroup xwaylandGroup(&kwinConfig, u"Xwayland"_s);
-        cursorSize *= xwaylandGroup.readEntry("Scale", 1.0);
-    }
 
     QString contents;
     contents += "Xcursor.theme: "_L1 + theme + u'\n';

@@ -367,67 +367,6 @@ auto VirtualDesktopInfo::WaylandPrivate::findDesktop(const QString &id) const
 
 void VirtualDesktopInfo::WaylandPrivate::init()
 {
-    if (!KWindowSystem::isPlatformWayland()) {
-        return;
-    }
-
-    virtualDesktopManagement = std::make_unique<PlasmaVirtualDesktopManagement>();
-
-    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::activeChanged, this, [this] {
-        if (!virtualDesktopManagement->isActive()) {
-            rows = 0;
-            virtualDesktops.clear();
-            currentVirtualDesktop.clear();
-            Q_EMIT currentDesktopChanged();
-            Q_EMIT numberOfDesktopsChanged();
-            Q_EMIT navigationWrappingAroundChanged();
-            Q_EMIT desktopIdsChanged();
-            Q_EMIT desktopNamesChanged();
-            Q_EMIT desktopPositionsChanged();
-            Q_EMIT desktopLayoutRowsChanged();
-        }
-    });
-
-    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::desktopCreated, this, &WaylandPrivate::addDesktop);
-
-    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::desktopRemoved, this, [this](const QString &id) {
-        std::erase_if(virtualDesktops, [id](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
-            return desktop->id == id;
-        });
-
-        Q_EMIT numberOfDesktopsChanged();
-        Q_EMIT desktopIdsChanged();
-        Q_EMIT desktopNamesChanged();
-        Q_EMIT desktopPositionsChanged();
-
-        if (currentVirtualDesktop == id) {
-            currentVirtualDesktop.clear();
-            Q_EMIT currentDesktopChanged();
-        }
-    });
-
-    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::rowsChanged, this, [this](quint32 rows) {
-        this->rows = rows;
-        Q_EMIT desktopLayoutRowsChanged();
-    });
-
-    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::done, this, [this]() {
-        bool reordered = false;
-        for (uint i = 0; i < virtualDesktops.size(); ++i) {
-            if (virtualDesktops[i]->position != i) {
-                reordered = true;
-                break;
-            }
-        }
-
-        if (reordered) {
-            std::ranges::sort(virtualDesktops, [](std::unique_ptr<PlasmaVirtualDesktop> &a, std::unique_ptr<PlasmaVirtualDesktop> &b) {
-                return a->position < b->position;
-            });
-
-            Q_EMIT desktopPositionsChanged();
-        }
-    });
 }
 
 void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 position)

@@ -67,19 +67,6 @@ void SystemTray::init()
     connect(this, &Containment::appletAdded, this, [this](Plasma::Applet *applet) {
         disconnect(applet, &Applet::activated, this, &Applet::activated);
     });
-
-    if (KWindowSystem::isPlatformWayland()) {
-        auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
-        KConfigGroup kscreenGroup = config->group(QStringLiteral("KScreen"));
-        m_xwaylandClientsScale = kscreenGroup.readEntry("XwaylandClientsScale", true);
-
-        m_configWatcher = KConfigWatcher::create(config);
-        connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-            if (group.name() == u"KScreen" && names.contains(QByteArrayLiteral("XwaylandClientsScale"))) {
-                m_xwaylandClientsScale = group.readEntry("XwaylandClientsScale", true);
-            }
-        });
-    }
 }
 
 void SystemTray::initSettingsAndRegistry()
@@ -277,24 +264,6 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
             return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
         }
 #endif
-
-        if (KWindowSystem::isPlatformWayland()) {
-            if (!m_xwaylandClientsScale) {
-                return pos;
-            }
-
-            const qreal devicePixelRatio = window->devicePixelRatio();
-
-            if (QGuiApplication::screens().size() == 1) {
-                return pos * devicePixelRatio;
-            }
-
-            const QRect geometry = window->screen()->geometry();
-            const QRect nativeGeometry = window->screen()->handle()->geometry();
-            const QPointF nativeGlobalPosOnCurrentScreen = (pos - geometry.topLeft()) * devicePixelRatio;
-
-            return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
-        }
     }
 
     return QPoint();
