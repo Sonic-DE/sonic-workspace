@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2026-01-31 18:17+0530\n"
+"PO-Revision-Date: 2026-02-27 21:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -68,10 +68,9 @@ msgstr[1] ""
 "அப்பயனர்கள் அவர்தம் தரவை இழக்க கூடும்."
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "மீள்துவக்கப்படும்போது கணினி சாதனநிரல் அமைப்புகளில் நுழையும்."
+msgstr "மீள்துவக்கப்படும்போது கணினி சாதனநிரல் (UEFI) அமைப்புகளில் நுழையும்."
 
 #: contents/logout/Logout.qml:193
 #, kde-format

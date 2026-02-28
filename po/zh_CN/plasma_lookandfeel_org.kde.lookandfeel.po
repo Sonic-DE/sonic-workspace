@@ -62,7 +62,7 @@ msgstr[0] ""
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
+msgstr "重启后，电脑将进入 UEFI 固件设置。"
 
 #: contents/logout/Logout.qml:193
 #, kde-format
