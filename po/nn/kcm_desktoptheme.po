@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-09-01 15:04+0200\n"
+"PO-Revision-Date: 2026-03-01 19:29+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -151,26 +151,25 @@ msgstr "Rediger tema …"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr ""
+msgstr "Fjern Plasma-stil"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "Namn på gjeldande Plasma-stil"
+msgstr "Kan ikkje sletta den gjeldande Plasma-stilen"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "Kan ikkje sletta systeminstallerte Plasma-stilar"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Ikkje slette denne Plasma-stilen"
 
 #: ui/main.qml:205
 #, kde-format

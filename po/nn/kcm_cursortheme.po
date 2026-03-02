@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:46+0000\n"
-"PO-Revision-Date: 2023-08-05 23:04+0200\n"
+"PO-Revision-Date: 2026-03-01 19:14+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -161,29 +161,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(gjeldande tema for denne Plasma-økta)"
 
 #: ui/Delegate.qml:48
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr "Tilbakestill peikartema"
+msgstr "Fjern peikartema"
 
 #: ui/Delegate.qml:50
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr "Namn på gjeldande peikartema"
+msgstr "Kan ikkje sletta det gjeldande peikartemaet"
 
 #: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgstr "Kan ikkje sletta systeminstallerte peikartema"
 
 #: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "Ikkje slett dette peikartemaet"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
