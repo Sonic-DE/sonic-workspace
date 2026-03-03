@@ -295,7 +295,7 @@ private:
     QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;
-    QList<Plasma::Containment *> m_waitingPanels;
+    QList<QPointer<Plasma::Containment>> m_waitingPanels;
     QHash<QString, QString> m_activityContainmentPlugins;
     QAction *m_addPanelAction;
     std::unique_ptr<QMenu> m_addPanelsMenu;
