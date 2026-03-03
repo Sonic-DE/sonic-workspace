@@ -1,22 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Vit Pelcak <vit@pelcak.org>
-# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-08 02:54+0000\n"
-"PO-Revision-Date: 2026-03-13 14:11+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"PO-Revision-Date: 2024-08-28 11:26+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -26,13 +25,13 @@ msgstr "Zdědit jazyk"
 #, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr "Mezinárodní elektrotechnická komise (IEC)"
+msgstr ""
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr "Společná rada pro elektronická zařízení (JEDEC)"
+msgstr ""
 
 #: binarydialectmodel.cpp:60
 #, kde-format
@@ -44,19 +43,19 @@ msgstr "Metrický systém (SI)"
 #, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr "Binární - kibibajty (KiB), mebibajty (MiB), gibibajty (GiB)"
+msgstr ""
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Binární – kilobajty (KB), megabajty (MB), gigabajty (GB)"
+msgstr ""
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Decimální – kilobajty (kB), megabajty (MB), gigabajty (GB)"
+msgstr ""
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -92,7 +91,7 @@ msgstr "A4"
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr "c/o"
+msgstr ""
 
 #: exampleutility.cpp:94
 #, kde-format
@@ -110,7 +109,7 @@ msgstr "Vývojové oddělení"
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr "Dev-Building"
+msgstr ""
 
 #: exampleutility.cpp:97
 #, kde-format
@@ -266,9 +265,6 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
-"Pomocí nástroje <command>localectl</command> se nepodařilo najít dostupné "
-"národní prostředí systému. Nahlaste prosím tuto chybu na adrese "
-"<link>https://bugs.kde.org</link>."
 
 #: languagelistmodel.cpp:97
 #, kde-format
@@ -288,35 +284,35 @@ msgstr "%1 (Brazílie)"
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
-msgstr "Nelze najít spustitelný soubor „check-language-support“"
+msgstr ""
 
 #: localegeneratorubuntu.cpp:56
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support selhal, výstup: %1 %2"
+msgstr ""
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr "Ne všechny chybějící balíčky se podařilo vyřešit! %1"
+msgstr ""
 
 #: localegeneratorubuntu.cpp:96
 #, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Instalace jazykových balíčků se nezdařila (%1): %2"
+msgstr ""
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
 msgid "Another process is already running, please retry later"
-msgstr "Jiný proces již běží, zkuste to prosím později."
+msgstr ""
 
 #: localegenhelper/localegenhelper.cpp:65
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr "Nejste oprávněni upravovat konfigurační soubor locale."
+msgstr ""
 
 #: localegenhelper/localegenhelper.cpp:115
 #, kde-format
@@ -338,7 +334,7 @@ msgstr "Neznámý"
 msgid "Default for System"
 msgstr "Výchozí pro systém"
 
-#: localelistmodel.cpp:24 localelistmodel.cpp:146 ui/main.qml:387
+#: localelistmodel.cpp:24 localelistmodel.cpp:146 ui/main.qml:388
 #, kde-format
 msgid "Default"
 msgstr "Výchozí"
@@ -468,9 +464,6 @@ msgid ""
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Umístění jakýchkoli jiných jazyků pod angličtinu způsobí nežádoucí chování v "
-"některých aplikacích. Pokud chcete systém používat v angličtině, odstraňte "
-"všechny ostatní jazyky."
 
 #: ui/AdvancedLanguageSelectPage.qml:45
 #, kde-format
@@ -481,7 +474,7 @@ msgstr "Jazyk \"%1\" není podporován"
 #: ui/AdvancedLanguageSelectPage.qml:58
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr "Přidejte jazyky v pořadí, v jakém je chcete vidět ve svých aplikacích."
+msgstr ""
 
 #: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
@@ -553,10 +546,6 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
-"Byly vygenerovány soubory locale a pro podporu jazyků, ale písma specifická "
-"pro daný jazyk nebylo možné nainstalovat automaticky. Pokud váš jazyk "
-"vyžaduje pro správné zobrazení speciální písma, budete muset zjistit, o jaká "
-"písma se jedná, a nainstalovat je sami."
 
 #: ui/main.qml:81
 #, kde-format
@@ -580,45 +569,45 @@ msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr "Velikost dat a úložiště"
 
-#: ui/main.qml:281
+#: ui/main.qml:282
 #, kde-format
 msgid "Numbers"
 msgstr "Čísla"
 
-#: ui/main.qml:283
+#: ui/main.qml:284
 #, kde-format
 msgid "Time"
 msgstr "Čas"
 
-#: ui/main.qml:285
+#: ui/main.qml:286
 #, kde-format
 msgid "Currency"
 msgstr "Měna"
 
-#: ui/main.qml:287
+#: ui/main.qml:288
 #, kde-format
 msgid "Measurements"
 msgstr "Míry"
 
-#: ui/main.qml:289
+#: ui/main.qml:290
 #, kde-format
 msgid "Paper Size"
 msgstr "Velikost papíru"
 
-#: ui/main.qml:291
+#: ui/main.qml:292
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adresa"
 
 # Tohle vypadá na název vlastnosti. Jméno bycvh nechal pro lidi a zvířata.
-#: ui/main.qml:293
+#: ui/main.qml:294
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Název"
 
-#: ui/main.qml:295
+#: ui/main.qml:296
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
