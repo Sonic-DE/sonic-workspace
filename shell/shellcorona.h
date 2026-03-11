@@ -319,7 +319,6 @@ private:
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
     // The set of all the screens which have both the desktop and all panels (if any) fully loaded
     QSet<int> m_screensWithUiReady;
-    friend class ShellTest;
 };
 
 const QDBusArgument &operator>>(const QDBusArgument &argument, QColor &color);
