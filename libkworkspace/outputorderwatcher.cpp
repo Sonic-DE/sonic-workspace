@@ -44,11 +44,7 @@ void OutputOrderWatcher::useFallback(bool fallback, const char *reason)
 
 OutputOrderWatcher *OutputOrderWatcher::instance(QObject *parent)
 {
-    if (KWindowSystem::isPlatformX11()) {
-        return new X11OutputOrderWatcher(parent);
-    }
-    // return default impl that does something at least
-    return new OutputOrderWatcher(parent);
+    return new X11OutputOrderWatcher(parent);
 }
 
 void OutputOrderWatcher::refresh()
