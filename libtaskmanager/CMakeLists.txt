@@ -18,8 +18,6 @@ set(taskmanager_LIB_SRCS
     tasktools.cpp
     virtualdesktopinfo.cpp
     windowtasksmodel.cpp
-    screencasting.cpp screencasting.h
-    screencastingrequest.cpp screencastingrequest.h
 )
 
 if (HAVE_X11)
