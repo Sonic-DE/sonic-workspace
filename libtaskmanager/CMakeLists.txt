@@ -17,7 +17,6 @@ set(taskmanager_LIB_SRCS
     tasksmodel.cpp
     tasktools.cpp
     virtualdesktopinfo.cpp
-    waylandtasksmodel.cpp
     windowtasksmodel.cpp
     screencasting.cpp screencasting.h
     screencastingrequest.cpp screencastingrequest.h
@@ -127,7 +126,6 @@ install(FILES
     tasksmodel.h
     tasktools.h
     virtualdesktopinfo.h
-    waylandtasksmodel.h
     windowtasksmodel.h
     ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
