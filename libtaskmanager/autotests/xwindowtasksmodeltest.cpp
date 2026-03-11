@@ -58,9 +58,6 @@ private:
 void XWindowTasksModelTest::initTestCase()
 {
     TestUtils::initTestCase();
-    if (!KWindowSystem::isPlatformX11()) {
-        QSKIP("Test is not running on X11.");
-    }
 
     char *singleWIdData = new char[sizeof(WId)];
     memcpy(singleWIdData, &m_WId, sizeof(WId));

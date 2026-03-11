@@ -49,9 +49,7 @@ WindowTasksModel::Private::~Private()
 
 void WindowTasksModel::Private::initSourceTasksModel()
 {
-    if (!sourceTasksModel && KWindowSystem::isPlatformX11()) {
-        sourceTasksModel = new XWindowTasksModel();
-    }
+    sourceTasksModel = new XWindowTasksModel();
 
     q->setSourceModel(sourceTasksModel);
 }

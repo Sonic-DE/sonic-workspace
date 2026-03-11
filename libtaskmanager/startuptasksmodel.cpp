@@ -50,7 +50,7 @@ StartupTasksModel::Private::~Private()
 
 void StartupTasksModel::Private::initSourceTasksModel()
 {
-    if (!sourceTasksModel && KWindowSystem::isPlatformX11()) {
+    if (!sourceTasksModel) {
         sourceTasksModel = new XStartupTasksModel();
     }
 
