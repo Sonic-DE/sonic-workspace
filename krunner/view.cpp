@@ -41,9 +41,7 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
 {
     KCrash::initialize();
 
-    if (KWindowSystem::isPlatformX11()) {
-        m_x11Positioner = new X11WindowScreenRelativePositioner(this);
-    }
+    m_x11Positioner = new X11WindowScreenRelativePositioner(this);
 
     // used only by screen readers
     setTitle(i18n("KRunner"));
@@ -153,14 +151,10 @@ void View::loadConfig()
 
 void View::showEvent(QShowEvent *event)
 {
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setOnAllDesktops(winId(), true);
-    }
+    KX11Extras::setOnAllDesktops(winId(), true);
     QQuickWindow::showEvent(event);
     requestActivate();
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::forceActiveWindow(winId());
-    }
+    KX11Extras::forceActiveWindow(winId());
 }
 
 void View::positionOnScreen()
@@ -168,16 +162,14 @@ void View::positionOnScreen()
     const auto screens = QGuiApplication::screens();
     auto screenIt = screens.cend();
 
-    if (KWindowSystem::isPlatformX11()) {
-        screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
-            return screen->geometry().contains(QCursor::pos(screen));
-        });
-    }
+    screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
+        return screen->geometry().contains(QCursor::pos(screen));
+    });
 
     QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
     setScreen(shownOnScreen);
 
-    if (KWindowSystem::isPlatformX11()) {
+    {
         m_x11Positioner->setAnchors(Qt::TopEdge);
         m_x11Positioner->setMargins(margins());
         if (m_floating) {
@@ -191,7 +183,7 @@ void View::positionOnScreen()
 
 void View::toggleDisplay()
 {
-    if (isVisible() && !QGuiApplication::focusWindow() && KWindowSystem::isPlatformX11()) {
+    if (isVisible() && !QGuiApplication::focusWindow()) {
         KX11Extras::forceActiveWindow(winId());
         return;
     }
