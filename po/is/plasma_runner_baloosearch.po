@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-03-12 18:00+0000\n"
+"PO-Revision-Date: 2026-03-10 14:36+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -31,7 +31,7 @@ msgstr "sv1@fellsnet.is, gudmundure@gmail.com"
 #: baloosearchrunner.cpp:42
 #, kde-format
 msgid "File Search"
-msgstr "Skráaleit"
+msgstr "Leita að skrám"
 
 #: baloosearchrunner.cpp:69
 #, kde-format
