@@ -9,10 +9,7 @@
 
 #include <config-X11.h>
 
-#include "waylandstartuptasksmodel.h"
-#if HAVE_X11
 #include "xstartuptasksmodel.h"
-#endif
 
 #include <KWindowSystem>
 
@@ -53,11 +50,9 @@ StartupTasksModel::Private::~Private()
 
 void StartupTasksModel::Private::initSourceTasksModel()
 {
-#if HAVE_X11
     if (!sourceTasksModel && KWindowSystem::isPlatformX11()) {
         sourceTasksModel = new XStartupTasksModel();
     }
-#endif
 
     q->setSourceModel(sourceTasksModel);
 }

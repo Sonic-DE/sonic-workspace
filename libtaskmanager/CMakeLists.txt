@@ -17,7 +17,6 @@ set(taskmanager_LIB_SRCS
     tasksmodel.cpp
     tasktools.cpp
     virtualdesktopinfo.cpp
-    waylandstartuptasksmodel.cpp
     waylandtasksmodel.cpp
     windowtasksmodel.cpp
     screencasting.cpp screencasting.h
@@ -128,7 +127,6 @@ install(FILES
     tasksmodel.h
     tasktools.h
     virtualdesktopinfo.h
-    waylandstartuptasksmodel.h
     waylandtasksmodel.h
     windowtasksmodel.h
     ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
