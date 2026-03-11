@@ -122,9 +122,6 @@ bool CursorTheme::haveXfixes()
     bool result = false;
 
 #ifdef HAVE_XFIXES
-    if (!QX11Info::isPlatformX11()) {
-        return result;
-    }
     int event_base, error_base;
     if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base)) {
         int major, minor;

@@ -17,10 +17,6 @@
 // for xid, and all other widgets can use this as their parent...
 static QWidget *createParent(int xid)
 {
-    if (!QX11Info::isPlatformX11()) {
-        return nullptr;
-    }
-
     if (!xid)
         return nullptr;
 

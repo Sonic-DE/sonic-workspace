@@ -219,9 +219,7 @@ void PreviewWidget::layoutItems()
 {
     if (!list.isEmpty()) {
         double deviceCoordinateWidth = width();
-        if (KWindowSystem::isPlatformX11()) {
-            deviceCoordinateWidth *= window()->devicePixelRatio();
-        }
+        deviceCoordinateWidth *= window()->devicePixelRatio();
         const int spacing = cursorSpacing / 2;
         int nextX = spacing;
         int nextY = spacing;
@@ -269,9 +267,7 @@ void PreviewWidget::paint(QPainter *painter)
     // as they will be rendered by X11/KWin, ignoring whatever Qt
     // scaling
     double devicePixelRatio = 1;
-    if (KWindowSystem::isPlatformX11()) {
-        devicePixelRatio = window()->devicePixelRatio();
-    }
+    devicePixelRatio = window()->devicePixelRatio();
     painter->scale(1 / devicePixelRatio, 1 / devicePixelRatio);
     for (const auto *c : std::as_const(list)) {
         if (c->pixmap().isNull())
@@ -289,9 +285,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
         layoutItems();
 
     double devicePixelRatio = 1.0;
-    if (KWindowSystem::isPlatformX11()) {
-        devicePixelRatio = window()->devicePixelRatio();
-    }
+    devicePixelRatio = window()->devicePixelRatio();
     auto it = std::ranges::find_if(list, [e, devicePixelRatio](const PreviewCursor *c) {
         return c->rect().contains(e->position() * devicePixelRatio);
     });

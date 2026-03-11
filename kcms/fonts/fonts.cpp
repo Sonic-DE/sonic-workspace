@@ -114,7 +114,7 @@ void KFonts::save()
 {
     bool forceFontDPIChanged = false;
 
-    if (KWindowSystem::isPlatformX11()) {
+    {
         auto dpiItem = fontsAASettings()->findItem(u"forceFontDPI"_s);
         auto antiAliasingItem = fontsAASettings()->findItem(u"antiAliasing"_s);
         Q_ASSERT(dpiItem && antiAliasingItem);
@@ -129,7 +129,7 @@ void KFonts::save()
 
     // if the setting is reset in the module, remove the dpi value,
     // otherwise don't explicitly remove it and leave any possible system-wide value
-    if (fontsAASettings()->forceFontDPI() == 0 && forceFontDPIChanged && KWindowSystem::isPlatformX11()) {
+    if (fontsAASettings()->forceFontDPI() == 0 && forceFontDPIChanged) {
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
         proc.start(u"xrdb"_s, QStringList{u"-quiet"_s, u"-remove"_s, u"-nocpp"_s});
