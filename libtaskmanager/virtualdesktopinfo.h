@@ -136,7 +136,6 @@ Q_SIGNALS:
 private:
     class Private;
     class XWindowPrivate;
-    class WaylandPrivate;
     static Private *d;
 };
 

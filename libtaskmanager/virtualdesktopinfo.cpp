@@ -11,21 +11,16 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
-#include <qwayland-org-kde-plasma-virtual-desktop.h>
-
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QGuiApplication>
-#include <QWaylandClientExtension>
 #include <algorithm>
 
 #include <config-X11.h>
 
-#if HAVE_X11
 #include <netwm.h>
-#endif // HAVE_X11
 
 namespace X11Info
 {
@@ -117,7 +112,6 @@ void VirtualDesktopInfo::Private::navigationWrappingAroundChanged(bool newVal)
     Q_EMIT navigationWrappingAroundChanged();
 }
 
-#if HAVE_X11
 class Q_DECL_HIDDEN VirtualDesktopInfo::XWindowPrivate : public VirtualDesktopInfo::Private
 {
     Q_OBJECT
@@ -240,247 +234,6 @@ void VirtualDesktopInfo::XWindowPrivate::requestRemoveDesktop(quint32 position)
         info.setNumberOfDesktops(info.numberOfDesktops() - 1);
     }
 }
-#endif // HAVE_X11
-
-class PlasmaVirtualDesktop : public QObject, public QtWayland::org_kde_plasma_virtual_desktop
-{
-    Q_OBJECT
-public:
-    PlasmaVirtualDesktop(::org_kde_plasma_virtual_desktop *object, const QString &id)
-        : org_kde_plasma_virtual_desktop(object)
-        , id(id)
-    {
-    }
-    ~PlasmaVirtualDesktop()
-    {
-        wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
-    }
-    const QString id;
-    QString name;
-    uint position = 0;
-Q_SIGNALS:
-    void done();
-    void activated();
-
-protected:
-    void org_kde_plasma_virtual_desktop_name(const QString &name) override
-    {
-        this->name = name;
-    }
-    void org_kde_plasma_virtual_desktop_position(uint32_t index) override
-    {
-        this->position = index;
-    }
-    void org_kde_plasma_virtual_desktop_done() override
-    {
-        Q_EMIT done();
-    }
-    void org_kde_plasma_virtual_desktop_activated() override
-    {
-        Q_EMIT activated();
-    }
-};
-
-class PlasmaVirtualDesktopManagement : public QWaylandClientExtensionTemplate<PlasmaVirtualDesktopManagement>,
-                                       public QtWayland::org_kde_plasma_virtual_desktop_management
-{
-    Q_OBJECT
-public:
-    PlasmaVirtualDesktopManagement()
-        : QWaylandClientExtensionTemplate(3)
-    {
-        connect(this, &QWaylandClientExtension::activeChanged, this, [this] {
-            if (!isActive()) {
-                wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
-            }
-        });
-    }
-    ~PlasmaVirtualDesktopManagement()
-    {
-        if (isActive()) {
-            wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
-        }
-    }
-Q_SIGNALS:
-    void desktopCreated(const QString &id, quint32 position);
-    void desktopRemoved(const QString &id);
-    void rowsChanged(const quint32 rows);
-    void done();
-
-protected:
-    void org_kde_plasma_virtual_desktop_management_desktop_created(const QString &desktop_id, uint32_t position) override
-    {
-        Q_EMIT desktopCreated(desktop_id, position);
-    }
-    void org_kde_plasma_virtual_desktop_management_desktop_removed(const QString &desktop_id) override
-    {
-        Q_EMIT desktopRemoved(desktop_id);
-    }
-    void org_kde_plasma_virtual_desktop_management_rows(uint32_t rows) override
-    {
-        Q_EMIT rowsChanged(rows);
-    }
-    void org_kde_plasma_virtual_desktop_management_done() override
-    {
-        Q_EMIT done();
-    }
-};
-
-class Q_DECL_HIDDEN VirtualDesktopInfo::WaylandPrivate : public VirtualDesktopInfo::Private
-{
-    Q_OBJECT
-public:
-    WaylandPrivate();
-
-    QVariant currentVirtualDesktop;
-    std::vector<std::unique_ptr<PlasmaVirtualDesktop>> virtualDesktops;
-    std::unique_ptr<PlasmaVirtualDesktopManagement> virtualDesktopManagement;
-    quint32 rows;
-
-    auto findDesktop(const QString &id) const;
-
-    void init() override;
-    void addDesktop(const QString &id, quint32 position);
-    QVariant currentDesktop() const override;
-    int numberOfDesktops() const override;
-    QVariantList desktopIds() const override;
-    QStringList desktopNames() const override;
-    quint32 position(const QVariant &desktop) const override;
-    int desktopLayoutRows() const override;
-    void requestActivate(const QVariant &desktop) override;
-    void requestCreateDesktop(quint32 position) override;
-    void requestRemoveDesktop(quint32 position) override;
-};
-
-VirtualDesktopInfo::WaylandPrivate::WaylandPrivate()
-    : VirtualDesktopInfo::Private()
-{
-    init();
-}
-
-auto VirtualDesktopInfo::WaylandPrivate::findDesktop(const QString &id) const
-{
-    return std::ranges::find_if(virtualDesktops, [&id](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
-        return desktop->id == id;
-    });
-}
-
-void VirtualDesktopInfo::WaylandPrivate::init()
-{
-}
-
-void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 position)
-{
-    if (findDesktop(id) != virtualDesktops.end()) {
-        return;
-    }
-
-    auto desktop = std::make_unique<PlasmaVirtualDesktop>(virtualDesktopManagement->get_virtual_desktop(id), id);
-    desktop->position = position;
-
-    connect(desktop.get(), &PlasmaVirtualDesktop::activated, this, [id, this]() {
-        currentVirtualDesktop = id;
-        Q_EMIT currentDesktopChanged();
-    });
-
-    connect(desktop.get(), &PlasmaVirtualDesktop::done, this, [this]() {
-        Q_EMIT desktopNamesChanged();
-    });
-
-    virtualDesktops.insert(std::next(virtualDesktops.begin(), position), std::move(desktop));
-
-    Q_EMIT numberOfDesktopsChanged();
-    Q_EMIT desktopIdsChanged();
-    Q_EMIT desktopNamesChanged();
-    Q_EMIT desktopPositionsChanged();
-}
-
-QVariant VirtualDesktopInfo::WaylandPrivate::currentDesktop() const
-{
-    return currentVirtualDesktop;
-}
-
-int VirtualDesktopInfo::WaylandPrivate::numberOfDesktops() const
-{
-    return virtualDesktops.size();
-}
-
-quint32 VirtualDesktopInfo::WaylandPrivate::position(const QVariant &desktop) const
-{
-    if (auto it = findDesktop(desktop.toString()); it != virtualDesktops.end()) {
-        return (*it)->position;
-    }
-    return 0;
-}
-
-QVariantList VirtualDesktopInfo::WaylandPrivate::desktopIds() const
-{
-    QVariantList ids;
-    ids.reserve(virtualDesktops.size());
-
-    std::ranges::transform(virtualDesktops, std::back_inserter(ids), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
-        return desktop->id;
-    });
-    return ids;
-}
-
-QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
-{
-    if (!virtualDesktopManagement->isActive()) {
-        return {};
-    }
-    QStringList names;
-    names.reserve(virtualDesktops.size());
-
-    std::ranges::transform(virtualDesktops, std::back_inserter(names), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
-        return desktop->name;
-    });
-    return names;
-}
-
-int VirtualDesktopInfo::WaylandPrivate::desktopLayoutRows() const
-{
-    if (!virtualDesktopManagement->isActive()) {
-        return 0;
-    }
-
-    return rows;
-}
-
-void VirtualDesktopInfo::WaylandPrivate::requestActivate(const QVariant &desktop)
-{
-    if (!virtualDesktopManagement->isActive()) {
-        return;
-    }
-
-    if (auto it = findDesktop(desktop.toString()); it != virtualDesktops.end()) {
-        (*it)->request_activate();
-    }
-}
-
-void VirtualDesktopInfo::WaylandPrivate::requestCreateDesktop(quint32 position)
-{
-    if (!virtualDesktopManagement->isActive()) {
-        return;
-    }
-    virtualDesktopManagement->request_create_virtual_desktop(i18n("New Desktop"), position);
-}
-
-void VirtualDesktopInfo::WaylandPrivate::requestRemoveDesktop(quint32 position)
-{
-    if (!virtualDesktopManagement->isActive()) {
-        return;
-    }
-    if (virtualDesktops.size() == 1) {
-        return;
-    }
-
-    if (position > (virtualDesktops.size() - 1)) {
-        return;
-    }
-
-    virtualDesktopManagement->request_remove_virtual_desktop(virtualDesktops.at(position)->id);
-}
 
 VirtualDesktopInfo::Private *VirtualDesktopInfo::d = nullptr;
 
@@ -488,14 +241,7 @@ VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent)
     : QObject(parent)
 {
     if (!d) {
-#if HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            d = new VirtualDesktopInfo::XWindowPrivate;
-        } else
-#endif // HAVE_X11
-        {
-            d = new VirtualDesktopInfo::WaylandPrivate;
-        }
+        d = new VirtualDesktopInfo::XWindowPrivate;
     } else {
         ++d->refCount;
     }
