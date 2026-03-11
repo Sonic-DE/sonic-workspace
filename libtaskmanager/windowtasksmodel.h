@@ -23,7 +23,6 @@ namespace TaskManager
  * windowing server the host process is connected to. The underlying
  * windowing system is abstracted away.
  *
- * @see WaylandTasksModel
  * @see XWindowTasksModel
  *
  * @author Eike Hein <hein@kde.org>
