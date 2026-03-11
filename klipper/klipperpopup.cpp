@@ -74,8 +74,7 @@ void KlipperPopup::resizePopup()
 {
     // If the popup is off-screen, move it to the closest edge of the screen
     const QSize popupSize = QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize());
-
-    if (KWindowSystem::isPlatformX11()) {
+    {
         const QRect screenGeometry = screen()->geometry();
         QRect popupGeometry(position(), popupSize);
         if (!screenGeometry.contains(popupGeometry)) {
@@ -83,27 +82,22 @@ void KlipperPopup::resizePopup()
                                  std::clamp(y(), screenGeometry.top(), screenGeometry.bottom() - popupSize.height()));
         }
         setGeometry(popupGeometry);
-    } else {
-        resize(popupSize);
     }
 }
 
 void KlipperPopup::showEvent(QShowEvent *event)
 {
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setOnAllDesktops(winId(), true);
-    }
+    KX11Extras::setOnAllDesktops(winId(), true);
     PlasmaWindow::showEvent(event); // NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher
     requestActivate();
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::forceActiveWindow(winId());
-    }
+    KX11Extras::forceActiveWindow(winId());
 }
 
 void KlipperPopup::positionOnScreen()
 {
     const QList<QScreen *> screens = QGuiApplication::screens();
-    if (KWindowSystem::isPlatformX11()) {
+
+    {
         auto screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
             return screen->geometry().contains(QCursor::pos(screen));
         });
