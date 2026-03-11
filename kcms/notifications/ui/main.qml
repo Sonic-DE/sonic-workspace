@@ -145,7 +145,7 @@ KCM.SimpleKCM {
             checked: kcm.dndSettings.whenScreenSharing
             onClicked: kcm.dndSettings.whenScreenSharing = checked
             // Only applicable to Wayland where we can control who can cast the screen
-            visible: Qt.platform.pluginName.includes("wayland")
+            visible: false
 
             KCM.SettingStateBinding {
                 configObject: kcm.dndSettings

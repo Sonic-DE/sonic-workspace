@@ -32,7 +32,6 @@
 #include "config-fontinst.h"
 #include <KPluginFactory>
 #include <KStandardActions>
-#include <KWaylandExtras>
 #include <KWindowSystem>
 #include <KZip>
 #include <QTemporaryDir>

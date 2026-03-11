@@ -328,11 +328,6 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 
 void CFcEngine::Xft::freeColors()
 {
-    // FIXME: no Xft on Wayland
-    if (!xDisplay()) {
-        return;
-    }
-
     XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_txtColor);
     XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_bgndColor);
     m_txtColor.color.alpha = 0x0000;
@@ -1237,9 +1232,7 @@ XftFont *CFcEngine::getFont(int size)
     qDebug() << m_name << ' ' << m_style << ' ' << size;
 #endif
 
-    if (!xDisplay()) {
-        // FIXME: no Xft on Wayland
-    } else if (m_installed) {
+    if (m_installed) {
         int weight, width, slant;
 
         FC::decomposeStyleVal(m_style, weight, width, slant);

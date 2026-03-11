@@ -26,9 +26,7 @@ target_link_libraries(kcm_colors PRIVATE
     krdb
 )
 
-if(HAVE_X11)
-    target_link_libraries(kcm_colors PRIVATE X11::X11 Qt::GuiPrivate)
-endif()
+target_link_libraries(kcm_colors PRIVATE X11::X11 Qt::GuiPrivate)
 
 target_sources(kcm_colors PRIVATE
     ../kcms-common.cpp

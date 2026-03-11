@@ -7,9 +7,7 @@ target_link_libraries(kcm_fonts_static Qt::Core Qt::Xml KF6::I18n KF6::WindowSys
 
 set_property(TARGET kcm_fonts_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-if(HAVE_X11)
-    target_link_libraries(kcm_fonts_static X11::X11 X11::Xft XCB::IMAGE Qt::GuiPrivate)
-endif()
+target_link_libraries(kcm_fonts_static X11::X11 X11::Xft XCB::IMAGE Qt::GuiPrivate)
 
 kcmutils_add_qml_kcm(kcm_fonts)
 target_sources(kcm_fonts PRIVATE

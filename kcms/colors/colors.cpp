@@ -31,7 +31,6 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KWaylandExtras>
 #include <KWindowSystem>
 
 #include <KIO/DeleteJob>

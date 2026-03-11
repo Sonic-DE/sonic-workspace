@@ -130,10 +130,6 @@ XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
 
 int XCursorTheme::defaultCursorSize() const
 {
-    // TODO: manage Wayland
-    if (!QX11Info::isPlatformX11()) {
-        return 32;
-    }
     /* This code is basically borrowed from display.c of the XCursor library
        We can't use "int XcursorGetDefaultSize(Display *dpy)" because if
        previously the cursor size was set to a custom value, it would return
@@ -161,10 +157,6 @@ int XCursorTheme::defaultCursorSize() const
 
 qulonglong XCursorTheme::loadCursor(const QString &name, int size) const
 {
-    // TODO: manage Wayland
-    if (!QX11Info::isPlatformX11()) {
-        return None;
-    }
     if (size <= 0)
         size = defaultCursorSize();
 
