@@ -40,9 +40,6 @@ int main(int argc, char **argv)
     createConfigDirectory();
     runStartupConfig();
 
-    // Do not sync any of this section with the wayland versions as there scale factors are
-    // sent properly over wl_output
-
     {
         KConfig cfg(QStringLiteral("kdeglobals"));
 
@@ -53,7 +50,7 @@ int main(int argc, char **argv)
         }
     }
 
-    setupCursor(false);
+    setupCursor();
 
     runEnvironmentScripts();
 
@@ -77,7 +74,7 @@ int main(int argc, char **argv)
     // variables (e.g. LANG and LC_*)
     importSystemdEnvrionment();
 
-    if (!startPlasmaSession(false))
+    if (!startPlasmaSession())
         return 1;
 
     // Anything after here is logout

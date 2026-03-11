@@ -1,8 +1,8 @@
 ## StartPlasma
 
-`startplasma` is the main binary invoked by the login manager. It is compiled as two binaries (`startplasma-x11` and `startplasma-wayland`) with some common files. It sets up key environment variables and other core GUI-less tasks, and then triggers the main startup sequence either via requesting the plasma systemd target, or a legacy fallback via plasma-session.
+`startplasma` is the main binary invoked by the login manager. It is compiled as binary `startplasma-x11` with some common files. It sets up key environment variables and other core GUI-less tasks, and then triggers the main startup sequence either via requesting the plasma systemd target, or a legacy fallback via plasma-session.
 
-`startplasma` tracks the status of ksmserver (x11) or kwin_wayland (wayland) to detect when to exit. To ensure all shutdown tasks are complete, it also waits until `plasma-shutdown` exits.
+`startplasma` tracks the status of ksmserver (x11) to detect when to exit. To ensure all shutdown tasks are complete, it also waits until `plasma-shutdown` exits.
 
 ## plasma-dbus-run-session-if-needed
 

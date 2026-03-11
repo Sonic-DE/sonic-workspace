@@ -14,7 +14,6 @@ target_link_libraries(plasma-fallback-session-save
     KF6::ConfigCore
     PW::LibTaskManager
     Qt6::GuiPrivate
-    Wayland::Client
 )
 
 

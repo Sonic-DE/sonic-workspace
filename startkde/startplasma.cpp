@@ -127,7 +127,6 @@ inline bool isSessionVariable(QStringView name)
 {
     // Check is variable is specific to session.
     return name == "DISPLAY"_L1 || name == "XAUTHORITY"_L1 || //
-        name == "WAYLAND_DISPLAY"_L1 || name == "WAYLAND_SOCKET"_L1 || //
         name.startsWith("XDG_"_L1);
 }
 
@@ -219,7 +218,7 @@ void runStartupConfig()
     }
 }
 
-void setupCursor(bool wayland)
+void setupCursor(void)
 {
 #ifdef XCURSOR_PATH
     QByteArray path(XCURSOR_PATH);
@@ -228,7 +227,7 @@ void setupCursor(bool wayland)
 #endif
 
     // TODO: consider linking directly
-    if (!wayland) {
+    {
         const KConfig cfg(QStringLiteral("kcminputrc"));
         const KConfigGroup inputCfg = cfg.group(QStringLiteral("Mouse"));
 
@@ -686,7 +685,7 @@ static void migrateUserScriptsAutostart()
     QDBusConnection::sessionBus().call(message);
 }
 
-bool startPlasmaSession(bool wayland)
+bool startPlasmaSession(void)
 {
     resetSystemdFailedUnits();
     reloadSystemd();
@@ -713,11 +712,7 @@ bool startPlasmaSession(bool wayland)
 
     // We want to exit when both ksmserver and plasma-session-shutdown have finished
     // This also closes if ksmserver crashes unexpectedly, as in those cases plasma-shutdown is not running
-    if (wayland) {
-        serviceWatcher.addWatchedService(QStringLiteral("org.kde.KWinWrapper"));
-    } else {
-        serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
-    }
+    serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.Shutdown"));
     serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
 
@@ -740,12 +735,8 @@ bool startPlasmaSession(bool wayland)
         qCDebug(PLASMA_STARTUP) << "Using classic boot";
 
         QStringList plasmaSessionOptions;
-        if (wayland) {
-            plasmaSessionOptions << QStringLiteral("--no-lockscreen");
-        } else {
-            if (desktopLockedAtStart) {
-                plasmaSessionOptions << QStringLiteral("--lockscreen");
-            }
+        if (desktopLockedAtStart) {
+            plasmaSessionOptions << QStringLiteral("--lockscreen");
         }
 
         startPlasmaSession->setProcessChannelMode(QProcess::ForwardedChannels);
@@ -760,7 +751,7 @@ bool startPlasmaSession(bool wayland)
         startPlasmaSession->start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
     } else {
         qCDebug(PLASMA_STARTUP) << "Using systemd boot";
-        const QString platform = wayland ? QStringLiteral("wayland") : QStringLiteral("x11");
+        const QString platform = QStringLiteral("x11");
 
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                                   QStringLiteral("/org/freedesktop/systemd1"),
@@ -774,9 +765,6 @@ bool startPlasmaSession(bool wayland)
             rc = false;
         } else {
             playStartupSound();
-        }
-        if (wayland) {
-            startKSplashViaSystemd();
         }
     }
     if (rc) {
