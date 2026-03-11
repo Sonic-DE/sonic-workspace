@@ -238,9 +238,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, KSvg::FrameSvg::Enable
     QMargins padding;
     QMargins extraPadding = m_extraPadding.value(window);
 
-    if (KWindowSystem::isPlatformX11()) {
-        extraPadding *= window->devicePixelRatio();
-    }
+    extraPadding *= window->devicePixelRatio();
 
     if (enabledBorders & KSvg::FrameSvg::TopBorder) {
         const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-top-margin")).toSize();

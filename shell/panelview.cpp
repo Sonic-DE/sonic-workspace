@@ -151,8 +151,7 @@ bool PanelView::isUnsupportedEnvironment() const
     // It is a static variable: compute it once and cache the results because
     // we don't expect such configuration to change at runtime.
     static const bool unsupported = []() {
-        const auto isX11 = KWindowSystem::isPlatformX11();
-        return isX11 && vendorIsNVidia();
+        return vendorIsNVidia();
     }();
     return unsupported;
 }
@@ -1104,7 +1103,7 @@ void PanelView::keyPressEvent(QKeyEvent *event)
 void PanelView::integrateScreen()
 {
     updateMask();
-    if (KWindowSystem::isPlatformX11()) {
+    {
         KX11Extras::setOnAllDesktops(winId(), true);
         KX11Extras::setType(winId(), NET::Dock);
         if (auto xcbWindow = nativeInterface<QNativeInterface::Private::QXcbWindow>()) {
@@ -1446,7 +1445,7 @@ void PanelView::updateMask()
                                                  mask);
     }
 
-    if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
+    if (KX11Extras::compositingActive()) {
         const QRect bounding = mask.boundingRect();
         // Always go to screen edge, to preserve fitts law
         switch (containment()->location()) {
@@ -1473,9 +1472,6 @@ void PanelView::updateMask()
 
 bool PanelView::canSetStrut() const
 {
-    if (!KWindowSystem::isPlatformX11()) {
-        return true;
-    }
     // read the wm name, need to do this every time which means a roundtrip unfortunately
     // but WM might have changed
     NETRootInfo rootInfo(qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection(), NET::Supported | NET::SupportingWMCheck);
@@ -1750,9 +1746,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
-        if (KWindowSystem::isPlatformX11()) {
-            KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
-        }
+        KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();
@@ -1760,11 +1754,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         m_corona->savePreviousWindow();
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
-        if (KWindowSystem::isPlatformX11()) {
-            KX11Extras::forceActiveWindow(winId());
-        } else {
-            showTemporarily();
-        }
+        KX11Extras::forceActiveWindow(winId());
 
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
@@ -1786,9 +1776,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
 
         restoreAutoHide();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
-        if (KWindowSystem::isPlatformX11()) {
-            KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
-        }
+        KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();

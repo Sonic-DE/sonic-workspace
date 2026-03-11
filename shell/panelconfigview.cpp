@@ -78,7 +78,7 @@ void PanelRulerView::syncPanelLocation()
         setBorders(Qt::TopEdge);
     }
 
-    if (KWindowSystem::isPlatformX11()) {
+    {
         KX11Extras::setType(winId(), NET::Dock);
         KX11Extras::setState(winId(), NET::KeepAbove);
 
@@ -110,66 +110,6 @@ void PanelRulerView::syncPanelLocation()
         default:
             setPosition(available.bottomLeft() + screen->geometry().topLeft() - QPoint(0, height()));
         }
-    } else if (m_layerWindow) {
-        switch (m_containment->location()) {
-        case Plasma::Types::LeftEdge:
-        case Plasma::Types::RightEdge:
-            m_layerWindow->setDesiredSize(QSize(mainItem()->implicitWidth(), available.height()));
-            break;
-        case Plasma::Types::TopEdge:
-        case Plasma::Types::BottomEdge:
-        default:
-            m_layerWindow->setDesiredSize(QSize(available.width(), mainItem()->implicitHeight()));
-            break;
-        }
-
-        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        LayerShellQt::Window::Anchors anchors;
-
-        switch (m_containment->location()) {
-        case Plasma::Types::TopEdge:
-            anchors.setFlag(LayerShellQt::Window::AnchorTop);
-            break;
-        case Plasma::Types::LeftEdge:
-            anchors.setFlag(LayerShellQt::Window::AnchorLeft);
-            break;
-        case Plasma::Types::RightEdge:
-            anchors.setFlag(LayerShellQt::Window::AnchorRight);
-            break;
-        case Plasma::Types::BottomEdge:
-        default:
-            anchors.setFlag(LayerShellQt::Window::AnchorBottom);
-            break;
-        }
-
-        if (m_containment->formFactor() == Plasma::Types::Horizontal) {
-            switch (m_panelView->alignment()) {
-            case Qt::AlignLeft:
-                anchors.setFlag(LayerShellQt::Window::AnchorLeft);
-                break;
-            case Qt::AlignCenter:
-                break;
-            case Qt::AlignRight:
-                anchors.setFlag(LayerShellQt::Window::AnchorRight);
-                break;
-            }
-        } else {
-            switch (m_panelView->alignment()) {
-            case Qt::AlignLeft:
-                anchors.setFlag(LayerShellQt::Window::AnchorTop);
-                break;
-            case Qt::AlignCenter:
-                break;
-            case Qt::AlignRight:
-                anchors.setFlag(LayerShellQt::Window::AnchorBottom);
-                break;
-            }
-        }
-
-        // m_layerWindow->setMargins(margins);
-        m_layerWindow->setAnchors(anchors);
-
-        requestUpdate();
     }
 }
 

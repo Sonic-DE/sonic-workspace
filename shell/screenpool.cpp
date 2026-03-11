@@ -253,7 +253,6 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         m_fakeScreens.remove(screen);
     } else if (isOutputFake(screen)) {
         // Fake but not in m_fakeScreens can only happen on X11, where the last output quietly renames itself to ":0.0" without signals
-        Q_ASSERT(KWindowSystem::isPlatformX11());
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_fakeScreens.contains(screen));
         m_availableScreens.removeAll(screen);
