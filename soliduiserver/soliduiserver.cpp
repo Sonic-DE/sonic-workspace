@@ -145,7 +145,7 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
     dialog->setAttribute(Qt::WA_NativeWindow, true);
     KWindowSystem::setMainWindow(dialog->windowHandle(), wId); // correct, set dialog parent
 
-    if (KWindowSystem::isPlatformX11()) {
+    {
         if (modal) {
             KX11Extras::setState(dialog->winId(), NET::Modal);
         } else {
