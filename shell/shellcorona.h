@@ -45,12 +45,6 @@ namespace Plasma
 class Applet;
 } // namespace Plasma
 
-namespace KWayland::Client
-{
-class PlasmaWindow;
-class PlasmaWindowManagement;
-}
-
 class ShellCorona : public Plasma::Corona, QDBusContext
 {
     Q_OBJECT
@@ -318,8 +312,6 @@ private:
     QTimer m_invariantsTimer;
 #endif
     // For getting the active window on Wayland
-    KWayland::Client::PlasmaWindowManagement *m_waylandWindowManagement = nullptr;
-    QPointer<KWayland::Client::PlasmaWindow> m_previousPlasmaWindow;
     bool m_closingDown : 1;
     bool m_screenReorderInProgress = false;
     QString m_testModeLayout;
