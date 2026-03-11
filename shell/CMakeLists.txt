@@ -89,18 +89,11 @@ target_sources(plasmashell_osd PRIVATE
 
 target_link_libraries(plasmashell_osd PRIVATE
     Plasma::PlasmaQuick
-    Wayland::Client
 )
 
 if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
 endif()
-qt6_generate_wayland_protocol_client_sources(plasmashell
-    ${private_code_option}
-    FILES
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml
-)
 
 target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
 
@@ -125,15 +118,12 @@ target_link_libraries(plasmashell PRIVATE
  KF6::XmlGui
  LayerShellQt::Interface
  Plasma::Activities
- Plasma::KWaylandClient
  Plasma::Plasma
  Plasma::PlasmaQuick
  PW::KWorkspace
  Qt::GuiPrivate # qpa/qplatformwindow_p.h
  Qt::Quick
  Qt::DBus
- Qt::WaylandClient
- Wayland::Client
 )
 target_link_libraries(plasmashell PRIVATE KF6::ConfigQml)
 if (TARGET KF6::UserFeedbackCore)
