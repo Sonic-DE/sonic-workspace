@@ -84,7 +84,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
 
     // Qt doesn't set this on unmanaged windows
     // FIXME: or does it?
-    if (KWindowSystem::isPlatformX11()) {
+    {
         constexpr auto role = std::string_view("logoutdialog");
         constexpr std::size_t roleLength = role.length();
 
