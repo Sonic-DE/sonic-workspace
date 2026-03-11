@@ -31,7 +31,7 @@
  *  - startPlasma (from startplasma)
  *  - kcminit
  *  - ksmserver
- *  - wm (for X11 from KWin, for Wayland from this class)
+ *  - wm (for X11 from KWin)
  *  - desktop (from shellcorona)
  */
 

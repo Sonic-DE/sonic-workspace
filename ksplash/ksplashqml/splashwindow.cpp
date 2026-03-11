@@ -50,7 +50,6 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
             setFlags(Qt::BypassWindowManagerHint);
         } else {
             // on other platforms go fullscreen
-            // on Wayland we cannot go fullscreen due to QTBUG 54883
             setWindowState(Qt::WindowFullScreen);
         }
     }
