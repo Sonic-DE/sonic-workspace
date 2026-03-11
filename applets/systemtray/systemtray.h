@@ -92,7 +92,6 @@ private:
     void initSettingsAndRegistry();
 
     KConfigWatcher::Ptr m_configWatcher;
-    bool m_xwaylandClientsScale = true;
 
     QPointer<SystemTraySettings> m_settings;
     QPointer<PlasmoidRegistry> m_plasmoidRegistry;
