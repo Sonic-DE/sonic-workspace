@@ -25,10 +25,6 @@ int main(int argc, char **argv)
 
     QGuiApplication app(argc, argv);
 
-    if (!KWindowSystem::isPlatformX11()) {
-        qFatal("gmenudbusmenuproxy is only useful XCB. Aborting");
-    }
-
     KAboutData about(QStringLiteral("gmenudbusmenuproxy"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
     KAboutData::setApplicationData(about);
 
