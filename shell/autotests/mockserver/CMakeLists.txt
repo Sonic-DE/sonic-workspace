@@ -11,7 +11,6 @@ set(SharedClientTest_LIB_SRCS
     coreprotocol.cpp coreprotocol.h
     datadevice.cpp datadevice.h
     mockcompositor.cpp mockcompositor.h
-    xdgoutputv1.cpp xdgoutputv1.h
     xdgshell.cpp xdgshell.h
     outputorder.cpp outputorder.h
     layershell.cpp layershell.h

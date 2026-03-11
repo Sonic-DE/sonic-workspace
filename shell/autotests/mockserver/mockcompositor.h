@@ -33,7 +33,6 @@
 #include "datadevice.h"
 #include "layershell.h"
 #include "outputorder.h"
-#include "xdgoutputv1.h"
 #include "xdgshell.h"
 
 #include <QtGui/QGuiApplication>
@@ -87,10 +86,6 @@ public:
     XdgPopup *xdgPopup(int i = 0)
     {
         return get<XdgWmBase>()->popup(i);
-    }
-    XdgOutputV1 *xdgOutput(Output *out)
-    {
-        return get<XdgOutputManagerV1>()->getXdgOutput(out);
     }
     uint sendXdgShellPing();
     void xdgPingAndWaitForPong();
