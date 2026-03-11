@@ -13,7 +13,6 @@
 #include <KIconColors>
 #include <KIconEngine>
 #include <KIconLoader>
-#include <KWaylandExtras>
 #include <KWindowSystem>
 #include <Plasma/Theme>
 
@@ -57,11 +56,6 @@ protected:
             sendClickedEvent(id);
             return;
         }
-        auto tokenFuture = KWaylandExtras::xdgActivationToken(menu()->window()->windowHandle(), {});
-        tokenFuture.then(m_source, [this, id](const QString &token) {
-            m_source->provideXdgActivationToken(token);
-            sendClickedEvent(id);
-        });
     }
 
 private:
@@ -539,13 +533,6 @@ void StatusNotifierItemSource::contextMenu(int x, int y)
         if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
             m_statusNotifierItemInterface->call(QDBus::NoBlock, QStringLiteral("ContextMenu"), x, y);
         }
-    }
-}
-
-void StatusNotifierItemSource::provideXdgActivationToken(const QString &token)
-{
-    if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
-        m_statusNotifierItemInterface->ProvideXdgActivationToken(token);
     }
 }
 
