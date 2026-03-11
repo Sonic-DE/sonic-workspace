@@ -14,8 +14,6 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
-#include <PlasmaQuick/PlasmaShellWaylandIntegration>
-
 DashboardWindow::DashboardWindow(QQuickItem *parent)
     : QQuickWindow(parent ? parent->window() : nullptr)
     , m_mainItem(nullptr)
@@ -27,9 +25,6 @@ DashboardWindow::DashboardWindow(QQuickItem *parent)
     setIcon(QIcon::fromTheme(QStringLiteral("plasma")));
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &DashboardWindow::updateTheme);
-
-    // this takes care of SkipSwitcher and SkipTaskbar
-    PlasmaShellWaylandIntegration::get(this);
 }
 
 DashboardWindow::~DashboardWindow() = default;
