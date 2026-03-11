@@ -44,10 +44,6 @@
 #include <PlasmaActivities/Consumer>
 #include <PlasmaActivities/Controller>
 
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/plasmawindowmanagement.h>
-#include <KWayland/Client/registry.h>
 #include <qassert.h>
 
 #include "alternativeshelper.h"
@@ -1315,14 +1311,7 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 void ShellCorona::savePreviousWindow()
 {
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11() && m_previousWId == 0) {
-        m_previousWId = KX11Extras::activeWindow();
-    }
-#endif
-    if (m_waylandWindowManagement && !m_previousPlasmaWindow) {
-        m_previousPlasmaWindow = m_waylandWindowManagement->activeWindow();
-    }
+    m_previousWId = KX11Extras::activeWindow();
 }
 
 void ShellCorona::restorePreviousWindow()
@@ -1331,24 +1320,14 @@ void ShellCorona::restorePreviousWindow()
         return;
     }
 
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11() && m_previousWId) {
-        KX11Extras::forceActiveWindow(m_previousWId);
-    }
-#endif
-    if (m_previousPlasmaWindow) {
-        m_previousPlasmaWindow->requestActivate();
-    }
+    KX11Extras::forceActiveWindow(m_previousWId);
 
     clearPreviousWindow();
 }
 
 void ShellCorona::clearPreviousWindow()
 {
-#if HAVE_X11
     m_previousWId = 0;
-#endif
-    m_previousPlasmaWindow = nullptr;
 }
 
 ///// SLOTS
