@@ -1,6 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kfontinst\")
 
-if (HAVE_X11)
     check_include_files(locale.h HAVE_LOCALE_H)
     configure_file(config-fontinst.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-fontinst.h)
     include_directories(
@@ -32,5 +31,3 @@ if (HAVE_X11)
     add_subdirectory( viewpart )
 
     ecm_install_icons(ICONS sc-apps-preferences-desktop-font-installer.svgz DESTINATION ${KDE_INSTALL_ICONDIR})
-
-endif ()

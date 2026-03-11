@@ -8,9 +8,7 @@ target_include_directories(krdb PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE
 
 target_link_libraries(krdb PRIVATE Qt::Widgets Qt::DBus KF6::CoreAddons KF6::DBusAddons KF6::GuiAddons KF6::I18n KF6::WindowSystem KF6::ColorScheme X11::X11 Qt::GuiPrivate)
 
-if(HAVE_X11)
-  target_link_libraries(krdb PRIVATE XCB::XCB XCB::CURSOR)
-endif()
+target_link_libraries(krdb PRIVATE XCB::XCB XCB::CURSOR)
 
 install(TARGETS krdb ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 

@@ -42,9 +42,7 @@ target_link_libraries(kcm_cursortheme PRIVATE
     krdb
 )
 
-if (HAVE_X11)
-   target_link_libraries(kcm_cursortheme PRIVATE X11::Xcursor X11::Xfixes Qt::GuiPrivate)
-endif ()
+target_link_libraries(kcm_cursortheme PRIVATE X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 
 # plasma-apply-cursortheme utility
 
@@ -69,9 +67,7 @@ target_link_libraries(plasma-apply-cursortheme
     KF6::WindowSystem
 )
 
-if (HAVE_X11)
-   target_link_libraries(plasma-apply-cursortheme X11::X11 X11::Xcursor X11::Xfixes XCB::XCB XCB::CURSOR Qt::GuiPrivate KF6::ColorScheme)
-endif()
+target_link_libraries(plasma-apply-cursortheme X11::X11 X11::Xcursor X11::Xfixes XCB::XCB XCB::CURSOR Qt::GuiPrivate KF6::ColorScheme)
 
 install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
 
