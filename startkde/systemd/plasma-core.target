@@ -7,6 +7,5 @@ Wants=plasma-kcminit-phase1.service
 Wants=graphical-session-pre.target
 Wants=plasma-ksmserver.service
 After=graphical-session-pre.target
-After=plasma-kwin_wayland.service
 RefuseManualStart=yes
 StopWhenUnneeded=true

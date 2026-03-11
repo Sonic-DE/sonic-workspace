@@ -21,7 +21,7 @@ void messageBox(const QString &text);
 
 void createConfigDirectory();
 void runStartupConfig();
-void setupCursor(bool wayland);
+void setupCursor(void);
 std::optional<QProcessEnvironment> getSystemdEnvironment();
 void importSystemdEnvrionment();
 void runEnvironmentScripts();
@@ -31,7 +31,7 @@ bool syncDBusEnvironment();
 void setupFontDpi();
 QProcess *setupKSplash();
 
-bool startPlasmaSession(bool wayland);
+bool startPlasmaSession(void);
 
 void stopSystemdSession();
 void waitForKonqi();

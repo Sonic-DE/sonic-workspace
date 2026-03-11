@@ -32,12 +32,6 @@ kconfig_target_kcfg_file(startplasma
     CLASS_NAME LookAndFeelSettings
 )
 
-add_executable(startplasma-wayland ${START_PLASMA_COMMON_SRCS} startplasma-wayland.cpp)
-
-target_link_libraries(startplasma-wayland PRIVATE
-    startplasma
-)
-
 if (WITH_X11_SESSION)
     add_executable(startplasma-x11 ${START_PLASMA_COMMON_SRCS} startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp)
 
@@ -60,7 +54,6 @@ endif()
 
 configure_file(config-startplasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-startplasma.h)
 
-install(TARGETS startplasma-wayland ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 if (WITH_X11_SESSION)
     install(TARGETS startplasma-x11 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()

@@ -16,8 +16,6 @@ SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include <qpa/qplatformnativeinterface.h>
 
-#include <wayland-client-core.h>
-
 #include <abstracttasksmodel.h>
 #include <windowtasksmodel.h>
 
@@ -41,13 +39,6 @@ int main(int argc, char *argv[])
 
     //
     auto native = qGuiApp->platformNativeInterface();
-    auto display = static_cast<struct ::wl_display *>(native->nativeResourceForIntegration("wl_display"));
-    if (display) {
-        // fetch all window IDs
-        wl_display_roundtrip(display);
-        // fetch all window properties
-        wl_display_roundtrip(display);
-    }
 
     KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
 
