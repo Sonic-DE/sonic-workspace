@@ -11,7 +11,6 @@ set(PROJECT_DEP_VERSION "6.6.2")
 set(QT_MIN_VERSION "6.10.0")
 set(KF6_MIN_VERSION "6.22.0")
 option(WITH_X11_SESSION "Build and install X11 session (deprecated)" ON)
-option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 
 set(CMAKE_CXX_STANDARD 23)
@@ -390,12 +389,6 @@ configure_file(config-appstream.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-appst
 configure_file(config-KDECI_BUILD.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-KDECI_BUILD.h )
 add_subdirectory(login-sessions)
 add_subdirectory(lookandfeel)
-
-if (INSTALL_SDDM_WAYLAND_SESSION)
-    install(FILES sddm-wayland-session/plasma-wayland.conf DESTINATION /etc/sddm.conf.d)
-else()
-    message(STATUS "INSTALL_SDDM_WAYLAND_SESSION is disabled. As soon as it's installed, SDDM will default to use Wayland and KWin for its greeter session (BETA, do not deploy to final users yet).")
-endif()
 
 install(FILES portal-configuration/kde-portals.conf DESTINATION ${KDE_INSTALL_DATADIR}/xdg-desktop-portal)
 
