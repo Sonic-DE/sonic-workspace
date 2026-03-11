@@ -23,7 +23,6 @@
 
 #include <KAuthorized>
 #include <KStartupInfo>
-#include <KWaylandExtras>
 #include <KX11Extras>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
