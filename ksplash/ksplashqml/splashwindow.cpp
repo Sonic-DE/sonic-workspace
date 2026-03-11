@@ -45,13 +45,8 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
     }
 
     if (!m_testing && !m_window) {
-        if (KWindowSystem::isPlatformX11()) {
-            // X11 specific hint only on X11
-            setFlags(Qt::BypassWindowManagerHint);
-        } else {
-            // on other platforms go fullscreen
-            setWindowState(Qt::WindowFullScreen);
-        }
+        // X11 specific hint only on X11
+        setFlags(Qt::BypassWindowManagerHint);
     }
 
     if (m_testing && !m_window) {
