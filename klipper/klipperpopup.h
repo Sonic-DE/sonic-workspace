@@ -13,11 +13,6 @@ class QWindow;
 
 class HistoryModel;
 
-namespace KWayland::Client
-{
-class PlasmaShell;
-}
-
 class KlipperPopup : public PlasmaQuick::PlasmaWindow
 {
     Q_OBJECT
@@ -27,8 +22,6 @@ public:
     ~KlipperPopup() override = default;
 
     void show();
-
-    void setPlasmaShell(KWayland::Client::PlasmaShell *plasmashell);
 
     void editCurrentClipboard();
     void showCurrentBarcode();
@@ -51,5 +44,4 @@ private:
     std::shared_ptr<HistoryModel> m_model;
 
     PlasmaQuick::SharedQmlEngine m_engine;
-    KWayland::Client::PlasmaShell *m_plasmashell = nullptr;
 };

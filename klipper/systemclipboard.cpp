@@ -32,13 +32,10 @@
 #include "historyitem.h"
 #include "klipper_debug.h"
 #include "updateclipboardjob.h"
-#include <wayland-client-core.h>
 
-#if HAVE_X11
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
 #include <xcb/xcb_event.h>
-#endif // HAVE_X11
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -74,7 +71,6 @@ bool ignoreClipboardChanges()
 
 void x11RoundTrip()
 {
-#if HAVE_X11
     if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
         const auto cookie = xcb_get_input_focus(interface->connection());
         xcb_generic_error_t *error = nullptr;
@@ -83,7 +79,6 @@ void x11RoundTrip()
             free(error);
         }
     }
-#endif
 }
 }
 
@@ -351,7 +346,6 @@ void SystemClipboard::slotCheckPending()
 
 bool SystemClipboard::blockFetchingNewData()
 {
-#if HAVE_X11
     // Hacks for #85198 and #80302.
     // #85198 - block fetching new clipboard contents if Shift is pressed and mouse is not,
     //   this may mean the user is doing selection using the keyboard, in which case
@@ -387,7 +381,6 @@ bool SystemClipboard::blockFetchingNewData()
     if (++m_overflowCounter > MAX_CLIPBOARD_CHANGES) {
         return true;
     }
-#endif
     return false;
 }
 

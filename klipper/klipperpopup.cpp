@@ -15,8 +15,6 @@
 #include <QQuickItem>
 
 #include <KLocalizedString>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 #include <KX11Extras>
 #include <algorithm>
@@ -45,18 +43,10 @@ KlipperPopup::KlipperPopup()
 
 void KlipperPopup::show()
 {
-    if (m_plasmashell) {
-        hide();
-    }
     positionOnScreen();
     QMetaObject::invokeMethod(mainItem(), "updateContentSize", Q_ARG(QSizeF, screen()->availableSize().toSizeF()));
     resizePopup();
     setVisible(true);
-}
-
-void KlipperPopup::setPlasmaShell(KWayland::Client::PlasmaShell *plasmashell)
-{
-    m_plasmashell = plasmashell;
 }
 
 void KlipperPopup::editCurrentClipboard()
@@ -78,9 +68,6 @@ void KlipperPopup::showCurrentBarcode()
 void KlipperPopup::hide()
 {
     QWindow::hide();
-    if (m_plasmashell) {
-        destroy(); // Required to recreate wl_surface
-    }
 }
 
 void KlipperPopup::resizePopup()
