@@ -19,8 +19,6 @@ set(taskmanager_LIB_SRCS
     virtualdesktopinfo.cpp
     waylandtasksmodel.cpp
     windowtasksmodel.cpp
-    screencasting.cpp screencasting.h
-    screencastingrequest.cpp screencastingrequest.h
 )
 
 if (HAVE_X11)
