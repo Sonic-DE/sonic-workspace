@@ -20,10 +20,6 @@
 #include <KLocalizedString>
 #include <KNotification>
 #include <KToggleAction>
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/registry.h>
-#include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 
 #include "configdialog.h"
@@ -35,11 +31,8 @@
 #include "systemclipboard.h"
 
 #include <config-X11.h>
-#include <wayland-client-core.h>
-#if HAVE_X11
 #include <xcb/xcb.h>
 #include <xcb/xcb_aux.h>
-#endif
 
 std::shared_ptr<Klipper> Klipper::self()
 {
@@ -58,7 +51,6 @@ Klipper::Klipper(QObject *parent)
     , m_clip(SystemClipboard::self())
     , m_historyCycler(new HistoryCycler(this))
     , m_quitAction(nullptr)
-    , m_plasmashell(nullptr)
 {
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"),
@@ -240,14 +232,8 @@ void Klipper::saveSettings() const
 void Klipper::showPopupMenu(QMenu *menu)
 {
     Q_ASSERT(menu != nullptr);
-    if (m_plasmashell) {
-        menu->hide();
-    }
     menu->popup(QCursor::pos());
     QWindow *menuWindow = menu->windowHandle();
-    if (m_plasmashell) {
-        menuWindow->installEventFilter(this);
-    }
     if (!menu->windowFlags().testFlag(Qt::Popup)) {
         connect(menuWindow, &QWindow::activeChanged, menu, [menu] {
             if (!menu->windowHandle()->isActive()) {
@@ -262,12 +248,6 @@ bool Klipper::eventFilter(QObject *filtered, QEvent *event)
     const bool ret = QObject::eventFilter(filtered, event);
     auto menuWindow = qobject_cast<QWindow *>(filtered);
     if (menuWindow && event->type() == QEvent::Expose && menuWindow->isVisible()) {
-        auto surface = KWayland::Client::Surface::fromWindow(menuWindow);
-        auto plasmaSurface = m_plasmashell->createSurface(surface, menuWindow);
-        plasmaSurface->openUnderCursor();
-        plasmaSurface->setSkipTaskbar(true);
-        plasmaSurface->setSkipSwitcher(true);
-        plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::AppletPopup);
         menuWindow->removeEventFilter(this);
     }
     return ret;

@@ -45,9 +45,7 @@ target_link_libraries(klipper
     KF6::WidgetsAddons
     KF6::WindowSystem
     KF6::XmlGui
-    Plasma::KWaylandClient
     Plasma::PlasmaQuick
-    Wayland::Client
     LayerShellQt::Interface
     ${ZLIB_LIBRARY}
 )
