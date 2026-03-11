@@ -12,7 +12,6 @@
 #include "config-X11.h"
 #include <QGuiApplication>
 #include <QScreen>
-
 #include <KWindowSystem>
 
 namespace TaskManager
@@ -361,7 +360,7 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
         QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
 
         QRect regionGeometry = d->regionGeometry;
-        if (static const bool isX11 = KWindowSystem::isPlatformX11(); isX11 && windowGeometry.isValid()) {
+        if (windowGeometry.isValid()) {
             // On X11, in regionGeometry, the original point of the topLeft position belongs to the device coordinate system
             // but the size belongs to the logical coordinate system (which means the reported size is already divided by DPR)
             // Converting regionGeometry to device coordinate system is better than converting windowGeometry to logical
