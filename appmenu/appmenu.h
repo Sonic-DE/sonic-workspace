@@ -22,13 +22,6 @@ class QDBusServiceWatcher;
 class KDBusMenuImporter;
 class AppmenuDBus;
 class VerticalMenu;
-namespace KWayland
-{
-namespace Client
-{
-class PlasmaShell;
-};
-};
 
 class AppMenuModule : public KDEDModule, protected QDBusContext
 {
@@ -86,8 +79,5 @@ private:
     QDBusServiceWatcher *m_menuViewWatcher;
     QPointer<VerticalMenu> m_menu;
 
-#ifdef HAVE_X11
     xcb_connection_t *m_xcbConn = nullptr;
-#endif
-    KWayland::Client::PlasmaShell *m_plasmashell = nullptr;
 };

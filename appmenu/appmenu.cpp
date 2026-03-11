@@ -20,14 +20,6 @@
 #include <QMenu>
 #include <QPainter>
 #include <QRasterWindow>
-#include <private/qwaylanddisplay_p.h>
-#include <private/qwaylandinputdevice_p.h>
-#include <private/qwaylandwindow_p.h>
-
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/registry.h>
-#include <KWayland/Client/surface.h>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory, "appmenu.json", registerPlugin<AppMenuModule>();)
@@ -92,35 +84,20 @@ AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
         setupMenuImporter();
     }
 
-#if HAVE_X11
     if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>(); !interface || !interface->connection()) {
         m_xcbConn = xcb_connect(nullptr, nullptr);
-    }
-#endif
-    if (qGuiApp->platformName() == QLatin1String("wayland")) {
-        auto connection = KWayland::Client::ConnectionThread::fromApplication();
-        KWayland::Client::Registry registry;
-        registry.create(connection);
-        connect(&registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [this, &registry](quint32 name, quint32 version) {
-            m_plasmashell = registry.createPlasmaShell(name, version, this);
-        });
-        registry.setup();
-        connection->roundtrip();
     }
 }
 
 AppMenuModule::~AppMenuModule()
 {
-#if HAVE_X11
     if (m_xcbConn) {
         xcb_disconnect(m_xcbConn);
     }
-#endif
 }
 
 void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
-#if HAVE_X11
     auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
     auto *c = interface ? interface->connection() : nullptr;
     if (!c) {
@@ -160,7 +137,6 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
         setWindowProperty(id, s_serviceNameAtom, s_x11AppMenuServiceNamePropertyName, serviceName.toUtf8());
         setWindowProperty(id, s_objectPathAtom, s_x11AppMenuObjectPathPropertyName, menuObjectPath.path().toUtf8());
     }
-#endif
 }
 
 void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath, int actionId)
@@ -201,38 +177,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
             importer->deleteLater();
         });
 
-        if (m_plasmashell) {
-            QScreen *screen = QGuiApplication::screenAt(QPoint(x, y));
-            if (!screen) {
-                screen = QGuiApplication::primaryScreen();
-            }
-
-            const QRect screenRect = screen->geometry();
-            if (!m_menu->isVisible()) {
-                // We create a invisible toplevel so the menu can be an xdg_popup which is important
-                // to have the expected UX of an menu. By using the ToolTip role it cannot receive
-                // focus which is important because some apps misbehave when they dont have focus when
-                // a menu is triggered
-                auto toplevelWindow = new ToplevelWindow;
-                toplevelWindow->setFlag(Qt::FramelessWindowHint);
-                toplevelWindow->QObject::setParent(menu);
-                toplevelWindow->setGeometry(QRect(screenRect.topLeft(), QSize(1, 1)));
-                auto surface = KWayland::Client::Surface::fromWindow(toplevelWindow);
-                auto plasmaSurface = m_plasmashell->createSurface(surface, surface);
-                plasmaSurface->setSkipSwitcher(true);
-                plasmaSurface->setSkipTaskbar(true);
-                plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::ToolTip);
-                plasmaSurface->setPosition({x - 1, y - 1});
-                toplevelWindow->show();
-                connect(m_menu, &QMenu::aboutToShow, toplevelWindow, [toplevelWindow, this] {
-                    m_menu->windowHandle()->setTransientParent(toplevelWindow);
-                });
-                ensureSerial(toplevelWindow);
-            }
-            m_menu.data()->popup(screenRect.topLeft());
-        } else {
-            m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
-        }
+        m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
 
         QAction *actiontoActivate = importer->actionForId(actionId);
 
@@ -264,16 +209,6 @@ void AppMenuModule::reconfigure()
 
 void AppMenuModule::ensureSerial(QWindow *w)
 {
-    // HACK we need an input serial to create popups but Qt only sets them on click
-    if (auto waylandApp = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>()) {
-        if (!waylandApp->lastInputSerial()) {
-            auto waylandWindow = dynamic_cast<QtWaylandClient::QWaylandWindow *>(w->handle());
-            if (waylandWindow) {
-                const auto device = waylandWindow->display()->currentInputDevice();
-                waylandWindow->display()->setLastInputDevice(device, 1, waylandWindow);
-            }
-        }
-    }
 }
 
 #include "appmenu.moc"
