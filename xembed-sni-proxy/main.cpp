@@ -47,10 +47,6 @@ int main(int argc, char **argv)
 
     QGuiApplication app(argc, argv);
 
-    if (!KWindowSystem::isPlatformX11()) {
-        qFatal("xembed-sni-proxy is only useful XCB. Aborting");
-    }
-
     KAboutData about(QStringLiteral("xembedsniproxy"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
     KAboutData::setApplicationData(about);
 
