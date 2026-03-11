@@ -35,7 +35,6 @@
 #include <KAcceleratorManager>
 #include <KActionCollection>
 #include <KSharedConfig>
-#include <KWaylandExtras>
 #include <KWindowSystem>
 
 using namespace Qt::StringLiterals;
@@ -427,12 +426,6 @@ void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *status
         source->activate(pos.x(), pos.y());
         return;
     }
-
-    auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(this, [source, service, pos](const QString &token) {
-        source->provideXdgActivationToken(token);
-        source->activate(pos.x(), pos.y());
-    });
 }
 
 void SystemTray::secondaryActivate(const QString &service, QPoint pos)
@@ -444,12 +437,6 @@ void SystemTray::secondaryActivate(const QString &service, QPoint pos)
         source->secondaryActivate(pos.x(), pos.y());
         return;
     }
-
-    auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(this, [source, pos](const QString &token) {
-        source->provideXdgActivationToken(token);
-        source->secondaryActivate(pos.x(), pos.y());
-    });
 }
 
 void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem *statusNotifierIcon)
@@ -518,12 +505,6 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
         source->contextMenu(pos.x(), pos.y());
         return;
     }
-
-    auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(this, [source, pos](const QString &token) {
-        source->provideXdgActivationToken(token);
-        source->contextMenu(pos.x(), pos.y());
-    });
 }
 
 void SystemTray::scroll(const QString &service, int delta, const QString &direction)
