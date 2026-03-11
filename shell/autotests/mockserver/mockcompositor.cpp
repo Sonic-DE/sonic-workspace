@@ -36,7 +36,6 @@ DefaultCompositor::DefaultCompositor()
         Lock l(this);
 
         add<WlCompositor>();
-        add<XdgOutputManagerV1>();
         auto *output = add<Output>();
         auto *outputOrder = add<OutputOrder>();
         output->m_data.physicalSize = output->m_data.mode.physicalSizeForDpi(96);

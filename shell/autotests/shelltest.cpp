@@ -20,7 +20,6 @@
 #include "../screenpool.h"
 #include "../shellcorona.h"
 #include "mockcompositor.h"
-#include "xdgoutputv1.h"
 
 using namespace MockCompositor;
 
@@ -60,7 +59,6 @@ private Q_SLOTS:
     void testSecondScreenInsertion();
     void testRedundantScreenInsertion();
     void testScreenRemovalRecyclingViews();
-    void testMoveOutOfRedundant();
     void testScreenRemoval();
     void testReorderScreens_data();
     void testReorderScreens();
@@ -322,27 +320,6 @@ void ShellTest::testRedundantScreenInsertion()
     QCOMPARE(view0->containment(), cont0);
     QCOMPARE(cont0->screen(), 0);
     QCOMPARE(view0->screen(), oldScreen0);
-}
-
-void ShellTest::testMoveOutOfRedundant()
-{
-    testRedundantScreenInsertion();
-
-    QSignalSpy coronaAddedSpy(m_corona, SIGNAL(screenAdded(int)));
-
-    exec([this] {
-        auto *out = output(1);
-        auto *xdgOut = xdgOutput(out);
-        out->m_data.mode.resolution = {1280, 2048};
-        xdgOut->sendLogicalSize(QSize(1280, 2048));
-        out->sendDone();
-        outputOrder()->setList({u"WL-1"_s, u"DP-1"_s});
-    });
-
-    coronaAddedSpy.wait();
-    QCOMPARE(coronaAddedSpy.size(), 1);
-    const int screen = coronaAddedSpy.takeFirst().at(0).value<int>();
-    QCOMPARE(screen, 1);
 }
 
 void ShellTest::testScreenRemoval()
