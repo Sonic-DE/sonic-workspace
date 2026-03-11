@@ -269,7 +269,7 @@ void MenuProxy::onWindowAdded(WId id)
         return;
     }
 
-    if (KWindowSystem::isPlatformX11()) {
+    {
         KWindowInfo info(id, NET::WMWindowType);
 
         NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask | NET::ToolbarMask | NET::MenuMask | NET::DialogMask
