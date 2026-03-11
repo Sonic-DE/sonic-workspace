@@ -249,7 +249,7 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
     QQuickWindow *const window = visualParent->window();
     if (window && window->screen()) {
         pos = window->mapToGlobal(pos.toPoint());
-        if (KWindowSystem::isPlatformX11()) {
+        {
             const auto devicePixelRatio = window->screen()->devicePixelRatio();
             if (QGuiApplication::screens().size() == 1) {
                 return pos * devicePixelRatio;
@@ -420,10 +420,7 @@ void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *status
         Qt::SingleShotConnection);
 
     QWindow *window = nullptr;
-    if (KWindowSystem::isPlatformX11()) {
-        source->activate(pos.x(), pos.y());
-        return;
-    }
+    source->activate(pos.x(), pos.y());
 }
 
 void SystemTray::secondaryActivate(const QString &service, QPoint pos)
@@ -431,10 +428,7 @@ void SystemTray::secondaryActivate(const QString &service, QPoint pos)
     const auto source = StatusNotifierItemHost::self()->itemForService(service);
 
     QWindow *window = nullptr;
-    if (KWindowSystem::isPlatformX11()) {
-        source->secondaryActivate(pos.x(), pos.y());
-        return;
-    }
+    source->secondaryActivate(pos.x(), pos.y());
 }
 
 void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem *statusNotifierIcon)
@@ -499,10 +493,7 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
         Qt::SingleShotConnection);
 
     QWindow *window = nullptr;
-    if (KWindowSystem::isPlatformX11()) {
-        source->contextMenu(pos.x(), pos.y());
-        return;
-    }
+    source->contextMenu(pos.x(), pos.y());
 }
 
 void SystemTray::scroll(const QString &service, int delta, const QString &direction)
