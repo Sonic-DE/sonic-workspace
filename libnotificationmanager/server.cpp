@@ -14,7 +14,6 @@
 #include "debug.h"
 
 #include <KStartupInfo>
-#include <KWaylandExtras>
 #include <KWindowSystem>
 #include <QDebug>
 
