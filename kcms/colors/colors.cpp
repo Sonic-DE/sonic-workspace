@@ -372,9 +372,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         // However, since we pass the ID to an external process which has no idea of this
         // we need to resolve the actual window we end up showing in.
         if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(ctx->window())) {
-            if (KWindowSystem::isPlatformX11()) {
                 args << QStringLiteral("--attach") << QString::number(actualWindow->winId());
-            }
         }
     }
 
