@@ -31,7 +31,7 @@ bool WindowSystem::eventFilter(QObject *watched, QEvent *event)
 void WindowSystem::forceActive(QQuickItem *item)
 {
     if (item) {
-        if (auto window = item->window(); KWindowSystem::isPlatformX11() && window) {
+        if (auto window = item->window(); window) {
             KX11Extras::forceActiveWindow(window->winId());
         }
     }

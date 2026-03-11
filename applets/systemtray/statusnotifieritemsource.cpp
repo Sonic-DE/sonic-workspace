@@ -52,10 +52,7 @@ protected:
 
     void actionActivated(int id) override
     {
-        if (KWindowSystem::isPlatformX11() || !menu()->window() || !menu()->window()->windowHandle()) {
-            sendClickedEvent(id);
-            return;
-        }
+        sendClickedEvent(id);
     }
 
 private:
