@@ -31,7 +31,7 @@
  *  - startPlasma (from startplasma)
  *  - kcminit
  *  - ksmserver
- *  - wm (for X11 from KWin, for Wayland from this class)
+ *  - wm (for X11 from KWin)
  *  - desktop (from shellcorona)
  */
 
@@ -63,8 +63,6 @@ SplashApp::SplashApp(int &argc, char **argv)
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
     dbus.registerService(QStringLiteral("org.kde.KSplash"));
-
-    setupWaylandIntegration();
 
     for (const auto screenList{screens()}; QScreen * screen : screenList) {
         adoptScreen(screen);
@@ -133,10 +131,6 @@ void SplashApp::adoptScreen(QScreen *screen)
         m_windows.removeAll(w);
         w->deleteLater();
     });
-}
-
-void SplashApp::setupWaylandIntegration()
-{
 }
 
 #include "moc_splashapp.cpp"
