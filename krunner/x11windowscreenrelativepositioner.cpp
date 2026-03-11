@@ -14,10 +14,6 @@ X11WindowScreenRelativePositioner::X11WindowScreenRelativePositioner(QWindow *wi
     : QObject(window)
     , m_window(window)
 {
-    if (!KWindowSystem::isPlatformX11()) {
-        qCritical("X11WindowScreenRelativePositioner should only be used on X11 windows");
-    }
-
     m_window->installEventFilter(this);
     connect(m_window, &QWindow::screenChanged, this, &X11WindowScreenRelativePositioner::handleScreenChanged);
 
