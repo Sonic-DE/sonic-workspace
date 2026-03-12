@@ -50,7 +50,7 @@ void MenuImporter::RegisterWindow(WId id, const QDBusObjectPath &path)
     if (path.path().isEmpty()) // prevent bad dbusmenu usage
         return;
 
-    if (KWindowSystem::isPlatformX11()) {
+    {
         KWindowInfo info(id, NET::WMWindowType, NET::WM2WindowClass);
         NET::WindowTypes mask = NET::AllTypesMask;
         auto type = info.windowType(mask);
