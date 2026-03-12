@@ -3,6 +3,3 @@
 
 /* Define if you have the XFixes extension */
 #cmakedefine HAVE_XFIXES 1
-
-/* Define if you have X11 at all */
-#cmakedefine01 HAVE_X11

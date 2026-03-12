@@ -19,10 +19,8 @@
 #include <QGuiApplication>
 
 #include "config-X11.h"
-#if HAVE_X11
 #include <X11/Xauth.h>
 #include <X11/Xlib.h>
-#endif // HAVE_X11
 
 #include <errno.h>
 #include <fcntl.h>
@@ -844,7 +842,6 @@ void KDisplayManager::lockSwitchVT(int vt)
 
 void KDisplayManager::GDMAuthenticate()
 {
-#if HAVE_X11
     FILE *fp;
     const char *dpy = nullptr, *dnum, *dne;
     int dnl;
@@ -885,5 +882,4 @@ void KDisplayManager::GDMAuthenticate()
     }
 
     fclose(fp);
-#endif // HAVE_X11
 }

@@ -20,14 +20,12 @@ set(taskmanager_LIB_SRCS
     windowtasksmodel.cpp
 )
 
-if (HAVE_X11)
-    set(taskmanager_LIB_SRCS
+set(taskmanager_LIB_SRCS
         ${taskmanager_LIB_SRCS}
         xstartuptasksmodel.cpp
         xwindowsystemeventbatcher.cpp xwindowsystemeventbatcher.h
         xwindowtasksmodel.cpp
-    )
-endif()
+)
 
 add_library(taskmanager ${taskmanager_LIB_SRCS})
 add_library(PW::LibTaskManager ALIAS taskmanager)
@@ -87,10 +85,8 @@ else()
     target_compile_definitions(taskmanager PRIVATE HAVE_QTTEST=0)
 endif()
 
-if (HAVE_X11)
-    target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
-    target_link_libraries(taskmanager PRIVATE X11::X11)
-endif()
+target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
+target_link_libraries(taskmanager PRIVATE X11::X11)
 
 set_target_properties(taskmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}
@@ -129,13 +125,11 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
 )
 
-if (HAVE_X11)
-    install(FILES
+install(FILES
         xstartuptasksmodel.h
         xwindowtasksmodel.h
         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
-    )
-endif()
+)
 
 ecm_finalize_qml_module(taskmanager)
 

@@ -23,9 +23,7 @@
 #include <KWindowSystem>
 #include <plasmaquick/popupplasmawindow.h>
 #include <qnamespace.h>
-#if HAVE_X11
 #include <KX11Extras>
-#endif
 #include <klocalizedstring.h>
 #include <kwindoweffects.h>
 
@@ -81,7 +79,6 @@ void PanelRulerView::syncPanelLocation()
     }
 
     if (KWindowSystem::isPlatformX11()) {
-#if HAVE_X11
         KX11Extras::setType(winId(), NET::Dock);
         KX11Extras::setState(winId(), NET::KeepAbove);
 
@@ -113,7 +110,6 @@ void PanelRulerView::syncPanelLocation()
         default:
             setPosition(available.bottomLeft() + screen->geometry().topLeft() - QPoint(0, height()));
         }
-#endif
     } else if (m_layerWindow) {
         switch (m_containment->location()) {
         case Plasma::Types::LeftEdge:

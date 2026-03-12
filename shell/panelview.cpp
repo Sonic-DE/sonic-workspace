@@ -37,10 +37,8 @@
 
 #include <LayerShellQt/Window>
 
-#if HAVE_X11
 #include <NETWM>
 #include <qpa/qplatformwindow_p.h>
-#endif
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -153,11 +151,7 @@ bool PanelView::isUnsupportedEnvironment() const
     // It is a static variable: compute it once and cache the results because
     // we don't expect such configuration to change at runtime.
     static const bool unsupported = []() {
-#if HAVE_X11
         const auto isX11 = KWindowSystem::isPlatformX11();
-#else
-        const auto isX11 = false;
-#endif
         return isX11 && vendorIsNVidia();
     }();
     return unsupported;
@@ -1110,7 +1104,6 @@ void PanelView::keyPressEvent(QKeyEvent *event)
 void PanelView::integrateScreen()
 {
     updateMask();
-#if HAVE_X11
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::setOnAllDesktops(winId(), true);
         KX11Extras::setType(winId(), NET::Dock);
@@ -1118,7 +1111,6 @@ void PanelView::integrateScreen()
             xcbWindow->setWindowType(QNativeInterface::Private::QXcbWindow::Dock);
         }
     }
-#endif
     setVisibilityMode(m_visibilityMode);
 
     if (containment()) {
@@ -1481,7 +1473,6 @@ void PanelView::updateMask()
 
 bool PanelView::canSetStrut() const
 {
-#if HAVE_X11
     if (!KWindowSystem::isPlatformX11()) {
         return true;
     }
@@ -1538,9 +1529,6 @@ bool PanelView::canSetStrut() const
         }
     }
     return true;
-#else
-    return true;
-#endif
 }
 
 void PanelView::updateExclusiveZone()
@@ -1571,7 +1559,6 @@ void PanelView::updateExclusiveZone()
     }
 
     {
-#if HAVE_X11
         qreal top_width = 0, top_start = 0, top_end = 0;
         qreal bottom_width = 0, bottom_start = 0, bottom_end = 0;
         qreal right_width = 0, right_start = 0, right_end = 0;
@@ -1651,7 +1638,6 @@ void PanelView::updateExclusiveZone()
                                      bottom_width,
                                      bottom_start,
                                      bottom_end);
-#endif
     }
 }
 

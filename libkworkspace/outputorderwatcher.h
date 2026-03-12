@@ -13,9 +13,7 @@
 #include "kworkspace_export.h"
 #include <config-outputorder.h>
 
-#if HAVE_X11
 #include <xcb/xcb.h>
-#endif
 
 class QScreen;
 class QTimer;
@@ -79,7 +77,6 @@ protected:
 private:
 };
 
-#if HAVE_X11
 class X11OutputOrderWatcher : public OutputOrderWatcher, public QAbstractNativeEventFilter
 {
     Q_OBJECT
@@ -99,7 +96,6 @@ private:
     int m_xrandrExtensionOffset;
     xcb_atom_t m_kdeScreenAtom = XCB_ATOM_NONE;
 };
-#endif
 
 class WaylandOutputOrderWatcher : public OutputOrderWatcher
 {

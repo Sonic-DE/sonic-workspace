@@ -1,3 +1,4 @@
+
 /*
     SPDX-FileCopyrightText: 2005 Jean-Remy Falleri <jr.falleri@laposte.net>
     SPDX-FileCopyrightText: 2005-2007 Kevin Ottens <ervin@kde.org>
@@ -23,9 +24,7 @@
 #include <kpassworddialog.h>
 #include <kwallet.h>
 #include <kwindowsystem.h>
-#if HAVE_X11
 #include <KX11Extras>
-#endif
 
 // solid specific includes
 #include <solid/device.h>
@@ -146,7 +145,6 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
     dialog->setAttribute(Qt::WA_NativeWindow, true);
     KWindowSystem::setMainWindow(dialog->windowHandle(), wId); // correct, set dialog parent
 
-#if HAVE_X11
     if (KWindowSystem::isPlatformX11()) {
         if (modal) {
             KX11Extras::setState(dialog->winId(), NET::Modal);
@@ -154,7 +152,6 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
             KX11Extras::clearState(dialog->winId(), NET::Modal);
         }
     }
-#endif
 
     // allow dialog activation even if it interrupts, better than trying hacks
     // with keeping the dialog on top or on all desktops

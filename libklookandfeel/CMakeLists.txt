@@ -6,9 +6,7 @@ if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
 
-if(HAVE_X11)
-    set(HAVE_XCURSOR TRUE)
-endif()
+set(HAVE_XCURSOR TRUE)
 
 if(Breeze_FOUND)
     if(BREEZE_WITH_KDECORATION)
@@ -56,13 +54,11 @@ target_link_libraries(klookandfeel
         krdb
 )
 
-if (HAVE_X11)
-    target_sources(klookandfeel PRIVATE
+target_sources(klookandfeel PRIVATE
         ../kcms/cursortheme/xcursor/cursortheme.cpp
         ../kcms/cursortheme/xcursor/xcursortheme.cpp
-    )
-   target_link_libraries(klookandfeel PRIVATE KF6::WindowSystem X11::Xcursor X11::Xfixes)
-endif ()
+)
+target_link_libraries(klookandfeel PRIVATE KF6::WindowSystem X11::Xcursor X11::Xfixes)
 
 target_include_directories(klookandfeel
     PUBLIC

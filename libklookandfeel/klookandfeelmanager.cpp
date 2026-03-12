@@ -28,7 +28,6 @@
 #include <algorithm>
 
 #include "config-X11.h"
-#if HAVE_X11
 #include <X11/Xlib.h>
 #include <private/qtx11extras_p.h>
 
@@ -42,7 +41,6 @@
 #endif
 
 #include <fixx11h.h>
-#endif
 
 using namespace Qt::StringLiterals;
 

@@ -28,9 +28,8 @@ target_link_libraries(appmenu
     PkgConfig::XKBCommon
     dbusmenuqt
 )
-if (HAVE_X11)
-    target_link_libraries(appmenu XCB::XCB)
-endif()
+
+target_link_libraries(appmenu XCB::XCB)
 
 ecm_qt_declare_logging_category(appmenu
     HEADER appmenu_debug.h

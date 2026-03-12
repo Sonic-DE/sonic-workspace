@@ -50,9 +50,7 @@ target_link_libraries(klipper
     ${ZLIB_LIBRARY}
 )
 
-if (HAVE_X11)
-    target_link_libraries(klipper XCB::XCB XCB::AUX)
-endif()
+target_link_libraries(klipper XCB::XCB XCB::AUX)
 
 set_target_properties(klipper PROPERTIES
                       VERSION ${PROJECT_VERSION}

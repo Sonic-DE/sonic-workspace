@@ -9,9 +9,7 @@
 #pragma once
 
 #include <config-X11.h>
-#ifdef HAVE_X11
 #include <xcb/xcb.h>
-#endif
 
 #include <kdedmodule.h>
 

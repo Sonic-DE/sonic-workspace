@@ -249,7 +249,6 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
     QQuickWindow *const window = visualParent->window();
     if (window && window->screen()) {
         pos = window->mapToGlobal(pos.toPoint());
-#if HAVE_X11
         if (KWindowSystem::isPlatformX11()) {
             const auto devicePixelRatio = window->screen()->devicePixelRatio();
             if (QGuiApplication::screens().size() == 1) {
@@ -262,7 +261,6 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
 
             return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
         }
-#endif
     }
 
     return QPoint();

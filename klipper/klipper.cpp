@@ -351,11 +351,9 @@ QString Klipper::getClipboardHistoryItem(int i)
 
 void Klipper::updateTimestamp()
 {
-#if HAVE_X11
     if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
         xcb_aux_sync(interface->connection());
     }
-#endif
 }
 
 void Klipper::slotCycleNext()

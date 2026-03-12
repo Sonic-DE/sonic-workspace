@@ -10,8 +10,6 @@ list(GET VERSION_LIST 2 PROJECT_VERSION_PATCH)
 set(PROJECT_DEP_VERSION "6.6.2")
 set(QT_MIN_VERSION "6.10.0")
 set(KF6_MIN_VERSION "6.22.0")
-option(WITH_X11_SESSION "Build and install X11 session (deprecated)" ON)
-option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -171,11 +169,6 @@ option(PACKAGEKIT_OFFLINE_UPDATES "Integrate with PackageKit for offline updates
 add_feature_info(PACKAGEKIT_OFFLINE_UPDATES PackageKitQt6_FOUND "Integrate with PackageKit for offline updates")
 set(PACKAGEKIT_OFFLINE_UPDATES ${PackageKitQt6_FOUND})
 
-if(WITH_X11_SESSION)
-    set(WITH_X11 1)
-endif()
-
-if(WITH_X11)
     find_package(X11)
     set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                             URL "https://www.x.org"
@@ -196,7 +189,6 @@ if(WITH_X11)
     check_X11_lib(Xrender)
     check_X11_lib(Xtst)
 
-    set(HAVE_X11 1)
     set(HAVE_XCURSOR 1)
     set(HAVE_XFIXES 1)
 
@@ -204,11 +196,6 @@ if(WITH_X11)
     set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 
     find_package(KScreenLocker ${PROJECT_DEP_VERSION} REQUIRED)
-else()
-    set(HAVE_X11 0)
-    set(HAVE_XCURSOR 0)
-    set(HAVE_XFIXES 0)
-endif()
 
 # FreeBSD systems might have libxcrypt but their shadow equivalent doesn't use it
 if(CMAKE_SYSTEM_NAME MATCHES "Linux")
@@ -418,9 +405,7 @@ add_subdirectory(shell)
 add_subdirectory(freespacenotifier)
 add_subdirectory(klipper)
 add_subdirectory(krunner)
-if(WITH_X11)
-    add_subdirectory(ksmserver)
-endif()
+add_subdirectory(ksmserver)
 add_subdirectory(logout-greeter)
 add_subdirectory(ksplash)
 add_subdirectory(statusnotifierwatcher)
@@ -452,11 +437,7 @@ add_subdirectory(solidautoeject)
 endif()
 
 ecm_optional_add_subdirectory(xembed-sni-proxy)
-
-if (WITH_X11)
-    #TODO port away from X11
-    ecm_optional_add_subdirectory(gmenu-dbusmenu-proxy)
-endif()
+ecm_optional_add_subdirectory(gmenu-dbusmenu-proxy)
 
 add_subdirectory(soliduiserver)
 
