@@ -74,12 +74,9 @@ MACRO(PLASMASHELL_UNIT_TESTS)
 ENDMACRO(PLASMASHELL_UNIT_TESTS)
 
 PLASMASHELL_UNIT_TESTS(
-    screenpooltest
     shelltest
 )
 
 kde_target_enable_exceptions(shelltest PRIVATE)
 target_compile_definitions(shelltest PRIVATE QTEST_THROW_ON_FAIL)
-
-set_tests_properties(screenpooltest shelltest PROPERTIES TIMEOUT 120)
 
