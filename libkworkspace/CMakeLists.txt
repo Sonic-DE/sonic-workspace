@@ -45,7 +45,6 @@ target_link_libraries(kworkspace
         KF6::CoreAddons
     PRIVATE
         Qt::DBus
-        Qt::WaylandClient
         KF6::I18n
         KF6::WindowSystem
         KF6::ConfigCore
@@ -77,11 +76,6 @@ ecm_qt_declare_logging_category(kworkspace
 if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
 endif()
-qt6_generate_wayland_protocol_client_sources(kworkspace
-    ${private_code_option}
-    FILES
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
-)
 
 install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

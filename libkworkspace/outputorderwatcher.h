@@ -56,11 +56,6 @@ public:
      *  A caveat on X11 is the initial startup where plasmashell may query screen information before
      * kscreen has set properties.
      * This should resolve itself as a dynamic re-ordering when kscreen does start.
-     *
-     * For wayland we know kwin sends the priority order whenever screen changes are made.
-     * As creating screens requires an extra async call to kwin (to bind to the output)
-     * we always get the new priority ordering before and screen additions.
-     * We should always have correct values on startup.
      */
     virtual void refresh();
 Q_SIGNALS:
@@ -100,15 +95,3 @@ private:
     xcb_atom_t m_kdeScreenAtom = XCB_ATOM_NONE;
 };
 #endif
-
-class WaylandOutputOrderWatcher : public OutputOrderWatcher
-{
-    Q_OBJECT
-public:
-    WaylandOutputOrderWatcher(QObject *parent);
-    void refresh() override;
-
-private:
-    bool hasAllScreens() const;
-    QStringList m_pendingOutputOrder;
-};
