@@ -46,7 +46,6 @@ private:
     Plasma::Containment *const m_containment;
     PanelView *const m_panelView;
     PanelConfigView *const m_mainConfigView;
-    LayerShellQt::Window *m_layerWindow = nullptr;
 };
 
 class PanelConfigView : public PlasmaQuick::PopupPlasmaWindow

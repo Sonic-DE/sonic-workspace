@@ -30,8 +30,6 @@
 
 #include <KPackage/Package>
 
-#include <LayerShellQt/Window>
-
 using namespace Qt::StringLiterals;
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
@@ -106,25 +104,12 @@ void DesktopView::setScreenToFollow(QScreen *screen)
         return;
     }
 
-    // layer surfaces can't be moved between outputs, so hide and show the window on a new output
-    const bool remap = m_layerWindow && isVisible();
-    if (remap) {
-        setVisible(false);
-    }
-
     if (m_screenToFollow) {
         disconnect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
     m_screenToFollow = screen;
-    if (m_layerWindow) {
-        m_layerWindow->setScreen(screen);
-    }
     setScreen(screen);
     connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
-
-    if (remap) {
-        setVisible(true);
-    }
 
     QString rectString;
     QDebug(&rectString) << screen->geometry();

@@ -18,11 +18,6 @@
 #include "config-workspace.h"
 #include "panelview.h"
 
-namespace LayerShellQt
-{
-class Window;
-}
-
 class DesktopView : public PlasmaQuick::ContainmentView
 {
     Q_OBJECT
@@ -126,7 +121,6 @@ private:
     std::optional<QColor> m_accentColor;
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_screenToFollow;
-    LayerShellQt::Window *m_layerWindow = nullptr;
     QString m_krunnerText;
     QFuture<QString> m_krunnerFuture;
 

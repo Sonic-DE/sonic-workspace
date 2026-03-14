@@ -21,7 +21,6 @@ target_link_libraries(ksmserver-logout-greeter
     KF6::WindowSystem
     KF6::ConfigCore
     X11::X11
-    LayerShellQt::Interface
 )
 
 if(PACKAGEKIT_OFFLINE_UPDATES)

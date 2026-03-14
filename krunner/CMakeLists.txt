@@ -28,7 +28,6 @@ target_link_libraries(krunner PRIVATE
     KF6::Crash
     KF6::Runner
     PW::KWorkspace
-    LayerShellQt::Interface
 )
 target_compile_definitions(krunner PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 

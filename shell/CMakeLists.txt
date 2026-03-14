@@ -116,7 +116,6 @@ target_link_libraries(plasmashell PRIVATE
  KF6::WidgetsAddons
  KF6::WindowSystem
  KF6::XmlGui
- LayerShellQt::Interface
  Plasma::Activities
  Plasma::Plasma
  Plasma::PlasmaQuick

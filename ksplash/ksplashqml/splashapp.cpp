@@ -21,8 +21,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-#include <LayerShellQt/Shell>
-
 #define TEST_STEP_INTERVAL 2000
 
 /**
@@ -64,7 +62,7 @@ SplashApp::SplashApp(int &argc, char **argv)
     dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
     dbus.registerService(QStringLiteral("org.kde.KSplash"));
 
-    for (const auto screenList{screens()}; QScreen * screen : screenList) {
+    for (const auto screenList{screens()}; QScreen *screen : screenList) {
         adoptScreen(screen);
     }
 

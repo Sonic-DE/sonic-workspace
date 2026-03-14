@@ -33,7 +33,6 @@
 #include <KWindowEffects>
 #include <KWindowSystem>
 #include <KX11Extras>
-#include <LayerShellQt/Window>
 
 #include <cstdio>
 #include <netwm.h>

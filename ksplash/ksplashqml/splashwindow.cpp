@@ -18,8 +18,6 @@
 #include <QSurfaceFormat>
 #include <QTimer>
 
-#include <LayerShellQt/Window>
-
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 

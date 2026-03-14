@@ -25,7 +25,6 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
-#include <LayerShellQt/Window>
 #include <algorithm>
 #include <qnamespace.h>
 

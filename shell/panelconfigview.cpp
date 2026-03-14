@@ -10,8 +10,6 @@
 #include "panelshadows_p.h"
 #include "shellcorona.h"
 
-#include <LayerShellQt/Window>
-
 #include <QAction>
 #include <QDebug>
 #include <QDir>

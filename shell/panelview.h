@@ -22,11 +22,6 @@
 class AutoHideScreenEdge;
 class ShellCorona;
 
-namespace LayerShellQt
-{
-class Window;
-}
-
 class PanelView : public PlasmaQuick::ContainmentView
 
 {
@@ -148,7 +143,6 @@ class PanelView : public PlasmaQuick::ContainmentView
      * @since 6.4
      */
     Q_PROPERTY(bool floatingApplets READ floatingApplets WRITE setFloatingApplets NOTIFY floatingAppletsChanged)
-
 
 public:
     enum VisibilityMode {
@@ -325,7 +319,6 @@ private:
     OpacityMode defaultOpacityMode() const;
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
     KWindowEffects::SlideFromLocation slideLocation() const;
-    void updateLayerWindow();
     void positionPanel();
     void positionAndResizePanel();
     void integrateScreen();
@@ -372,7 +365,6 @@ private:
     QTimer m_unhideTimer;
     Plasma::Types::BackgroundHints m_backgroundHints;
     KSvg::FrameSvg::EnabledBorders m_enabledBorders = KSvg::FrameSvg::AllBorders;
-    LayerShellQt::Window *m_layerWindow = nullptr;
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;
     QMetaObject::Connection m_transientWindowVisibleWatcher;

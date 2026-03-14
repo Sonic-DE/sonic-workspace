@@ -14,7 +14,6 @@ target_link_libraries(ksplashqml
     KF6::WindowSystem
     Plasma::PlasmaQuick
     PW::KWorkspace
-    LayerShellQt::Interface
    )
 
 ecm_qt_declare_logging_category(ksplashqml

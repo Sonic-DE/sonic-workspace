@@ -18,7 +18,6 @@
 #include "shutdowndlg.h"
 
 #include <KWindowSystem>
-#include <LayerShellQt/Shell>
 #include <algorithm>
 
 using namespace std::chrono_literals;

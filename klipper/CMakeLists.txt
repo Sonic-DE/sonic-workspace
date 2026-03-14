@@ -46,7 +46,6 @@ target_link_libraries(klipper
     KF6::WindowSystem
     KF6::XmlGui
     Plasma::PlasmaQuick
-    LayerShellQt::Interface
     ${ZLIB_LIBRARY}
 )
 

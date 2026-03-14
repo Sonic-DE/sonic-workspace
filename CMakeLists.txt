@@ -74,7 +74,6 @@ set_package_properties(KSysGuard PROPERTIES
     TYPE REQUIRED
 )
 find_package(KF6Screen ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
-find_package(LayerShellQt 6.6.1 CONFIG REQUIRED)
 
 if (BUILD_TESTING)
     include(ECMAddTests)
