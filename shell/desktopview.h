@@ -13,8 +13,6 @@
 #include <QFuture>
 #include <QPointer>
 
-#include <KConfigWatcher>
-
 #include "config-workspace.h"
 #include "panelview.h"
 
@@ -124,9 +122,7 @@ private:
     QString m_krunnerText;
     QFuture<QString> m_krunnerFuture;
 
-    // KRunner config
-    KConfigWatcher::Ptr m_configWatcher;
-    bool m_activateKRunnerWhenTypingOnDesktop;
+    // KRunner config (activation on typing is always enabled)
 
     // Accent color config
     Plasma::Containment *m_containment = nullptr;
