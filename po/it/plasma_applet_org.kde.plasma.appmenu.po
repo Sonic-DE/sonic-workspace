@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:46+0000\n"
-"PO-Revision-Date: 2022-07-26 18:26+0200\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2026-03-16 07:47+0100\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "Mostra il menu dell'applicazione completo"
 #: qml/configGeneral.qml:32
 #, kde-format
 msgid "Show menus for apps on different screens"
-msgstr ""
+msgstr "Mostra i menu delle applicazioni su schermi diversi"
 
 #: qml/MenuDelegate.qml:62
 #, kde-format
