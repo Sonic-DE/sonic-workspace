@@ -5,8 +5,6 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include <PackageKit/Daemon>
-
 #include <QStandardPaths>
 
 #include <KLocalizedString>
@@ -67,44 +65,7 @@ void LocaleGeneratorUbuntu::ubuntuLangCheck(int statusCode, QProcess::ExitStatus
                                   }),
                    packages.end());
 
-    if (!packages.isEmpty()) {
-        auto transaction = PackageKit::Daemon::resolve(packages, PackageKit::Transaction::FilterNotInstalled | PackageKit::Transaction::FilterArch);
-        connect(transaction,
-                &PackageKit::Transaction::package,
-                this,
-                [this](PackageKit::Transaction::Info info, const QString &packageID, const QString &summary) {
-                    Q_UNUSED(info);
-                    Q_UNUSED(summary);
-                    m_packageIDs << packageID;
-                });
-        connect(transaction, &PackageKit::Transaction::errorCode, this, [](PackageKit::Transaction::Error error, const QString &details) {
-            qCDebug(KCM_REGIONANDLANG) << "resolve error" << error << details;
-        });
-        connect(transaction, &PackageKit::Transaction::finished, this, [packages, this](PackageKit::Transaction::Exit status, uint code) {
-            qCDebug(KCM_REGIONANDLANG) << "resolve finished" << status << code << m_packageIDs;
-            if (m_packageIDs.size() != packages.size()) {
-                qCWarning(KCM_REGIONANDLANG) << "Not all missing packages managed to resolve!" << packages << m_packageIDs;
-                const QString packagesString = packages.join(QLatin1Char(';'));
-                Q_EMIT userHasToGenerateManually(i18nc("%1 is a list of package names", "Not all missing packages managed to resolve! %1", packagesString));
-                return;
-            }
-            auto transaction = PackageKit::Daemon::installPackages(m_packageIDs);
-            connect(transaction, &PackageKit::Transaction::errorCode, this, [this, packages](PackageKit::Transaction::Error error, const QString &details) {
-                qCDebug(KCM_REGIONANDLANG) << "install error:" << error << details;
-                const QString packagesString = packages.join(QStringLiteral(", "));
-                Q_EMIT userHasToGenerateManually(i18nc("%1 is a list of package names, %2 is the error explanation",
-                                                       "Failed to install language packages (%1): %2",
-                                                       packagesString,
-                                                       details));
-            });
-            connect(transaction, &PackageKit::Transaction::finished, this, [this](PackageKit::Transaction::Exit status, uint code) {
-                qCDebug(KCM_REGIONANDLANG) << "install finished:" << status << code;
-                if (status == PackageKit::Transaction::Exit::ExitSuccess) {
-                    Q_EMIT success();
-                }
-            });
-        });
-    } else {
+    if (packages.isEmpty()) {
         Q_EMIT success();
     }
 }

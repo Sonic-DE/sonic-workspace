@@ -32,11 +32,6 @@ if(GLIBC_LOCALE_GEN)
         ${kcm_regionandlang_PART_SRCS}
         localegeneratorglibc.cpp localegeneratorglibc.h)
 endif()
-if(UBUNTU_LOCALE)
-    set(kcm_regionandlang_PART_SRCS
-        ${kcm_regionandlang_PART_SRCS}
-        localegeneratorubuntu.cpp localegeneratorubuntu.h)
-endif()
 ecm_qt_declare_logging_category(
     kcm_regionandlang_PART_SRCS
     HEADER kcm_regionandlang_debug.h
@@ -77,9 +72,6 @@ target_link_libraries(kcm_regionandlang PRIVATE
     KF6::GuiAddons
     Qt::Quick
 )
-if(UBUNTU_LOCALE)
-    target_link_libraries(kcm_regionandlang PRIVATE PK::packagekitqt6)
-endif()
 
 ########### unit tests ##############
 if(BUILD_TESTING)

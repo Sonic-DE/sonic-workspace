@@ -23,11 +23,6 @@ target_link_libraries(ksmserver-logout-greeter
     X11::X11
 )
 
-if(PACKAGEKIT_OFFLINE_UPDATES)
-    target_link_libraries(ksmserver-logout-greeter PK::packagekitqt6)
-    target_compile_definitions(ksmserver-logout-greeter PRIVATE PACKAGEKIT_OFFLINE_UPDATES)
-endif()
-
 install(TARGETS ksmserver-logout-greeter DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 kdbusaddons_generate_dbus_service_file(ksmserver-logout-greeter org.kde.LogoutPrompt ${KDE_INSTALL_FULL_LIBEXECDIR})
 
