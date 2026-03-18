@@ -24,11 +24,6 @@
 #include <QTimer>
 #include <limits>
 
-#ifdef PACKAGEKIT_OFFLINE_UPDATES
-#include <PackageKit/Daemon>
-#include <PackageKit/Offline>
-#endif
-
 #include <KLocalizedString>
 #include <KUser>
 #include <KWindowEffects>
@@ -48,10 +43,16 @@ using namespace Qt::StringLiterals;
 
 namespace
 {
-constexpr auto PK_OFFLINE_PREPARED_FILENAME = "/var/lib/PackageKit/prepared-update"_L1;
-constexpr auto PK_OFFLINE_PREPARED_UPGRADE_FILENAME = "/var/lib/PackageKit/prepared-upgrade"_L1;
 constexpr auto PK_OFFLINE_TRIGGER_FILENAME = "/system-update"_L1;
 
+QFileInfo systemdUpdateTriggerFileInfo()
+{
+    QFileInfo info(PK_OFFLINE_TRIGGER_FILENAME);
+    if (info.exists() && info.isSymLink()) {
+        return info;
+    }
+    return {};
+}
 } // namespace
 
 static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
@@ -315,12 +316,6 @@ void KSMShutdownDlg::slotReboot(int opt)
 
 void KSMShutdownDlg::slotRebootUpdate()
 {
-#ifdef PACKAGEKIT_OFFLINE_UPDATES
-    m_bootOption.clear();
-    setTriggerAction(PackageKit::Offline::Action::ActionReboot);
-    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
-    accept();
-#endif
 }
 
 void KSMShutdownDlg::slotLockScreen()
@@ -342,12 +337,6 @@ void KSMShutdownDlg::slotHalt()
 
 void KSMShutdownDlg::slotHaltUpdate()
 {
-#ifdef PACKAGEKIT_OFFLINE_UPDATES
-    m_bootOption.clear();
-    setTriggerAction(PackageKit::Offline::Action::ActionPowerOff);
-    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
-    accept();
-#endif
 }
 
 void KSMShutdownDlg::slotSuspend(int spdMethod)
@@ -365,49 +354,6 @@ void KSMShutdownDlg::slotSuspend(int spdMethod)
     reject();
 }
 
-#ifdef PACKAGEKIT_OFFLINE_UPDATES
-void KSMShutdownDlg::cancelSoftwareUpdate()
-{
-    QDBusPendingReply<> packageKitCall = PackageKit::Daemon::global()->offline()->cancel();
-    packageKitCall.waitForFinished();
-    if (packageKitCall.isError()) {
-        qCWarning(LOGOUT_GREETER) << "Failed to cancel pending software update" << packageKitCall.error().message();
-    } else {
-        rootContext()->setContextProperty(u"softwareUpdatePending"_s, false);
-    }
-}
-
-void KSMShutdownDlg::setTriggerAction(PackageKit::Offline::Action action)
-{
-    if (updateTriggered() || upgradeTriggered()) {
-        QDBusPendingReply packageKitCall;
-        if (updateTriggered()) {
-            packageKitCall = PackageKit::Daemon::global()->offline()->trigger(action);
-        } else if (upgradeTriggered()) {
-            packageKitCall = PackageKit::Daemon::global()->offline()->triggerUpgrade(action);
-        }
-        packageKitCall.waitForFinished();
-        if (packageKitCall.isError()) {
-            qCWarning(LOGOUT_GREETER) << "Failed to trigger action after update" << packageKitCall.error().message();
-        }
-    } else {
-        qCWarning(LOGOUT_GREETER) << "Update was attempted to be triggered without a pending update already existing";
-    }
-}
-
-bool KSMShutdownDlg::updateTriggered() const
-{
-    // This is part of a hot code path. Do not use blocking dbus calls here.
-    return PackageKit::Daemon::global()->offline()->updateTriggered();
-}
-
-bool KSMShutdownDlg::upgradeTriggered() const
-{
-    // This is part of a hot code path. Do not use blocking dbus calls here.
-    return PackageKit::Daemon::global()->offline()->upgradeTriggered();
-}
-
-#else
 bool KSMShutdownDlg::updateTriggered() const
 {
     return false;
@@ -421,7 +367,6 @@ bool KSMShutdownDlg::upgradeTriggered() const
 void KSMShutdownDlg::cancelSoftwareUpdate()
 {
 }
-#endif
 
 void KSMShutdownDlg::slotCancelSoftwareUpdate()
 {
