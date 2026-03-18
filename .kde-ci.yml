@@ -73,7 +73,6 @@ Dependencies:
  - 'on': ['Linux']
    'require':
     'libraries/polkit-qt-1': '@latest-kf6'
-    'third-party/packagekit-qt': '@latest'
 
 RuntimeDependencies:
  - 'on': ['Linux']
