@@ -8,10 +8,6 @@
 
 #pragma once
 
-#ifdef PACKAGEKIT_OFFLINE_UPDATES
-#include <PackageKit/Offline>
-#endif
-
 #include <PlasmaQuick/QuickViewSharedEngine>
 #include <kworkspace.h>
 #include <sessionmanagement.h>
@@ -54,9 +50,6 @@ protected:
     void resizeEvent(QResizeEvent *e) override;
 
 private:
-#ifdef PACKAGEKIT_OFFLINE_UPDATES
-    void setTriggerAction(PackageKit::Offline::Action action);
-#endif
     void cancelSoftwareUpdate();
     bool updateTriggered() const;
     bool upgradeTriggered() const;
