@@ -172,8 +172,6 @@ void KSMServer::executeCommand(const QStringList &command)
 
 IceAuthDataEntry *authDataEntries = nullptr;
 
-static QTemporaryFile *remTempFile = nullptr;
-
 static IceListenObj *listenObjs = nullptr;
 int numTransports = 0;
 
@@ -302,18 +300,6 @@ public:
     IceConn iceConn;
     inline static size_t count = 0;
 };
-
-/* for printing hex digits */
-static void fprintfhex(FILE *fp, unsigned int len, char *cp)
-{
-    static const char hexchars[] = "0123456789abcdef";
-
-    for (; len > 0; len--, cp++) {
-        unsigned char s = *cp;
-        putc(hexchars[s >> 4], fp);
-        putc(hexchars[s & 0x0f], fp);
-    }
-}
 
 #define MAGIC_COOKIE_LEN 16
 
