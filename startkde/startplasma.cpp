@@ -819,6 +819,8 @@ namespace
 {
 void canberraFinishCallback(ca_context *c, uint32_t /*id*/, int error_code, void *userdata)
 {
+    (void)userdata;
+
     QMetaObject::invokeMethod(
         qApp,
         [c, error_code] {

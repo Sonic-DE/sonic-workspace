@@ -433,6 +433,8 @@ QVariantList appstreamActions(const KService::Ptr &service)
 
 bool handleAppstreamActions(const QString &actionId, const KService::Ptr &service)
 {
+    (void)service;
+
     if (actionId != QLatin1String("manageApplication")) {
         return false;
     }

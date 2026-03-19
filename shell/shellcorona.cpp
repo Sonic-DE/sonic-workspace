@@ -1600,6 +1600,8 @@ void ShellCorona::createWaitingPanels()
         connect(panel, &PanelView::userConfiguringChanged, this, &ShellCorona::panelBeingConfiguredChanged);
 
         auto checkUiReady = [this, panel](bool visible) {
+            (void)visible;
+
             if (!panel->containment()) {
                 return;
             }

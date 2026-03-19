@@ -123,7 +123,6 @@ void SystemTray::migrateFromSystrayContainer()
     }
 
     // Delete the the old systray
-    bool oldSystrayInstantiated = false;
     for (Plasma::Containment *cont : corona()->containments()) {
         if (cont->id() == oldSystrayId) {
             delete cont;
@@ -419,7 +418,6 @@ void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *status
         },
         Qt::SingleShotConnection);
 
-    QWindow *window = nullptr;
     source->activate(pos.x(), pos.y());
 }
 

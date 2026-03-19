@@ -886,6 +886,9 @@ void Notifications::collapseAllGroups()
 
 void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &blacklistedDesktopEntries, const QStringList &blacklistedNotifyRcNames)
 {
+    (void)blacklistedDesktopEntries;
+    (void)blacklistedNotifyRcNames;
+
     int inhibited = 0;
     for (int i = 0, count = d->notificationsAndJobsModel->rowCount(); i < count; ++i) {
         const QModelIndex idx = d->notificationsAndJobsModel->index(i, 0);

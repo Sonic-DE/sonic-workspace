@@ -564,6 +564,8 @@ bool ActionsWidget::hasChanged() const
 
 void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int col)
 {
+    (void)col;
+
     QTreeWidgetItem *parentItem = item->parent(); // parent of the command item
     if (parentItem == nullptr) { // this is a top level action
         return;

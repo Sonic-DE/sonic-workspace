@@ -75,6 +75,9 @@ void Server::invokeAction(uint notificationId,
                           Notifications::InvokeBehavior behavior,
                           QWindow *window)
 {
+        (void)xdgActivationAppId;
+        (void)window;
+
         KStartupInfoId startupId;
         startupId.initId();
 
