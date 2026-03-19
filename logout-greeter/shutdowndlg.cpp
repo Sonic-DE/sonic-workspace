@@ -51,14 +51,6 @@ constexpr auto PK_OFFLINE_PREPARED_FILENAME = "/var/lib/PackageKit/prepared-upda
 constexpr auto PK_OFFLINE_PREPARED_UPGRADE_FILENAME = "/var/lib/PackageKit/prepared-upgrade"_L1;
 constexpr auto PK_OFFLINE_TRIGGER_FILENAME = "/system-update"_L1;
 
-QFileInfo systemdUpdateTriggerFileInfo()
-{
-    QFileInfo info(PK_OFFLINE_TRIGGER_FILENAME);
-    if (info.exists() && info.isSymLink()) {
-        return info;
-    }
-    return {};
-}
 } // namespace
 
 static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
