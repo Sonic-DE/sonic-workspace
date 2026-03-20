@@ -88,7 +88,7 @@ target_sources(plasmashell_osd PRIVATE
 )
 
 target_link_libraries(plasmashell_osd PRIVATE
-    Plasma::PlasmaQuick
+    PkgConfig::SonicQuick
 )
 
 if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
@@ -117,8 +117,8 @@ target_link_libraries(plasmashell PRIVATE
  KF6::WindowSystem
  KF6::XmlGui
  Plasma::Activities
- Plasma::Plasma
- Plasma::PlasmaQuick
+ PkgConfig::Sonic
+ PkgConfig::SonicQuick
  PW::KWorkspace
  Qt::GuiPrivate # qpa/qplatformwindow_p.h
  Qt::Quick

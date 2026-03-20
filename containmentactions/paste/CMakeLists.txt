@@ -2,8 +2,8 @@ kcoreaddons_add_plugin(plasma_containmentactions_paste SOURCES paste.cpp paste.h
 target_link_libraries(plasma_containmentactions_paste
     Qt::Gui
     Qt::Widgets
-    Plasma::Plasma
-    Plasma::PlasmaQuick
+    PkgConfig::Sonic
+    PkgConfig::SonicQuick
     KF6::KIOCore
 )
 

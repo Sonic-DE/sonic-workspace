@@ -44,8 +44,8 @@ target_link_libraries(systemtray_static
         KF6::ItemModels
         KF6::WindowSystem
         KF6::XmlGui
-        Plasma::Plasma
-        Plasma::PlasmaQuick
+        PkgConfig::Sonic
+        PkgConfig::SonicQuick
         dbusmenuqt
 )
 

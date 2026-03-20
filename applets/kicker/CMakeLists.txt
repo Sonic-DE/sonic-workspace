@@ -71,7 +71,7 @@ target_link_libraries(kickerplugin PRIVATE
                       KF6::KIOWidgets
                       KF6::KIOFileWidgets
                       KF6::Notifications
-                      Plasma::PlasmaQuick
+                      PkgConfig::SonicQuick
                       KF6::Runner
                       KF6::Service
                       KF6::WindowSystem

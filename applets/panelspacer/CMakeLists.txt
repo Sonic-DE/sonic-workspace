@@ -7,4 +7,4 @@ plasma_add_applet(org.kde.plasma.panelspacer
         main.xml
 )
 
-target_link_libraries(org.kde.plasma.panelspacer PRIVATE Qt::Gui Qt::Core Qt::Qml Qt::Quick Plasma::Plasma Plasma::PlasmaQuick KF6::I18n)
+target_link_libraries(org.kde.plasma.panelspacer PRIVATE Qt::Gui Qt::Core Qt::Qml Qt::Quick PkgConfig::Sonic PkgConfig::SonicQuick KF6::I18n)

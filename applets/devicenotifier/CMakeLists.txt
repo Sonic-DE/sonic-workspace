@@ -33,7 +33,7 @@ target_link_libraries(org.kde.plasma.devicenotifier
     PRIVATE
         Qt::DBus
         Qt::Qml
-        Plasma::Plasma
+        PkgConfig::Sonic
         KF6::Solid
         KF6::I18n
         KF6::CoreAddons

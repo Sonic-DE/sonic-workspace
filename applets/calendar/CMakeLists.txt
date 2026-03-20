@@ -13,4 +13,4 @@ plasma_add_applet(org.kde.plasma.calendar
         mini-calendar.svgz
 )
 
-target_link_libraries(org.kde.plasma.calendar PRIVATE Plasma::Plasma)
+target_link_libraries(org.kde.plasma.calendar PRIVATE PkgConfig::Sonic)

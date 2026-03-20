@@ -14,8 +14,8 @@ target_link_libraries(plasmashellprivateplugin PRIVATE
         Qt::Widgets
         Qt::Quick
         Qt::Qml
-        Plasma::Plasma
-        Plasma::PlasmaQuick
+        PkgConfig::Sonic
+        PkgConfig::SonicQuick
         KF6::I18n
         KF6::WidgetsAddons
         KF6::NewStuffWidgets

@@ -76,8 +76,8 @@ target_link_libraries(org.kde.plasma.notifications PRIVATE
                       Qt::Quick # for QQmlParserStatus
                       KF6::ConfigGui # for KStandardActions
                       KF6::I18n
-                      Plasma::Plasma
-                      Plasma::PlasmaQuick
+                      PkgConfig::Sonic
+                      PkgConfig::SonicQuick
                       KF6::CoreAddons
                       KF6::GlobalAccel
                       KF6::KIOGui

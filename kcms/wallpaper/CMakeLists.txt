@@ -28,8 +28,8 @@ target_link_libraries(kcm_wallpaper PRIVATE
     KF6::ConfigGui
     KF6::ConfigQml
     KF6::Package
-    Plasma::Plasma
-    Plasma::PlasmaQuick
+    PkgConfig::Sonic
+    PkgConfig::SonicQuick
     Plasma::Activities
     PW::KWorkspace
 )

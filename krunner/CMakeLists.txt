@@ -22,7 +22,7 @@ target_link_libraries(krunner PRIVATE
     Qt::Widgets
     KF6::KIOGui
     KF6::I18n
-    Plasma::PlasmaQuick
+    PkgConfig::SonicQuick
     Plasma::Activities
     KF6::DBusAddons
     KF6::Crash

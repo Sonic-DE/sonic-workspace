@@ -45,7 +45,7 @@ target_link_libraries(klipper
     KF6::WidgetsAddons
     KF6::WindowSystem
     KF6::XmlGui
-    Plasma::PlasmaQuick
+    PkgConfig::SonicQuick
     ${ZLIB_LIBRARY}
 )
 

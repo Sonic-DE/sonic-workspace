@@ -19,7 +19,7 @@ target_link_libraries(org.kde.plasma.appmenu PRIVATE
     Qt::Widgets
     Qt::Quick
     Qt::DBus
-    Plasma::Plasma
+    PkgConfig::Sonic
     KF6::WindowSystem
     KF6::I18n
     PW::LibTaskManager

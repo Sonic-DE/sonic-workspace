@@ -15,6 +15,6 @@ target_link_libraries(org.kde.plasma.icon PRIVATE
     KF6::KIOGui # for FavIconRequestJob
     KF6::KIOWidgets # for KRun
     KF6::Notifications
-    Plasma::Plasma
+    PkgConfig::Sonic
     PW::LibTaskManager
 )

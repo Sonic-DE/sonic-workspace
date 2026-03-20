@@ -24,7 +24,7 @@ target_link_libraries(plasma_containmentactions_contextmenu
                       Plasma::Activities
                       KF6::I18n
                       KF6::GlobalAccel
-                      Plasma::Plasma
+                      PkgConfig::Sonic
                       KF6::KIOCore
                       KF6::KIOGui
                       PW::KWorkspace)

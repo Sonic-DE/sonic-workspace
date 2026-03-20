@@ -41,7 +41,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Quick
     Qt::Qml
     Qt::Svg
-    Plasma::Plasma
+    PkgConfig::Sonic
     KF6::GlobalAccel
     KF6::I18n
     KF6::JobWidgets

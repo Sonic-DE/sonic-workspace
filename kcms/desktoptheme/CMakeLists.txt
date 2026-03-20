@@ -41,7 +41,7 @@ target_link_libraries(plasma-apply-desktoptheme
     KF6::KCMUtils
     KF6::I18n
     KF6::ColorScheme
-    Plasma::Plasma
+    PkgConfig::Sonic
 )
 
 #this desktop file is installed only for retrocompatibility with sycoca

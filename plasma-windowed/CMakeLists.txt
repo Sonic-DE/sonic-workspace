@@ -18,8 +18,8 @@ target_link_libraries(
     KF6::I18n
     KF6::IconThemes
     KF6::XmlGui
-    Plasma::PlasmaQuick
-    Plasma::Plasma
+    PkgConfig::SonicQuick
+    PkgConfig::Sonic
     KF6::DBusAddons
     KF6::Notifications
     KF6::Package

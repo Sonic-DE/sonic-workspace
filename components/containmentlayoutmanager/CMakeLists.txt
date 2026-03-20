@@ -34,7 +34,8 @@ target_link_libraries(containmentlayoutmanagerplugin
             Qt::Core
         PRIVATE
             Qt::Qml Qt::Quick
-            Plasma::Plasma Plasma::PlasmaQuick
+            PkgConfig::Sonic
+            PkgConfig::SonicQuick
     )
 
 ecm_qt_declare_logging_category(containmentlayoutmanagerplugin

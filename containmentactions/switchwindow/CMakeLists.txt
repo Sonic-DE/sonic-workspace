@@ -14,6 +14,6 @@ set_target_properties(plasma_containmentactions_switchwindow PROPERTIES
 
 target_link_libraries(plasma_containmentactions_switchwindow
                       Qt::Widgets
-                      Plasma::Plasma
+                      PkgConfig::Sonic
                       KF6::I18n
                       PW::LibTaskManager)

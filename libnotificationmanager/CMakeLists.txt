@@ -87,7 +87,7 @@ target_link_libraries(notificationmanager
         KF6::ItemModels # KDescendantsProxyModel
         KF6::Notifications # Inhibition summary
         KF6::KIOFileWidgets
-        Plasma::Plasma
+        PkgConfig::Sonic
         PW::LibTaskManager
         KF6::Screen
         KF6::Service
