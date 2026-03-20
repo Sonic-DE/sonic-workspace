@@ -70,10 +70,10 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Svg TextEditor TextWidgets Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
 
-pkg_check_modules(Sonic REQUIRED
+pkg_check_modules(Sonic REQUIRED IMPORTED_TARGET
     Sonic>=${PROJECT_DEP_VERSION}
 )
-pkg_check_modules(SonicQuick REQUIRED
+pkg_check_modules(SonicQuick REQUIRED IMPORTED_TARGET
     SonicQuick>=${PROJECT_DEP_VERSION}
 )
 
