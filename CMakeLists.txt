@@ -44,6 +44,7 @@ include(ECMQmlModule)
 
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_INSTALL_FULL_LIBIR}/cmake/Plasma")
+message("CMAKE_INSTALL_FULL_LIBDIR=${CMAKE_INSTALL_FULL_LIBDIR}")
 include(PlasmaMacros)
 
 find_package(PkgConfig REQUIRED)
