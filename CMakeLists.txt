@@ -42,24 +42,7 @@ include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
 
-
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_INSTALL_FULL_LIBDIR}/cmake/Plasma")
-message("CMAKE_INSTALL_FULL_LIBDIR=${CMAKE_INSTALL_FULL_LIBDIR}")
-message("CMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}")
-
-find_file(PLASMA_MACROS_FOUND
-    NAMES PlasmaMacros.cmake
-    PATHS ${CMAKE_MODULE_PATH}
-    NO_DEFAULT_PATH
-    NO_CMAKE_FIND_ROOT_PATH
-)
-
-if(PLASMA_MACROS_FOUND)
-    message(STATUS "Found PlasmaMacros.cmake at: ${PLASMA_MACROS_FOUND}")
-else()
-    message(FATAL_ERROR "PlasmaMacros.cmake NOT found in CMAKE_MODULE_PATH")
-endif()
-
 include(PlasmaMacros)
 
 find_package(PkgConfig REQUIRED)
@@ -87,10 +70,10 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Svg TextEditor TextWidgets Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
 
-pkg_check_modules(SONIC REQUIRED
+pkg_check_modules(Sonic REQUIRED
     Sonic>=${PROJECT_DEP_VERSION}
 )
-pkg_check_modules(SONICQUICK REQUIRED
+pkg_check_modules(SonicQuick REQUIRED
     SonicQuick>=${PROJECT_DEP_VERSION}
 )
 
