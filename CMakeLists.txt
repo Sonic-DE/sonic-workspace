@@ -68,10 +68,10 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     OPTIONAL_COMPONENTS DocTools)
 
 pkg_check_modules(SONIC REQUIRED
-    Sonic >=${PROJECT_DEP_VERSION}
+    Sonic>=${PROJECT_DEP_VERSION}
 )
 pkg_check_modules(SONICQUICK REQUIRED
-    SonicQuick >=${PROJECT_DEP_VERSION}
+    SonicQuick>=${PROJECT_DEP_VERSION}
 )
 
 find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
