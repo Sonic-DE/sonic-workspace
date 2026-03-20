@@ -15,6 +15,8 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+find_package(PkgConfig REQUIRED)
+
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
@@ -64,8 +66,14 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Notifications Package Parts Prison Runner StatusNotifierItem
                     Svg TextEditor TextWidgets Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
-find_package(Sonic ${PROJECT_DEP_VERSION} REQUIRED)
-find_package(SonicQuick ${PROJECT_DEP_VERSION} REQUIRED)
+
+pkg_check_modules(SONIC REQUIRED
+    Sonic >=${PROJECT_DEP_VERSION}
+)
+pkg_check_modules(SONICQUICK REQUIRED
+    SonicQuick >=${PROJECT_DEP_VERSION}
+)
+
 find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(KSysGuard ${PROJECT_DEP_VERSION} CONFIG)
