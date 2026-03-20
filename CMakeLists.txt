@@ -41,6 +41,7 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
+include(Plasma/PlasmaMacros)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire QUIET IMPORTED_TARGET libpipewire-0.3)
