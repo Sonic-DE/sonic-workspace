@@ -41,6 +41,9 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
+
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_INSTALL_FULL_LIBIR}/cmake/Plasma")
 include(PlasmaMacros)
 
 find_package(PkgConfig REQUIRED)
