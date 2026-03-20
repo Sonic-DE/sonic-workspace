@@ -45,6 +45,20 @@ include(ECMQmlModule)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_INSTALL_FULL_LIBIR}/cmake/Plasma")
 message("CMAKE_INSTALL_FULL_LIBDIR=${CMAKE_INSTALL_FULL_LIBDIR}")
+
+find_file(PLASMA_MACROS_FOUND
+    NAMES PlasmaMacros.cmake
+    PATHS ${CMAKE_MODULE_PATH}
+    NO_DEFAULT_PATH
+    NO_CMAKE_FIND_ROOT_PATH
+)
+
+if(PLASMA_MACROS_FOUND)
+    message(STATUS "Found PlasmaMacros.cmake at: ${PLASMA_MACROS_FOUND}")
+else()
+    message(FATAL_ERROR "PlasmaMacros.cmake NOT found in CMAKE_MODULE_PATH")
+endif()
+
 include(PlasmaMacros)
 
 find_package(PkgConfig REQUIRED)
