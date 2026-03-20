@@ -64,8 +64,8 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Notifications Package Parts Prison Runner StatusNotifierItem
                     Svg TextEditor TextWidgets Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
-find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
-find_package(PlasmaQuick ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(Sonic ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(SonicQuick ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(KSysGuard ${PROJECT_DEP_VERSION} CONFIG)
