@@ -18,7 +18,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(PkgConfig REQUIRED)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
-# set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -41,9 +41,7 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
-
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_INSTALL_FULL_LIBDIR}/cmake/Plasma")
-include(PlasmaMacros)
+include(PlasmaMacros1)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire QUIET IMPORTED_TARGET libpipewire-0.3)
