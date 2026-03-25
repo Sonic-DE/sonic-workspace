@@ -34,6 +34,7 @@ inline constexpr XID None = XNone;
 namespace Xcb
 {
 Xcb::Atoms *atoms;
+Xcb::TrayVisual *trayVisual;
 }
 
 int main(int argc, char **argv)
@@ -59,6 +60,7 @@ int main(int argc, char **argv)
     qDBusRegisterMetaType<KDbusToolTipStruct>();
 
     Xcb::atoms = new Xcb::Atoms();
+    Xcb::trayVisual = new Xcb::TrayVisual();
 
     KDBusService service(KDBusService::Unique);
     FdoSelectionManager manager;
@@ -66,5 +68,6 @@ int main(int argc, char **argv)
     auto rc = app.exec();
 
     delete Xcb::atoms;
+    delete Xcb::trayVisual;
     return rc;
 }
