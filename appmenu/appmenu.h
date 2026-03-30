@@ -66,7 +66,6 @@ private Q_SLOTS:
 
 private:
     void hideMenu();
-    void ensureSerial(QWindow *window);
 
     void fakeUnityAboutToShow(const QString &service, const QDBusObjectPath &menuObjectPath);
 
