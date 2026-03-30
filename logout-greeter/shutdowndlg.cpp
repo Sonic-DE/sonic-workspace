@@ -30,6 +30,8 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
+#include <Plasma/Plasma>
+
 #include <cstdio>
 #include <netwm.h>
 
@@ -228,7 +230,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
 
     // engine stuff
     engine()->rootContext()->setContextObject(new KLocalizedContext(engine().get()));
-    engine()->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
+    Plasma::setupPlasmaStyle(engine().get());
 }
 
 void KSMShutdownDlg::init(const KPackage::Package &package)
