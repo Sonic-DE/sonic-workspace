@@ -1,179 +1,101 @@
-<?xml version="1.0" ?>
-<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
-"dtd/kdedbx45.dtd" [
-<!ENTITY % addindex "IGNORE">
-<!ENTITY % Brazilian-Portuguese "INCLUDE"
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Brazilian-Portuguese "INCLUDE"
 > <!-- change language only here -->
 ]>
 
 <article id="kcmstyle" lang="&language;">
-<articleinfo>
+    <articleinfo>
 
-<title
->Estilo dos aplicativos</title>
-<authorgroup>
-<author
->&Mike.McBride; &Mike.McBride.mail;</author>
-<othercredit role="translator"
-><firstname
->Lisiane</firstname
-> <surname
->Sztoltz</surname
-><affiliation
-><address
-> <email
->lisiane@conectiva.com.br</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-><othercredit role="translator"
-><firstname
->Marcus</firstname
-><surname
->Gama</surname
-><affiliation
-><address
-><email
->marcus.gama@gmail.com</email
-></address
-></affiliation
-><contrib
->Revisão</contrib
-></othercredit
-> 
-</authorgroup>
+        <title>Estilo dos aplicativos</title>
+        <authorgroup>
+            <author>&Mike.McBride; &Mike.McBride.mail;</author>
+            <othercredit role="translator"
+            >
+                <firstname>Lisiane</firstname>
+                <surname>Sztoltz</surname>
+                <affiliation>
+                    <address>
+                        <email>lisiane@conectiva.com.br</email>
+                    </address>
+                </affiliation>
+                <contrib>Tradução</contrib>
+            </othercredit>
+            <othercredit role="translator"
+            >
+                <firstname>Marcus</firstname>
+                <surname>Gama</surname>
+                <affiliation>
+                    <address>
+                        <email>marcus.gama@gmail.com</email>
+                    </address>
+                </affiliation>
+                <contrib>Revisão</contrib>
+            </othercredit>
+        </authorgroup>
 
-<date
->2021-04-09</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+        <date>2021-04-09</date>
+        <releaseinfo>Plasma 5.20</releaseinfo>
 
-<keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Configuração do Sistema</keyword>
-<keyword
->estilo</keyword>
-<keyword
->Aplicativo</keyword>
-<keyword
->widgets</keyword>
-</keywordset>
-</articleinfo>
+        <keywordset>
+            <keyword>KDE</keyword>
+            <keyword>Configuração do Sistema</keyword>
+            <keyword>estilo</keyword>
+            <keyword>Aplicativo</keyword>
+            <keyword>widgets</keyword>
+        </keywordset>
+    </articleinfo>
 
-<para
->Este módulo é usado para configurar a forma como os widgets individuais são desenhados pelo &plasma;.</para>
+    <para>Este módulo é usado para configurar a forma como os widgets individuais são desenhados pelo &plasma;.</para>
 
-<note
-><para
->Um <emphasis
->Widget</emphasis
-> é um termo normalmente usado por programadores para se referirem a elementos da Interface do Usuário, tais como botões, menus e barras de rolagem. Você pode considerá-los como partes fundamentais que são reunidas para formar o seu aplicativo.</para
-></note>
+    <note>
+        <para>Um <emphasis>Widget</emphasis> é um termo normalmente usado por programadores para se referirem a elementos da Interface do Usuário, tais como botões, menus e barras de rolagem. Você pode considerá-los como partes fundamentais que são reunidas para formar o seu aplicativo.</para>
+    </note>
 
-<para
->Com este módulo, você pode configurar como os widgets são desenhados, mas para alterar suas cores, você deve ir para a seção <ulink url="help:/kcontrol/colors/index.html" 
->Cores</ulink
->.</para>
+    <para>Com este módulo, você pode configurar como os widgets são desenhados, mas para alterar suas cores, você deve ir para a seção <ulink url="help:/kcontrol/colors/index.html"
+        >Cores</ulink>.</para>
 
-<para
->A grade superior, rotulada <guilabel
->Estilo dos Aplicativos</guilabel
-> contém uma lista de prévias dos estilos predefinidos. Cada estilo tem um nome, e uma breve descrição é mostrada quando você passa o ponteiro do mouse sobre seu item.</para>
+    <para>A grade superior, rotulada <guilabel>Estilo dos Aplicativos</guilabel> contém uma lista de prévias dos estilos predefinidos. Cada estilo tem um nome, e uma breve descrição é mostrada quando você passa o ponteiro do mouse sobre seu item.</para>
 
-<para
->Se você quiser configurar um tema do &plasma;, use o ícone de sobreposição <guilabel
->Configurar estilo...</guilabel
-> no canto inferior direito do ícone de estilo do widget na grade.</para>
+    <para>Se você quiser configurar um tema do &plasma;, use o ícone de sobreposição <guilabel>Configurar estilo...</guilabel> no canto inferior direito do ícone de estilo do widget na grade.</para>
 
-<para
->Se implementado, é possível alterar quase todos os aspectos do estilo: centralizar as guias da barra de guias, desenhar separadores de itens da barra de ferramentas, desenhar indicador de foco em listas, desenhar marcas de seleção do controle deslizante, habilitar manipuladores de redimensionamento estendidos, definir a visibilidade dos aceleradores do teclado, modo de arrastar das janelas, usar quadros para melhor acessibilidade, usar botões nas barras de rolagem, usar transparência nos menus.</para>
+    <para>Se implementado, é possível alterar quase todos os aspectos do estilo: centralizar as guias da barra de guias, desenhar separadores de itens da barra de ferramentas, desenhar indicador de foco em listas, desenhar marcas de seleção do controle deslizante, habilitar manipuladores de redimensionamento estendidos, definir a visibilidade dos aceleradores do teclado, modo de arrastar das janelas, usar quadros para melhor acessibilidade, usar botões nas barras de rolagem, usar transparência nos menus.</para>
 
-<para
->A configuração geral pode ser feita pressionando o botão <guibutton
->Configurar ícones e barras de ferramentas</guibutton
-> abaixo da grade. Este botão abre um painel para selecionar mais configurações.</para>
-<variablelist>
+    <para>A configuração geral pode ser feita pressionando o botão <guibutton>Configurar ícones e barras de ferramentas</guibutton> abaixo da grade. Este botão abre um painel para selecionar mais configurações.</para>
+    <variablelist>
 
-<varlistentry
-> 
-<term
-><guilabel
->Mostrar ícones: Nos botões</guilabel
-></term>
-<listitem>
-<para
->Se esta opção estiver selecionada, os botões de ação (como o <guibutton
->OK</guibutton
-> e o <guibutton
->Aplicar</guibutton
->) ficarão com um pequeno ícone localizado dentro deles para ser usado como uma referência visual. Se esta opção não estiver selecionada, somente aparecerá o texto no botão.</para>
-</listitem
-> 
-</varlistentry
-> 
+        <varlistentry>
+            <term>
+                <guilabel>Mostrar ícones: Nos botões</guilabel>
+            </term>
+            <listitem>
+                <para>Se esta opção estiver selecionada, os botões de ação (como o <guibutton>OK</guibutton> e o <guibutton>Aplicar</guibutton>) ficarão com um pequeno ícone localizado dentro deles para ser usado como uma referência visual. Se esta opção não estiver selecionada, somente aparecerá o texto no botão.</para>
+            </listitem>
+        </varlistentry>
 
-<varlistentry
-> 
-<term
-><guilabel
->Mostrar ícones: Nos menus</guilabel
-></term>
-<listitem>
-<para
->Se esta opção estiver selecionada, os aplicativos do &kde; irão exibir pequenos ícones ao lado da maioria dos itens do menu. Se esta opção não estiver selecionada, somente o texto dos menus será mostrado. As alterações da visibilidade dos ícones no menu somente afetarão os aplicativos iniciados após as alterações.</para>
-</listitem
-> 
-</varlistentry
-> 
+        <varlistentry>
+            <term>
+                <guilabel>Mostrar ícones: Nos menus</guilabel>
+            </term>
+            <listitem>
+                <para>Se esta opção estiver selecionada, os aplicativos do &kde; irão exibir pequenos ícones ao lado da maioria dos itens do menu. Se esta opção não estiver selecionada, somente o texto dos menus será mostrado. As alterações da visibilidade dos ícones no menu somente afetarão os aplicativos iniciados após as alterações.</para>
+            </listitem>
+        </varlistentry>
 
-<varlistentry
-> 
-<term
-><guilabel
->Rótulo da barra de ferramentas principal</guilabel
->, <guilabel
->Rótulo da barra de ferramentas secundária</guilabel
-></term>
-<listitem>
-<para
->Essas caixas suspensas permitem que você determine onde no botão em ambas as barras de ferramentas o nome do texto do botão aparecerá como padrão. Se <guilabel
->Nenhum</guilabel
-> for selecionado, não haverá texto nos botões da barra de ferramentas. Se <guilabel
->Somente texto</guilabel
-> for selecionado, o ícone do botão será substituído por um nome de texto do botão. Se <guilabel
->Ao lado dos ícones</guilabel
-> for selecionado, o nome do botão será colocado à <emphasis
->direita</emphasis
-> do ícone. Se <guilabel
->Abaixo do ícone</guilabel
-> for selecionado, o padrão será ter o texto do botão <emphasis
->abaixo</emphasis
-> do ícone.</para>
+        <varlistentry>
+            <term><guilabel>Rótulo da barra de ferramentas principal</guilabel>, <guilabel>Rótulo da barra de ferramentas secundária</guilabel></term>
+            <listitem>
+                <para>Essas caixas suspensas permitem que você determine onde no botão em ambas as barras de ferramentas o nome do texto do botão aparecerá como padrão. Se <guilabel>Nenhum</guilabel> for selecionado, não haverá texto nos botões da barra de ferramentas. Se <guilabel>Somente texto</guilabel> for selecionado, o ícone do botão será substituído por um nome de texto do botão. Se <guilabel>Ao lado dos ícones</guilabel> for selecionado, o nome do botão será colocado à <emphasis>direita</emphasis> do ícone. Se <guilabel>Abaixo do ícone</guilabel> for selecionado, o padrão será ter o texto do botão <emphasis>abaixo</emphasis> do ícone.</para>
 
-<tip
-><para
->Essas opções especificam apenas o local <emphasis
->padrão</emphasis
->. Cada aplicativo pode substituir as configurações usadas neste painel.</para
-></tip>
-</listitem
-> 
-</varlistentry
-> 
+                <tip>
+                    <para>Essas opções especificam apenas o local <emphasis>padrão</emphasis>. Cada aplicativo pode substituir as configurações usadas neste painel.</para>
+                </tip>
+            </listitem>
+        </varlistentry>
 
-</variablelist>
+    </variablelist>
 
-<para
->O botão <guibutton
->Configurar estilo de aplicativo GNOME/GTK...</guibutton
-> pode ser usado para abrir a aba de configuração onde você pode escolher <guilabel
->tema GTK</guilabel
->, instalar o tema GTK do arquivo ou <guibutton
->Obter novos estilos de aplicativo GNOME/GTK</guibutton
-> da Internet. </para>
+    <para>O botão <guibutton>Configurar estilo de aplicativo GNOME/GTK...</guibutton> pode ser usado para abrir a aba de configuração onde você pode escolher <guilabel>tema GTK</guilabel>, instalar o tema GTK do arquivo ou <guibutton>Obter novos estilos de aplicativo GNOME/GTK</guibutton> da Internet. </para>
 
 </article>

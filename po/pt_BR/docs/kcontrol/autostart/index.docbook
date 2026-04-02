@@ -1,300 +1,197 @@
-<?xml version="1.0" ?>
-<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
-"dtd/kdedbx45.dtd" [
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Brazilian-Portuguese "INCLUDE">
 ]>
 <article id="autostart" lang="&language;">
-<articleinfo>
-<title
->Iniciar automaticamente</title>
-<authorgroup>
-<author
->&Anne-Marie.Mahfouf;</author>
-<othercredit role="translator"
-><firstname
->Marcus</firstname
-><surname
->Gama</surname
-><affiliation
-><address
-><email
->marcus.gama@gmail.com</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-><othercredit role="translator"
-><firstname
->André Marcelo</firstname
-><surname
->Alvarenga</surname
-><affiliation
-><address
-><email
->alvarenga@kde.org</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-> 
-</authorgroup>
+  <articleinfo>
+    <title>Iniciar automaticamente</title>
+    <authorgroup>
+      <author>&Anne-Marie.Mahfouf;</author>
+      <othercredit role="translator"
+      >
+        <firstname>Marcus</firstname>
+        <surname>Gama</surname>
+        <affiliation>
+          <address>
+            <email>marcus.gama@gmail.com</email>
+          </address>
+        </affiliation>
+        <contrib>Tradução</contrib>
+      </othercredit>
+      <othercredit role="translator"
+      >
+        <firstname>André Marcelo</firstname>
+        <surname>Alvarenga</surname>
+        <affiliation>
+          <address>
+            <email>alvarenga@kde.org</email>
+          </address>
+        </affiliation>
+        <contrib>Tradução</contrib>
+      </othercredit>
+    </authorgroup>
 
-<date
->05/04/2021</date>
-<releaseinfo
->&plasma; 5.20</releaseinfo>
+    <date>05/04/2021</date>
+    <releaseinfo>&plasma; 5.20</releaseinfo>
 
-<keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Configuração do Sistema</keyword>
-<keyword
->iniciar automaticamente</keyword>
-<keyword
->arquivo 'desktop'</keyword>
-<keyword
->arquivo de programa</keyword>
-</keywordset>
-</articleinfo>
+    <keywordset>
+      <keyword>KDE</keyword>
+      <keyword>Configuração do Sistema</keyword>
+      <keyword>iniciar automaticamente</keyword>
+      <keyword>arquivo 'desktop'</keyword>
+      <keyword>arquivo de programa</keyword>
+    </keywordset>
+  </articleinfo>
 
-<sect1 id="kcm_autostart">
-<title
->Gerenciador de Inicialização</title>
+  <sect1 id="kcm_autostart">
+    <title>Gerenciador de Inicialização</title>
 
-<para
->Este módulo é uma ferramenta de configuração para gerenciar os programas que iniciam juntamente com o seu &plasma;. Ele permite adicionar programas que sejam executados automaticamente durante a inicialização ou desligamento da sua sessão do &plasma;, bem como gerenciá-los.</para>
+    <para>Este módulo é uma ferramenta de configuração para gerenciar os programas que iniciam juntamente com o seu &plasma;. Ele permite adicionar programas que sejam executados automaticamente durante a inicialização ou desligamento da sua sessão do &plasma;, bem como gerenciá-los.</para>
 
-<note
-><para
->Por favor, observe que, neste módulo, todas as alterações são aplicadas imediatamente.</para
-></note>
+    <note>
+      <para>Por favor, observe que, neste módulo, todas as alterações são aplicadas imediatamente.</para>
+    </note>
 
-<para
->O programa analisa as pastas <filename
->$HOME/.config/autostart/</filename
-> por aplicativos e scripts de login, <filename class="directory"
->$HOME/.config/plasma-workspace/env</filename
-> por scripts pré-inicialização e <filename class="directory"
->$HOME/.config/plasma-workspace/shutdown</filename
-> por scripts de logout para verificar quais programas e scripts estão presentes e os apresenta. Ele permite-lhe gerenciá-los facilmente. </para>
+    <para>O programa analisa as pastas <filename>$HOME/.config/autostart/</filename> por aplicativos e scripts de login, <filename class="directory"
+      >$HOME/.config/plasma-workspace/env</filename> por scripts pré-inicialização e <filename class="directory"
+      >$HOME/.config/plasma-workspace/shutdown</filename> por scripts de logout para verificar quais programas e scripts estão presentes e os apresenta. Ele permite-lhe gerenciá-los facilmente. </para>
 
-<para
->Os scripts de login são arquivos <filename class="extension"
->.desktop</filename
-> com uma chave <literal
->X-KDE-AutostartScript=true</literal
->. Os scripts de pré-inicialização são executados anteriormente e podem ser usados ​​para definir variáveis ​​de ambiente. </para>
+    <para>Os scripts de login são arquivos <filename class="extension"
+      >.desktop</filename> com uma chave <literal>X-KDE-AutostartScript=true</literal>. Os scripts de pré-inicialização são executados anteriormente e podem ser usados ​​para definir variáveis ​​de ambiente. </para>
 
-<note
-><para
->Lembre-se que você pode modificar a localização da sua pasta <filename class="directory"
->Autostart</filename
-> em <menuchoice
-><guimenu
->Aplicativos</guimenu
-> <guimenuitem
->Localização</guimenuitem
-></menuchoice
-> da categoria <guilabel
->Personalização</guilabel
-> das &systemsettings; e definir uma pasta diferente de <filename class="directory"
->$HOME/.config/autostart</filename
->.</para
-></note>
+    <note>
+      <para>Lembre-se que você pode modificar a localização da sua pasta <filename class="directory"
+        >Autostart</filename> em <menuchoice>
+          <guimenu>Aplicativos</guimenu>
+          <guimenuitem>Localização</guimenuitem>
+        </menuchoice> da categoria <guilabel>Personalização</guilabel> das &systemsettings; e definir uma pasta diferente de <filename class="directory"
+        >$HOME/.config/autostart</filename>.</para>
+    </note>
 
-<para
->Leia também a <ulink url="help:/kcontrol/kcmsmserver"
->Sessão do Ambiente de Trabalho</ulink
-> e os <ulink url="help:/kcontrol/kded"
->Serviços em Segundo Plano</ulink
-> para obter informações sobre a configuração do comportamento na inicialização da sessão do &plasma;.</para>
+    <para>Leia também a <ulink url="help:/kcontrol/kcmsmserver"
+      >Sessão do Ambiente de Trabalho</ulink> e os <ulink url="help:/kcontrol/kded"
+      >Serviços em Segundo Plano</ulink> para obter informações sobre a configuração do comportamento na inicialização da sessão do &plasma;.</para>
 
-<para
->Alguns aplicativos do &kde; lidam com o comportamento de início automático por si só, &eg;, poderá ativar ou desativar o início automático de um aplicativo na caixa de diálogo de configurações (&kalarm;) ou usar o <menuchoice
-><guimenu
->Arquivo</guimenu
-><guimenuitem
->Sair</guimenuitem
-></menuchoice
-> (&konversation;, &kopete;). Caso contrário, os aplicativos continuarão a execução na área de notificação e serão reiniciados na próxima sessão. </para>
+    <para>Alguns aplicativos do &kde; lidam com o comportamento de início automático por si só, &eg;, poderá ativar ou desativar o início automático de um aplicativo na caixa de diálogo de configurações (&kalarm;) ou usar o <menuchoice>
+        <guimenu>Arquivo</guimenu>
+        <guimenuitem>Sair</guimenuitem>
+      </menuchoice> (&konversation;, &kopete;). Caso contrário, os aplicativos continuarão a execução na área de notificação e serão reiniciados na próxima sessão. </para>
 
-<sect2 id="migration">
-<title
->Migração do &kde; Workspaces 4</title>
-<para
->Para migrar a sua configuração pessoal do início automático do &kde; Workspaces 4:</para>
-<simplelist>
-<member
->Copie os arquivos '.desktop' da pasta <filename class="directory"
->$HOME/.kde/Autostart</filename
-> para a pasta <filename class="directory"
->$HOME/.config/autostart</filename
-></member>
-<member
->Copie os arquivos de scripts de inicialização da pasta <filename class="directory"
->$HOME/.kde/Autostart</filename
-> para a pasta <filename class="directory"
->$HOME/.config/plasma-workspace/env</filename
-></member>
-<member
->Copie os arquivos de scripts de desligamento da pasta <filename class="directory"
->$HOME/.kde/Autostart</filename
-> para a pasta <filename class="directory"
->$HOME/.config/plasma-workspace/shutdown</filename
-></member>
-</simplelist>
-</sect2>
+    <sect2 id="migration">
+      <title>Migração do &kde; Workspaces 4</title>
+      <para>Para migrar a sua configuração pessoal do início automático do &kde; Workspaces 4:</para>
+      <simplelist>
+        <member>Copie os arquivos '.desktop' da pasta <filename class="directory"
+          >$HOME/.kde/Autostart</filename> para a pasta <filename class="directory"
+          >$HOME/.config/autostart</filename></member>
+        <member>Copie os arquivos de scripts de inicialização da pasta <filename class="directory"
+          >$HOME/.kde/Autostart</filename> para a pasta <filename class="directory"
+          >$HOME/.config/plasma-workspace/env</filename></member>
+        <member>Copie os arquivos de scripts de desligamento da pasta <filename class="directory"
+          >$HOME/.kde/Autostart</filename> para a pasta <filename class="directory"
+          >$HOME/.config/plasma-workspace/shutdown</filename></member>
+      </simplelist>
+    </sect2>
 
-<sect2 id="disabling_autostart">
-<title
->Desativando os arquivos de inicialização automática fornecidos pela sua distribuição</title>
-<para
->A maneira correta de desativar um item de inicialização automática, por exemplo, o applet da impressora (caso você use a impressora ocasionalmente), é copiar o arquivo <filename class="extension"
->.desktop</filename
-> correspondente para sua pasta de inicialização automática pessoal. Qualquer item com o mesmo nome em <filename class="directory"
->$HOME/.config/autostart</filename
-> sobrescreve o arquivo <filename class="extension"
->.desktop</filename
-> do pacote padrão. Adicione a seguinte linha ao arquivo copiado <filename class="extension"
->.desktop</filename
->:</para>
-<programlisting
->Hidden=true
+    <sect2 id="disabling_autostart">
+      <title>Desativando os arquivos de inicialização automática fornecidos pela sua distribuição</title>
+      <para>A maneira correta de desativar um item de inicialização automática, por exemplo, o applet da impressora (caso você use a impressora ocasionalmente), é copiar o arquivo <filename class="extension"
+        >.desktop</filename> correspondente para sua pasta de inicialização automática pessoal. Qualquer item com o mesmo nome em <filename class="directory"
+        >$HOME/.config/autostart</filename> sobrescreve o arquivo <filename class="extension"
+        >.desktop</filename> do pacote padrão. Adicione a seguinte linha ao arquivo copiado <filename class="extension"
+        >.desktop</filename>:</para>
+      <programlisting>Hidden=true
 </programlisting>
-</sect2>
+    </sect2>
 
-<sect2 id="current">
-<title
->Visualização dos arquivos</title>
-<para
->O componente principal do módulo mostra os programas que são carregados quando o &plasma; inicia e scripts que são executados quando o &plasma; inicia ou desliga.</para>
+    <sect2 id="current">
+      <title>Visualização dos arquivos</title>
+      <para>O componente principal do módulo mostra os programas que são carregados quando o &plasma; inicia e scripts que são executados quando o &plasma; inicia ou desliga.</para>
 
-<variablelist>
-<varlistentry
-><term
-><guilabel
->Ícone</guilabel
-></term>
-<listitem>
-<para
->Esta coluna mostra o ícone do programa ou script que você deseja iniciar com o &plasma;. O ícone é extraído do arquivo Desktop da chave Icon para um programa e é o ícone padrão para um script. </para>
-</listitem>
-</varlistentry>
+      <variablelist>
+        <varlistentry>
+          <term>
+            <guilabel>Ícone</guilabel>
+          </term>
+          <listitem>
+            <para>Esta coluna mostra o ícone do programa ou script que você deseja iniciar com o &plasma;. O ícone é extraído do arquivo Desktop da chave Icon para um programa e é o ícone padrão para um script. </para>
+          </listitem>
+        </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Nome</guilabel
-></term>
-<listitem>
-<para
->Esta coluna mostra o nome do programa ou script que você deseja iniciar com o &plasma;. O nome é extraído do arquivo <filename class="extension"
->.desktop</filename
-> da chave <literal
->Name</literal
-> para um programa e é o nome do arquivo para um script. </para>
-</listitem>
-</varlistentry>
+        <varlistentry>
+          <term>
+            <guilabel>Nome</guilabel>
+          </term>
+          <listitem>
+            <para>Esta coluna mostra o nome do programa ou script que você deseja iniciar com o &plasma;. O nome é extraído do arquivo <filename class="extension"
+              >.desktop</filename> da chave <literal>Name</literal> para um programa e é o nome do arquivo para um script. </para>
+          </listitem>
+        </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Propriedades</guilabel
-></term>
-<listitem>
-<para
->Este botão só é exibido quando você passa o cursor do mouse sobre o item. O botão (habilitado apenas para programas e scripts de login, ou seja, arquivos <filename class="extension"
->.desktop</filename
->) permite que você altere as propriedades do programa ou script. Você tem propriedades gerais, propriedades de permissões, uma pré-visualização quando aplicável e propriedades relacionadas ao aplicativo ou script de login. O comando padrão é extraído do arquivo <filename class="extension"
->.desktop</filename
-> a partir da chave <literal
->Exec</literal
->. </para>
-<para
->Para um script de logout, o comando é o caminho do script e não pode ser modificado. </para>
-</listitem>
-</varlistentry>
+        <varlistentry>
+          <term>
+            <guilabel>Propriedades</guilabel>
+          </term>
+          <listitem>
+            <para>Este botão só é exibido quando você passa o cursor do mouse sobre o item. O botão (habilitado apenas para programas e scripts de login, ou seja, arquivos <filename class="extension"
+              >.desktop</filename>) permite que você altere as propriedades do programa ou script. Você tem propriedades gerais, propriedades de permissões, uma pré-visualização quando aplicável e propriedades relacionadas ao aplicativo ou script de login. O comando padrão é extraído do arquivo <filename class="extension"
+              >.desktop</filename> a partir da chave <literal>Exec</literal>. </para>
+            <para>Para um script de logout, o comando é o caminho do script e não pode ser modificado. </para>
+          </listitem>
+        </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Remover</guilabel
-></term>
-<listitem>
-<para
->Este botão só é exibido quando você passa o cursor do mouse sobre o item. Pressionar o botão <guibutton
->&minus;</guibutton
-> removerá imediatamente o arquivo Desktop do programa, o script ou o link simbólico na pasta <filename class="directory"
->Autostart</filename
->. </para>
-</listitem>
-</varlistentry>
-</variablelist>
-</sect2>
+        <varlistentry>
+          <term>
+            <guilabel>Remover</guilabel>
+          </term>
+          <listitem>
+            <para>Este botão só é exibido quando você passa o cursor do mouse sobre o item. Pressionar o botão <guibutton>&minus;</guibutton> removerá imediatamente o arquivo Desktop do programa, o script ou o link simbólico na pasta <filename class="directory"
+              >Autostart</filename>. </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
 
-<sect2 id="actions">
-<title
->Ações</title>
-<para
->Na parte inferior, você encontrará o botão combinado <guibutton
->Adicionar...</guibutton
-> para escolher o tipo de item que deseja adicionar. Você pode adicionar programas e scripts de login ou logout. </para>
+    <sect2 id="actions">
+      <title>Ações</title>
+      <para>Na parte inferior, você encontrará o botão combinado <guibutton>Adicionar...</guibutton> para escolher o tipo de item que deseja adicionar. Você pode adicionar programas e scripts de login ou logout. </para>
 
-<variablelist>
-<varlistentry
-><term
-><guimenuitem
->Adicionar Programa</guimenuitem
-></term>
-<listitem>
-<para
->Clicar neste item irá mostrar a janela padrão do &plasma; para <guilabel
->Escolher um aplicativo</guilabel
-> e permite-lhe escolher o programa que deseja iniciar. Depois de escolher o programa, clicar em <guibutton
->OK</guibutton
-> irá mostrar as propriedades deste programa. </para>
-<para
->Isto irá copiar o arquivo <filename class="extension"
->.desktop</filename
-> do programa para a sua pasta <filename class="directory"
->Autostart</filename
->. </para>
-</listitem>
-</varlistentry>
+      <variablelist>
+        <varlistentry>
+          <term>
+            <guimenuitem>Adicionar Programa</guimenuitem>
+          </term>
+          <listitem>
+            <para>Clicar neste item irá mostrar a janela padrão do &plasma; para <guilabel>Escolher um aplicativo</guilabel> e permite-lhe escolher o programa que deseja iniciar. Depois de escolher o programa, clicar em <guibutton>OK</guibutton> irá mostrar as propriedades deste programa. </para>
+            <para>Isto irá copiar o arquivo <filename class="extension"
+              >.desktop</filename> do programa para a sua pasta <filename class="directory"
+              >Autostart</filename>. </para>
+          </listitem>
+        </varlistentry>
 
-<varlistentry
-><term
-><guimenuitem
->Adicionar script de login...</guimenuitem
-></term>
-<listitem>
-<para
->Este item abre uma caixa de diálogo que solicita a localização do script que você deseja adicionar. Os scripts configurados para serem executados no login terão um arquivo <filename class="extension"
->.desktop</filename
-> correspondente criado na sua pasta <filename class="directory"
->Autostart</filename
-> e serão executados durante a inicialização do Plasma. </para>
-</listitem>
-</varlistentry>
-<varlistentry
-><term
-><guimenuitem
->Adicionar script de logout...</guimenuitem
-></term>
-<listitem>
-<para
->Este item abre uma caixa de diálogo que solicita a localização do script que você deseja adicionar. Os scripts configurados para serem executados no logout são copiados ou vinculados simbolicamente na pasta <filename class="directory"
->$HOME/.config/plasma-workspace/shutdown</filename
-> e serão executados automaticamente durante o encerramento do Plasma após o usuário ter saído. </para>
-</listitem>
-</varlistentry>
-</variablelist>
-</sect2>
-</sect1>
+        <varlistentry>
+          <term>
+            <guimenuitem>Adicionar script de login...</guimenuitem>
+          </term>
+          <listitem>
+            <para>Este item abre uma caixa de diálogo que solicita a localização do script que você deseja adicionar. Os scripts configurados para serem executados no login terão um arquivo <filename class="extension"
+              >.desktop</filename> correspondente criado na sua pasta <filename class="directory"
+              >Autostart</filename> e serão executados durante a inicialização do Plasma. </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+            <guimenuitem>Adicionar script de logout...</guimenuitem>
+          </term>
+          <listitem>
+            <para>Este item abre uma caixa de diálogo que solicita a localização do script que você deseja adicionar. Os scripts configurados para serem executados no logout são copiados ou vinculados simbolicamente na pasta <filename class="directory"
+              >$HOME/.config/plasma-workspace/shutdown</filename> e serão executados automaticamente durante o encerramento do Plasma após o usuário ter saído. </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
 </article>
 
 <!--

@@ -1,193 +1,135 @@
-<?xml version="1.0" ?>
-<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
-"dtd/kdedbx45.dtd" [
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Brazilian-Portuguese "INCLUDE">
 ]>
 <article id="desktopthemedetails" lang="&language;">
-<articleinfo>
-<title
->Estilo do Plasma</title>
-<authorgroup>
-<author
-><firstname
->Andrew</firstname
-> <surname
->Lake</surname
-></author>
-<author
-><firstname
->Carl</firstname
-> <surname
->Schwan</surname
-> </author>
-<othercredit role="translator"
-><firstname
->Marcus</firstname
-><surname
->Gama</surname
-><affiliation
-><address
-><email
->marcus.gama@gmail.com</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-> <othercredit role="translator"
-><firstname
->Bianca</firstname
-><surname
->Oliveira</surname
-><affiliation
-><address
-><email
->kbiancasol@gmail.com</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-> 
-</authorgroup>
+  <articleinfo>
+    <title>Estilo do Plasma</title>
+    <authorgroup>
+      <author>
+        <firstname>Andrew</firstname>
+        <surname>Lake</surname>
+      </author>
+      <author>
+        <firstname>Carl</firstname>
+        <surname>Schwan</surname>
+      </author>
+      <othercredit role="translator"
+      >
+        <firstname>Marcus</firstname>
+        <surname>Gama</surname>
+        <affiliation>
+          <address>
+            <email>marcus.gama@gmail.com</email>
+          </address>
+        </affiliation>
+        <contrib>Tradução</contrib>
+      </othercredit>
+      <othercredit role="translator"
+      >
+        <firstname>Bianca</firstname>
+        <surname>Oliveira</surname>
+        <affiliation>
+          <address>
+            <email>kbiancasol@gmail.com</email>
+          </address>
+        </affiliation>
+        <contrib>Tradução</contrib>
+      </othercredit>
+    </authorgroup>
 
-<date
->09/04/2021</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+    <date>09/04/2021</date>
+    <releaseinfo>Plasma 5.20</releaseinfo>
 
-<keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Configurações do sistema</keyword>
-<keyword
->área de trabalho</keyword>
-<keyword
->estilo</keyword>
-<keyword
->tema</keyword>
-<keyword
->plasma</keyword>
-</keywordset>
-</articleinfo>
+    <keywordset>
+      <keyword>KDE</keyword>
+      <keyword>Configurações do sistema</keyword>
+      <keyword>área de trabalho</keyword>
+      <keyword>estilo</keyword>
+      <keyword>tema</keyword>
+      <keyword>plasma</keyword>
+    </keywordset>
+  </articleinfo>
 
-<para
->O &plasma; vem com vários estilos. São os estilos do &plasma; que definem como seus diferentes componentes são exibidos (&eg;, Plasmóides, painéis, widgets). </para>
+  <para>O &plasma; vem com vários estilos. São os estilos do &plasma; que definem como seus diferentes componentes são exibidos (&eg;, Plasmóides, painéis, widgets). </para>
 
-<para>
-  <screenshot>
-    <screeninfo
->Aqui está uma captura de tela do gerenciador de estilos do &plasma;</screeninfo>
-    <mediaobject>
-      <imageobject>
-        <imagedata fileref="main.png" format="PNG"/>
-      </imageobject>
-      <textobject>
-        <phrase
->Personalizando o estilo do &plasma;</phrase>
-      </textobject>
-    </mediaobject>
-  </screenshot>
-</para>
-
-<para
->Neste módulo você pode:</para>
-<itemizedlist>
-  <listitem
-><para
->instalar e escolher estilos do &plasma;</para
-></listitem>
-  <listitem
-><para
->editar estilos do &plasma;</para
-></listitem>
-  <listitem
-><para
->remover estilos do &plasma;</para
-></listitem>
-</itemizedlist>
-
-<para
->É possível filtrar a lista de estilos usando o campo <guilabel
->Pesquisar...</guilabel
-> acima da grade. Além disso, você pode usar a caixa de combinação ao lado deste campo para exibir apenas os <guimenuitem
->Temas claros</guimenuitem
->, os <guimenuitem
->Temas escuros</guimenuitem
-> ou os <guimenuitem
->Temas compatíveis com o esquema de cores</guimenuitem
->. </para>
-
-<para
->Se você deseja remover um estilo, use o <inlinemediaobject
-><imageobject
-><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
-></inlinemediaobject
-> ícone de sobreposição na parte inferior direita do ícone do estilo. Para desfazer essa ação clique no ícone<inlinemediaobject
-><imageobject
-><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
-></inlinemediaobject
->. Se você clicar no botão <guibutton
->Aplicar</guibutton
-> os estilos selecionados para remoção são realmente excluídos, você não poderá desfazer exclusões individuais ou coletivas. </para>
-
-<para
->Se o pacote plasma-sdk estiver instalado em seu sistema, terá um botão suspenso para pré-visualizar o estilo e permitirá que você inicie o <application
->Explorador de tema do Plasma</application
->. </para>
-<para
->Para obter informações mais técnicas, visite <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
->esta página</ulink
->. </para>
-
-<variablelist>
-  <varlistentry>
-    <term
-><guilabel
->Baixar novos estilos do Plasma...</guilabel
-></term>
-    <listitem>
-    <para
->Você precisa estar conectado a Internet para usá-lo. Clicando neste botão uma caixa de diálogo será exibida, nela você poderá escolher um novo estilo do plasma. Clicando em <guibutton
->Instalar</guibutton
-> na caixa de diálogo,o estilo do &plasma; escolhido será instalado e depois que você <guibutton
->Fechar</guibutton
-> o instalador seu novo estilo estará disponível para uso. </para>
-    <para>
+  <para>
     <screenshot>
-    <screeninfo
->Baixar novos estilos do Plasma...</screeninfo>
+      <screeninfo>Aqui está uma captura de tela do gerenciador de estilos do &plasma;</screeninfo>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="get-new-theme.png" format="PNG"/>
+          <imagedata fileref="main.png" format="PNG" />
         </imageobject>
         <textobject>
-          <phrase
->Baixar novos estilos do Plasma...</phrase>
+          <phrase>Personalizando o estilo do &plasma;</phrase>
         </textobject>
       </mediaobject>
     </screenshot>
-    </para>
-    </listitem>
-  </varlistentry>
-  <varlistentry>
-    <term
-><guilabel
->Instalar de um arquivo...</guilabel
-></term>
-    <listitem>
-      <para
->Se você baixou novos estilos da Internet, você pode usar isto para navegar para a localização destes estilos recém baixados. Clicando neste botão irá mostrar a janela dos arquivos para apontar para o tarball do estilo do &plasma; que você tem em seu disco.</para>
+  </para>
 
-      <para
->Clicando <guibutton
->Abrir</guibutton
-> nesta caixa de diálogo você irá instalar o estilo apontado e ele ficará disponível na lista de estilos. </para>
+  <para>Neste módulo você pode:</para>
+  <itemizedlist>
+    <listitem>
+      <para>instalar e escolher estilos do &plasma;</para>
     </listitem>
-  </varlistentry>
-</variablelist>
+    <listitem>
+      <para>editar estilos do &plasma;</para>
+    </listitem>
+    <listitem>
+      <para>remover estilos do &plasma;</para>
+    </listitem>
+  </itemizedlist>
+
+  <para>É possível filtrar a lista de estilos usando o campo <guilabel>Pesquisar...</guilabel> acima da grade. Além disso, você pode usar a caixa de combinação ao lado deste campo para exibir apenas os <guimenuitem>Temas claros</guimenuitem>, os <guimenuitem>Temas escuros</guimenuitem> ou os <guimenuitem>Temas compatíveis com o esquema de cores</guimenuitem>. </para>
+
+  <para>Se você deseja remover um estilo, use o <inlinemediaobject>
+      <imageobject>
+        <imagedata fileref="edit-delete.png" format="PNG" />
+      </imageobject>
+    </inlinemediaobject> ícone de sobreposição na parte inferior direita do ícone do estilo. Para desfazer essa ação clique no ícone<inlinemediaobject>
+      <imageobject>
+        <imagedata fileref="edit-undo.png" format="PNG" />
+      </imageobject>
+    </inlinemediaobject>. Se você clicar no botão <guibutton>Aplicar</guibutton> os estilos selecionados para remoção são realmente excluídos, você não poderá desfazer exclusões individuais ou coletivas. </para>
+
+  <para>Se o pacote plasma-sdk estiver instalado em seu sistema, terá um botão suspenso para pré-visualizar o estilo e permitirá que você inicie o <application>Explorador de tema do Plasma</application>. </para>
+  <para>Para obter informações mais técnicas, visite <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+    >esta página</ulink>. </para>
+
+  <variablelist>
+    <varlistentry>
+      <term>
+        <guilabel>Baixar novos estilos do Plasma...</guilabel>
+      </term>
+      <listitem>
+        <para>Você precisa estar conectado a Internet para usá-lo. Clicando neste botão uma caixa de diálogo será exibida, nela você poderá escolher um novo estilo do plasma. Clicando em <guibutton>Instalar</guibutton> na caixa de diálogo,o estilo do &plasma; escolhido será instalado e depois que você <guibutton>Fechar</guibutton> o instalador seu novo estilo estará disponível para uso. </para>
+        <para>
+          <screenshot>
+            <screeninfo>Baixar novos estilos do Plasma...</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="get-new-theme.png" format="PNG" />
+              </imageobject>
+              <textobject>
+                <phrase>Baixar novos estilos do Plasma...</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>
+        <guilabel>Instalar de um arquivo...</guilabel>
+      </term>
+      <listitem>
+        <para>Se você baixou novos estilos da Internet, você pode usar isto para navegar para a localização destes estilos recém baixados. Clicando neste botão irá mostrar a janela dos arquivos para apontar para o tarball do estilo do &plasma; que você tem em seu disco.</para>
+
+        <para>Clicando <guibutton>Abrir</guibutton> nesta caixa de diálogo você irá instalar o estilo apontado e ele ficará disponível na lista de estilos. </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
 
 </article>
 

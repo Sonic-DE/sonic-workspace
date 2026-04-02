@@ -1,186 +1,141 @@
-<?xml version="1.0" ?>
-<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
-"dtd/kdedbx45.dtd" [
-<!ENTITY % addindex "IGNORE">
-<!ENTITY % Brazilian-Portuguese "INCLUDE"
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE"
 > <!-- change language only here -->
 ]>
 
 <article id="icons" lang="&language;">
-<articleinfo>
-<title
->Ícones</title>
-<authorgroup>
-<author
->&Mike.McBride; &Mike.McBride.mail;</author>
-<author
->&Jost.Schenck; &Jost.Schenck.mail;</author>
-<author
->&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
-<othercredit role="translator"
-><firstname
->Lisiane</firstname
-> <surname
->Sztoltz</surname
-><affiliation
-><address
-> <email
->lisiane@conectiva.com.br</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-> 
-</authorgroup>
+  <articleinfo>
+    <title>Ícones</title>
+    <authorgroup>
+      <author>&Mike.McBride; &Mike.McBride.mail;</author>
+      <author>&Jost.Schenck; &Jost.Schenck.mail;</author>
+      <author>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+      <othercredit role="translator"
+      >
+        <firstname>Lisiane</firstname>
+        <surname>Sztoltz</surname>
+        <affiliation>
+          <address>
+            <email>lisiane@conectiva.com.br</email>
+          </address>
+        </affiliation>
+        <contrib>Tradução</contrib>
+      </othercredit>
+    </authorgroup>
 
-<date
->09/04/2021</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+    <date>09/04/2021</date>
+    <releaseinfo>Plasma 5.20</releaseinfo>
 
-<keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Centro de Controle</keyword>
-<keyword
->ícone</keyword>
-</keywordset>
-</articleinfo>
+    <keywordset>
+      <keyword>KDE</keyword>
+      <keyword>Centro de Controle</keyword>
+      <keyword>ícone</keyword>
+    </keywordset>
+  </articleinfo>
 
-<para
->O &plasma; vem com um conjunto completo de ícones, de vários tamanhos. Estes ícones estão sendo usados em todo o ambiente de trabalho do &plasma;: no painel, no gerenciador de arquivos &dolphin;, na barra de ferramentas de cada aplicativo do &plasma;, etc. O módulo de controle de ícones oferece a você muitas maneiras de personalizar o modo como o &plasma; manipula ícones.</para>
+  <para>O &plasma; vem com um conjunto completo de ícones, de vários tamanhos. Estes ícones estão sendo usados em todo o ambiente de trabalho do &plasma;: no painel, no gerenciador de arquivos &dolphin;, na barra de ferramentas de cada aplicativo do &plasma;, etc. O módulo de controle de ícones oferece a você muitas maneiras de personalizar o modo como o &plasma; manipula ícones.</para>
 
-<para>
-<screenshot>
-<screeninfo
->Aqui está uma imagem do gerenciador de temas de ícones</screeninfo>
-  <mediaobject>
-    <imageobject>
-      <imagedata fileref="main.png" format="PNG"/>
-    </imageobject>
-    <textobject>
-      <phrase
->Personalizando os ícones do &plasma;</phrase>
-    </textobject>
-  </mediaobject>
-</screenshot>
-</para>
+  <para>
+    <screenshot>
+      <screeninfo>Aqui está uma imagem do gerenciador de temas de ícones</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="main.png" format="PNG" />
+        </imageobject>
+        <textobject>
+          <phrase>Personalizando os ícones do &plasma;</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+  </para>
 
-<para
->Neste módulo você poderá:</para>
-<itemizedlist>
-<listitem
-><para
->instalar e escolher temas de ícones</para
-></listitem>
-<listitem
-><para
->selecionar diferentes tamanhos para o ícone</para
-></listitem>
-<listitem
-><para
->remover tema de ícones</para
-></listitem>
-</itemizedlist>
+  <para>Neste módulo você poderá:</para>
+  <itemizedlist>
+    <listitem>
+      <para>instalar e escolher temas de ícones</para>
+    </listitem>
+    <listitem>
+      <para>selecionar diferentes tamanhos para o ícone</para>
+    </listitem>
+    <listitem>
+      <para>remover tema de ícones</para>
+    </listitem>
+  </itemizedlist>
 
-<important
-><para
->Observe que algumas destas configurações podem depender do tema de ícones que você selecionou. O &plasma; disponibiliza diversos temas de ícones por padrão: Breeze, Breeze Dark e Oxygen.</para
-></important>
+  <important>
+    <para>Observe que algumas destas configurações podem depender do tema de ícones que você selecionou. O &plasma; disponibiliza diversos temas de ícones por padrão: Breeze, Breeze Dark e Oxygen.</para>
+  </important>
 
-<para
->Na parte superior, você encontra uma prévia dos ícones do tema atual. A maioria das instalações padrão terá apenas alguns temas de ícones disponíveis, entre eles o tema Breeze, padrão do &plasma;. Você também pode baixar mais temas da internet em <ulink url="https://store.kde.org/"
->https://store.kde.org/</ulink
-> ou instalá-los a partir de um arquivo local.</para>
+  <para>Na parte superior, você encontra uma prévia dos ícones do tema atual. A maioria das instalações padrão terá apenas alguns temas de ícones disponíveis, entre eles o tema Breeze, padrão do &plasma;. Você também pode baixar mais temas da internet em <ulink url="https://store.kde.org/"
+    >https://store.kde.org/</ulink> ou instalá-los a partir de um arquivo local.</para>
 
-<para
->Ao passar o cursor, uma pré-visualização animada mostra uma seleção aleatória, tipos MIME comuns e ícones de pastas comuns. </para>
+  <para>Ao passar o cursor, uma pré-visualização animada mostra uma seleção aleatória, tipos MIME comuns e ícones de pastas comuns. </para>
 
-<para
->Se você deseja remover um tema, use o ícone de sobreposição <inlinemediaobject
-><imageobject
-><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
-></inlinemediaobject
-> na parte inferior direita do ícone do tema. Para desfazer essa ação clique no ícone<inlinemediaobject
-><imageobject
-><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
-></inlinemediaobject
->. Se você clicar no botão <guibutton
->Aplicar</guibutton
-> os temas selecionados para remoção são realmente excluídos, você não poderá desfazer exclusões individuais ou coletivas. </para>
+  <para>Se você deseja remover um tema, use o ícone de sobreposição <inlinemediaobject>
+      <imageobject>
+        <imagedata fileref="edit-delete.png" format="PNG" />
+      </imageobject>
+    </inlinemediaobject> na parte inferior direita do ícone do tema. Para desfazer essa ação clique no ícone<inlinemediaobject>
+      <imageobject>
+        <imagedata fileref="edit-undo.png" format="PNG" />
+      </imageobject>
+    </inlinemediaobject>. Se você clicar no botão <guibutton>Aplicar</guibutton> os temas selecionados para remoção são realmente excluídos, você não poderá desfazer exclusões individuais ou coletivas. </para>
 
-<variablelist>
-<varlistentry
-><term
-><guilabel
->Configurar tamanho dos ícones</guilabel
-></term>
-<listitem>
-<para
->Selecione um dos componentes e use o controle deslizante para ajustar o tamanho correspondente. O tamanho do componente é ajustável. </para>
-<para>
-<screenshot>
-<screeninfo
->Configurar tamanho dos ícones</screeninfo>
-  <mediaobject>
-    <imageobject>
-      <imagedata fileref="use-of-icons.png" format="PNG"/>
-    </imageobject>
-    <textobject>
-      <phrase
->Configurar tamanho dos ícones</phrase>
-    </textobject>
-  </mediaobject>
-</screenshot>
-</para>
-</listitem>
-</varlistentry>
-<varlistentry
-><term
-><guilabel
->Baixar novos ícones...</guilabel
-></term>
-<listitem>
-<para
->Você precisará estar conectado à Internet para usar esta opção. Clicando neste botão, será apresentada uma janela de onde poderá escolher um novo tema de ícones. Clicar em <guibutton
->Instalar</guibutton
-> na janela irá instalar o tema de ícones escolhido e se depois disso você <guibutton
->Fechar</guibutton
-> o instalador, o seu tema ficará imediatamente disponível. </para>
-<para>
-<screenshot>
-<screeninfo
->Baixar novos ícones</screeninfo>
-  <mediaobject>
-    <imageobject>
-      <imagedata fileref="get-new-theme.png" format="PNG"/>
-    </imageobject>
-    <textobject>
-      <phrase
->Baixar novos ícones</phrase>
-    </textobject>
-  </mediaobject>
-</screenshot>
-</para>
-</listitem>
-</varlistentry>
-<varlistentry
-><term
-><guilabel
->Instalar a partir do arquivo...</guilabel
-></term>
-<listitem>
-<para
->Se você baixou novos temas da Internet, poderá usar esta opção para navegar até a localização destes temas recém transferidos. Ao clicar neste botão, irá aparecer uma janela para que você insira o caminho do pacote do tema de ícones que você possui no seu disco.</para>
+  <variablelist>
+    <varlistentry>
+      <term>
+        <guilabel>Configurar tamanho dos ícones</guilabel>
+      </term>
+      <listitem>
+        <para>Selecione um dos componentes e use o controle deslizante para ajustar o tamanho correspondente. O tamanho do componente é ajustável. </para>
+        <para>
+          <screenshot>
+            <screeninfo>Configurar tamanho dos ícones</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="use-of-icons.png" format="PNG" />
+              </imageobject>
+              <textobject>
+                <phrase>Configurar tamanho dos ícones</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>
+        <guilabel>Baixar novos ícones...</guilabel>
+      </term>
+      <listitem>
+        <para>Você precisará estar conectado à Internet para usar esta opção. Clicando neste botão, será apresentada uma janela de onde poderá escolher um novo tema de ícones. Clicar em <guibutton>Instalar</guibutton> na janela irá instalar o tema de ícones escolhido e se depois disso você <guibutton>Fechar</guibutton> o instalador, o seu tema ficará imediatamente disponível. </para>
+        <para>
+          <screenshot>
+            <screeninfo>Baixar novos ícones</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="get-new-theme.png" format="PNG" />
+              </imageobject>
+              <textobject>
+                <phrase>Baixar novos ícones</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>
+        <guilabel>Instalar a partir do arquivo...</guilabel>
+      </term>
+      <listitem>
+        <para>Se você baixou novos temas da Internet, poderá usar esta opção para navegar até a localização destes temas recém transferidos. Ao clicar neste botão, irá aparecer uma janela para que você insira o caminho do pacote do tema de ícones que você possui no seu disco.</para>
 
-<para
->Clicar em <guibutton
->Abrir</guibutton
-> nesta janela, irá instalar o tema selecionado, que será disponibilizado na lista de temas. </para>
-</listitem>
-</varlistentry>
-</variablelist>
+        <para>Clicar em <guibutton>Abrir</guibutton> nesta janela, irá instalar o tema selecionado, que será disponibilizado na lista de temas. </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
 
 </article>

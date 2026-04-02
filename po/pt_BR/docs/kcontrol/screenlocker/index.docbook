@@ -1,99 +1,57 @@
-<?xml version="1.0" ?>
-<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
-"dtd/kdedbx45.dtd" [
-<!ENTITY % addindex "IGNORE">
-<!ENTITY % Brazilian-Portuguese "INCLUDE"
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Brazilian-Portuguese "INCLUDE"
 > <!-- change language only here -->
 ]>
 
 <article id="screenlocker" lang="&language;">
-<articleinfo>
-<title
->Bloqueio de tela</title>
-<authorgroup>
-<author
->&Mike.McBride; &Mike.McBride.mail;</author>
-<othercredit role="translator"
-><firstname
->Lisiane</firstname
-> <surname
->Sztoltz</surname
-><affiliation
-><address
-> <email
->lisiane@conectiva.com.br</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-> 
-</authorgroup>
-<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
-<date
->02/07/2020</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+    <articleinfo>
+        <title>Bloqueio de tela</title>
+        <authorgroup>
+            <author>&Mike.McBride; &Mike.McBride.mail;</author>
+            <othercredit role="translator"
+            >
+                <firstname>Lisiane</firstname>
+                <surname>Sztoltz</surname>
+                <affiliation>
+                    <address>
+                        <email>lisiane@conectiva.com.br</email>
+                    </address>
+                </affiliation>
+                <contrib>Tradução</contrib>
+            </othercredit>
+        </authorgroup>
+        <!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+        <date>02/07/2020</date>
+        <releaseinfo>Plasma 5.20</releaseinfo>
 
-<keywordset>
-<keyword
->KDE</keyword>
-<keyword
->configurações do sistema</keyword>
-<keyword
->bloqueio de tela</keyword>
-<keyword
->bloqueador de sessão</keyword>
-</keywordset>
-</articleinfo>
-<para
->Com este módulo, você pode determinar quanto tempo deve passar antes que o bloqueador de tela seja ativado, configurar o período de tolerância para desbloquear a tela sem senha e escolher a aparência do seu bloqueador de tela.</para>
+        <keywordset>
+            <keyword>KDE</keyword>
+            <keyword>configurações do sistema</keyword>
+            <keyword>bloqueio de tela</keyword>
+            <keyword>bloqueador de sessão</keyword>
+        </keywordset>
+    </articleinfo>
+    <para>Com este módulo, você pode determinar quanto tempo deve passar antes que o bloqueador de tela seja ativado, configurar o período de tolerância para desbloquear a tela sem senha e escolher a aparência do seu bloqueador de tela.</para>
 
-<para
->Na parte superior encontra-se uma opção para bloqueio da tela <guilabel
->Bloquear tela automaticamente</guilabel
-> e um campo incremental que define o período de inatividade, em minutos, antes de iniciar o bloqueio. Você pode indicar qualquer número positivo neste campo.</para>
+    <para>Na parte superior encontra-se uma opção para bloqueio da tela <guilabel>Bloquear tela automaticamente</guilabel> e um campo incremental que define o período de inatividade, em minutos, antes de iniciar o bloqueio. Você pode indicar qualquer número positivo neste campo.</para>
 
-<para
->A caixa de seleção <guilabel
->Após sair do modo de suspensão</guilabel
-> pode ser usada para ativar ou desativar o bloqueio da tela da área de trabalho após a suspensão do sistema.</para>
+    <para>A caixa de seleção <guilabel>Após sair do modo de suspensão</guilabel> pode ser usada para ativar ou desativar o bloqueio da tela da área de trabalho após a suspensão do sistema.</para>
 
-<para
->Abaixo desta opção existe outra chamada <guilabel
->Permitir desbloquear sem senha para</guilabel
->. Quando você pressionar uma tecla ou clicar um botão do mouse, de forma a terminar o bloqueio ao fim do tempo definido no campo incremental e voltar ao seu trabalho, não será necessário informar uma senha. A senha é a mesma usada para autenticação na máquina.</para>
+    <para>Abaixo desta opção existe outra chamada <guilabel>Permitir desbloquear sem senha para</guilabel>. Quando você pressionar uma tecla ou clicar um botão do mouse, de forma a terminar o bloqueio ao fim do tempo definido no campo incremental e voltar ao seu trabalho, não será necessário informar uma senha. A senha é a mesma usada para autenticação na máquina.</para>
 
-<para
->O bloqueio manual da tela faz com que a proteção por senha seja aplicada imediatamente.</para>
+    <para>O bloqueio manual da tela faz com que a proteção por senha seja aplicada imediatamente.</para>
 
-<para
->Você pode definir um atalho para bloquear a tela usando o campo <guilabel
->Atalho de teclado</guilabel
->.</para>
+    <para>Você pode definir um atalho para bloquear a tela usando o campo <guilabel>Atalho de teclado</guilabel>.</para>
 
-<para
->A combinação de teclas padrão <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->L</keycap
-></keycombo
-> oferece uma forma rápida de bloquear a tela manualmente.</para>
+    <para>A combinação de teclas padrão <keycombo action="simul"
+        >&Ctrl;&Alt;<keycap>L</keycap></keycombo> oferece uma forma rápida de bloquear a tela manualmente.</para>
 
-<para
->Se você quiser alterar o plano de fundo com a tela bloqueada, pressione o botão <guibutton
->Configurar</guibutton
-> ao lado do rótulo <guilabel
->Aparência</guilabel
->. Em seguida, você poderá alterar o <guilabel
->Tipo de papel de parede</guilabel
->.</para>
+    <para>Se você quiser alterar o plano de fundo com a tela bloqueada, pressione o botão <guibutton>Configurar</guibutton> ao lado do rótulo <guilabel>Aparência</guilabel>. Em seguida, você poderá alterar o <guilabel>Tipo de papel de parede</guilabel>.</para>
 
-<para
->Você pode selecionar uma <guilabel
->Cor simples</guilabel
-> como tipo de papel de parede.</para>
+    <para>Você pode selecionar uma <guilabel>Cor simples</guilabel> como tipo de papel de parede.</para>
 
-<para
->Alternativamente, use uma única imagem ou uma apresentação de slides com imagens de uma pasta ou carregue novos papéis de parede da Internet.</para>
+    <para>Alternativamente, use uma única imagem ou uma apresentação de slides com imagens de uma pasta ou carregue novos papéis de parede da Internet.</para>
 
 </article>
