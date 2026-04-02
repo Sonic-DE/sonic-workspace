@@ -13,16 +13,16 @@ Created with Inkscape (http://www.inkscape.org/)
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs1" />
-  <g
-     id="layer1">
-    <rect
-       style="fill:#ff0000;stroke-width:0.265692"
-       id="rect1"
-       width="16"
-       height="16"
-       x="0"
-       y="0" />
-  </g>
+   <defs
+      id="defs1" />
+   <g
+      id="layer1">
+      <rect
+         style="fill:#ff0000;stroke-width:0.265692"
+         id="rect1"
+         width="16"
+         height="16"
+         x="0"
+         y="0" />
+   </g>
 </svg>
