@@ -3,7 +3,7 @@
 Startup can be summarised as being:
 
 plasma-core.target
-plasma-workspace@.target
+<plasma-workspace@.target>
 graphical-session.target
 
 plasma-workspace@ is the target explicitly activated.
@@ -14,6 +14,7 @@ plasma-workspace@ is a template file that ends with x11 or wayland. That will th
 startup order can be different between the two.
 
 ## Wants & Order
+
 Note that in systemd dependencies (wants/wantedby) counter-intuitively do not determine order.
 
 plasma-workspace wants graphical-session, meaning it will make it something started by it, but it also explicitly comes before graphical-session.

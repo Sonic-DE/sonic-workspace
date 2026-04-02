@@ -1,4 +1,4 @@
-##XEmbed SNI Proxy
+## XEmbed SNI Proxy
 
 The goal of this project is to make xembed system trays available in Plasma.
 
@@ -8,7 +8,7 @@ Ideally we also want this to work in an xwayland session, making X system tray i
 
 This project should be portable onto all other DEs that speak SNI.
 
-##How it works (in theory)
+## How it works (in theory)
 
 * We register a window as a system tray container
 * We render embedded windows composited offscreen
@@ -18,7 +18,7 @@ This project should be portable onto all other DEs that speak SNI.
 
 There are a few extra hacks in the real code to deal with some toolkits being awkward.
 
-##Build instructions
+## Build instructions
 
     cmake .
     make
@@ -26,5 +26,5 @@ There are a few extra hacks in the real code to deal with some toolkits being aw
 
 After building, run `xembedsniproxy`.
 
-[1] http://standards.freedesktop.org/systemtray-spec/systemtray-spec-latest.html
-[2] http://www.freedesktop.org/wiki/Specifications/StatusNotifierItem/
+[1] <http://standards.freedesktop.org/systemtray-spec/systemtray-spec-latest.html>
+[2] <http://www.freedesktop.org/wiki/Specifications/StatusNotifierItem/>
