@@ -171,7 +171,7 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
         m_themes[themeName] = imageSet;
     }
 
-    for (const auto children = item->findChildren<KSvg::Svg *>(); KSvg::Svg * svg : children) {
+    for (const auto children = item->findChildren<KSvg::Svg *>(); KSvg::Svg *svg : children) {
         auto *frame = qobject_cast<KSvg::FrameSvg *>(svg);
         svg->setUsingRenderingCache(false);
         if (frame) {

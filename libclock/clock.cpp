@@ -48,7 +48,7 @@ bool Clock::isValid() const
 {
     return m_timeZone.isValid();
 }
- QByteArray Clock::timeZone() const
+QByteArray Clock::timeZone() const
 {
     return m_timeZone.id();
 }

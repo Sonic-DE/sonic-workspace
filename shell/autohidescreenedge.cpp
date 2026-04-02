@@ -107,7 +107,7 @@ AutoHideScreenEdge::AutoHideScreenEdge(PanelView *view)
 
 AutoHideScreenEdge *AutoHideScreenEdge::create(PanelView *view)
 {
-        return new X11AutoHideScreenEdge(view);
+    return new X11AutoHideScreenEdge(view);
 }
 
 #include "autohidescreenedge.moc"

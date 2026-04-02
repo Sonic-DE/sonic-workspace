@@ -19,11 +19,11 @@
 #include <QScreen>
 
 #include <KWindowSystem>
-#include <plasmaquick/popupplasmawindow.h>
-#include <qnamespace.h>
 #include <KX11Extras>
 #include <klocalizedstring.h>
 #include <kwindoweffects.h>
+#include <plasmaquick/popupplasmawindow.h>
+#include <qnamespace.h>
 
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>

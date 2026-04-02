@@ -72,7 +72,7 @@ QList<int> AppInterface::panelIds() const
     //       however QScript deals with QList<uint> very, very poorly
     QList<int> panels;
 
-    for (const auto conts = m_env->corona()->containments(); Plasma::Containment * c : conts) {
+    for (const auto conts = m_env->corona()->containments(); Plasma::Containment *c : conts) {
         // qDebug() << "checking" << (QObject*)c << isPanel(c);
         if (ScriptEngine::isPanel(c)) {
             panels.append(c->id());

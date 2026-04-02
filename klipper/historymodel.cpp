@@ -280,12 +280,12 @@ void HistoryModel::clearHistory()
         // TODO: Consider adding a setting in Klipper configuration UI to customize this behavior
         // (e.g., always ask, always keep starred, always clear all)
         int clearChoice = KMessageBox::questionTwoActionsCancel(nullptr,
-                                                               i18n("The clipboard history contains starred items. Clear them too?"),
-                                                               i18n("Clear Clipboard History"),
-                                                               KGuiItem(i18n("Clear Everything"), QStringLiteral("edit-clear-history")),
-                                                               KGuiItem(i18n("Keep Starred Items"), QStringLiteral("starred-symbolic")),
-                                                               KStandardGuiItem::cancel(),
-                                                               QStringLiteral("klipperClearHistoryStarredChoice"));
+                                                                i18n("The clipboard history contains starred items. Clear them too?"),
+                                                                i18n("Clear Clipboard History"),
+                                                                KGuiItem(i18n("Clear Everything"), QStringLiteral("edit-clear-history")),
+                                                                KGuiItem(i18n("Keep Starred Items"), QStringLiteral("starred-symbolic")),
+                                                                KStandardGuiItem::cancel(),
+                                                                QStringLiteral("klipperClearHistoryStarredChoice"));
 
         if (clearChoice == KMessageBox::Cancel) {
             return; // User cancelled
@@ -564,11 +564,11 @@ bool HistoryModel::remove(const QString &uuid)
     // Show confirmation dialog for starred items
     if (isStarred) {
         int result = KMessageBox::warningContinueCancel(nullptr,
-                                                       i18n("This item is starred. Do you really want to remove it from history?"),
-                                                       i18n("Remove Starred Item"),
-                                                       KStandardGuiItem::del(),
-                                                       KStandardGuiItem::cancel(),
-                                                       QStringLiteral("klipperRemoveStarredItemAskAgain"));
+                                                        i18n("This item is starred. Do you really want to remove it from history?"),
+                                                        i18n("Remove Starred Item"),
+                                                        KStandardGuiItem::del(),
+                                                        KStandardGuiItem::cancel(),
+                                                        QStringLiteral("klipperRemoveStarredItemAskAgain"));
         if (result != KMessageBox::Continue) {
             return false; // User cancelled deletion
         }

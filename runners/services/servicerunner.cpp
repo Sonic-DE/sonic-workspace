@@ -76,7 +76,6 @@ struct WeightedScoreCard {
 
 QDebug operator<<(QDebug dbg, const WeightedScoreCard &card)
 {
-
     dbg.nospace() << "WeightedCard[";
     for (const auto &scoreCard : card.cards) {
         dbg.nospace() << scoreCard;
@@ -88,7 +87,8 @@ QDebug operator<<(QDebug dbg, const WeightedScoreCard &card)
     return dbg;
 }
 
-auto makeScores(const auto &notNormalizedString, const auto &queryList) {
+auto makeScores(const auto &notNormalizedString, const auto &queryList)
+{
     if (notNormalizedString.isEmpty()) {
         return ScoreCards{}; // No string, no score.
     }
@@ -134,8 +134,8 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
     return cards;
 };
 
-
-auto makeScoreFromList(const auto &queryList, const QStringList &strings) {
+auto makeScoreFromList(const auto &queryList, const QStringList &strings)
+{
     // This turns the loop inside out. For every query item we must find a match in our keywords or we discard
     ScoreCards cards;
     // e.g. text,editor,programming

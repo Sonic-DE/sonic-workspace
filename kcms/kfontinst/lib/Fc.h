@@ -8,8 +8,8 @@
 #include "Misc.h"
 #include "kfontinst_export.h"
 #include <QUrl>
-#include <fontconfig/fontconfig.h>
 #include <fontconfig/fcfreetype.h>
+#include <fontconfig/fontconfig.h>
 
 #include "kfontinst_export.h"
 

@@ -10,9 +10,9 @@
 #include "launchertasksmodel_p.h"
 
 #include "config-X11.h"
+#include <KWindowSystem>
 #include <QGuiApplication>
 #include <QScreen>
-#include <KWindowSystem>
 
 namespace TaskManager
 {

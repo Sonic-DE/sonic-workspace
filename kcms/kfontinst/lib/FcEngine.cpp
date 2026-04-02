@@ -36,7 +36,7 @@ static Display *xDisplay()
 {
     static Display *s_display = nullptr;
     if (!s_display) {
-            s_display = QX11Info::display();
+        s_display = QX11Info::display();
     }
     return s_display;
 }

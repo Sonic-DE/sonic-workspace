@@ -21,10 +21,10 @@
 #include <KPluginFactory>
 #include <KUserTimestamp>
 
+#include <KX11Extras>
 #include <kpassworddialog.h>
 #include <kwallet.h>
 #include <kwindowsystem.h>
-#include <KX11Extras>
 
 // solid specific includes
 #include <solid/device.h>

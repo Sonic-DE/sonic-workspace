@@ -17,7 +17,7 @@ void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *)
     engine->addImageProvider(QStringLiteral("wallpaper-preview"), new WallpaperPreviewImageProvider);
 }
 
-void ImagePlugin::registerTypes(const char */*uri*/)
+void ImagePlugin::registerTypes(const char * /*uri*/)
 {
     qRegisterMetaType<KFileItem>(); // For image preview
     qRegisterMetaType<MediaMetadata>(); // For image preview

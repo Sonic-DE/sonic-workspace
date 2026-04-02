@@ -273,7 +273,7 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
 void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 {
     qCDebug(SCREENPOOL) << "handleOutputOrderChanged" << newOrder;
-    
+
     QStringList qtScreenNames;
     for (auto s : qGuiApp->screens()) {
         qtScreenNames << s->name();

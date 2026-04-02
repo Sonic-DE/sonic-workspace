@@ -228,7 +228,6 @@ void TimeZoneModel::sortTimeZones()
     });
 }
 
-
 QStringList TimeZoneUtils::sortedTimeZones(const QStringList timeZones) const
 {
     const QDateTime now = QDateTime::currentDateTime();
@@ -254,4 +253,3 @@ QStringList TimeZoneUtils::sortedTimeZones(const QStringList timeZones) const
 }
 
 #include "moc_timezonemodel.cpp"
-

@@ -29,8 +29,9 @@ private Q_SLOTS:
     void parse();
 
     void compressNotificationRemoval();
+
 private:
-    QTemporaryDir m_tempDir ;
+    QTemporaryDir m_tempDir;
 };
 
 void NotificationTest::initTestCase()

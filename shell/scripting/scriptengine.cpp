@@ -326,7 +326,7 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
         return result;
     }
 
-    for (const auto conts = m_corona->containments(); Plasma::Containment * c : conts) {
+    for (const auto conts = m_corona->containments(); Plasma::Containment *c : conts) {
         if (c->activity() == id && !isPanel(c)) {
             result << new Containment(c, this);
         }

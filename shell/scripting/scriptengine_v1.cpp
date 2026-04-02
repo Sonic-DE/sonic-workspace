@@ -152,7 +152,7 @@ QJSValue ScriptEngine::V1::desktopById(const QJSValue &param) const
 
     const quint32 id = param.toInt();
 
-    for (const auto conts = m_engine->m_corona->containments(); Plasma::Containment * c : conts) {
+    for (const auto conts = m_engine->m_corona->containments(); Plasma::Containment *c : conts) {
         if (c->id() == id && !isPanel(c)) {
             return m_engine->wrap(c);
         }
@@ -440,7 +440,7 @@ QJSValue ScriptEngine::V1::panelById(const QJSValue &idParam) const
 
     const quint32 id = idParam.toInt();
 
-    for (const auto conts = m_engine->m_corona->containments(); Plasma::Containment * c : conts) {
+    for (const auto conts = m_engine->m_corona->containments(); Plasma::Containment *c : conts) {
         if (c->id() == id && isPanel(c)) {
             return m_engine->wrap(c);
         }

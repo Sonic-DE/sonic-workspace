@@ -986,9 +986,7 @@ void Notifications::playSoundHint(const QModelIndex &idx) const
     if (!d->canberraContext) {
         const int ret = ca_context_create(&d->canberraContext);
         if (ret != CA_SUCCESS) {
-            qCWarning(NOTIFICATIONMANAGER)
-                << "Failed to initialize canberra context for audio notification:"
-                << ca_strerror(ret);
+            qCWarning(NOTIFICATIONMANAGER) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
             d->canberraContext = nullptr;
             return;
         }
@@ -999,34 +997,27 @@ void Notifications::playSoundHint(const QModelIndex &idx) const
 
     const auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
     const KConfigGroup soundGroup = config->group(QStringLiteral("Sounds"));
-    const auto soundTheme =
-        soundGroup.readEntry("Theme", QStringLiteral("ocean"));
+    const auto soundTheme = soundGroup.readEntry("Theme", QStringLiteral("ocean"));
 
     if (!soundName.isEmpty()) {
         ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
     }
     if (!soundFilePath.isEmpty()) {
-        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME,
-                       QFile::encodeName(soundFilePath).constData());
+        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME, QFile::encodeName(soundFilePath).constData());
     }
-    ca_proplist_sets(props, CA_PROP_APPLICATION_NAME,
-                     appName.toLatin1().constData());
-    ca_proplist_sets(props, CA_PROP_APPLICATION_ID,
-                     desktopFile.toLatin1().constData());
-    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME,
-                     soundTheme.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_APPLICATION_NAME, appName.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_APPLICATION_ID, desktopFile.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, soundTheme.toLatin1().constData());
     // We'll also want this cached for a time. volatile makes sure the cache is
     // dropped after some time or when the cache is under pressure.
     ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "volatile");
 
-    const int ret =
-        ca_context_play_full(d->canberraContext, 0, props, nullptr, nullptr);
+    const int ret = ca_context_play_full(d->canberraContext, 0, props, nullptr, nullptr);
 
     ca_proplist_destroy(props);
 
     if (ret != CA_SUCCESS) {
-        qCWarning(NOTIFICATIONMANAGER) << "Failed to play sound" << soundName
-                                       << "with canberra:" << ca_strerror(ret);
+        qCWarning(NOTIFICATIONMANAGER) << "Failed to play sound" << soundName << "with canberra:" << ca_strerror(ret);
         return;
     }
 }

@@ -885,7 +885,6 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
     }
 
     case SortWindowPositionHorizontal: {
-
         if (auto result = lessThanByVirtualDesktop(left, right)) {
             return *result;
         }
@@ -930,7 +929,6 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
     }
     // fall through
     case SortVirtualDesktop: {
-
         if (auto result = lessThanByVirtualDesktop(left, right)) {
             return *result;
         }
