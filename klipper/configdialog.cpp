@@ -7,6 +7,7 @@
 
 #include "configdialog.h"
 
+#include <QtGlobal>
 #include <QButtonGroup>
 #include <QCheckBox>
 #include <QFontDatabase>
@@ -564,6 +565,8 @@ bool ActionsWidget::hasChanged() const
 
 void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int col)
 {
+    Q_UNUSED(col);
+
     QTreeWidgetItem *parentItem = item->parent(); // parent of the command item
     if (parentItem == nullptr) { // this is a top level action
         return;
