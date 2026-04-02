@@ -37,9 +37,6 @@ int main(int argc, char *argv[])
 
     TaskManager::WindowTasksModel tasksModel(&a);
 
-    //
-    auto native = qGuiApp->platformNativeInterface();
-
     KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
 
     const QStringList groupList = config->groupList();
