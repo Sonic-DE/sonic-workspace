@@ -113,7 +113,9 @@ QFileInfo ShellRunnerTest::createExecutableFile(const QString &fileName)
     const QString tmpPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir(tmpPath).mkpath(u"."_s);
     QFile testFile(tmpPath + QDir::separator() + fileName);
-    testFile.open(QIODevice::WriteOnly);
+    if (!testFile.open(QIODevice::WriteOnly)) {
+        qWarning() << "Failed to open testFile:" << testFile.errorString();
+    }
     testFile.setPermissions(QFile::ExeOwner);
     return QFileInfo(testFile);
 }
