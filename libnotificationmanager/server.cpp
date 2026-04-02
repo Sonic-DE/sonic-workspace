@@ -16,6 +16,7 @@
 #include <KStartupInfo>
 #include <KWindowSystem>
 #include <QDebug>
+#include <QtGlobal>
 
 using namespace NotificationManager;
 
@@ -75,6 +76,9 @@ void Server::invokeAction(uint notificationId,
                           Notifications::InvokeBehavior behavior,
                           QWindow *window)
 {
+    Q_UNUSED(xdgActivationAppId);
+    Q_UNUSED(window);
+
     KStartupInfoId startupId;
     startupId.initId();
 

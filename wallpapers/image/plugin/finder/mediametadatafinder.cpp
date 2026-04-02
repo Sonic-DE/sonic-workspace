@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+#include <QtGlobal>
 
 #include "mediametadatafinder.h"
 
@@ -14,6 +15,8 @@
 
 MediaMetadata MediaMetadata::read(const QString &path)
 {
+    Q_UNUSED(path);
+
     MediaMetadata metadata;
 
 #if HAVE_KExiv2
