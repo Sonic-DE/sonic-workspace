@@ -145,6 +145,7 @@ void Unit::stop()
 
 QStringList Unit::getLastJournalEntries(const QString &unit)
 {
+    Q_UNUSED(unit)
 #if HAVE_SYSTEMD
     sd_journal *journal;
 

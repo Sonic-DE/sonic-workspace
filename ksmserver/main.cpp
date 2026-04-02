@@ -59,6 +59,8 @@ bool writeTest(QByteArray path)
 
 void sanity_check(int argc, char *argv[])
 {
+    Q_UNUSED(argc)
+    Q_UNUSED(argv)
     QString msg;
     QByteArray path;
     if (msg.isEmpty()) {

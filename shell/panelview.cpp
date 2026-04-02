@@ -1513,6 +1513,7 @@ void PanelView::refreshContainment()
     restore();
     Plasma::Containment *const cont = containment();
     connect(m_corona, &Plasma::Corona::editModeChanged, this, [this](bool edit) {
+        Q_UNUSED(edit)
         updateExclusiveZone();
     });
     updateExclusiveZone();

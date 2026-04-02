@@ -165,6 +165,7 @@ void KSecretPrompter::UnlockCollectionPrompt(const QDBusObjectPath &path,
                                              const QString &activationToken,
                                              const QString &collectionName)
 {
+    Q_UNUSED(activationToken)
     Prompt(path,
            i18nc("@title:window", "Unlock Wallet"),
            xi18nc("@label", "Authentication is needed to unlock the wallet <resource>%1</resource>.", collectionName),
@@ -176,6 +177,7 @@ void KSecretPrompter::CreateCollectionPrompt(const QDBusObjectPath &path,
                                              const QString &activationToken,
                                              const QString &collectionName)
 {
+    Q_UNUSED(activationToken)
     Prompt(path,
            i18nc("@title", "Create Wallet"),
            xi18nc("@label", "Provide a password to create the wallet <resource>%1</resource>.", collectionName),
