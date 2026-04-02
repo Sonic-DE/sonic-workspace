@@ -4,39 +4,39 @@
     methods and properties used by xembedsniproxy -->
   <interface name="org.kde.StatusNotifierItem">
 
-    <property name="Category" type="s" access="read"/>
-    <property name="Id" type="s" access="read"/>
-    <property name="Title" type="s" access="read"/>
-    <property name="Status" type="s" access="read"/>
-    <property name="WindowId" type="i" access="read"/>
+    <property name="Category" type="s" access="read" />
+    <property name="Id" type="s" access="read" />
+    <property name="Title" type="s" access="read" />
+    <property name="Status" type="s" access="read" />
+    <property name="WindowId" type="i" access="read" />
 
-    <property name="ItemIsMenu" type="b" access="read"/>
+    <property name="ItemIsMenu" type="b" access="read" />
 
 
     <property name="IconPixmap" type="(iiay)" access="read">
-      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector" />
     </property>
 
     <!-- interaction: the systemtray wants the application to do something -->
     <method name="ContextMenu">
-        <!-- we're passing the coordinates of the icon, so the app knows where to put the popup window -->
-        <arg name="x" type="i" direction="in"/>
-        <arg name="y" type="i" direction="in"/>
+      <!-- we're passing the coordinates of the icon, so the app knows where to put the popup window -->
+      <arg name="x" type="i" direction="in" />
+      <arg name="y" type="i" direction="in" />
     </method>
 
     <method name="Activate">
-        <arg name="x" type="i" direction="in"/>
-        <arg name="y" type="i" direction="in"/>
+      <arg name="x" type="i" direction="in" />
+      <arg name="y" type="i" direction="in" />
     </method>
 
     <method name="SecondaryActivate">
-        <arg name="x" type="i" direction="in"/>
-        <arg name="y" type="i" direction="in"/>
+      <arg name="x" type="i" direction="in" />
+      <arg name="y" type="i" direction="in" />
     </method>
 
     <method name="Scroll">
-      <arg name="delta" type="i" direction="in"/>
-      <arg name="orientation" type="s" direction="in"/>
+      <arg name="delta" type="i" direction="in" />
+      <arg name="orientation" type="s" direction="in" />
     </method>
 
     <!-- Signals: the client wants to change something in the status-->
@@ -56,7 +56,7 @@
     </signal>
 
     <signal name="NewStatus">
-      <arg name="status" type="s"/>
+      <arg name="status" type="s" />
     </signal>
 
   </interface>

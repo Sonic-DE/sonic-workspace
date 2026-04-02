@@ -12,7 +12,7 @@
         This method gets called when a match session is over.
         It can be used to clear data which should not be kept in memory after a match session.
     -->
-    <method name="Teardown"/>
+    <method name="Teardown" />
 
     <!--
         This method can be used to set runner config at runtime. In case the service wildcard is used
@@ -54,21 +54,21 @@
         necessary to pass focus to another window when e.g. launching an application or opening a document.
     -->
     <method name="SetActivationToken">
-      <arg name="token" type="s" direction="in"/>
+      <arg name="token" type="s" direction="in" />
     </method>
 
     <!--
         Execute an action
     -->
     <method name="Run">
-        <!--
+      <!--
         The Unique ID from Match.
         -->
-      <arg name="matchId" type="s" direction="in"/>
-        <!--
+      <arg name="matchId" type="s" direction="in" />
+      <!--
         The action ID to run. For the default action this will be empty.
         -->
-      <arg name="actionId" type="s" direction="in"/>
+      <arg name="actionId" type="s" direction="in" />
     </method>
     <!--
         Fetch matching results for a given query.
@@ -77,7 +77,7 @@
         has returned.
     -->
     <method name="Match">
-      <arg name="query" type="s" direction="in"/>
+      <arg name="query" type="s" direction="in" />
       <!--
         Return a list of items that match the
         Structure is:
@@ -99,8 +99,8 @@
               has alpha, bits per sample, number of channels, pixmap data.
             - multiline (boolean). If the text should be displayed as styled multiline text.
       -->
-      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="RemoteMatches"/>
-      <arg name="matches" type="a(sssida{sv})" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="RemoteMatches" />
+      <arg name="matches" type="a(sssida{sv})" direction="out" />
     </method>
   </interface>
 </node>

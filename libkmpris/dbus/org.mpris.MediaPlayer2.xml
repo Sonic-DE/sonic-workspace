@@ -1,7 +1,7 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <node xmlns:tp="http://telepathy.freedesktop.org/wiki/DbusSpec#extensions-v0">
   <interface name="org.mpris.MediaPlayer2">
-    <annotation name="org.freedesktop.DBus.Property.EmitsChangedSignal" value="true"/>
+    <annotation name="org.freedesktop.DBus.Property.EmitsChangedSignal" value="true" />
 
     <method name="Raise" tp:name-for-bindings="Raise">
     </method>

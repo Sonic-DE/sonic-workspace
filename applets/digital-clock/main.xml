@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name=""/>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="" />
 
   <group name="Appearance">
     <entry name="showLocalTimezone" type="Bool">
@@ -70,7 +69,7 @@
       <label>When multiple time zones are configured, this is the one shown on widget restore. Typically the system's current time zone.</label>
       <default>Local</default>
     </entry>
-        <entry name="wheelChangesTimezone" type="Bool">
+    <entry name="wheelChangesTimezone" type="Bool">
       <label>Whether the mouse wheel switches between the time zones configured in selectedTimeZones.</label>
       <default>false</default>
     </entry>

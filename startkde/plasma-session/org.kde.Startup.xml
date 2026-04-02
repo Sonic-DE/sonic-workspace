@@ -2,8 +2,8 @@
 <node>
   <interface name="org.kde.Startup">
     <method name="updateLaunchEnv">
-      <arg name="key" type="s" direction="in"/>
-       <arg name="value" type="s" direction="in"/>
+      <arg name="key" type="s" direction="in" />
+      <arg name="value" type="s" direction="in" />
     </method>
-</interface>
+  </interface>
 </node>

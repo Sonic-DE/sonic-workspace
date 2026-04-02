@@ -3,13 +3,13 @@
 <node>
   <interface name="org.kde.GtkConfig">
     <method name="setGtkTheme">
-      <arg name="themeName" type="s" direction="in"/>
+      <arg name="themeName" type="s" direction="in" />
     </method>
     <method name="gtkTheme">
-      <arg type="s" direction="out"/>
+      <arg type="s" direction="out" />
     </method>
     <method name="showGtkThemePreview">
-      <arg name="themeName" type="s" direction="in"/>
+      <arg name="themeName" type="s" direction="in" />
     </method>
   </interface>
 </node>

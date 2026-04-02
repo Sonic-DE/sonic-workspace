@@ -6,16 +6,16 @@
     <method name="toggleDisplay">
     </method>
     <method name="displaySingleRunner">
-      <arg name="runnerName" type="s" direction="in"/>
+      <arg name="runnerName" type="s" direction="in" />
     </method>
     <method name="displayWithClipboardContents">
     </method>
     <method name="query">
-      <arg name="term" type="s" direction="in"/>
+      <arg name="term" type="s" direction="in" />
     </method>
     <method name="querySingleRunner">
-      <arg name="runnerName" type="s" direction="in"/>
-      <arg name="term" type="s" direction="in"/>
+      <arg name="runnerName" type="s" direction="in" />
+      <arg name="term" type="s" direction="in" />
     </method>
   </interface>
 </node>

@@ -2,27 +2,27 @@
 <node>
   <interface name="org.kde.KSMServerInterface">
     <method name="isShuttingDown">
-      <arg type="b" direction="out"/>
+      <arg type="b" direction="out" />
     </method>
     <method name="sessionList">
-      <arg type="as" direction="out"/>
+      <arg type="as" direction="out" />
     </method>
     <method name="currentSession">
-      <arg type="s" direction="out"/>
+      <arg type="s" direction="out" />
     </method>
     <method name="saveCurrentSession">
     </method>
     <method name="saveCurrentSessionAs">
-      <arg type="s" direction="in"/>
+      <arg type="s" direction="in" />
     </method>
 
     <method name="restoreSession">
-        <!-- Restore the main session. Should only be called once on startup -->
+      <!-- Restore the main session. Should only be called once on startup -->
     </method>
 
     <method name="closeSession">
-        <!-- Performs a logout and closes the session. Returns true if the session was closed successfully, false if cancelled by the user-->
-        <arg type="b" direction="out"/>
+      <!-- Performs a logout and closes the session. Returns true if the session was closed successfully, false if cancelled by the user-->
+      <arg type="b" direction="out" />
     </method>
     <method name="resetLogout">
       <!-- Called when logout is cancelled -->

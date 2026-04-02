@@ -3,30 +3,30 @@
 <node>
     <interface name="org.kde.kuiserver">
 
-    <method name="registerService">
-        <arg name="service" type="s" direction="in"/>
-        <arg name="objectPath" type="s" direction="in"/>
-    </method>
+        <method name="registerService">
+            <arg name="service" type="s" direction="in" />
+            <arg name="objectPath" type="s" direction="in" />
+        </method>
 
-    <method name="emitJobUrlsChanged">
-    </method>
+        <method name="emitJobUrlsChanged">
+        </method>
 
-    <method name="requiresJobTracker">
-        <arg type="b" direction="out"/>
-    </method>
+        <method name="requiresJobTracker">
+            <arg type="b" direction="out" />
+        </method>
 
-    <method name="registeredJobContacts">
-        <arg type="as" direction="out"/>
-    </method>
+        <method name="registeredJobContacts">
+            <arg type="as" direction="out" />
+        </method>
 
-    <signal name="jobUrlsChanged">
-        <arg type="as" direction="out"/>
-        <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;QString&gt;"/>
-    </signal>
+        <signal name="jobUrlsChanged">
+            <arg type="as" direction="out" />
+            <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;QString&gt;" />
+        </signal>
 
-    <signal name="requiresJobTrackerChanged">
-        <arg type="b" direction="out"/>
-    </signal>
+        <signal name="requiresJobTrackerChanged">
+            <arg type="b" direction="out" />
+        </signal>
 
     </interface>
 </node>

@@ -1,7 +1,5 @@
-<!DOCTYPE node PUBLIC
-"-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
-"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd" [
-<!ENTITY ERROR_NO_SUCH_DEVICE "net.reactivated.Fprint.Error.NoSuchDevice">
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd" [
+	<!ENTITY ERROR_NO_SUCH_DEVICE "net.reactivated.Fprint.Error.NoSuchDevice">
 ]>
 <node name="/" xmlns:doc="http://www.freedesktop.org/dbus/1.0/doc.dtd">
 	<interface name="net.reactivated.Fprint.Manager">
@@ -10,7 +8,9 @@
 
 		<method name="GetDevices">
 			<arg type="ao" name="devices" direction="out">
-				<doc:doc><doc:summary>An array of object paths for devices.</doc:summary></doc:doc>
+				<doc:doc>
+					<doc:summary>An array of object paths for devices.</doc:summary>
+				</doc:doc>
 			</arg>
 
 			<doc:doc>
@@ -27,7 +27,9 @@
 
 		<method name="GetDefaultDevice">
 			<arg type="o" name="device" direction="out">
-				<doc:doc><doc:summary>The object path for the default device.</doc:summary></doc:doc>
+				<doc:doc>
+					<doc:summary>The object path for the default device.</doc:summary>
+				</doc:doc>
 			</arg>
 
 			<doc:doc>
@@ -45,4 +47,3 @@
 
 	</interface>
 </node>
-

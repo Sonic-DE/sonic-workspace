@@ -1,10 +1,10 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="org.kde.PlasmaShell">
-    <property name="editMode" type="b" access="readwrite"/>
-    <property name="shell" type="s" access="read"/>
+    <property name="editMode" type="b" access="readwrite" />
+    <property name="shell" type="s" access="read" />
     <method name="changeShell">
-      <arg name="shell" type="s" direction="in"/>
+      <arg name="shell" type="s" direction="in" />
     </method>
     <method name="toggleDashboard">
     </method>
@@ -13,48 +13,48 @@
     <method name="toggleWidgetExplorer">
     </method>
     <method name="setDashboardShown">
-      <arg name="show" type="b" direction="in"/>
+      <arg name="show" type="b" direction="in" />
     </method>
     <method name="evaluateScript">
-      <arg name="script" type="s" direction="in"/>
-      <arg name="output" type="s" direction="out"/>
+      <arg name="script" type="s" direction="in" />
+      <arg name="output" type="s" direction="out" />
     </method>
     <method name="color">
-      <arg name="output" type="u" direction="out"/>
+      <arg name="output" type="u" direction="out" />
     </method>
     <method name="immutable">
-      <arg name="output" type="b" direction="out"/>
+      <arg name="output" type="b" direction="out" />
     </method>
     <method name="dumpCurrentLayoutJS">
-      <arg name="script" type="ay" direction="out"/>
+      <arg name="script" type="ay" direction="out" />
     </method>
     <method name="loadLookAndFeelDefaultLayout">
-        <arg name="layout" type="s" direction="in"/>
+      <arg name="layout" type="s" direction="in" />
     </method>
     <method name="activateLauncherMenu">
     </method>
     <method name="refreshCurrentShell" />
 
     <method name="wallpaper">
-      <arg name="screenNum" type="u" direction="in"/>
-      <arg name="parameters" type="a{sv}" direction="out"/>
-      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap"/>
+      <arg name="screenNum" type="u" direction="in" />
+      <arg name="parameters" type="a{sv}" direction="out" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap" />
     </method>
     <method name="setWallpaper">
-      <arg name="wallpaperPlugin" type="s" direction="in"/>
-      <arg name="parameters" type="a{sv}" direction="in"/>
-      <arg name="screenNum" type="u" direction="in"/>
-      <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QVariantMap"/>
+      <arg name="wallpaperPlugin" type="s" direction="in" />
+      <arg name="parameters" type="a{sv}" direction="in" />
+      <arg name="screenNum" type="u" direction="in" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QVariantMap" />
     </method>
     <signal name="shellChanged">
-      <arg name="shell" type="s" direction="out"/>
+      <arg name="shell" type="s" direction="out" />
     </signal>
     <signal name="wallpaperChanged">
-      <arg name="screenNum" type="u" direction="out"/>
+      <arg name="screenNum" type="u" direction="out" />
     </signal>
 
     <signal name="colorChanged">
-      <arg name="changedColor" type="s" direction="out"/>
+      <arg name="changedColor" type="s" direction="out" />
     </signal>
   </interface>
 </node>
