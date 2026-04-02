@@ -1,5 +1,5 @@
- <!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
-  "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
 
 <!--
 # SPDX-License-Identifier: GPL-2.0-or-later
@@ -10,30 +10,32 @@
 	<Name>Applications</Name>
 	<Directory>kde-main.directory</Directory>
 	<!-- Search the default locations -->
-	<DefaultAppDirs/>
-	<DefaultDirectoryDirs/>
+	<DefaultAppDirs />
+	<DefaultDirectoryDirs />
 	<DefaultLayout>
-		<Merge type="menus"/>
-		<Merge type="files"/>
-		<Separator/>
+		<Merge type="menus" />
+		<Merge type="files" />
+		<Separator />
 		<Menuname>More</Menuname>
 	</DefaultLayout>
 	<Layout>
-		<Merge type="menus"/>
+		<Merge type="menus" />
 		<Menuname>Applications</Menuname>
-		<Merge type="files"/>
+		<Merge type="files" />
 	</Layout>
 
 	<Menu>
 		<Name>Applications</Name>
 		<Directory>kf5-unknown.directory</Directory>
-		<OnlyUnallocated/>
+		<OnlyUnallocated />
 		<Include>
 			<Not>
 				<!-- Don't list non-KDE core applications -->
 				<And>
 					<Category>Core</Category>
-					<Not><Category>KDE</Category></Not>
+					<Not>
+						<Category>KDE</Category>
+					</Not>
 				</And>
 				<!-- Don't list SUSE's YaST in here -->
 				<Category>X-SuSE-YaST</Category>
@@ -80,14 +82,18 @@
 				</And>
 			</Include>
 		</Menu>
-                <Include>
-					<And>
-                        <Category>Development</Category>
-                        <Not><Category>Translation</Category></Not>
-                        <Not><Category>WebDevelopment</Category></Not>
-					</And>
-                </Include>
-        </Menu>
+		<Include>
+			<And>
+				<Category>Development</Category>
+				<Not>
+					<Category>Translation</Category>
+				</Not>
+				<Not>
+					<Category>WebDevelopment</Category>
+				</Not>
+			</And>
+		</Include>
+	</Menu>
 	<Menu>
 		<Name>Science</Name>
 		<Directory>kf5-science.directory</Directory>
@@ -103,7 +109,9 @@
 					<Category>Math</Category>
 					<Category>Science</Category>
 				</Or>
-				<Not><Category>Education</Category></Not>
+				<Not>
+					<Category>Education</Category>
+				</Not>
 			</And>
 		</Include>
 	</Menu>
@@ -249,7 +257,9 @@
 		<Include>
 			<And>
 				<Category>Graphics</Category>
-				<Not><Category>X-KDE-More</Category></Not>
+				<Not>
+					<Category>X-KDE-More</Category>
+				</Not>
 			</And>
 		</Include>
 		<Menu>
@@ -269,7 +279,9 @@
 		<Include>
 			<And>
 				<Category>Network</Category>
-				<Not><Category>X-KDE-More</Category></Not>
+				<Not>
+					<Category>X-KDE-More</Category>
+				</Not>
 			</And>
 		</Include>
 		<Menu>
@@ -293,7 +305,9 @@
 		<Include>
 			<And>
 				<Category>AudioVideo</Category>
-				<Not><Category>X-KDE-More</Category></Not>
+				<Not>
+					<Category>X-KDE-More</Category>
+				</Not>
 			</And>
 		</Include>
 		<Menu>
@@ -311,21 +325,23 @@
 		<Name>Office</Name>
 		<Directory>kf5-office.directory</Directory>
 		<Layout>
-			<Merge type="menus"/>
+			<Merge type="menus" />
 			<Filename>kde-koshell.desktop</Filename>
 			<Filename>kde-Kontact.desktop</Filename>
-			<Separator/>
+			<Separator />
 			<Filename>kde-kword.desktop</Filename>
 			<Filename>kde-kspread.desktop</Filename>
 			<Filename>kde-kpresenter.desktop</Filename>
-			<Merge type="files"/>
-			<Separator/>
+			<Merge type="files" />
+			<Separator />
 			<Menuname>More</Menuname>
 		</Layout>
 		<Include>
 			<And>
 				<Category>Office</Category>
-				<Not><Category>X-KDE-More</Category></Not>
+				<Not>
+					<Category>X-KDE-More</Category>
+				</Not>
 			</And>
 		</Include>
 		<Menu>
@@ -352,7 +368,9 @@
 		<Include>
 			<And>
 				<Category>System</Category>
-				<Not><Category>X-KDE-More</Category></Not>
+				<Not>
+					<Category>X-KDE-More</Category>
+				</Not>
 			</And>
 		</Include>
 		<Menu>
@@ -380,7 +398,9 @@
 		<Include>
 			<And>
 				<Category>Utility</Category>
-				<Not><Category>X-KDE-More</Category></Not>
+				<Not>
+					<Category>X-KDE-More</Category>
+				</Not>
 			</And>
 			<Category>TextEditor</Category>
 			<Category>Accessibility</Category>
@@ -410,6 +430,6 @@
 			<Category>Core</Category>
 		</And>
 	</Include>
-	<DefaultMergeDirs/>
+	<DefaultMergeDirs />
 	<MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>

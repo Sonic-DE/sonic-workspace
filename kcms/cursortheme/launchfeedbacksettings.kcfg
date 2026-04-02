@@ -4,10 +4,9 @@ SPDX-FileCopyrightText: 2017 Eike Hein <hein@kde.org>
 SPDX-License-Identifier: LGPL-2.0-only
 -->
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name="klaunchrc"/>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="klaunchrc" />
   <group name="BusyCursorSettings">
     <entry name="blinking" key="Blinking" type="Bool">
       <default>false</default>

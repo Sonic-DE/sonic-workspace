@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name="klipperrc"/>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="klipperrc" />
 
   <group name="General">
     <entry name="Version" type="String">
@@ -48,30 +46,30 @@
       <default>true</default>
     </entry>
     <entry name="URLGrabberEnabled" type="Bool">
-        <label>Immediately on selection</label>
-	<tooltip>Show the popup menu of applicable actions as soon as a selection is made.</tooltip>
-        <default>false</default>
+      <label>Immediately on selection</label>
+      <tooltip>Show the popup menu of applicable actions as soon as a selection is made.</tooltip>
+      <default>false</default>
     </entry>
     <entry name="TimeoutForActionPopups" type="Int">
-        <label>Automatic action menu time:</label>
-        <default>8</default>
-        <min>0</min>
-        <max>200</max>
-        <tooltip>Display the automatic action popup menu for this time.</tooltip>
+      <label>Automatic action menu time:</label>
+      <default>8</default>
+      <min>0</min>
+      <max>200</max>
+      <tooltip>Display the automatic action popup menu for this time.</tooltip>
     </entry>
     <entry name="MaxClipItems" type="Int">
-        <label>History size:</label>
-        <default>20</default>
-        <min>1</min>
-        <max>2048</max>
-	<tooltip>The clipboard history will store up to this many items.</tooltip>
+      <label>History size:</label>
+      <default>20</default>
+      <min>1</min>
+      <max>2048</max>
+      <tooltip>The clipboard history will store up to this many items.</tooltip>
     </entry>
     <entry key="ActionListChanged" name="ActionList" type="Int">
-        <label>Dummy entry for indicating changes in an action's tree widget</label>
-        <default>-1</default>
+      <label>Dummy entry for indicating changes in an action's tree widget</label>
+      <default>-1</default>
     </entry>
     <entry name="ActionsInfoMessageShown" type="Bool">
-        <default>true</default>
+      <default>true</default>
     </entry>
   </group>
 
