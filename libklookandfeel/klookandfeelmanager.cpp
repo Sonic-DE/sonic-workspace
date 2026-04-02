@@ -638,7 +638,11 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
         }
 
         QFile packageFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults/package"));
-        packageFile.open(QIODevice::WriteOnly);
+
+        if (!packageFile.open(QIODevice::WriteOnly)) {
+            qWarning() << "Failed to open package file:" << packageFile.errorString();
+            return;
+        }
         packageFile.write(packageId.toUtf8());
 
         if (m_mode == Mode::Defaults) {

@@ -115,7 +115,9 @@ QIcon FaviconFromBlob::iconFor(const QString &url)
         if (iconData.size() <= 0)
             return defaultIcon();
 
-        iconFile.open(QFile::WriteOnly);
+        if (!iconFile.open(QFile::WriteOnly)) {
+            qWarning() << "Failed to open icon file:" << iconFile.errorString();
+        }
         iconFile.write(iconData);
         iconFile.close();
     }

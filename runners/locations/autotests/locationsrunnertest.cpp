@@ -47,9 +47,13 @@ void LocationsRunnerTest::initTestCase()
     normalHomeFile = KShell::tildeExpand(QStringLiteral("~/.krunner_locationsrunner_testfile"));
     executableHomeFile = KShell::tildeExpand(QStringLiteral("~/.krunner_locationsrunner_testexecutablefile"));
     QFile normalFile(normalHomeFile);
-    normalFile.open(QIODevice::WriteOnly);
+    if (!normalFile.open(QIODevice::WriteOnly)) {
+        qWarning() << "Failed to open normalFile:" << normalFile.errorString();
+    }
     QFile executableFile(executableHomeFile);
-    executableFile.open(QIODevice::WriteOnly);
+    if (!executableFile.open(QIODevice::WriteOnly)) {
+        qWarning() << "Failed to open executableFile:" << executableFile.errorString();
+    }
     executableFile.setPermissions(executableFile.permissions() | QFile::ExeOwner);
     QVERIFY(!normalHomeFile.isEmpty());
 }
