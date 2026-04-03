@@ -1,12 +1,10 @@
-# SPDX-FileCopyrightText: 2024 Bohdan Onofriichuk <bogdan.onofriuchuk@gmail.com>
+# SPDX-FileCopyrightText: 2024 Bohdan Onofriichuk <bogdan.onofriichuk@gmail.com>
 # SPDX-License-Identifier: BSD-3-Clause
 
 set(batterycontrol_SRCS
         batterycontrol.cpp batterycontrol.h
         batteriesnamesmonitor_p.cpp batteriesnamesmonitor_p.h
 )
-
-add_definitions(-DTRANSLATION_DOMAIN=\"batterycontrol\")
 
 ecm_qt_declare_logging_category(batterycontrol_SRCS
         HEADER "batterycontrol_debug.h"
