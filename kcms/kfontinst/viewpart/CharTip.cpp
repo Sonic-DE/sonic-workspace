@@ -153,7 +153,7 @@ void CCharTip::showTip()
     details +=
         u"<tr><td align=\"right\"><b>" + i18n("UCS-4") + u"&nbsp;</b></td><td>" + u"U+" + QStringLiteral("%1").arg(m_item.ucs4, 4, 16) + u"&nbsp;</td></tr>";
 
-    QString str(QString::fromUcs4(&(m_item.ucs4), 1));
+    QString str(QString::fromUcs4(reinterpret_cast<const char32_t *>(&m_item.ucs4), 1));
     details += u"<tr><td align=\"right\"><b>" + i18n("UTF-16") + u"&nbsp;</b></td><td>";
 
     const ushort *utf16(str.utf16());
