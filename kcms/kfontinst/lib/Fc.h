@@ -8,10 +8,10 @@
 #include "Misc.h"
 #include "kfontinst_export.h"
 #include <QUrl>
-#include <fontconfig/fcfreetype.h>
+// clang-format off
 #include <fontconfig/fontconfig.h>
-
-#include "kfontinst_export.h"
+#include <fontconfig/fcfreetype.h>
+// clang-format on
 
 #if (FC_VERSION < 20200)
 
