@@ -270,6 +270,4 @@ void X11OutputOrderWatcher::roundtrip() const
     }
 }
 
-#include "outputorderwatcher.moc"
-
 #include "moc_outputorderwatcher.cpp"

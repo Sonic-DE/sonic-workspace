@@ -204,5 +204,4 @@ void KSecretPrompter::dropPrompt(const Id &id)
     maybeQuit();
 }
 
-#include "ksecretprompter.moc"
 #include "moc_ksecretprompter.cpp"
