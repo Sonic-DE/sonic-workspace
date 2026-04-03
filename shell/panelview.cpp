@@ -97,6 +97,9 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         case Plasma::Types::TopEdge:
         case Plasma::Types::BottomEdge:
             containment()->setFormFactor(Plasma::Types::Horizontal);
+            break;
+        default:
+            break;
         }
         restore();
     });
