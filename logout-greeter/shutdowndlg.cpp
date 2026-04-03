@@ -26,6 +26,7 @@
 
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
 #include <PackageKit/Daemon>
+#include <PackageKit/Offline>
 #endif
 
 #include <KLocalizedString>
@@ -397,13 +398,13 @@ void KSMShutdownDlg::setTriggerAction(PackageKit::Offline::Action action)
 bool KSMShutdownDlg::updateTriggered() const
 {
     // This is part of a hot code path. Do not use blocking dbus calls here.
-    return systemdUpdateTriggerFileInfo().symLinkTarget() == PK_OFFLINE_PREPARED_FILENAME;
+    return PackageKit::Daemon::global()->offline()->updateTriggered();
 }
 
 bool KSMShutdownDlg::upgradeTriggered() const
 {
     // This is part of a hot code path. Do not use blocking dbus calls here.
-    return systemdUpdateTriggerFileInfo().symLinkTarget() == PK_OFFLINE_PREPARED_UPGRADE_FILENAME;
+    return PackageKit::Daemon::global()->offline()->upgradeTriggered();
 }
 
 #else
