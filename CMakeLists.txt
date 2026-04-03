@@ -216,15 +216,13 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     # notes for packager:
     # This is the macro definition part of Region & Language KCM
     # Depending on your distributions, the KCM behaves differently
-    # For Ubuntu based systems, this KCM uses "check-language-support" and PackageKit
-    # to install relevant fonts and packages
     #
     # For Glibc systems that don't come with pre-generated locales, such as ArchLinux
     # This KCM uses "/etc/locale.gen" and "locale-gen" to generate configured locales
     # and display a note to let user install fonts themselves if required
     # You shouldn't required to do anything in this case
     #
-    # For Glibc systems that come with pre-generated locales, such as Fedora and openSUSE
+    # For Glibc systems that come with pre-generated locales, such as Ubuntu, Fedora and openSUSE
     # a note to let user install fonts themselves if required is displayed
     # You should enable GLIBC_LOCALE_PREGENERATED option
     #
