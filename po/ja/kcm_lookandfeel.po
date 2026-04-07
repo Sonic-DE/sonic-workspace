@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2025-09-21 15:02+0900\n"
-"Last-Translator: Yuma Kakei <yumasansansan@gmail.com>\n"
+"PO-Revision-Date: 2026-03-31 10:22+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -373,7 +373,7 @@ msgstr "Plasma スタイル"
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "ポインタ"
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -449,6 +449,3 @@ msgstr "適用するものを選んでください..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "表示するオプションを減らす..."
-
-#~ msgid "Cursors"
-#~ msgstr "カーソル"
