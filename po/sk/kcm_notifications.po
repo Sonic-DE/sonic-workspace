@@ -3,21 +3,20 @@
 #
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
-# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-15 20:12+0100\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"PO-Revision-Date: 2023-11-11 14:51+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -277,22 +276,22 @@ msgctxt ""
 msgid "Application Notifications"
 msgstr "Upozornenia aplikácií"
 
-#: ui/SourcesPage.qml:104
+#: ui/SourcesPage.qml:108
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: ui/SourcesPage.qml:105
+#: ui/SourcesPage.qml:109
 #, kde-format
 msgid "System Services"
 msgstr "Systémové služby"
 
-#: ui/SourcesPage.qml:153
+#: ui/SourcesPage.qml:157
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Žiadna aplikácia alebo udalosť nezodpovedá hľadanému výrazu"
 
-#: ui/SourcesPage.qml:177
+#: ui/SourcesPage.qml:181
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
@@ -301,13 +300,11 @@ msgstr ""
 "Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a správania"
 
 #, fuzzy
-#~| msgid "Notifications"
 #~ msgctxt "@action:button Plasma-specific notifications"
 #~ msgid "System Notifications"
 #~ msgstr "Upozornenia"
 
 #, fuzzy
-#~| msgid "Application Settings"
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings"
 #~ msgstr "Nastavenia aplikácií"
@@ -322,7 +319,6 @@ msgstr ""
 #~ msgstr "Vybrať vlastnú polohu..."
 
 #, fuzzy
-#~| msgid "Application Settings"
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"
 #~ msgstr "Nastavenia aplikácií"
