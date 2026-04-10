@@ -84,9 +84,10 @@ RuntimeDependencies:
       'plasma/milou': '@same'
 
 Options:
-  ctest-arguments: '--repeat until-pass:5'
-  use-ccache: True
-  require-passing-tests-on: [ '@all' ]
-  clang-format-versions: [ 14, 18 ]
-  run-qmllint: True
+ ctest-arguments: '--repeat until-pass:5'
+ use-ccache: True
+ require-passing-tests-on: ['@all']
+ clang-format-versions: [14, 18]
+ run-qmllint: True
+ gcovr-arguments: '--merge-mode-functions=separate'
 
