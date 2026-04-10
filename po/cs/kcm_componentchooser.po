@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-10-15 11:02+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-04-08 21:09+0200\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
 "Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -36,10 +36,9 @@ msgid "Select default browser"
 msgstr "Vyberte výchozí prohlížeč"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Vyberte výchozí aplikaci pro číselník telefonu"
+msgstr "Vyberte výchozí aplikaci kalendáře"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -174,7 +173,7 @@ msgstr "Poštovní klient:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Kalendář:"
 
 #: ui/main.qml:111
 #, kde-format
