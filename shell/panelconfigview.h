@@ -78,6 +78,7 @@ protected:
 public Q_SLOTS:
     void showAddWidgetDialog();
     void addPanelSpacer();
+    void addPanelMarginsSeparator();
 
 protected Q_SLOTS:
     void syncGeometry();
