@@ -30,4 +30,5 @@ CMakeLists.txt.user*
 .qmlls.ini
 .ccls
 .ccls-cache
-.claude
+*.pyc
+__pycache__/
