@@ -172,6 +172,7 @@ void ShellCorona::init()
     dashboardAction->setAutoRepeat(true);
     dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme(QStringLiteral("dashboard-show")));
+    // TODO Plasma 7: Remove Ctrl keybinding in favor Meta+D in KWin
     KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL | Qt::Key_F12);
 
     checkAddPanelAction();
