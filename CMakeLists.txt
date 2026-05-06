@@ -36,7 +36,6 @@ include(ECMConfiguredInstall)
 include(ECMGenerateDBusServiceFile)
 include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
-include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
 
