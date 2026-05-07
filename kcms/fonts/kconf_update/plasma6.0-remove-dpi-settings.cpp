@@ -11,8 +11,8 @@
 #include <QCoreApplication>
 
 /**
- * In plasma6 scaling is completely managed by the global scaling settings, both in Wayland and X11,
- * setting fonts dpi is not supported anymore and can lead to undesired results
+ * In plasma6 scaling is completely managed by the global scaling settings in X11.
+ * Setting fonts dpi is not supported anymore and can lead to undesired results.
  *
  * @since 6.0
  */
