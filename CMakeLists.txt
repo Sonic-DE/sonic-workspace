@@ -42,7 +42,7 @@ include(ECMQmlModule)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire QUIET IMPORTED_TARGET libpipewire-0.3)
-add_feature_info(PipeWire PipeWire_FOUND "Required for camera indicator applet and Wayland screencasting testing")
+add_feature_info(PipeWire PipeWire_FOUND "Required for camera indicator applet testing")
 set(BUILD_CAMERAINDICATOR_DEFAULT OFF)
 if(PipeWire_FOUND)
     set(BUILD_CAMERAINDICATOR_DEFAULT ON)

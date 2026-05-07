@@ -13,7 +13,6 @@ ecm_target_qml_sources(components SOURCES
     components/UserDelegate.qml
     components/UserList.qml
     components/VirtualKeyboard.qml
-    components/VirtualKeyboard_wayland.qml
     components/VirtualKeyboardLoader.qml
     components/WallpaperFader.qml
 )

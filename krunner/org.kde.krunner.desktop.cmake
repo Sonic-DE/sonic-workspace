@@ -69,7 +69,6 @@ X-DBUS-ServiceName=org.kde.krunner
 StartupNotify=false
 X-KDE-Shortcuts=Alt+Space,Alt+F2,Search
 Actions=RunClipboard
-X-KDE-Wayland-Interfaces=org_kde_plasma_window_management
 
 [Desktop Action RunClipboard]
 Exec=krunner -c
