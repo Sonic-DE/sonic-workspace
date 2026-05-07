@@ -49,7 +49,6 @@ NotificationsApplet.NotificationWindow {
         return modelTimeout;
     }
 
-    // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves
     takeFocus: notificationItem.modelInterface.replying || focusListener.wantsFocus
 
     visible: false
