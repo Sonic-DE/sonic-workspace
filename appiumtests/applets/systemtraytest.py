@@ -212,10 +212,7 @@ class SystemTrayTests(unittest.TestCase):
         Take screenshot when the current test fails
         """
         if not self._outcome.result.wasSuccessful():
-            if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-                subprocess.check_call(["import", "-window", "root", f"failed_test_shot_systemtraytest_#{self.id()}.png"])
-            else:
-                self.driver.get_screenshot_as_file(f"failed_test_shot_systemtraytest_#{self.id()}.png")
+            subprocess.check_call(["import", "-window", "root", f"failed_test_shot_systemtraytest_#{self.id()}.png"])
 
     @classmethod
     def tearDownClass(cls) -> None:
@@ -241,10 +238,7 @@ class SystemTrayTests(unittest.TestCase):
         """
         with tempfile.TemporaryDirectory() as temp_dir:
             saved_image_path = os.path.join(temp_dir, "tray.png")
-            if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-                subprocess.check_call(["import", "-window", "root", saved_image_path])
-            else:
-                self.driver.get_screenshot_as_file(saved_image_path)
+            subprocess.check_call(["import", "-window", "root", saved_image_path])
             cv_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
         return base64.b64encode(cv.imencode('.png', cv_image)[1].tobytes()).decode()
 
@@ -310,7 +304,7 @@ class SystemTrayTests(unittest.TestCase):
 
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
-        debug_env["XDG_SESSION_TYPE"] = "x11" if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0" else "wayland"
+        debug_env["XDG_SESSION_TYPE"] = "x11"
         self.xembedsniproxy = subprocess.Popen([os.path.join(CMAKE_RUNTIME_OUTPUT_DIRECTORY, "xembedsniproxy"), '--platform', 'xcb'], env=debug_env, stderr=subprocess.PIPE)  # For debug output
         if not self.xembedsniproxy.stderr or self.xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
@@ -349,141 +343,7 @@ class SystemTrayTests(unittest.TestCase):
         # The tray icon is a red square
         rect: dict[str, int] = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(170, 0, 0))["rect"]
 
-        if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-            return
-
-        # Left click
-        self.click_center(rect)
-
-        # Middle click
-        self.click_center(rect, MouseButton.MIDDLE)
-
-        # Right click
-        self.click_center(rect, MouseButton.RIGHT)
-        self.assertTrue(self.xembed_tray_icon.popup_menu_event.is_set())
-
-        # Scroll up
-        self.scroll_center(rect, 0, -15)
-
-        # Scroll down
-        self.scroll_center(rect, 0, 15)
-
-        # Scroll left
-        self.scroll_center(rect, -15, 0)
-
-        # Scroll right
-        self.scroll_center(rect, 15, 0)
-
-    @unittest.skipIf(os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0", "inputsynth only works on Wayland")
-    def test_2_statusnotifieritem(self) -> None:
-        """
-        Tests for org.kde.StatusNotifierItem
-        1. Left click
-        2. Right click
-        3. Middle click
-        4. Wheel
-        5. Activate menu actions
-        6. NeedsAttention/Active/Passive status
-        """
-        try:
-            from PySide6.QtCore import QObject
-        except ModuleNotFoundError:
-            self.skipTest("PySide is not available")
-
-        asan_env = os.environ.copy()
-        asan_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
-        status_notifier = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "statusnotifieritemtest.py")], stdout=subprocess.PIPE, stderr=sys.stderr, env=asan_env)
-        self.addCleanup(status_notifier.kill)
-        time.sleep(1)  # Wait until the icon appears
-        rect: dict = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))["rect"]  # Red
-
-        expected_result: list[str] = []
-
-        # Left click
-        self.click_center(rect)
-        expected_result.append("Activated")
-
-        # Middle click
-        self.click_center(rect, MouseButton.MIDDLE)
-        expected_result.append("SecondaryActivated")
-
-        # Scroll up
-        self.scroll_center(rect, 0, -15)
-        expected_result.append("Scrolled by 180 Vertically")
-
-        # Scroll down
-        self.scroll_center(rect, 0, 15)
-        expected_result.append("Scrolled by -180 Vertically")
-        time.sleep(1)
-
-        # Scroll left
-        self.scroll_center(rect, -15, 0)
-        expected_result.append("Scrolled by 180 Horizontally")
-
-        # Scroll right
-        self.scroll_center(rect, 15, 0)
-        expected_result.append("Scrolled by -180 Horizontally")
-
-        # Right click
-        self.click_center(rect, MouseButton.RIGHT)
-
-        # Click the first action to change the color to blue
-        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(0, 255, 0))["rect"]  # Green
-        self.click_center(rect)
-        expected_result.append("NeedsAttention")
-
-        # Right click
-        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(0, 0, 255))["rect"]  # Blue
-        self.click_center(rect, MouseButton.RIGHT)
-
-        # Click the second action to change the color to red
-        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 85, 255))["rect"]  # Purple
-        self.click_center(rect)
-        expected_result.append("Active")
-
-        # Right click
-        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))["rect"]  # Red
-        self.click_center(rect, MouseButton.RIGHT)
-
-        # Move to the submenu item
-        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(85, 0, 255))["rect"]
-        self.click_center(rect)
-
-        # Move to the submenu
-        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 255, 0))["rect"]  # Yellow
-        self.click_center(rect)
-        expected_result.append("Passive")
-        # The icon is hidden
-        self.assertRaises(Exception, self.driver.find_image_occurrence, self.take_screenshot(), generate_color_block(255, 0, 0))
-
-        status_notifier.kill()
-        status_notifier.wait(10)
-        output = status_notifier.stdout.readlines()
-        self.assertEqual(len(expected_result), len(output), f"output: f{output} expected: {expected_result}")
-        for l in range(0, len(expected_result)):
-            self.assertEqual(output[l].decode().strip(), expected_result[l])
-
-    @unittest.skipIf(os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0", "Screenshot")
-    def test_2_1_sni_svg_icon(self) -> None:
-        """
-        Shows the tray icon if the source is an svg file
-        """
-        try:
-            from PySide6.QtCore import QObject
-        except ModuleNotFoundError:
-            self.skipTest("PySide is not available")
-
-        with subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "svgtrayicon.py")], stdout=sys.stderr, stderr=sys.stderr) as process:
-            sni_title = "SvgTrayIconTest"
-            logging.info(self.driver.page_source)
-            element = self.driver.find_element(AppiumBy.NAME, sni_title)
-            # The tray icon is a red square
-            self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))
-            process.kill()
-        WebDriverWait(self.driver, 10).until_not(lambda _: element.is_displayed())
-
-    @unittest.skipIf(os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0", "In openbox, the popup is not focused by default, so sending keys will not work.")
-    def test_3_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
+    def test_2_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
         """
         Make sure iconContainer in AbstractItem.qml has the default focus so it can receive key presses
         """
@@ -494,22 +354,15 @@ class SystemTrayTests(unittest.TestCase):
 
         # By default the focused item is "Notifications"
         # Press Enter key directly to open the widget
-        if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-            subprocess.check_call(["xdotool", "key", "Return"])
-        else:
-            actions = ActionChains(self.driver)
-            actions.send_keys(Keys.ENTER).perform()
+        subprocess.check_call(["xdotool", "key", "Return"])
         element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Do not disturb")))
 
         self.driver.find_element(AppiumBy.NAME, "Go Back").click()
         wait.until_not(lambda _: element.is_displayed())
 
-        if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-            subprocess.check_call(["xdotool", "key", "Escape"])
-        else:
-            ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
+        subprocess.check_call(["xdotool", "key", "Escape"])
 
-    def test_4_dbus_activated_plasmoid(self) -> None:
+    def test_3_dbus_activated_plasmoid(self) -> None:
         """
         Dynamically load a Plasmoid into the systemtray when a specific service becomes available
         """
@@ -528,6 +381,6 @@ class SystemTrayTests(unittest.TestCase):
 
 if __name__ == '__main__':
     assert "USE_CUSTOM_BUS" in os.environ
-    assert "GDK_BACKEND" in os.environ or "TEST_WITH_KWIN_WAYLAND" in os.environ
+    assert "GDK_BACKEND" in os.environ
     logging.getLogger().setLevel(logging.INFO)
     unittest.main()
