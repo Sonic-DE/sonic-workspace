@@ -93,27 +93,7 @@ void Shutdown::ksmServerComplete()
         }
     }
 
-    OrgKdeKWinSessionInterface kwinInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus());
-    kwinInterface.setTimeout(INT32_MAX);
-    auto reply = kwinInterface.closeWaylandWindows();
-    auto watcher = new QDBusPendingCallWatcher(reply, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-        watcher->deleteLater();
-        OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-        auto reply = QDBusReply<bool>(*watcher);
-        if (!reply.isValid()) {
-            qCWarning(PLASMA_SESSION) << "KWin failed to complete logout";
-            ksmserverIface.resetLogout();
-            logoutCancelled();
-            return;
-        }
-        if (reply.value()) {
-            logoutComplete();
-        } else {
-            ksmserverIface.resetLogout();
-            logoutCancelled();
-        }
-    });
+    logoutComplete();
 }
 
 void Shutdown::logoutCancelled()
