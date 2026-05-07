@@ -11,7 +11,7 @@ This is a workaround script for some setups. See 8475fe4545998c806704a45a7d912f7
 ## plasma-shutdown
 
 `plasma-shutdown` is a small helper invoked via DBus activation after any potential logout confirmation by the user.
-It triggers the relevant paths to quit and save all apps via both ksmserver and KWin, abstracting the session differences between X11 and Wayland. If this is successful, then any shutdown scripts are run, and finally KWin and ksmserver are terminated. After returning success or failure, the helper exits.
+It triggers the relevant paths to quit and save all apps via both ksmserver and KWin. If this is successful, then any shutdown scripts are run, and finally KWin and ksmserver are terminated. After returning success or failure, the helper exits.
 
 ### plasma-session
 
