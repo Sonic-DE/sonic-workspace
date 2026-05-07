@@ -42,9 +42,7 @@ public:
     bool latched() const;
     bool locked() const;
 
-    /// Unsupported in Wayland
     Q_INVOKABLE void lock(bool lock);
-    /// Unsupported in Wayland
     Q_INVOKABLE void latch(bool latch);
 
 Q_SIGNALS:
