@@ -24,9 +24,7 @@ Loader {
         state = state === "hidden" ? "visible" : "hidden";
     }
 
-    source: Qt.platform.pluginName.includes("wayland")
-        ? Qt.resolvedUrl("./VirtualKeyboard_wayland.qml")
-        : Qt.resolvedUrl("./VirtualKeyboard.qml")
+    source: Qt.resolvedUrl("./VirtualKeyboard.qml")
 
     onKeyboardActiveChanged: {
         if (keyboardActive) {
