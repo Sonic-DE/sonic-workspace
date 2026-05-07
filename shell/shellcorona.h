@@ -309,8 +309,7 @@ private:
 #ifndef NDEBUG
     QTimer m_invariantsTimer;
 #endif
-    // For getting the active window on Wayland
-    bool m_closingDown : 1;
+
     bool m_screenReorderInProgress = false;
     QString m_testModeLayout;
     Plasma::Applet *m_showingAlternatives = nullptr;
