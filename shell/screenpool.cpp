@@ -115,7 +115,7 @@ bool ScreenPool::isOutputFake(QScreen *screen) const
 {
     Q_ASSERT(screen);
     // On X11 the output named :0.0 is fake (the geometry is usually valid and whatever the geometry
-    // of the last connected screen was), on wayland the fake output has no name and no geometry
+    // of the last connected screen was)
     bool screenHasDefaultName = false;
     if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
         static QString defaultName; // QXcbScreen::defaultName
@@ -246,7 +246,6 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         Q_ASSERT(!m_availableScreens.contains(screen));
         m_redundantScreens.remove(screen);
     } else if (m_fakeScreens.contains(screen)) {
-        // If is in fake screens, then must be fake, this will only happen on Wayland
         Q_ASSERT(isOutputFake(screen));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_availableScreens.contains(screen));

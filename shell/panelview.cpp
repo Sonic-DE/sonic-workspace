@@ -611,7 +611,6 @@ void PanelView::positionPanel()
         return;
     }
 
-    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
     const QPoint pos = geometryByDistance(0).topLeft();
     setPosition(pos);
     updateMask();
@@ -636,7 +635,6 @@ void PanelView::positionAndResizePanel()
         return;
     }
 
-    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
     const QPoint pos = geometryByDistance(0).topLeft();
 
     const QRect geom = {pos, sizeHint};
@@ -727,13 +725,6 @@ QRect PanelView::geometryByDistance(int distance) const
 QSize PanelView::preferredSize() const
 {
     if (!m_initCompleted) {
-        return {};
-    }
-
-    // On Wayland when a screen is disconnected and the panel is migrating to a newscreen
-    // it can happen a moment where the qscreen gets destroyed before it gets reassigned
-    // to the new screen
-    if (!m_screenToFollow) {
         return {};
     }
 
@@ -956,7 +947,6 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     // don't setGeometry() to make really sure we aren't doing a resize loop
     if (m_screenToFollow && containment()) {
         updateEnabledBorders();
-        // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
         const QPoint pos = geometryByDistance(0).topLeft();
         setPosition(pos);
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
@@ -984,7 +974,6 @@ void PanelView::keyPressEvent(QKeyEvent *event)
         if (containment()->status() == Plasma::Types::AcceptingInputStatus) {
             containment()->setStatus(Plasma::Types::PassiveStatus);
         }
-        // No return for Wayland
     }
 
     PlasmaQuick::ContainmentView::keyPressEvent(event);
