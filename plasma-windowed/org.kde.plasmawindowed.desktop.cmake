@@ -123,4 +123,3 @@ Icon=plasma
 Type=Application
 X-DBUS-StartupType=Unique
 InitialPreference=1
-X-KDE-Wayland-Interfaces=org_kde_plasma_window_management,org_kde_kwin_keystate,zkde_screencast_unstable_v1,org_kde_plasma_activation_feedback
