@@ -421,7 +421,7 @@ KCM.SimpleKCM {
 
         RowLayout {
             Layout.preferredWidth: formLayout.maxImplicitWidth
-            // We don't want people messing with the font DPI on Wayland;
+            // We don't want people messing with the font DPI;
             // they should always be using the global scaling system instead
             visible: Qt.platform.pluginName === "xcb"
 

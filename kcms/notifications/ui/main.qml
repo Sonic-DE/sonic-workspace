@@ -144,8 +144,6 @@ KCM.SimpleKCM {
             text: i18nc("Automatically enable Do Not Disturb mode during screen sharing", "During screen sharing")
             checked: kcm.dndSettings.whenScreenSharing
             onClicked: kcm.dndSettings.whenScreenSharing = checked
-            // Only applicable to Wayland where we can control who can cast the screen
-            visible: false
 
             KCM.SettingStateBinding {
                 configObject: kcm.dndSettings
