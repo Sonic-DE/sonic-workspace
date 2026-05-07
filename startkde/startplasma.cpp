@@ -489,7 +489,7 @@ void cleanupPlasmaEnvironment(const std::optional<QProcessEnvironment> &oldSyste
 
 // Drop session-specific variables from the systemd environment.
 // Those can be leftovers from previous sessions, which can interfere with the session
-// we want to start now, e.g. $DISPLAY might break kwin_wayland.
+// we want to start now.
 static void dropSessionVarsFromSystemdEnvironment()
 {
     const auto environment = getSystemdEnvironment();
@@ -517,8 +517,6 @@ static void dropSessionVarsFromSystemdEnvironment()
     }
 }
 
-// kwin_wayland can possibly also start dbus-activated services which need env variables.
-// In that case, the update in startplasma might be too late.
 bool syncDBusEnvironment()
 {
     dropSessionVarsFromSystemdEnvironment();

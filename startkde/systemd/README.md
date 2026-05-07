@@ -8,10 +8,9 @@ graphical-session.target
 
 plasma-workspace@ is the target explicitly activated.
 
-## X11 and wayland
+## X11
 
-plasma-workspace@ is a template file that ends with x11 or wayland. That will then require the correct kwin_
-startup order can be different between the two.
+plasma-workspace@ is a template file. We require the correct kwin_ startup order.
 
 ## Wants & Order
 
