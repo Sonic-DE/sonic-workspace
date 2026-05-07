@@ -211,14 +211,9 @@ void View::displayWithClipboardContents()
 {
     display();
 
-    // On Wayland we cannot retrieve the clipboard selection until we get the focus
-    if (QGuiApplication::focusWindow()) {
-        m_requestedClipboardSelection = false;
-        m_engine->rootObject()->setProperty("singleRunner", QString());
-        m_engine->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
-    } else {
-        m_requestedClipboardSelection = true;
-    }
+    m_requestedClipboardSelection = false;
+    m_engine->rootObject()->setProperty("singleRunner", QString());
+    m_engine->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
 }
 
 void View::query(const QString &term)
