@@ -568,10 +568,6 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
     setActiveForInput(true);
 
-    if (qgetenv("XDG_SESSION_TYPE") == "wayland") {
-        xcb_warp_pointer(c, XCB_NONE, m_windowId, 0, 0, 0, 0, clickPoint.x(), clickPoint.y());
-    }
-
     // mouse down
     if (m_injectMode == Direct) {
         auto *event = new xcb_button_press_event_t;
@@ -618,18 +614,5 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         sendXTestReleased(m_x11Interface->display(), mouseButton);
     }
 
-    if (m_injectMode == Direct) {
-        setActiveForInput(false);
-    } else {
-        // delayed because on xwayland with the new libei path it will go to XWayland
-        // then kwin, then back to X
-        // we need to delay slightly until that happens
-        if (qgetenv("XDG_SESSION_TYPE") == QByteArrayLiteral("wayland")) {
-            QTimer::singleShot(300, this, [this]() {
-                setActiveForInput(false);
-            });
-        } else {
-            setActiveForInput(false);
-        }
-    }
+    setActiveForInput(false);
 }
