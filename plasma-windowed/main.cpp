@@ -37,11 +37,7 @@ int main(int argc, char **argv)
     format.setOption(QSurfaceFormat::ResetNotification);
     QSurfaceFormat::setDefaultFormat(format);
 
-    // this is needed to fake window position so Plasma Dialog sets correct borders
-    qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
-
     QApplication app(argc, argv);
-    qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     app.setApplicationVersion(QLatin1String(version));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setDesktopFileName(QStringLiteral("org.kde.plasmawindowed"));
