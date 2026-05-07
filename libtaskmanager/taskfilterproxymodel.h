@@ -74,7 +74,7 @@ public:
      * If set to an empty id, filtering by virtual desktop is disabled.
      *
      * @see virtualDesktop
-     * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
+     * @param desktop A virtual desktop id.
      **/
     void setVirtualDesktop(const QVariant &desktop = QVariant());
 

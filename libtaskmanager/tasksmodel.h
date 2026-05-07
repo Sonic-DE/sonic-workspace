@@ -165,7 +165,7 @@ public:
      * If set to an empty id, filtering by virtual desktop is disabled.
      *
      * @see virtualDesktop
-     * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
+     * @param desktop A virtual desktop id uint >0.
      **/
     void setVirtualDesktop(const QVariant &desktop = QVariant());
 
@@ -872,15 +872,15 @@ public:
     /**
      * Request entering the window at the given index on the specified virtual desktops.
      *
-     * On Wayland, virtual desktop ids are QStrings. On X11, they are uint >0.
+     * Virtual desktop ids are uint >0.
      *
      * An empty list has a special meaning: The window is entered on all virtual desktops
      * in the session.
      *
-     * On X11, a window can only be on one or all virtual desktops. Therefore, only the
+     * A window can only be on one or all virtual desktops. Therefore, only the
      * first list entry is actually used.
      *
-     * On X11, the id 0 has a special meaning: The window is entered on all virtual
+     * The id 0 has a special meaning: The window is entered on all virtual
      * desktops in the session.
      *
      * @param index An index in this window tasks model.
