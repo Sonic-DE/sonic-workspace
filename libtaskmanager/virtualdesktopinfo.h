@@ -42,8 +42,7 @@ public:
     /**
      * The currently active virtual desktop.
      *
-     * @returns the id of the currently active virtual desktop. QString on
-     * Wayland; uint >0 on X11.
+     * @returns the id of the currently active virtual desktop.
      **/
     QVariant currentDesktop() const;
 
@@ -56,8 +55,6 @@ public:
 
     /**
      * The ids of all virtual desktops present in the session.
-     *
-     * On Wayland, the ids are QString. On X11, they are uint >0.
      *
      * @returns a the list of ids of the virtual desktops present in the
      * session.
@@ -77,7 +74,7 @@ public:
 
     /**
      * Returns the position of the passed-in virtual desktop.
-     * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
+     * @param desktop A virtual desktop id.
      * @returns the position of the virtual desktop, or -1 if the desktop
      * id is not valid.
      **/
@@ -93,7 +90,7 @@ public:
     /**
      * Request activating the passed-in virtual desktop.
      *
-     * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
+     * @param desktop A virtual desktop id.
      **/
     void requestActivate(const QVariant &desktop);
 

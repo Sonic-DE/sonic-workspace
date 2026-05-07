@@ -42,7 +42,7 @@ public:
         GenericName, /**< Generic application name. */
         LauncherUrl, /**< URL that can be used to launch this application (.desktop or executable). */
         LauncherUrlWithoutIcon, /**< Special path to get a launcher URL while skipping fallback icon encoding. Used as speed optimization. */
-        WinIdList, /**< NOTE: On Wayland, these ids are only useful within the same process. On X11, they are global window ids. */
+        WinIdList, /**< Window IDs for this task. */
         MimeType, /**< MIME type for this task (window, window group), needed for DND. */
         MimeData, /**< Data for MimeType. */
         IsWindow, /**< This is a window task. */
@@ -75,10 +75,8 @@ public:
         IsDemandingAttention, /**< Task is demanding attention. */
         SkipTaskbar, /**< Task should not be shown in a 'task bar' user interface. */
         SkipPager, /**< Task should not to be shown in a 'pager' user interface. */
-        AppPid, /**< Application Process ID. This is provided best-effort, and may not
-                     be what you expect: For window tasks owned by processes started
-                     from e.g. kwin_wayland, it would be the process id of kwin
-                     itself. DO NOT use this for destructive actions such as closing
+        AppPid, /**< Application Process ID. This is provided best-effort and may not
+                     be what you expect. DO NOT use this for destructive actions such as closing
                      the application. The intended use case is to try and (smartly)
                      gather more information about the task when needed. */
         StackingOrder, /**< A window task's index in the window stacking order. Care must be
@@ -274,15 +272,15 @@ public:
      * Request entering the window at the given index on the specified virtual desktops,
      * leaving any other desktops.
      *
-     * On Wayland, virtual desktop ids are QStrings. On X11, they are uint >0.
+     * Virtual desktop ids are uint >0.
      *
      * An empty list has a special meaning: The window is entered on all virtual desktops
      * in the session.
      *
-     * On X11, a window can only be on one or all virtual desktops. Therefore, only the
+     * A window can only be on one or all virtual desktops. Therefore, only the
      * first list entry is actually used.
      *
-     * On X11, the id 0 has a special meaning: The window is entered on all virtual
+     * The id 0 has a special meaning: The window is entered on all virtual
      * desktops in the session.
      *
      * @param index An index in this window tasks model.
