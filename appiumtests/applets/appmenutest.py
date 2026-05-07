@@ -77,10 +77,7 @@ class AppMenuTest(unittest.TestCase):
         Take screenshot when the current test fails
         """
         if not self._outcome.result.wasSuccessful():
-            if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-                subprocess.check_call(["import", "-window", "root", f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png"])
-            else:
-                self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
+            subprocess.check_call(["import", "-window", "root", f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png"])
 
     @classmethod
     def tearDownClass(cls) -> None:

@@ -41,7 +41,7 @@ def send_notification(data: dict[str, str | int | list[str] | dict[str, GLib.Var
     """
     app_name: str = str(data.get("app_name", "Appium Test"))
     replaces_id: int = int(data.get("replaces_id", 0))
-    app_icon: str = str(data.get("app_icon", "wayland"))
+    app_icon: str = str(data.get("app_icon", "plasma"))
     summary: str = str(data.get("summary", ""))
     body: str = str(data.get("body", ""))
     actions: list[str] = data.get("actions", [])
