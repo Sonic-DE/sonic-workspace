@@ -28,15 +28,6 @@ private Q_SLOTS:
     void initTestCase();
 
     /**
-        The mime data from Wayland clipboard is not the exact same image, so two
-        image items are listed (first time restarting plasmashell). But after
-        images are saved to local, they have the same uuid again. So klipper
-        starts to become confused after the second time restarting plasmashell.
-
-        This is caused by QPixmap::from(QImage).toImage() erasing metadata in the
-        image, and Wayland clipboard is async, so another identical image is added
-        to clipboard.
-
         This test tries to reproduce the process to trigger the original bug by
 
         1. Enable image history
