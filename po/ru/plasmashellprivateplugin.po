@@ -2,7 +2,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2019-2023, 2025-2026 Alexander Yavorsky <kekcuha@gmail.com>
 # Nick Shaforostoff <shafff@ukr.net>, 2007, 2008, 2009.
 # Nick Shaforostoff <shaforostoff@kde.ru>, 2008, 2009.
 # Albert R. Valiev <darkstar@altlinux.ru>, 2008.
@@ -16,15 +16,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-17 02:42+0000\n"
-"PO-Revision-Date: 2025-12-19 13:26+0200\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"PO-Revision-Date: 2026-06-18 18:52+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -158,7 +158,7 @@ msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "Не закрывать"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:286
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:287
 #, kde-format
 msgid "Configure…"
 msgstr "Настроить…"
@@ -202,7 +202,7 @@ msgstr "Фильтры"
 #: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
 msgid ""
-"This Widget was written for an unknown older version of Plasma and is not "
+"This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
@@ -213,7 +213,7 @@ msgstr ""
 #: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
 msgid ""
-"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
 "Этот виджет предназначен для Plasma версии %1 и не может работать в Plasma "
@@ -223,7 +223,7 @@ msgstr ""
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
 msgid ""
-"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
 "Этот виджет предназначен для Plasma версии %1 и не может работать в Plasma "
@@ -232,12 +232,13 @@ msgstr ""
 #: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
 msgid ""
-"This Widget was written for Plasma %1 and is not compatible with the latest "
-"version of Plasma. Please update Plasma in order to use the widget."
+"This widget was written for Plasma %1 and is not compatible with the older "
+"version of Plasma installed on this system. Please update Plasma in order to "
+"use the widget."
 msgstr ""
 "Этот виджет предназначен для Plasma версии %1 и не может работать в "
-"актуальной версии Plasma.Обновите используемую версию Plasma для "
-"использования этого виджета."
+"используемой устаревшей версии Plasma. Обновите используемую версию Plasma "
+"для использования этого виджета."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
@@ -418,7 +419,7 @@ msgstr "Ошибка при установке пакета «%1»: %2"
 msgid "Installation Failure"
 msgstr "Ошибка установки"
 
-#: timezoneselector/TimezoneSelector.qml:104
+#: timezoneselector/TimezoneSelector.qml:107
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -426,42 +427,45 @@ msgid ""
 "map"
 msgstr "Выбранный часовой пояс недоступен для просмотра на этой карте"
 
-#: timezoneselector/TimezoneSelector.qml:194
-#, kde-format
-msgctxt "@action:button"
-msgid "Zoom in"
-msgstr "Увеличить"
-
-#: timezoneselector/TimezoneSelector.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Zoom out"
-msgstr "Уменьшить"
-
-#: timezoneselector/TimezoneSelector.qml:239
-#, kde-format
-msgctxt "@label:listbox In the context of time zone selection"
-msgid "Region:"
-msgstr "Регион:"
-
-#: timezoneselector/TimezoneSelector.qml:246
+#: timezoneselector/TimezoneSelector.qml:122
+#: timezoneselector/TimezoneSelector.qml:301
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Выбрать…"
 
-#: timezoneselector/TimezoneSelector.qml:250
+#: timezoneselector/TimezoneSelector.qml:124
+#: timezoneselector/TimezoneSelector.qml:293
 #, kde-format
-msgid "Timezone region selector"
-msgstr "Выбор региона часового пояса"
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Region:"
+msgstr "Регион:"
 
-#: timezoneselector/TimezoneSelector.qml:271
+#: timezoneselector/TimezoneSelector.qml:146
+#: timezoneselector/TimezoneSelector.qml:326
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Часовой пояс:"
 
-#: timezoneselector/TimezoneSelector.qml:281
+#: timezoneselector/TimezoneSelector.qml:248
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom in"
+msgstr "Увеличить"
+
+#: timezoneselector/TimezoneSelector.qml:264
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom out"
+msgstr "Уменьшить"
+
+#: timezoneselector/TimezoneSelector.qml:305
+#, kde-format
+msgid "Timezone region selector"
+msgstr "Выбор региона часового пояса"
+
+#: timezoneselector/TimezoneSelector.qml:337
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Выбор местоположения часового пояса"

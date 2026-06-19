@@ -15,20 +15,20 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2015, 2016, 2018, 2019.
 # Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2019-2023, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2023-12-24 18:21+0300\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"PO-Revision-Date: 2026-06-14 19:07+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -38,13 +38,13 @@ msgstr ""
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
-msgid "Name of the current cursor theme"
+msgid "Name of the current pointer theme"
 msgstr "Название текущего набора курсоров"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
-msgid "Current cursor size"
+msgid "Current pointer size"
 msgstr "Текущий размер курсора"
 
 #: kcmcursortheme.cpp:312
@@ -114,21 +114,21 @@ msgstr ""
 #: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
-"This tool allows you to set the mouse cursor theme for the current Plasma "
+"This tool allows you to set the mouse pointer theme for the current Plasma "
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
-"Это приложение позволяет задать используемый набор курсоров, не позволяя "
-"выбрать отсутствующий или уже используемый набор."
+"Этот инструмент позволяет задать набор курсоров для текущего сеанса Plasma, "
+"исключая случайный выбор отсутствующего или уже установленного набора."
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid ""
-"The name of the cursor theme you wish to set for your current Plasma session "
-"(passing a full path will only use the last part of the path)"
+"The name of the pointer theme you wish to set for your current Plasma "
+"session (passing a full path will only use the last part of the path)"
 msgstr ""
-"Название набора курсоров для использования в Plasma (при передаче полного "
-"пути в качестве параметра, будет использована только его завершающая часть)"
+"Название набора курсоров для использования в текущем сеансе работы в Plasma "
+"(при передаче полного пути будет использована только его завершающая часть)."
 
 #: plasma-apply-cursortheme.cpp:70
 #, kde-format
@@ -145,36 +145,39 @@ msgstr "Использовать указанный размер вместо о
 #: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
-"The requested theme \"%1\" is already set as the theme for the current "
-"Plasma session."
-msgstr "Набор курсоров «%1» уже используется в Plasma."
+"The requested theme “%1” is already set as the theme for the current Plasma "
+"session."
+msgstr "Набор курсоров «%1» уже используется в текущем сеансе Plasma."
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
-"Successfully applied the mouse cursor theme %1 to your current Plasma session"
-msgstr "Набор курсоров %1 успешно задан для использования в Plasma"
+"Successfully applied the mouse pointer theme %1 to your current Plasma "
+"session"
+msgstr ""
+"Набор курсоров «%1» успешно применён для текущего сеанса работы в Plasma."
 
 #: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid ""
-"You have to restart the Plasma session for your newly applied mouse cursor "
+"You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
 msgstr ""
-"Чтобы выбранные курсоры отображались верно, необходимо перезапустить сеанс "
-"Plasma."
+"Чтобы новый набор курсоров отображался корректно, необходимо перезапустить "
+"сеанс Plasma."
 
 #: plasma-apply-cursortheme.cpp:115
 #, kde-format
 msgid ""
-"Could not find theme \"%1\". The theme should be one of the following "
-"options: %2"
+"Could not find theme “%1”. The theme should be one of the following options: "
+"%2"
 msgstr ""
-"Не удалось найти набор «%1». Необходимо указать один из следующих наборов: %2"
+"Не удалось найти набор «%1». Необходимо указать один из следующих вариантов: "
+"%2"
 
 #: plasma-apply-cursortheme.cpp:123
 #, kde-format
-msgid "You have the following mouse cursor themes on your system:"
+msgid "You have the following mouse pointer themes on your system:"
 msgstr "В системе установлены следующие наборы курсоров:"
 
 #: plasma-apply-cursortheme.cpp:128
@@ -182,15 +185,28 @@ msgstr "В системе установлены следующие наборы
 msgid "(Current theme for this Plasma session)"
 msgstr "(Текущий набор для этого сеанса работы в Plasma)"
 
-#: ui/Delegate.qml:43
+#: ui/Delegate.qml:48
 #, kde-format
-msgid "Remove Theme"
-msgstr "Удалить набор"
+msgctxt "@info:tooltip"
+msgid "Remove pointer theme"
+msgstr "Удалить набор курсоров"
 
 #: ui/Delegate.qml:50
 #, kde-format
-msgid "Restore Cursor Theme"
-msgstr "Восстановить набор курсоров мыши"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active pointer theme"
+msgstr "Активный набор курсоров не может быть удалён"
+
+#: ui/Delegate.qml:52
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed pointer themes"
+msgstr "Набор курсоров, встроенный в систему, не может быть удалён"
+
+#: ui/Delegate.qml:60
+#, kde-format
+msgid "Don’t delete this pointer theme"
+msgstr "Не удалять этот набор курсоров"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -207,12 +223,12 @@ msgstr "Настройка анимации при запуске приложе
 #: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@label"
-msgid "Cursor feedback:"
+msgid "Pointer feedback:"
 msgstr "Изменение курсора:"
 
 #: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
-msgctxt "@option:radio No cursor feedback when launching apps"
+msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
 msgstr "Не использовать"
 
@@ -261,35 +277,35 @@ msgstr[1] "%1 секунды"
 msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунду"
 
-#: ui/main.qml:91 ui/main.qml:129
+#: ui/main.qml:109 ui/main.qml:147
 #, kde-format
 msgid "Size: %1"
 msgstr "Размер: %1"
 
-#: ui/main.qml:144
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Настроить параметры отклика при запуске приложений…"
 
-#: ui/main.qml:159
+#: ui/main.qml:177
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Установить из файла..."
 
-#: ui/main.qml:165
+#: ui/main.qml:183
 #, kde-format
 msgid "&Get New…"
 msgstr "З&агрузить наборы курсоров…"
 
-#: ui/main.qml:179
+#: ui/main.qml:197
 #, kde-format
 msgid "Open Theme"
 msgstr "Открытие набора"
 
-#: ui/main.qml:181
+#: ui/main.qml:199
 #, kde-format
-msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Наборы курсоров мыши (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:59
@@ -299,6 +315,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(доступные размеры: %1)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Удалить набор"
 
 #~ msgid "This module lets you choose the mouse cursor theme."
 #~ msgstr "Этот модуль позволяет выбрать набор курсоров мыши."
