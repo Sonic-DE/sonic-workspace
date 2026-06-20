@@ -322,62 +322,7 @@ void X11OutputOrderWatcher::roundtrip() const {
   }
 }
 
-bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType,
-                                              void *message, qintptr *result) {
-  Q_UNUSED(result);
-  // a particular edge case: when we switch the only enabled screen
-  // we don't have any signal about it, the primary screen changes but we have
-  // the same old QScreen* getting recycled see
-  // https://bugs.kde.org/show_bug.cgi?id=373880 if this slot will be invoked
-  // many times, their//second time on will do nothing as name and
-  // primaryOutputName will be the same by then
-  if (eventType[0] != 'x') {
-    return false;
-  }
-
-  auto *ev = static_cast<xcb_generic_event_t *>(message);
-
-  const auto responseType = XCB_EVENT_RESPONSE_TYPE(ev);
-
-  if (responseType == m_xrandrExtensionOffset + XCB_RANDR_NOTIFY) {
-    auto *randrEvent = reinterpret_cast<xcb_randr_notify_event_t *>(ev);
-    if (randrEvent->subCode == XCB_RANDR_NOTIFY_OUTPUT_PROPERTY) {
-      xcb_randr_output_property_t property = randrEvent->u.op;
-
-      if (property.atom == m_kdeScreenAtom) {
-        // Force an X11 roundtrip to make sure we have all other
-        // screen events in the buffer when we process the deferred refresh
-        useFallback(false);
-        roundtrip();
-        m_delayTimer->start();
-      }
-    } else if (randrEvent->subCode == XCB_RANDR_NOTIFY_OUTPUT_CHANGE) {
-      // When the ast screen is removed, its qscreen becomes name ":0.0" as the
-      // fake screen, but nothing happens really, screenpool doesn't notice (and
-      // looking at the assert_x there are, that was expected" then the screen
-      // gets connected again, a new screen gets connected, the old 0.0 one gets
-      // disconnected, but the screen order stuff doesn't say anything as it's
-      // still the same connector name as before so screenpool finds itself with
-      // an empty screenorder
-      if (randrEvent->u.oc.connection == XCB_RANDR_CONNECTION_DISCONNECTED) {
-        // Cause ScreenPool to reevaluate screenorder again, so the screen :0.0
-        // will be correctly moved to fakeScreens
-        m_delayTimer->start();
-      }
-    }
-  }
-  return false;
-}
-
-void X11OutputOrderWatcher::roundtrip() const {
-  const auto cookie = xcb_get_input_focus(m_x11Interface->connection());
-  xcb_generic_error_t *error = nullptr;
-  ScopedPointer<xcb_get_input_focus_reply_t> sync(
-      xcb_get_input_focus_reply(m_x11Interface->connection(), cookie, &error));
-  if (error) {
-    free(error);
-  }
-}
+#include "outputorderwatcher.moc"
 
 #include "moc_outputorderwatcher.cpp"
 
