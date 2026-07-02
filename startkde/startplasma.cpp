@@ -414,6 +414,7 @@ void setupPlasmaEnvironment()
     qputenv("XDG_CONFIG_DIRS", QByteArray(QFile::encodeName(extraConfigDir) + ':' + currentConfigDirs));
 
     const auto &[lookAndFeelName, lookAndFeelContents] = determineLookAndFeel();
+    qCDebug(PLASMA_STARTUP) << "Applying" << lookAndFeelName << "global theme";
     QFile activeLnf(extraConfigDir + QLatin1String("/package"));
     if (!activeLnf.open(QIODevice::ReadOnly)) {
         qWarning() << "Failed to open activeLnf file:" << activeLnf.errorString();
