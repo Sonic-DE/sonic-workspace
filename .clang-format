@@ -37,7 +37,7 @@ ColumnLimit: 160
 SortIncludes: true
 
 # break before braces on function, namespace and class definitions.
-BreakBeforeBraces: Custom
+BreakBeforeBraces: Linux
 
 # CrlInstruction *a;
 PointerAlignment: Right
@@ -68,7 +68,7 @@ BinPackParameters: false
 BreakBeforeBinaryOperators: NonAssignment
 
 # format C++11 braced lists like function calls
-Cpp11BracedListStyle: FunctionCall
+Cpp11BracedListStyle: true
 
 # do not put a space before C++11 braced lists
 SpaceBeforeCpp11BracedList: false
