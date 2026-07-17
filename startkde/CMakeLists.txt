@@ -30,6 +30,7 @@ target_link_libraries(startplasma PUBLIC
 kconfig_target_kcfg_file(startplasma
     FILE ${CMAKE_SOURCE_DIR}/kcms/lookandfeel/lookandfeelsettings.kcfg
     CLASS_NAME LookAndFeelSettings
+    MUTATORS
 )
 
     add_executable(startplasma-x11 ${START_PLASMA_COMMON_SRCS} startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp)
