@@ -6,15 +6,15 @@
   <group name="KDE">
     <entry name="lookAndFeelPackage" key="LookAndFeelPackage" type="String">
       <label>Global look and feel</label>
-      <default>org.kde.breeze.desktop</default>
+      <default>org.kde.silverlightbottompanel.desktop</default>
     </entry>
     <entry name="defaultLightLookAndFeel" key="DefaultLightLookAndFeel" type="String">
       <label>Global Look and Feel package, alternate</label>
-      <default>org.kde.breeze.desktop</default>
+      <default>org.kde.silverlightbottompanel.desktop</default>
     </entry>
     <entry name="defaultDarkLookAndFeel" key="DefaultDarkLookAndFeel" type="String">
       <label>Global Look and Feel package, alternate</label>
-      <default>org.kde.breezedark.desktop</default>
+      <default>org.kde.silverdarkbottompanel.desktop</default>
     </entry>
     <entry name="automaticLookAndFeel" key="AutomaticLookAndFeel" type="Bool">
       <label>Switch between dark and light global themes depending on time of day</label>

@@ -1,7 +1,3 @@
-plasma_install_package(org.kde.breeze org.kde.breeze.desktop look-and-feel lookandfeel)
-plasma_install_package(org.kde.breezedark org.kde.breezedark.desktop look-and-feel lookandfeel)
-plasma_install_package(org.kde.breezetwilight org.kde.breezetwilight.desktop look-and-feel lookandfeel)
-
 ecm_add_qml_module(components URI "org.kde.breeze.components" NO_GENERATE_PLUGIN_SOURCE)
 ecm_target_qml_sources(components SOURCES
     components/animation/RejectPasswordAnimation.qml

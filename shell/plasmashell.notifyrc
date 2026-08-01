@@ -1,0 +1,10 @@
+[Global]
+IconName=preferences-desktop-theme
+Name=Theme Repair
+Comment=Notifications about unavailable theme components
+
+[Event/themeComponentRepair]
+Name=Unavailable theme components replaced
+Comment=Some configured theme components were unavailable and were replaced with Silver
+Action=Popup
+Urgency=Normal

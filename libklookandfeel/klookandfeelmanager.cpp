@@ -600,7 +600,7 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
 
 #ifdef HAVE_BREEZE_DECO
-            setWindowDecoration(group.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)),
+            setWindowDecoration(group.readEntry("library", QStringLiteral(SILVER_KDECORATION_PLUGIN_ID)),
                                 group.readEntry("theme", QStringLiteral("Breeze")),
                                 group.readEntry("NoPlugin", false));
 #else

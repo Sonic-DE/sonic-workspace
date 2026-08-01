@@ -51,6 +51,8 @@ set (plasma_shell_SRCS
     screenpool-debug.cpp
     screenpool.cpp
     softwarerendernotifier.cpp
+    themecomponentrepaircoordinator.cpp
+    themecomponentrepaircoordinator.h
     shellcontainmentconfig.cpp
     ${scripting_SRC}
 )
@@ -121,6 +123,7 @@ target_link_libraries(plasmashell PRIVATE
  Plasma::Plasma
  Plasma::PlasmaQuick
  PW::KWorkspace
+ PW::KLookAndFeel
  Qt::GuiPrivate # qpa/qplatformwindow_p.h
  Qt::Quick
  Qt::DBus
@@ -145,6 +148,7 @@ configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org
 install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(FILES plasmashell.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 
 ecm_install_configured_files(INPUT plasma-plasmashell.service.in @ONLY DESTINATION  ${KDE_INSTALL_SYSTEMDUSERUNITDIR})

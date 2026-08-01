@@ -229,7 +229,7 @@ void setupCursor(void)
         const KConfig cfg(QStringLiteral("kcminputrc"));
         const KConfigGroup inputCfg = cfg.group(QStringLiteral("Mouse"));
 
-        const auto cursorTheme = inputCfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
+        const auto cursorTheme = inputCfg.readEntry("cursorTheme", QStringLiteral("silver_cursors_light"));
         const auto cursorSize = inputCfg.readEntry("cursorSize", 24);
 
         runSync(QStringLiteral("kapplymousetheme"), {cursorTheme, QString::number(cursorSize)});
@@ -432,7 +432,7 @@ void setupPlasmaEnvironment()
         lnfManager.setMode(KLookAndFeelManager::Mode::Apply);
         KConfig globals(QStringLiteral("kdeglobals")); // Reload the config
         KConfigGroup generalGroup(&globals, QStringLiteral("General"));
-        const QString colorScheme = generalGroup.readEntry("ColorScheme", QStringLiteral("BreezeLight"));
+        const QString colorScheme = generalGroup.readEntry("ColorScheme", QStringLiteral("SilverLight"));
         QString path = lnfManager.colorSchemeFile(colorScheme);
 
         if (!path.isEmpty()) {
@@ -810,4 +810,3 @@ void waitForKonqi()
         }
     }
 }
-

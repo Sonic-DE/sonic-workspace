@@ -8,9 +8,9 @@ endif()
 
 set(HAVE_XCURSOR TRUE)
 
-if(Breeze_FOUND)
-    if(BREEZE_WITH_KDECORATION)
-        set(HAVE_BREEZE_DECO TRUE)
+if(SonicSilver_FOUND)
+    if(SILVER_WITH_KDECORATION)
+        set(HAVE_SILVER_DECO TRUE)
     endif()
 endif()
 
@@ -33,6 +33,8 @@ target_sources(klookandfeel PRIVATE
     klookandfeel.cpp
     klookandfeelmanager.cpp
     klookandfeelmanifest.cpp
+    themecomponentresolver.cpp
+    themecomponentresolver.h
 )
 
 target_link_libraries(klookandfeel
@@ -76,6 +78,7 @@ install(
         klookandfeel.h
         klookandfeelmanager.h
         klookandfeelmanifest.h
+        themecomponentresolver.h
         ${CMAKE_CURRENT_BINARY_DIR}/klookandfeel_export.h
     DESTINATION
         ${KDE_INSTALL_INCLUDEDIR}/klookandfeel

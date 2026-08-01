@@ -7,3 +7,8 @@ target_link_libraries(lookandfeelmanagertest PW::KLookAndFeel Qt::Test)
 
 add_test(NAME lookandfeelmanagertest COMMAND lookandfeelmanagertest)
 ecm_mark_as_test(lookandfeelmanagertest)
+
+add_executable(themecomponentresolvertest themecomponentresolvertest.cpp)
+target_link_libraries(themecomponentresolvertest PW::KLookAndFeel Qt::Test)
+add_test(NAME themecomponentresolvertest COMMAND themecomponentresolvertest)
+ecm_mark_as_test(themecomponentresolvertest)

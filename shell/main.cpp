@@ -10,6 +10,7 @@
 #include "debug.h"
 #include "shellcorona.h"
 #include "softwarerendernotifier.h"
+#include "themecomponentrepaircoordinator.h"
 #ifdef WITH_KUSERFEEDBACKCORE
 #include "userfeedback.h"
 #endif
@@ -190,6 +191,8 @@ int main(int argc, char *argv[])
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(replace ? KDBusService::Replace : 0));
 
     corona.init();
+    auto themeRepairCoordinator = new ThemeComponentRepairCoordinator(&app);
+    themeRepairCoordinator->start();
     SoftwareRendererNotifier::notifyIfRelevant();
 
     return app.exec();

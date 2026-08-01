@@ -6,7 +6,7 @@
   <group name="General">
     <entry name="colorScheme" key="ColorScheme" type="String">
       <label>Color scheme name</label>
-      <default>BreezeLight</default>
+      <default>SilverLight</default>
     </entry>
     <entry name="accentColor" key="AccentColor" type="Color">
       <label>Accent color</label>

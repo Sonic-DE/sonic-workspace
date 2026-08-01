@@ -212,27 +212,27 @@ KLookAndFeelManifest KLookAndFeelManifest::snapshot()
     KLookAndFeelManifest manifest;
 
     KConfigGroup systemCG(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("KDE"));
-    manifest.setWidgetStyle(systemCG.readEntry("widgetStyle", QStringLiteral("breeze")));
+    manifest.setWidgetStyle(systemCG.readEntry("widgetStyle", QStringLiteral("Silver")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
-    manifest.setColorScheme(systemCG.readEntry("ColorScheme", QStringLiteral("Breeze")));
+    manifest.setColorScheme(systemCG.readEntry("ColorScheme", QStringLiteral("SilverLight")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("Icons"));
-    manifest.setIconTheme(systemCG.readEntry("Theme", QStringLiteral("breeze")));
+    manifest.setIconTheme(systemCG.readEntry("Theme", QStringLiteral("silver")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")), QStringLiteral("Theme"));
-    manifest.setPlasmaTheme(systemCG.readEntry("name", QStringLiteral("default")));
+    manifest.setPlasmaTheme(systemCG.readEntry("name", QStringLiteral("silver-light")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), QStringLiteral("Mouse"));
-    manifest.setCursorTheme(systemCG.readEntry("cursorTheme", QStringLiteral("breeze_cursors")));
+    manifest.setCursorTheme(systemCG.readEntry("cursorTheme", QStringLiteral("silver_cursors_light")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("kwinrc")), QStringLiteral("TabBox"));
-    manifest.setWindowSwitcher(systemCG.readEntry("LayoutName", QStringLiteral("org.kde.breeze.desktop")));
-    manifest.setDesktopSwitcher(systemCG.readEntry("DesktopLayout", QStringLiteral("org.kde.breeze.desktop")));
+    manifest.setWindowSwitcher(systemCG.readEntry("LayoutName", QStringLiteral("org.kde.silver.desktop")));
+    manifest.setDesktopSwitcher(systemCG.readEntry("DesktopLayout", QStringLiteral("org.kde.silver.desktop")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("kwinrc")), QStringLiteral("org.kde.kdecoration2"));
-    manifest.setDecorationLibrary(systemCG.readEntry("library", QStringLiteral("org.kde.breeze")));
-    manifest.setDecorationTheme(systemCG.readEntry("theme", QString()));
+    manifest.setDecorationLibrary(systemCG.readEntry("library", QStringLiteral("org.kde.silver")));
+    manifest.setDecorationTheme(systemCG.readEntry("theme", QStringLiteral("Silver")));
 
     const QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                                 QStringLiteral("/PlasmaShell"),

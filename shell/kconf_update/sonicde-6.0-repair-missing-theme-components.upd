@@ -1,0 +1,4 @@
+Version=6
+Id=sonicde-repair-missing-theme-components
+File=kdeglobals
+Script=sonicde-6.0-repair-missing-theme-components

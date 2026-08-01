@@ -375,7 +375,7 @@ void runRdb(unsigned int flags)
 
     // Export the Xcursor theme & size settings
     KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), u"Mouse"_s);
-    QString theme = mousecfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
+    QString theme = mousecfg.readEntry("cursorTheme", QStringLiteral("silver_cursors_light"));
     int cursorSize = mousecfg.readEntry("cursorSize", 24);
 
     QString contents;

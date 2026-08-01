@@ -8,7 +8,7 @@
 #include <KPackage/PackageLoader>
 #include <KPackage/PackageStructure>
 
-static constexpr QLatin1StringView DEFAULT_LOOKANDFEEL("org.kde.breeze.desktop");
+static constexpr QLatin1StringView DEFAULT_LOOKANDFEEL("org.kde.silverlightbottompanel.desktop");
 
 class LookAndFeelPackage : public KPackage::PackageStructure
 {

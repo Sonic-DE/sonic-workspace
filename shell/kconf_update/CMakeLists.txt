@@ -28,3 +28,9 @@ target_link_libraries(plasmashell-6.5-remove-stop-activity-shortcut PRIVATE KF6:
 
 install(FILES plasmashell-6.5-remove-stop-activity-shortcut.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS plasmashell-6.5-remove-stop-activity-shortcut DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
+
+add_executable(sonicde-6.0-repair-missing-theme-components)
+target_sources(sonicde-6.0-repair-missing-theme-components PRIVATE sonicde-6.0-repair-missing-theme-components.cpp)
+target_link_libraries(sonicde-6.0-repair-missing-theme-components PRIVATE PW::KLookAndFeel KF6::ConfigCore Qt::Core)
+install(FILES sonicde-6.0-repair-missing-theme-components.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(TARGETS sonicde-6.0-repair-missing-theme-components DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
