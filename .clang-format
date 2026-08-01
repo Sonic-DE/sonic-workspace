@@ -37,7 +37,7 @@ ColumnLimit: 160
 SortIncludes: true
 
 # break before braces on function, namespace and class definitions.
-BreakBeforeBraces: Linux
+BreakBeforeBraces: Custom
 
 # CrlInstruction *a;
 PointerAlignment: Right
@@ -68,7 +68,7 @@ BinPackParameters: false
 BreakBeforeBinaryOperators: NonAssignment
 
 # format C++11 braced lists like function calls
-Cpp11BracedListStyle: true
+Cpp11BracedListStyle: FunctionCall
 
 # do not put a space before C++11 braced lists
 SpaceBeforeCpp11BracedList: false
@@ -93,6 +93,8 @@ AllowShortLambdasOnASingleLine: Empty
 
 # We do not want clang-format to put all arguments on a new line
 AllowAllArgumentsOnNextLine: false
+
+# SonicDE uses spaces and places function opening braces on a new line.
 UseTab: Never
 BraceWrapping:
   AfterFunction: true
