@@ -2,7 +2,7 @@
     "KDE-KIO-Protocols": {
         "applications": {
             "Class": ":local",
-            "Icon": "start-here-kde",
+            "Icon": "start-here-sonicde",
             "deleting": false,
             "input": "none",
             "linking": false,
@@ -26,7 +26,7 @@
         },
         "programs": {
             "Class": ":local",
-            "Icon": "start-here-kde",
+            "Icon": "start-here-sonicde",
             "deleting": false,
             "input": "none",
             "linking": false,
