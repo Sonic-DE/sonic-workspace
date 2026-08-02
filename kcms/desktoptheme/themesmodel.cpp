@@ -182,6 +182,9 @@ void ThemesModel::load()
 
         if (theme.endsWith(QLatin1String(".json"))) {
             KPluginMetaData data = KPluginMetaData::fromJsonFile(theme);
+            if (data.rawData().value(QStringLiteral("NoDisplay")).toBool(false)) {
+                continue;
+            }
             name = data.name();
             comment = data.description();
         } else {
