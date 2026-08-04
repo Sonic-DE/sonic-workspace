@@ -77,10 +77,11 @@ int main(int argc, char *argv[])
         e.exec();
     }
 
-    const auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
+    auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
 
     if (!pkg.isValid()) {
-        qCWarning(LOGOUT_GREETER) << "Failed to load lookandfeel package" << packageName;
+        qCWarning(LOGOUT_GREETER) << "Failed to load lookandfeel package" << packageName << "; falling back to the default package";
+        pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), QString());
     }
 
     Greeter greeter(pkg);

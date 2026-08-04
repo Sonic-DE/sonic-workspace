@@ -8,6 +8,8 @@
 #include <QStandardPaths>
 #include <QStyleFactory>
 
+#include <cstdlib>
+
 #include <KConfig>
 #include <KConfigGroup>
 #include <KIconTheme>
@@ -27,6 +29,36 @@ bool dataFileExists(const QString &relativePath)
     return !QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, relativePath, QStandardPaths::LocateFile).isEmpty();
 }
 
+QStringList cursorThemeSearchRoots()
+{
+    // Mirror the locations the cursor theme KCM (and libXcursor) search,
+    // so a theme the KCM can see is never reported as missing here.
+    if (const char *xcursorPath = std::getenv("XCURSOR_PATH")) {
+        // When XCURSOR_PATH is set it replaces the default search path.
+        QStringList roots = QString::fromLocal8Bit(xcursorPath).split(u':', Qt::SkipEmptyParts);
+        for (QString &root : roots) {
+            if (root.startsWith(QLatin1Char('~'))) {
+                root.replace(0, 1, QDir::homePath());
+            }
+        }
+        return roots;
+    }
+
+    QStringList roots;
+    const QStringList dataDirs = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    roots.reserve(dataDirs.size() + 3);
+    for (const QString &dir : dataDirs) {
+        roots.append(dir + QStringLiteral("/icons"));
+    }
+    // Classic Xcursor locations that are not part of the XDG data dirs:
+    // the per-user dir and the legacy system-wide dirs.
+    roots.append(QDir::homePath() + QStringLiteral("/.icons"));
+    roots.append(QStringLiteral("/usr/share/pixmaps"));
+    roots.append(QStringLiteral("/usr/X11R6/lib/X11/icons"));
+    roots.removeDuplicates();
+    return roots;
+}
+
 bool cursorThemeExists(const QString &id, QSet<QString> *visited = nullptr, int depth = 0)
 {
     if (depth > 16) {
@@ -40,8 +72,9 @@ bool cursorThemeExists(const QString &id, QSet<QString> *visited = nullptr, int 
         return false;
     }
     visited->insert(id);
-    const auto roots = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("icons/") + id, QStandardPaths::LocateDirectory);
-    for (const QString &root : roots) {
+    const QStringList searchRoots = cursorThemeSearchRoots();
+    for (const QString &searchRoot : searchRoots) {
+        const QString root = searchRoot + QLatin1Char('/') + id;
         if (QDir(root + QStringLiteral("/cursors")).exists()) {
             return true;
         }

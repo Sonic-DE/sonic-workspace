@@ -13,6 +13,11 @@ private Q_SLOTS:
     void initTestCase()
     {
         QStandardPaths::setTestModeEnabled(true);
+        // the cursor search honours XCURSOR_PATH; make sure a host-set value
+        // cannot leak into the tests that expect the default search path
+        m_savedXcursorPath = qgetenv("XCURSOR_PATH");
+        qunsetenv("XCURSOR_PATH");
+        m_savedHome = qgetenv("HOME");
         const QString data = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
         QDir().mkpath(data + QStringLiteral("/color-schemes"));
         QDir().mkpath(data + QStringLiteral("/icons/thirdparty/cursors"));
@@ -76,6 +81,59 @@ private Q_SLOTS:
         QCOMPARE(ThemeComponentResolver::fallback(ThemeComponentResolver::Type::PlasmaTheme, true), QStringLiteral("silver-dark"));
         QCOMPARE(ThemeComponentResolver::fallback(ThemeComponentResolver::Type::Decoration, false), QStringLiteral("org.kde.silver"));
     }
+
+    void findsCursorThemeInLegacyHomeDir()
+    {
+        // ~/.icons is a classic Xcursor location the KCM searches; a user theme
+        // installed only there must still count as available
+        const QString data = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+        const QString fakeHome = data + QStringLiteral("/fakehome");
+        qputenv("HOME", QFile::encodeName(fakeHome));
+        // note: QStandardPaths test mode derives its locations from HOME, so
+        // the fixtures must be created after switching it
+        QDir().mkpath(fakeHome + QStringLiteral("/.icons/homecursor/cursors"));
+        const QString movedData = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+        QDir().mkpath(movedData + QStringLiteral("/icons/xdgcursor/cursors"));
+        QVERIFY(ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::CursorTheme, QStringLiteral("homecursor")));
+        // the XDG data locations keep being searched as well
+        QVERIFY(ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::CursorTheme, QStringLiteral("xdgcursor")));
+        restoreHome();
+    }
+
+    void honorsXCursorPathOverride()
+    {
+        // XCURSOR_PATH replaces the default search path entirely
+        const QString data = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+        const QString customRoot = data + QStringLiteral("/custom-cursor-root");
+        QDir().mkpath(customRoot + QStringLiteral("/envcursor/cursors"));
+        qputenv("XCURSOR_PATH", QFile::encodeName(customRoot));
+        QVERIFY(ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::CursorTheme, QStringLiteral("envcursor")));
+        QVERIFY(!ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::CursorTheme, QStringLiteral("thirdparty")));
+        qunsetenv("XCURSOR_PATH");
+    }
+
+    void cleanupTestCase()
+    {
+        restoreHome();
+        if (m_savedXcursorPath.isNull()) {
+            qunsetenv("XCURSOR_PATH");
+        } else {
+            qputenv("XCURSOR_PATH", m_savedXcursorPath);
+        }
+    }
+
+private:
+    void restoreHome()
+    {
+        if (m_savedHome.isNull()) {
+            qunsetenv("HOME");
+        } else {
+            qputenv("HOME", m_savedHome);
+        }
+    }
+
+    QByteArray m_savedXcursorPath;
+    QByteArray m_savedHome;
 };
 
 QTEST_MAIN(ThemeComponentResolverTest)

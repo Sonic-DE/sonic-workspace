@@ -599,9 +599,9 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             group = KConfigGroup(conf, u"kwinrc"_s);
             group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
 
-#ifdef HAVE_BREEZE_DECO
+#ifdef HAVE_SILVER_DECO
             setWindowDecoration(group.readEntry("library", QStringLiteral(SILVER_KDECORATION_PLUGIN_ID)),
-                                group.readEntry("theme", QStringLiteral("Breeze")),
+                                group.readEntry("theme", QStringLiteral("Silver")),
                                 group.readEntry("NoPlugin", false));
 #else
             setWindowDecoration(group.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")),

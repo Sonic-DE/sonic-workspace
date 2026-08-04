@@ -25,6 +25,7 @@
 #include <limits>
 
 #include <KLocalizedString>
+#include <KPackage/PackageLoader>
 #include <KUser>
 #include <KWindowEffects>
 #include <KWindowSystem>
@@ -237,10 +238,22 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
 {
     rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
-    const QString fileName = package.filePath("logoutmainscript");
+    QString fileName = package.filePath("logoutmainscript");
+    QUrl sourceUrl = package.fileUrl("logoutmainscript");
+
+    if (!QFile::exists(fileName)) {
+        // The configured package (and its fallback chain) provides no logout
+        // screen. Try the default look-and-feel package explicitly so that
+        // session actions never dead-end into an invisible greeter.
+        qCWarning(LOGOUT_GREETER) << "Couldn't find a theme for the Shutdown dialog in" << package.metadata().pluginId()
+                                  << "; trying the default look-and-feel package";
+        const KPackage::Package defaultPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), QString());
+        fileName = defaultPackage.filePath("logoutmainscript");
+        sourceUrl = defaultPackage.fileUrl("logoutmainscript");
+    }
 
     if (QFile::exists(fileName)) {
-        setSource(package.fileUrl("logoutmainscript"));
+        setSource(sourceUrl);
     } else {
         qCWarning(LOGOUT_GREETER) << "Couldn't find a theme for the Shutdown dialog" << fileName;
         return;
