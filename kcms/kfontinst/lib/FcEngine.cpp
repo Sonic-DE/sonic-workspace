@@ -1228,6 +1228,14 @@ XftFont *CFcEngine::getFont(int size)
     qDebug() << m_name << ' ' << m_style << ' ' << size;
 #endif
 
+    // Without an X11 display (e.g. kioworker running the thumbnailer offscreen,
+    // even on a pure X11 session) XftFontOpen*() would dereference a null
+    // Display* and segfault inside libX11. Bail out early and let callers
+    // handle the null return — they already skip rendering on a null font.
+    if (!xDisplay()) {
+        return nullptr;
+    }
+
     if (m_installed) {
         int weight, width, slant;
 
