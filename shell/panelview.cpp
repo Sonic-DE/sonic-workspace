@@ -724,7 +724,7 @@ QRect PanelView::geometryByDistance(int distance) const
 
 QSize PanelView::preferredSize() const
 {
-    if (!m_initCompleted) {
+    if (!m_initCompleted || !m_screenToFollow) {
         return {};
     }
 
