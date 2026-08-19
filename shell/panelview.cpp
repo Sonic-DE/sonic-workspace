@@ -724,7 +724,9 @@ QRect PanelView::geometryByDistance(int distance) const
 
 QSize PanelView::preferredSize() const
 {
-    if (!m_initCompleted || !m_screenToFollow) {
+    // QWindow switches away from a screen before that QScreen is destroyed.
+    // Do not dereference the logical target during the reassignment gap.
+    if (!m_initCompleted || !m_screenToFollow || m_screenToFollow != screen()) {
         return {};
     }
 
