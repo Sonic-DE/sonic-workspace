@@ -43,6 +43,7 @@ KCM.AbstractKCM {
         NewStuff.Action {
             configFile: "lookandfeel.knsrc"
             text: i18nc("@action:intoolbar", "Get New…")
+            transientParent: root.Window.window
             onEntryEvent: function (entry, event) {
                 if (event == NewStuff.Entry.StatusChangedEvent) {
                     kcm.knsEntryChanged(entry);
