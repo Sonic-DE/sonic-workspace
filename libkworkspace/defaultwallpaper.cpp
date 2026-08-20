@@ -36,8 +36,8 @@ KPackage::Package DefaultWallpaper::defaultWallpaperPackage()
     }
 
     if (!package.isValid()) {
-        // Use Next
-        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/Next"), QStandardPaths::LocateDirectory));
+        // Use SonicDE's default wallpaper.
+        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/Silver"), QStandardPaths::LocateDirectory));
     }
 
     return package;
