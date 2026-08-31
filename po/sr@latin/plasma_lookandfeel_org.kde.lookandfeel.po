@@ -181,9 +181,9 @@ msgstr "Odustani"
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "
 "should be translated as something short, is a form that can be seen on a "
-"product. Plasma is the project name so shouldn't be translated."
-msgid "Plasma made by KDE"
-msgstr "Plasma iz KDE‑a"
+"product. SonicDE is the project name so shouldn't be translated."
+msgid "Welcome to SonicDE"
+msgstr "Dobro došli u SonicDE"
 
 #, fuzzy
 #~| msgid "%1%"
