@@ -160,13 +160,43 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 
     </sect1>
 
-  </chapter>
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title>Clipboard/Selection Behavior</title>
+
+<sect2 id="clipboard-modes-general">
+<title>General</title>
+<para>
+&klipper; can be used to set the behavior of the clipboard and selection in
+&plasma;. To adjust their behavior, see <xref linkend="general-page"/>.
+</para>
+
+<note><para>There are two separate clipboard buffers: the
+<quote>selection</quote> and the <quote>clipboard</quote>. Text is
+placed in the selection buffer by simply selecting it, and can be
+pasted with the middle mouse button. To place text in
+the clipboard buffer, select it and press
+<keycombo>&Ctrl;<keycap>X</keycap> </keycombo> or
+<keycombo>&Ctrl;<keycap>C</keycap> </keycombo>. Text from the
+clipboard buffer is pasted using <keycombo>&Ctrl;<keycap>V</keycap>
+</keycombo> or by selecting <guimenuitem>Paste</guimenuitem>
+in a context menu.</para>
+</note>
+</sect2>
+</sect1>
+</chapter>
 
 <chapter id="preferences">
     <title>Configuring &klipper;</title>
 
-    <sect1 id="general-page">
-      <title>General Options</title>
+<sect1 id="general-page">
+<title>General Options</title>
+<note><para>
+Options below distinguish between <emphasis>selection</emphasis>
+and <emphasis>clipboard</emphasis>. To understand the difference,
+see <xref linkend="clipboard-modes"/>.
+</para></note>
 
       <variablelist>
 
