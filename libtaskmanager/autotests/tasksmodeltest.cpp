@@ -14,12 +14,22 @@
 using namespace Qt::StringLiterals;
 using namespace TaskManager;
 
+class TestAbstractTasksModel : public AbstractTasksModel {
+public:
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    {
+        Q_UNUSED(parent)
+        return 0;
+    }
+};
+
 class TasksModelTest : public QObject
 {
     Q_OBJECT
 
 private Q_SLOTS:
     void initTestCase();
+    void test_roleNamesAvoidFinalQmlMembers();
 
     /**
      * Test moving a launcher in the 'Task Manager' with "Keep launchers separate",
@@ -47,6 +57,12 @@ private Q_SLOTS:
 void TasksModelTest::initTestCase()
 {
     QGuiApplication::setQuitOnLastWindowClosed(false);
+}
+
+void TasksModelTest::test_roleNamesAvoidFinalQmlMembers()
+{
+    TestAbstractTasksModel model;
+    QCOMPARE(model.roleNames().value(AbstractTasksModel::StackingOrder), QByteArrayLiteral("stackingOrder"));
 }
 
 void TasksModelTest::test_moveLauncherBug472524()

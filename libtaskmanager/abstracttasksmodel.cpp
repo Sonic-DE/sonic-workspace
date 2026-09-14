@@ -24,7 +24,11 @@ QHash<int, QByteArray> AbstractTasksModel::roleNames() const
     QMetaEnum e = metaObject()->enumerator(metaObject()->indexOfEnumerator("AdditionalRoles"));
 
     for (int i = 0; i < e.keyCount(); ++i) {
-        roles.insert(e.value(i), e.key(i));
+        const int role = e.value(i);
+        // Qt 6.11 exposes a final StackingOrder member on delegate model data.
+        // Use the conventional lower-case role name to avoid shadowing it while
+        // keeping AbstractTasksModel.StackingOrder as the public enum value.
+        roles.insert(role, role == StackingOrder ? QByteArrayLiteral("stackingOrder") : e.key(i));
     }
 
     return roles;
