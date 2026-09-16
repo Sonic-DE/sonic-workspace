@@ -120,25 +120,15 @@ If it is turned off, the selection may still be saved in the clipboard history (
 
     layout->addRow(QString(), new QLabel(this));
 
-    // Radio button group: Storing text selections in history
-    //
-    // These two options correspond to the 'ignoreSelection' internal
-    // Klipper setting.
-    //
-    // The 'Always' option is not available if selection/clipboard synchronisation
-    // is turned off - in this case the selection is never automatically saved
-    // in the clipboard history.
+    m_saveSelectionCb = new QCheckBox(i18nc("@option:check Part of the setting 'Include in history:'", "Text selected with the pointer or keyboard"), this);
+    m_saveSelectionCb->setObjectName(QLatin1String("kcfg_SaveSelection"));
+    layout->addRow(i18nc("Followed e.g. by 'Text selected with the pointer or keyboard'", "Include in history:"), m_saveSelectionCb);
 
     auto *buttonGroup = new QButtonGroup(this);
 
-    // This widget is not managed by KConfigDialogManager, but
-    // the other radio button is.  That is sufficient for the
-    // manager to handle widget changes, the Apply button etc.
-    m_alwaysTextRb = new QRadioButton(i18n("Always save in history"), this);
-    m_alwaysTextRb->setChecked(true); // may be updated from settings later
-    connect(m_alwaysTextRb, &QAbstractButton::toggled, this, &GeneralWidget::widgetChanged);
-    buttonGroup->addButton(m_alwaysTextRb);
-    layout->addRow(i18n("Text selection:"), m_alwaysTextRb);
+    m_saveImagesCb = new QCheckBox(i18nc("@option:check Part of the setting 'Include in history:'", "Image data copied explicitly"), this);
+    m_saveImagesCb->setObjectName(QLatin1String("kcfg_SaveImages"));
+    layout->addRow(QString(), m_saveImagesCb);
 
     m_copiedTextRb = new QRadioButton(i18n("Only when explicitly copied"), this);
     m_copiedTextRb->setObjectName(QLatin1String("kcfg_IgnoreSelection"));
