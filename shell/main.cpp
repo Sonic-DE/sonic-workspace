@@ -80,6 +80,12 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
+    // Qt's automatic pipeline cache stores only one window's RHI data at a time.
+    // Disable it until per-window caching is implemented; gains are minimal for the shell.
+    // This applies to X11/OpenGL as well as other RHI backends.
+    // https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#the-automatic-pipeline-cache
+    QCoreApplication::setAttribute(Qt::AA_DisableShaderDiskCache);
+
     QApplication app(argc, argv);
 
     // Quit on SIGTERM to properly save state. See systemd.kill(5).
