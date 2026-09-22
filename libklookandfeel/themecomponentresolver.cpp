@@ -134,7 +134,8 @@ bool ThemeComponentResolver::isAvailable(Type type, const QString &id)
     case Type::Decoration:
         return decorationExists(id);
     case Type::Splash:
-        return dataDirectoryExists(QStringLiteral("plasma/look-and-feel/") + id + QStringLiteral("/contents/splash"));
+        // The splash KCM uses "None" to disable the splash screen, not as a package ID.
+        return id == QLatin1String("None") || dataDirectoryExists(QStringLiteral("plasma/look-and-feel/") + id + QStringLiteral("/contents/splash"));
     case Type::WindowSwitcher:
     case Type::DesktopSwitcher:
         // Switcher layouts may be supplied by a look-and-feel package or a
