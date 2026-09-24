@@ -88,7 +88,6 @@ PlasmaComponents3.ScrollView {
                 if (event.matches(StandardKey.Paste)) {
                     filter.paste();
                 } else {
-                    filter.text = "";
                     filter.text += event.text;
                 }
                 filter.forceActiveFocus();
@@ -405,6 +404,10 @@ PlasmaComponents3.ScrollView {
             sourceModel: clipboardMenu.model
             filterRoleName: "display"
             filterRegularExpression: RegExp(filter.text, "i")
+            onFilterRegularExpressionChanged: {
+                menuListView.currentIndex = 0;
+                menuListView.positionViewAtBeginning();
+            }
         }
 
         topMargin: Kirigami.Units.largeSpacing
