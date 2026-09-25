@@ -180,6 +180,7 @@ Item {
                 onActiveChanged: {
                     if (active) {
                         barcodeItem.grabToImage((result) => {
+                            barcodeItem.Drag.imageSource = result.url;
                             barcodeItem.Drag.mimeData = {
                                 "image/png": result.image,
                             };
