@@ -10,7 +10,6 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC
 import QtQuick.Layouts
-import QtQuick.Effects
 
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
@@ -108,6 +107,8 @@ PlasmaComponents.ItemDelegate {
         id: labelMaskSource
         anchors.fill: label
         visible: false
+        layer.enabled: true
+        layer.smooth: true
 
         Rectangle {
             anchors.centerIn: parent
@@ -124,11 +125,19 @@ PlasmaComponents.ItemDelegate {
         }
     }
 
-    MultiEffect {
+    ShaderEffect {
         id: labelMask
         anchors.fill: label
-        maskEnabled: true
-        maskSource: labelMaskSource
+        property Item source: null
+        readonly property Item sourceTexture: ShaderEffectSource {
+            sourceItem: labelMask.source
+            visible: false
+            smooth: true
+        }
+        readonly property Item maskSource: labelMaskSource
+        layer.enabled: true
+        layer.smooth: true
+        fragmentShader: "qrc:/qt/qml/org/kde/plasma/private/clipboard/shaders/clipboardfade.frag.qsb"
         visible: !!source && menuItem.ListView.isCurrentItem
 
         TapHandler {
