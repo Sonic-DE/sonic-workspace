@@ -10,7 +10,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC
 import QtQuick.Layouts
-import QtQuick.Effects
+import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
@@ -124,10 +124,10 @@ PlasmaComponents.ItemDelegate {
         }
     }
 
-    MultiEffect {
+    OpacityMask {
         id: labelMask
         anchors.fill: label
-        maskEnabled: true
+        cached: true
         maskSource: labelMaskSource
         visible: !!source && menuItem.ListView.isCurrentItem
 
