@@ -9,6 +9,7 @@
 #include <QTest>
 
 #include "abstracttasksmodel.h" // For enums
+#include "taskfilterproxymodel.h"
 #include "tasksmodel.h"
 
 using namespace Qt::StringLiterals;
@@ -18,9 +19,18 @@ class TestAbstractTasksModel : public AbstractTasksModel {
 public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
-        Q_UNUSED(parent)
-        return 0;
+        return parent.isValid() ? 0 : m_rowCount;
     }
+
+    void setRowCount(int rowCount)
+    {
+        beginResetModel();
+        m_rowCount = rowCount;
+        endResetModel();
+    }
+
+private:
+    int m_rowCount = 0;
 };
 
 class TasksModelTest : public QObject
@@ -30,6 +40,9 @@ class TasksModelTest : public QObject
 private Q_SLOTS:
     void initTestCase();
     void test_roleNamesAvoidFinalQmlMembers();
+    void test_filterRepeatedSourceAssignment_data();
+    void test_filterRepeatedSourceAssignment();
+    void test_filterSourceReplacement();
 
     /**
      * Test moving a launcher in the 'Task Manager' with "Keep launchers separate",
@@ -63,6 +76,72 @@ void TasksModelTest::test_roleNamesAvoidFinalQmlMembers()
 {
     TestAbstractTasksModel model;
     QCOMPARE(model.roleNames().value(AbstractTasksModel::StackingOrder), QByteArrayLiteral("stackingOrder"));
+}
+
+void TasksModelTest::test_filterRepeatedSourceAssignment_data()
+{
+    QTest::addColumn<int>("assignmentCount");
+    QTest::newRow("once") << 1;
+    QTest::newRow("twice") << 2;
+    QTest::newRow("five-times") << 5;
+}
+
+void TasksModelTest::test_filterRepeatedSourceAssignment()
+{
+    QFETCH(int, assignmentCount);
+
+    TestAbstractTasksModel source;
+    source.setRowCount(2);
+    TaskFilterProxyModel proxy;
+    for (int i = 0; i < assignmentCount; ++i) {
+        proxy.setSourceModel(&source);
+    }
+    QCOMPARE(proxy.rowCount(), 2);
+
+    QSignalSpy resetSpy(&proxy, &QAbstractItemModel::modelReset);
+    QVERIFY(resetSpy.isValid());
+    source.setRowCount(0);
+    QCOMPARE(resetSpy.count(), 1);
+    QCOMPARE(proxy.rowCount(), 0);
+
+    source.setRowCount(3);
+    QCOMPARE(resetSpy.count(), 2);
+    QCOMPARE(proxy.rowCount(), 3);
+}
+
+void TasksModelTest::test_filterSourceReplacement()
+{
+    TestAbstractTasksModel first;
+    first.setRowCount(2);
+    TestAbstractTasksModel second;
+    second.setRowCount(3);
+    TaskFilterProxyModel proxy;
+    proxy.setSourceModel(&first);
+    proxy.setSourceModel(&second);
+    proxy.setSourceModel(&second);
+    QCOMPARE(proxy.rowCount(), 3);
+
+    QSignalSpy resetSpy(&proxy, &QAbstractItemModel::modelReset);
+    first.setRowCount(4);
+    QCOMPARE(resetSpy.count(), 0);
+    QCOMPARE(proxy.rowCount(), 3);
+    second.setRowCount(1);
+    QCOMPARE(resetSpy.count(), 1);
+    QCOMPARE(proxy.rowCount(), 1);
+
+    proxy.setSourceModel(nullptr);
+    proxy.setSourceModel(nullptr);
+    resetSpy.clear();
+    second.setRowCount(5);
+    QCOMPARE(resetSpy.count(), 0);
+    QCOMPARE(proxy.rowCount(), 0);
+
+    proxy.setSourceModel(&first);
+    QCOMPARE(proxy.rowCount(), 4);
+    resetSpy.clear();
+    first.setRowCount(0);
+    QCOMPARE(resetSpy.count(), 1);
+    QCOMPARE(proxy.rowCount(), 0);
 }
 
 void TasksModelTest::test_moveLauncherBug472524()
