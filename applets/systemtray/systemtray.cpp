@@ -86,6 +86,13 @@ void SystemTray::initSettingsAndRegistry() {
   }
 }
 
+void SystemTray::initRegistry() {
+  if (m_plasmoidRegistry && !m_registryInitialized) {
+    m_plasmoidRegistry->init();
+    m_registryInitialized = true;
+  }
+}
+
 void SystemTray::migrateFromSystrayContainer() {
   // Search the old systray containment config group
   KConfigGroup rootCg(corona()->config(), QStringLiteral("Containments"));
@@ -172,7 +179,7 @@ void SystemTray::restoreContents(KConfigGroup &group) {
   }
 
   initSettingsAndRegistry();
-  m_plasmoidRegistry->init();
+  initRegistry();
 }
 
 void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y) {
@@ -288,6 +295,9 @@ bool SystemTray::isSystemTrayApplet(const QString &appletId) {
 
 SystemTrayModel *SystemTray::systemTrayModel() {
   if (!m_systemTrayModel) {
+    // QML may request the model before init() completes.
+    initSettingsAndRegistry();
+
     m_systemTrayModel = new SystemTrayModel(this);
 
     m_plasmoidModel =
@@ -296,6 +306,10 @@ SystemTrayModel *SystemTray::systemTrayModel() {
             &PlasmoidModel::addApplet);
     connect(this, &SystemTray::appletRemoved, m_plasmoidModel,
             &PlasmoidModel::removeApplet);
+
+    // Connect the model before the registry emits plugin and applet signals.
+    initRegistry();
+
     for (auto applet : applets()) {
       m_plasmoidModel->addApplet(applet);
     }
