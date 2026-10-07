@@ -421,11 +421,8 @@ void setupPlasmaEnvironment()
     }
 
     QFile activeLnf(extraConfigDir + QLatin1String("/package"));
-    if (!activeLnf.open(QIODevice::ReadOnly)) {
-        qWarning() << "Failed to open activeLnf file:" << activeLnf.errorString();
-        return;
-    }
-    if (activeLnf.readLine() != lookAndFeelName.toUtf8()) {
+    // A missing/unreadable marker means the defaults were never written yet (fresh user) and must be applied now.
+    if (!activeLnf.open(QIODevice::ReadOnly) || activeLnf.readLine() != lookAndFeelName.toUtf8()) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), lookAndFeelName);
         KLookAndFeelManager lnfManager;
         lnfManager.setMode(KLookAndFeelManager::Mode::Defaults);
