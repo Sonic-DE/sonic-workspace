@@ -273,7 +273,9 @@ PlasmaComponents3.ScrollView {
                         if (tabBar.visible) {
                             tabBar.forceActiveFocus();
                         } else {
-                            menuListView.forceActiveFocus();
+                            menuListView.currentIndex = 0
+                            clipboardMenu.keyboardActivated = true
+                            menuListView.forceActiveFocus(Qt.TabFocusReason);
                         }
                         event.accepted = true;
                     }
