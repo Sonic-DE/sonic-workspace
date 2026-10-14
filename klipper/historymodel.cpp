@@ -21,6 +21,7 @@
 #include <QSqlQuery>
 #include <QStandardPaths>
 
+#include <KConfigGroup>
 #include <KIO/DeleteJob>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -82,8 +83,7 @@ struct TransactionGuard {
     bool committed = true;
 };
 
-// Temporary function added in Plasma 6.8 in September 2026,
-// TODO: Drop when we hit 7.0 or in 2032
+// Temporary migration from the pre-6.8 settings. Drop when we hit 7.0 or in 2032.
 void migrateSettings()
 {
     KConfigGroup general = KlipperSettings::self()->sharedConfig()->group(u"General"_s);
@@ -92,23 +92,22 @@ void migrateSettings()
     }
 
     if (general.hasKey("IgnoreSelection")) {
-        KlipperSettings::setSaveSelection(!general.readEntry("IgnoreSelection", true));
-        // Will be useful in Plasma 6.9, when this MR gets merged: https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/7016
-        // That MR will delete this comment
-        // This was added in 6.8, which deleted IgnoreSelection, so only there can this safely run only once
-        // If it was not merged in 6.8, existing behaviour would break with the MR 7016
-        if (KlipperSettings::saveSelection() && KlipperSettings::uRLGrabberEnabled()) {
+        if (!general.hasKey("SaveSelection")) {
+            KlipperSettings::setSaveSelection(!general.readEntry("IgnoreSelection", true));
+        }
+        // Remember the old action-on-selection behavior for the future action settings redesign.
+        if (!general.hasKey("ActionOnSelection") && KlipperSettings::saveSelection() && KlipperSettings::uRLGrabberEnabled()) {
             general.writeEntry("ActionOnSelection", true);
         }
         general.deleteEntry("IgnoreSelection");
     }
     if (general.hasKey("IgnoreImages")) {
-        KlipperSettings::setSaveImages(!general.readEntry("IgnoreImages", true));
+        if (!general.hasKey("SaveImages")) {
+            KlipperSettings::setSaveImages(!general.readEntry("IgnoreImages", true));
+        }
         general.deleteEntry("IgnoreImages");
     }
-    if (general.hasKey("SelectionTextOnly")) {
-        general.deleteEntry("SelectionTextOnly");
-    }
+    general.deleteEntry("SelectionTextOnly");
     KlipperSettings::self()->save();
 }
 
@@ -147,7 +146,6 @@ std::shared_ptr<HistoryModel> HistoryModel::self()
 HistoryModel::HistoryModel()
     : QAbstractListModel(nullptr)
     , m_clip(SystemClipboard::self())
-    , m_displayImages(true)
 {
     if (!QSqlDatabase::isDriverAvailable(u"QSQLITE"_s)) {
         qCCritical(KLIPPER_LOG) << "SQLITE driver isn't available";
@@ -800,13 +798,11 @@ bool HistoryModel::saveClipboardHistory()
 void HistoryModel::loadSettings()
 {
     setMaxSize(KlipperSettings::maxClipItems());
-    m_displayImages = !KlipperSettings::ignoreImages();
+    m_bSaveImages = KlipperSettings::saveImages();
     m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
-    // 0 is the id of "Ignore selection" radiobutton
-    m_bIgnoreSelection = KlipperSettings::ignoreSelection();
+    m_bSaveSelection = KlipperSettings::saveSelection();
     m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bSynchronize = KlipperSettings::syncClipboards();
-    m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
 
     if (m_bNoNullClipboard) {
         connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard, Qt::UniqueConnection);
@@ -908,14 +904,10 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     // XXX: I want a better handling of selection/clipboard in general.
     // XXX: Order sensitive code. Must die.
     const bool selectionMode = mode == QClipboard::Selection;
-    if (selectionMode && m_bIgnoreSelection) {
+    if (selectionMode && !m_bSaveSelection) {
         if (m_bSynchronize) {
             m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
         }
-        return;
-    }
-
-    if (selectionMode && m_bSelectionTextOnly && !data->hasText()) {
         return;
     }
 
@@ -923,7 +915,7 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         return;
     }
 
-    if (!m_displayImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
+    if (!m_bSaveImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
     }
 
@@ -971,4 +963,3 @@ bool HistoryModel::isItemStarred(const QString &uuid) const
 }
 
 #include "moc_historymodel.cpp"
-
