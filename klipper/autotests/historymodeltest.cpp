@@ -6,13 +6,20 @@
 
 #include "../historymodel.h"
 #include "../historyitem.h"
+#include "../klipper.h"
 #include "systemclipboard.h"
 
 #include <QAbstractItemModelTester>
+#include <QCheckBox>
+#include <QDialogButtonBox>
 #include <QMimeData>
+#include <QPushButton>
+#include <QRadioButton>
+#include <QScopeGuard>
 #include <QStandardPaths>
 #include <QTest>
 
+#include <KConfigDialog>
 #include <KConfigGroup>
 #include <KCoreConfigSkeleton>
 #include <KSharedConfig>
@@ -22,18 +29,148 @@ class HistoryModelTest : public QObject
     Q_OBJECT
 private Q_SLOTS:
     void initTestCase();
+    void testMigrateSelectionSettings_data();
+    void testMigrateSelectionSettings();
+    void testHistorySettings_data();
+    void testHistorySettings();
     void testSetMaxSize();
     void testInsertRemove();
     void testClear();
     void testIndexOf();
     void testType_data();
     void testType();
+    void testConfigurationDialog_data();
+    void testConfigurationDialog();
     void testKeepClipboardContents();
 };
 
 void HistoryModelTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
+}
+
+void HistoryModelTest::testMigrateSelectionSettings_data()
+{
+    QTest::addColumn<int>("legacyKeys");
+    QTest::addColumn<int>("legacyValues");
+    QTest::addColumn<bool>("actionsEnabled");
+    QTest::addColumn<int>("newValues");
+
+    for (int keys = 0; keys < 8; ++keys) {
+        for (int values = 0; values < 8; ++values) {
+            for (bool actions : {false, true}) {
+                const auto name = QStringLiteral("keys-%1-values-%2-actions-%3").arg(keys).arg(values).arg(actions);
+                QTest::newRow(qPrintable(name)) << keys << values << actions << -1;
+            }
+        }
+    }
+    for (int values = 0; values < 4; ++values) {
+        const auto name = QStringLiteral("preserve-new-settings-%1").arg(values);
+        QTest::newRow(qPrintable(name)) << 7 << values << true << values;
+    }
+}
+
+void HistoryModelTest::testMigrateSelectionSettings()
+{
+    QFETCH(int, legacyKeys);
+    QFETCH(int, legacyValues);
+    QFETCH(bool, actionsEnabled);
+    QFETCH(int, newValues);
+
+    auto *settings = HistoryModel::settings();
+    auto config = settings->sharedConfig();
+    KConfigGroup general(config, QStringLiteral("General"));
+    general.deleteGroup();
+    const QStringList legacyNames{QStringLiteral("IgnoreSelection"), QStringLiteral("IgnoreImages"), QStringLiteral("SelectionTextOnly")};
+    for (int bit = 0; bit < legacyNames.size(); ++bit) {
+        if (legacyKeys & (1 << bit)) {
+            general.writeEntry(legacyNames[bit], bool(legacyValues & (1 << bit)));
+        }
+    }
+    if (newValues >= 0) {
+        general.writeEntry("SaveSelection", bool(newValues & 1));
+        general.writeEntry("SaveImages", bool(newValues & 2));
+        general.writeEntry("ActionOnSelection", false);
+    }
+    general.writeEntry("URLGrabberEnabled", actionsEnabled);
+    QVERIFY(general.sync());
+    settings->read();
+
+    const bool saveSelection = newValues >= 0 ? bool(newValues & 1) : (legacyKeys & 1) && !(legacyValues & 1);
+    const bool saveImages = newValues >= 0 ? bool(newValues & 2) : (legacyKeys & 2) && !(legacyValues & 2);
+    const bool actionOnSelection = newValues < 0 && (legacyKeys & 1) && saveSelection && actionsEnabled;
+
+    // The migration must preserve the result on subsequent startups.
+    for (int load = 0; load < 2; ++load) {
+        auto history = HistoryModel::self();
+        QVERIFY(history);
+        config->reparseConfiguration();
+        for (const auto &name : legacyNames) {
+            QVERIFY(!general.hasKey(name));
+        }
+        QCOMPARE(general.readEntry("SaveSelection", false), saveSelection);
+        QCOMPARE(general.readEntry("SaveImages", false), saveImages);
+        QCOMPARE(general.readEntry("ActionOnSelection", false), actionOnSelection);
+        QCOMPARE(history->m_bSaveSelection, saveSelection);
+        QCOMPARE(history->m_bSaveImages, saveImages);
+        settings->read();
+    }
+}
+
+void HistoryModelTest::testHistorySettings_data()
+{
+    QTest::addColumn<bool>("saveSelection");
+    QTest::addColumn<bool>("saveImages");
+    QTest::addColumn<bool>("selectionMode");
+    QTest::addColumn<int>("contentType");
+
+    for (int flags = 0; flags < 8; ++flags) {
+        for (int type = 0; type < 5; ++type) {
+            const auto name = QStringLiteral("flags-%1-content-%2").arg(flags).arg(type);
+            QTest::newRow(qPrintable(name)) << bool(flags & 1) << bool(flags & 2) << bool(flags & 4) << type;
+        }
+    }
+}
+
+void HistoryModelTest::testHistorySettings()
+{
+    QFETCH(bool, saveSelection);
+    QFETCH(bool, saveImages);
+    QFETCH(bool, selectionMode);
+    QFETCH(int, contentType);
+
+    auto *settings = HistoryModel::settings();
+    KConfigGroup general(settings->sharedConfig(), QStringLiteral("General"));
+    general.writeEntry("SaveSelection", saveSelection);
+    general.writeEntry("SaveImages", saveImages);
+    general.writeEntry("SyncClipboards", false);
+    QVERIFY(general.sync());
+    settings->read();
+    auto history = HistoryModel::self();
+    history->clear();
+    QTRY_COMPARE(history->pendingJobs(), 0);
+
+    QMimeData data;
+    if (contentType == 0 || contentType == 2 || contentType == 4) {
+        data.setText(QStringLiteral("clipboard settings regression"));
+    }
+    if (contentType >= 1 && contentType <= 3) {
+        QImage image(2, 2, QImage::Format_ARGB32);
+        image.fill(Qt::red);
+        data.setImageData(image);
+    }
+    if (contentType == 3) {
+        data.setData(QStringLiteral("x-kde-force-image-copy"), QByteArrayLiteral("1"));
+    } else if (contentType == 4) {
+        data.setData(QStringLiteral("x-kde-passwordManagerHint"), QByteArrayLiteral("secret"));
+    }
+
+    SystemClipboard::self()->checkClipData(selectionMode ? QClipboard::Selection : QClipboard::Clipboard, &data);
+    const bool expected = (!selectionMode || saveSelection) && contentType != 4 && (contentType != 1 || saveImages);
+    QCOMPARE(history->rowCount(), expected ? 1 : 0);
+    QTRY_COMPARE(history->pendingJobs(), 0);
+    history->clear();
+    QTRY_COMPARE(history->pendingJobs(), 0);
 }
 
 void HistoryModelTest::testSetMaxSize()
@@ -261,6 +398,69 @@ void HistoryModelTest::testKeepClipboardContents()
     dataDir.refresh();
     QVERIFY(dataDir.exists());
     QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper").removeRecursively();
+}
+
+void HistoryModelTest::testConfigurationDialog_data()
+{
+    QTest::addColumn<bool>("syncClipboards");
+    QTest::addColumn<bool>("saveSelection");
+    QTest::addColumn<bool>("saveImages");
+    for (int flags = 0; flags < 8; ++flags) {
+        QTest::newRow(qPrintable(QString::number(flags))) << bool(flags & 1) << bool(flags & 2) << bool(flags & 4);
+    }
+}
+
+void HistoryModelTest::testConfigurationDialog()
+{
+    QFETCH(bool, syncClipboards);
+    QFETCH(bool, saveSelection);
+    QFETCH(bool, saveImages);
+
+    auto *settings = HistoryModel::settings();
+    KConfigGroup general(settings->sharedConfig(), QStringLiteral("General"));
+    general.writeEntry("SyncClipboards", syncClipboards);
+    general.writeEntry("SaveSelection", saveSelection);
+    general.writeEntry("SaveImages", saveImages);
+    QVERIFY(general.sync());
+    settings->read();
+
+    Klipper klipper;
+    klipper.slotConfigure();
+    auto *dialog = KConfigDialog::exists(QStringLiteral("preferences"));
+    QVERIFY(dialog);
+    const auto cleanup = qScopeGuard([dialog] {
+        delete dialog;
+    });
+
+    auto *sync = dialog->findChild<QCheckBox *>(QStringLiteral("kcfg_SyncClipboards"));
+    auto *selection = dialog->findChild<QCheckBox *>(QStringLiteral("kcfg_SaveSelection"));
+    auto *images = dialog->findChild<QCheckBox *>(QStringLiteral("kcfg_SaveImages"));
+    QVERIFY(sync);
+    QVERIFY(selection);
+    QVERIFY(images);
+    QCOMPARE(selection->isChecked(), saveSelection);
+    QCOMPARE(images->isChecked(), saveImages);
+    QVERIFY(dialog->findChildren<QRadioButton *>().isEmpty());
+    sync->setChecked(!syncClipboards);
+    QVERIFY(selection->isEnabled());
+    QVERIFY(images->isEnabled());
+    QCOMPARE(selection->isChecked(), saveSelection);
+    QCOMPARE(images->isChecked(), saveImages);
+
+    selection->setChecked(!saveSelection);
+    images->setChecked(!saveImages);
+    auto *buttonBox = dialog->findChild<QDialogButtonBox *>();
+    QVERIFY(buttonBox);
+    auto *apply = buttonBox->button(QDialogButtonBox::Apply);
+    QVERIFY(apply);
+    QTRY_VERIFY(apply->isEnabled());
+    apply->click();
+    settings->sharedConfig()->reparseConfiguration();
+    QCOMPARE(general.readEntry("SaveSelection", false), !saveSelection);
+    QCOMPARE(general.readEntry("SaveImages", false), !saveImages);
+    auto history = HistoryModel::self();
+    QCOMPARE(history->m_bSaveSelection, !saveSelection);
+    QCOMPARE(history->m_bSaveImages, !saveImages);
 }
 
 QTEST_MAIN(HistoryModelTest)

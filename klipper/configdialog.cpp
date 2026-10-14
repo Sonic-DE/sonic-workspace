@@ -8,7 +8,6 @@
 #include "configdialog.h"
 
 #include <QtGlobal>
-#include <QButtonGroup>
 #include <QCheckBox>
 #include <QFontDatabase>
 #include <QFormLayout>
@@ -16,7 +15,6 @@
 #include <QHeaderView>
 #include <QLabel>
 #include <QPushButton>
-#include <QRadioButton>
 #include <QSpinBox>
 #include <QToolTip>
 #include <QVBoxLayout>
@@ -124,119 +122,26 @@ If it is turned off, the selection may still be saved in the clipboard history (
     m_saveSelectionCb->setObjectName(QLatin1String("kcfg_SaveSelection"));
     layout->addRow(i18nc("Followed e.g. by 'Text selected with the pointer or keyboard'", "Include in history:"), m_saveSelectionCb);
 
-    auto *buttonGroup = new QButtonGroup(this);
+    layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Text copied explicitly is always saved unless it is marked as a password."), this));
 
     m_saveImagesCb = new QCheckBox(i18nc("@option:check Part of the setting 'Include in history:'", "Image data copied explicitly"), this);
     m_saveImagesCb->setObjectName(QLatin1String("kcfg_SaveImages"));
     layout->addRow(QString(), m_saveImagesCb);
 
-    m_copiedTextRb = new QRadioButton(i18n("Only when explicitly copied"), this);
-    m_copiedTextRb->setObjectName(QLatin1String("kcfg_IgnoreSelection"));
-    buttonGroup->addButton(m_copiedTextRb);
-    layout->addRow(QString(), m_copiedTextRb);
-
-    layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether text selections are saved in the clipboard history."), this));
-
-    // Radio button group: Storing non-text selections in history
-    //
-    // The truth table for the 4 possible combinations of internal Klipper
-    // settings (of which two are equivalent, making 3 user-visible options)
-    // controlling what is stored in the clipboard history is:
-    //
-    // selectionTextOnly  ignoreImages   Selected   Selected    Copied    Copied      Option
-    //                                     text    image/other   text   image/other
-    //
-    //        false          false          yes       yes         yes       yes         1
-    //        true           false          yes       no          yes       yes         2
-    //        false          true           yes       no          yes       no          3
-    //        true           true           yes       no          yes       no          3
-    //
-    // Option 1:  Always store images in history
-    //        2:  Only when explicitly copied
-    //        3:  Never store images in history
-    //
-    // The 'Always' option is not available if selection/clipboard synchronisation
-    // is turned off.
-
-    buttonGroup = new QButtonGroup(this);
-
-    // This widget is not managed by KConfigDialogManager,
-    // but the other two radio buttons are.
-    m_alwaysImageRb = new QRadioButton(i18n("Always save in history"), this);
-    m_alwaysImageRb->setChecked(true); // may be updated from settings later
-    connect(m_alwaysImageRb, &QAbstractButton::toggled, this, &GeneralWidget::widgetChanged);
-    buttonGroup->addButton(m_alwaysImageRb);
-    layout->addRow(i18n("Non-text selection:"), m_alwaysImageRb);
-
-    m_copiedImageRb = new QRadioButton(i18n("Only when explicitly copied"), this);
-    m_copiedImageRb->setObjectName(QLatin1String("kcfg_SelectionTextOnly"));
-    buttonGroup->addButton(m_copiedImageRb);
-    layout->addRow(QString(), m_copiedImageRb);
-
-    m_neverImageRb = new QRadioButton(i18n("Never save in history"), this);
-    m_neverImageRb->setObjectName(QLatin1String("kcfg_IgnoreImages"));
-    buttonGroup->addButton(m_neverImageRb);
-    layout->addRow(QString(), m_neverImageRb);
-
-    layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
-
-    m_havePrevAlwaysImageTextConfig = false;
-}
-
-void GeneralWidget::updateWidgets()
-{
-    // Initialise widgets which are not managed by KConfigDialogManager
-    // from the application settings.
-
-    // SelectionTextOnly takes precedence over IgnoreImages,
-    // see Klipper::checkClipData().  Give that radio button
-    // priority too.
-    if (KlipperSettings::selectionTextOnly()) {
-        KlipperSettings::setIgnoreImages(false);
-    }
-}
-
-void GeneralWidget::initWidgetStates()
-{
-    Q_ASSERT(!m_havePrevAlwaysImageTextConfig);
-    // During dialog setup, disable / change some widgets according to current settings to achieve the same
-    // internal consistency as settings changes made by the user after opening the dialog.
-    slotWidgetModified();
-    m_havePrevAlwaysImageTextConfig = false;
-}
-
-void GeneralWidget::slotWidgetModified()
-{
-    // A setting widget has been changed.  Update the state of
-    // any other widgets that depend on it.
-
-    if (m_syncClipboardsCb->isChecked()) {
-        m_alwaysImageRb->setEnabled(true);
-        m_alwaysTextRb->setEnabled(true);
-        m_copiedTextRb->setEnabled(true);
-
-        if (m_havePrevAlwaysImageTextConfig) {
-            m_alwaysTextRb->setChecked(m_prevAlwaysText);
-            m_alwaysImageRb->setChecked(m_prevAlwaysImage);
-            m_havePrevAlwaysImageTextConfig = false;
-        }
-    } else {
-        m_prevAlwaysText = m_alwaysTextRb->isChecked();
-        m_prevAlwaysImage = m_alwaysImageRb->isChecked();
-        m_havePrevAlwaysImageTextConfig = true;
-
-        if (m_alwaysImageRb->isChecked()) {
-            m_copiedImageRb->setChecked(true);
-        }
-
-        if (m_alwaysTextRb->isChecked()) {
-            m_copiedTextRb->setChecked(true);
-        }
-
-        m_alwaysImageRb->setEnabled(false);
-        m_alwaysTextRb->setEnabled(false);
-        m_copiedTextRb->setEnabled(false);
-    }
+    QLabel *imageHint = ConfigDialog::createHintLabel(i18n("For example, layers and selections copied in image editors like Krita or GIMP."
+                                                           "<br/><a href=\"1\">More about images in the clipboard.</a>"),
+                                                      this);
+    layout->addRow(QString(), imageHint);
+    connect(imageHint, &QLabel::linkActivated, this, [imageHint]() {
+        QToolTip::showText(QCursor::pos(),
+                           xi18nc("@info:tooltip",
+                                  "Clipboard will always allow copying image files as filenames and will show their thumbnails. This setting covers cases "
+                                  "where images are stored directly as data. Some applications support both cases, but some only accept images as data."
+                                  "<nl/><nl/>"
+                                  "Also note that the Spectacle screenshot tool will ignore this setting when configured to save screenshots to the clipboard. "
+                                  "Any application that sends both text and image will also ignore it."),
+                           imageHint);
+    });
 }
 
 //////////////////////////
@@ -602,12 +507,8 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     
     addPage(shortcutsPage, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
-    connect(m_generalPage, &GeneralWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_shortcutsWidget, &KShortcutsEditor::keyChange, this, &ConfigDialog::settingsChangedSlot);
-
-    connect(this, &KConfigDialog::widgetModified, m_generalPage, &GeneralWidget::slotWidgetModified);
-    m_generalPage->initWidgetStates();
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void)winId();
@@ -655,8 +556,6 @@ void ConfigDialog::updateWidgets()
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
     }
-
-    m_generalPage->updateWidgets();
 }
 
 void ConfigDialog::updateWidgetsDefault()
