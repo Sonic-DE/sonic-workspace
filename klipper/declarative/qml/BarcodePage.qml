@@ -55,7 +55,10 @@ Item {
             PlasmaComponents3.ToolButton {
                 icon.name: "go-previous-view"
                 text: i18nd("klipper", "Return to Clipboard")
-                onClicked: barcodeView.stack.popCurrentItem()
+                onClicked: {
+                    barcodeView.stack.popCurrentItem()
+                    barcodeView.stack.forceActiveFocus(Qt.OtherFocusReason)
+                }
                 visible: barcodeView.showHeader
             }
 
@@ -177,6 +180,7 @@ Item {
                 onActiveChanged: {
                     if (active) {
                         barcodeItem.grabToImage((result) => {
+                            barcodeItem.Drag.imageSource = result.url;
                             barcodeItem.Drag.mimeData = {
                                 "image/png": result.image,
                             };

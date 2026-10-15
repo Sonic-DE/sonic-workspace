@@ -67,8 +67,9 @@ Klipper::Klipper(QObject *parent)
 
     m_toggleURLGrabAction = new KToggleAction(this);
     m_collection->addAction(QStringLiteral("clipboard_action"), m_toggleURLGrabAction);
-    m_toggleURLGrabAction->setText(i18nc("@action:inmenu Toggle automatic action", "Automatic Action Popup Menu"));
-    KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::META | Qt::CTRL | Qt::Key_X));
+    m_toggleURLGrabAction->setText(i18nc("@action:inmenu Toggle automatic action", "Toggle Automatic Popping Up of Action Menu"));
+    m_toggleURLGrabAction->setIcon(QIcon::fromTheme(QStringLiteral("show-menu")));
+    KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence());
     connect(m_toggleURLGrabAction, &QAction::toggled, this, &Klipper::setURLGrabberEnabled);
 
     /*
@@ -319,7 +320,7 @@ void Klipper::slotHistoryChanged(bool isTop)
     }
 
     QString &lastURLGrabberText = m_clip->isLocked(QClipboard::Selection) ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
-    if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->type() == HistoryItemType::Text) {
+    if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->allTypes().testFlag(HistoryItemType::Text)) {
         m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(m_historyModel->first()));
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
