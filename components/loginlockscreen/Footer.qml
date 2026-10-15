@@ -11,7 +11,6 @@ import org.kde.breeze.components as BreezeComponents
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.workspace.components as WorkspaceComponents
-import org.kde.plasma.workspace.keyboardlayout as Keyboards
 
 /*!
   A footer for the login and lock screens that contains components for e.g.
@@ -25,6 +24,15 @@ RowLayout {
     // different heights, so fillHeight is required.
 
     id: root
+
+    // Consumers may provide another backend with the same control contract.
+    property QtObject virtualKeyboard: VirtualKeyboard
+
+    readonly property bool virtualKeyboardVisible: virtualKeyboard.visible
+
+    function hideVirtualKeyboard() {
+        virtualKeyboard.active = false;
+    }
 
     /*!
       Signal emitted when the on-screen keyboard button is clicked.
@@ -48,14 +56,15 @@ RowLayout {
 
         focusPolicy: Qt.TabFocus
         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-        icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+        enabled: root.virtualKeyboard.available
+        icon.name: root.virtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
 
         onClicked: {
-            if (Keyboards.KWinVirtualKeyboard.visible) {
-                Keyboards.KWinVirtualKeyboard.active = false;
+            if (root.virtualKeyboard.visible) {
+                root.virtualKeyboard.active = false;
             } else {
                 root.oskActivated();
-                Keyboards.KWinVirtualKeyboard.forceActivate();
+                root.virtualKeyboard.forceActivate();
             }
         }
 

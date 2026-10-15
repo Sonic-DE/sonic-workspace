@@ -55,6 +55,8 @@ FocusScope {
     property alias userListCurrentIndex: userListView.currentIndex
     property alias userListCurrentItem: userListView.currentItem
     property bool showUserList: true
+    // Presentation only: keep the selected user and credential state unchanged.
+    property bool keyboardActive: false
 
     property alias userList: userListView
 
@@ -73,7 +75,7 @@ FocusScope {
     // whitespace to avoid items being overlapped.
     UserList {
         id: userListView
-        visible: root.showUserList && y > 0
+        visible: root.showUserList && !root.keyboardActive && y > 0
         anchors {
             bottom: parent.verticalCenter
             // We only need an extra bottom margin when text is constrained,
@@ -93,13 +95,14 @@ FocusScope {
     //ui is constrained to 16 grid units wide, or the screen
     ColumnLayout {
         id: prompts
-        anchors.top: parent.verticalCenter
+        anchors.top: root.keyboardActive ? parent.top : parent.verticalCenter
         anchors.topMargin: Kirigami.Units.largeSpacing
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         PlasmaComponents3.Label {
             id: notificationsLabel
+            visible: !root.keyboardActive
             font.pointSize: root.fontSize
             Layout.maximumWidth: Kirigami.Units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
@@ -146,6 +149,7 @@ FocusScope {
         }
         Item {
             Layout.alignment: Qt.AlignHCenter
+            visible: !root.keyboardActive
             implicitHeight: actionItemsLayout.implicitHeight
             implicitWidth: actionItemsLayout.implicitWidth
             GridLayout {
