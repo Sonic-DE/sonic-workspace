@@ -31,6 +31,16 @@ QtObject {
     signal timeChanged
 
     property bool inhibited: false
+    // Re-evaluated on notification arrival, not by a scheduler.
+    property bool timePeriodInhibited: false
+
+    property Connections notificationReceivedConnection: Connections {
+        target: NotificationManager.Server
+        function onNotificationReceived() {
+            globals.timePeriodInhibited = globals.notificationSettings.notificationsInhibitedByTimePeriod(new Date());
+            globals.checkInhibition();
+        }
+    }
 
     onInhibitedChanged: {
         // Explicitly update server state before potentially sending a inhibition summary,
@@ -274,7 +284,7 @@ QtObject {
 
     function checkInhibition() {
         globals.inhibited = Qt.binding(function() {
-            var inhibited = false;
+            var inhibited = globals.timePeriodInhibited;
 
             if (!NotificationManager.Server.valid) {
                 return false;
@@ -302,6 +312,7 @@ QtObject {
     }
 
     function revokeInhibitions() {
+        globals.timePeriodInhibited = false;
         notificationSettings.notificationsInhibitedUntil = undefined;
         notificationSettings.revokeApplicationInhibitions();
         notificationSettings.fullscreenFocused = false;

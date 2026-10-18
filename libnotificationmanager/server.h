@@ -183,6 +183,12 @@ Q_SIGNALS:
     void validChanged();
 
     /**
+     * Emitted before an incoming notification is processed, including replacements
+     * and portal notifications, so event-time Do Not Disturb rules can be applied.
+     */
+    void notificationReceived();
+
+    /**
      * Emitted when a notification was added.
      * This is emitted regardless of any filtering rules or user settings.
      * @param notification The notification

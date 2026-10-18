@@ -164,6 +164,67 @@ KCM.SimpleKCM {
             }
         }
 
+        QtControls.CheckBox {
+            id: timePeriodCheck
+            text: i18nc("@option:check Automatically enable Do Not Disturb mode", "During time period")
+            checked: kcm.dndSettings.duringTimePeriod
+            onClicked: kcm.dndSettings.duringTimePeriod = checked
+
+            KCM.SettingStateBinding {
+                configObject: kcm.dndSettings
+                settingName: "DuringTimePeriod"
+                extraEnabledConditions: root.notificationsAvailable
+            }
+        }
+
+        RowLayout {
+            visible: timePeriodCheck.checked
+            spacing: Kirigami.Units.smallSpacing
+
+            QtControls.Label {
+                id: startTimeLabel
+                text: i18nc("@label:spinbox", "Start time:")
+            }
+
+            TimeField {
+                value: kcm.dndSettings.timePeriodStart
+                onValueModified: kcm.dndSettings.timePeriodStart = value
+                Accessible.name: startTimeLabel.text
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.dndSettings
+                    settingName: "TimePeriodStart"
+                    extraEnabledConditions: root.notificationsAvailable && timePeriodCheck.checked
+                }
+            }
+
+            QtControls.Label {
+                id: endTimeLabel
+                Layout.leftMargin: Kirigami.Units.largeSpacing
+                text: i18nc("@label:spinbox", "End time:")
+            }
+
+            TimeField {
+                value: kcm.dndSettings.timePeriodEnd
+                onValueModified: kcm.dndSettings.timePeriodEnd = value
+                Accessible.name: endTimeLabel.text
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.dndSettings
+                    settingName: "TimePeriodEnd"
+                    extraEnabledConditions: root.notificationsAvailable && timePeriodCheck.checked
+                }
+            }
+        }
+
+        QtControls.Label {
+            Layout.fillWidth: true
+            visible: timePeriodCheck.checked
+            text: i18nc("@info", "Notification sounds are silenced when the current local time is within this period, including the start and end times. An end time earlier than the start time means the next day.")
+            textFormat: Text.PlainText
+            wrapMode: Text.WordWrap
+        }
+
         KQuickControls.KeySequenceItem {
             Kirigami.FormData.label: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Manually toggle with shortcut:")
             enabled: root.notificationsAvailable

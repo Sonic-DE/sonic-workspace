@@ -28,3 +28,11 @@ target_link_libraries(kcm_notifications PRIVATE
     PW::LibNotificationManager
     Canberra::Canberra
 )
+
+if(BUILD_TESTING)
+    find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS QuickTest)
+    add_executable(notifications_timefield_test autotests/timefield_test.cpp)
+    target_link_libraries(notifications_timefield_test PRIVATE Qt::QuickTest)
+    target_compile_definitions(notifications_timefield_test PRIVATE QUICK_TEST_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}/autotests")
+    add_test(NAME notifications-timefield-test COMMAND notifications_timefield_test -platform offscreen)
+endif()

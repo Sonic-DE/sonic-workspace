@@ -313,6 +313,12 @@ public:
     void setNotificationsInhibitedUntil(const QDateTime &time);
     void resetNotificationsInhibitedUntil();
 
+    /**
+     * Whether the time-period Do Not Disturb rule matches the given timestamp in local time.
+     * Both boundaries are inclusive. A period crossing midnight wraps to the next day.
+     */
+    Q_INVOKABLE bool notificationsInhibitedByTimePeriod(const QDateTime &dateTime) const;
+
     bool notificationsInhibitedByApplication() const;
     QStringList notificationInhibitionApplications() const;
     QStringList notificationInhibitionReasons() const;

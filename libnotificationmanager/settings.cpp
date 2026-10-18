@@ -539,6 +539,23 @@ void Settings::resetNotificationsInhibitedUntil()
     setNotificationsInhibitedUntil(QDateTime()); // FIXME d->dndSettings.defaultUntilValue());
 }
 
+bool Settings::notificationsInhibitedByTimePeriod(const QDateTime &dateTime) const
+{
+    if (!d->dndSettings.duringTimePeriod() || !dateTime.isValid()) {
+        return false;
+    }
+
+    const int start = d->dndSettings.timePeriodStart();
+    const int end = d->dndSettings.timePeriodEnd();
+    if (start < 0 || start >= 24 * 60 || end < 0 || end >= 24 * 60) {
+        return false;
+    }
+
+    const auto time = dateTime.toLocalTime().time();
+    const int now = time.hour() * 60 + time.minute();
+    return start <= end ? (now >= start && now <= end) : (now >= start || now <= end);
+}
+
 bool Settings::notificationsInhibitedByApplication() const
 {
     return Server::self().inhibitedByApplication();

@@ -21,6 +21,24 @@
             <default>true</default>
         </entry>
 
+        <entry name="DuringTimePeriod" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="TimePeriodStart" type="Int">
+            <label>Daily start time, in minutes after midnight</label>
+            <default>1320</default>
+            <min>0</min>
+            <max>1439</max>
+        </entry>
+
+        <entry name="TimePeriodEnd" type="Int">
+            <label>Daily end time, in minutes after midnight</label>
+            <default>420</default>
+            <min>0</min>
+            <max>1439</max>
+        </entry>
+
         <entry name="NotificationSoundsMuted" type="Bool">
             <default>false</default>
         </entry>

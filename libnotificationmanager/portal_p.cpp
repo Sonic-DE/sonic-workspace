@@ -174,6 +174,7 @@ void Portal::AddNotification(const QString &appId, const QString &portalNotifica
     notification.setBody(body);
 
     notification.setDesktopEntry(appId);
+    Q_EMIT Server::self().notificationReceived();
     notification.setWasAddedDuringInhibition(Server::self().inhibited());
 
     // Not setting dbusService since Portal notifications probably don't need

@@ -141,6 +141,8 @@ uint ServerPrivate::Notify(const QString &app_name,
                            const QVariantMap &hints,
                            int timeout)
 {
+    Q_EMIT static_cast<Server *>(parent())->notificationReceived();
+
     const bool wasReplaced = replaces_id > 0;
     uint notificationId = 0;
     if (wasReplaced) {
@@ -343,6 +345,8 @@ void ServerPrivate::onBroadcastNotification(const QMap<QString, QVariant> &prope
 
 uint ServerPrivate::add(const Notification &notification)
 {
+    Q_EMIT static_cast<Server *>(parent())->notificationReceived();
+
     // TODO check if notification with ID already exists and signal update instead
     if (notification.id() == 0) {
         ++m_highestNotificationId;
