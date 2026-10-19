@@ -50,6 +50,7 @@ void KlipperPopup::show()
     QMetaObject::invokeMethod(mainItem(), "updateContentSize", Q_ARG(QSizeF, screen()->availableSize().toSizeF()));
     resizePopup();
     setVisible(true);
+    requestActivate();
 }
 
 void KlipperPopup::editCurrentClipboard()
