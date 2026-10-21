@@ -57,6 +57,12 @@ FocusScope {
     property bool showUserList: true
     // Presentation only: keep the selected user and credential state unchanged.
     property bool keyboardActive: false
+    // Opt in to an avatar and compact, centered form above the keyboard.
+    property bool showUserListWithKeyboard: false
+    readonly property bool compactKeyboardLayout: keyboardActive && showUserListWithKeyboard
+    readonly property real keyboardUserListHeight: showUserList
+        ? userListView.height + (userListView.constrainText ? Kirigami.Units.gridUnit * 3 : 0) + Kirigami.Units.largeSpacing
+        : 0
 
     property alias userList: userListView
 
@@ -75,13 +81,13 @@ FocusScope {
     // whitespace to avoid items being overlapped.
     UserList {
         id: userListView
-        visible: root.showUserList && !root.keyboardActive && y > 0
+        visible: root.showUserList && (!root.keyboardActive || root.showUserListWithKeyboard) && y >= 0
         anchors {
-            bottom: parent.verticalCenter
+            bottom: root.compactKeyboardLayout ? prompts.top : parent.verticalCenter
             // We only need an extra bottom margin when text is constrained,
             // since only in this case can the username label be a multi-line
             // string that would otherwise overflow.
-            bottomMargin: constrainText ? Kirigami.Units.gridUnit * 3 : 0
+            bottomMargin: (constrainText ? Kirigami.Units.gridUnit * 3 : 0) + (root.compactKeyboardLayout ? Kirigami.Units.largeSpacing : 0)
             left: parent.left
             right: parent.right
         }
@@ -96,10 +102,17 @@ FocusScope {
     ColumnLayout {
         id: prompts
         anchors.top: root.keyboardActive ? parent.top : parent.verticalCenter
-        anchors.topMargin: Kirigami.Units.largeSpacing
+        anchors.topMargin: root.compactKeyboardLayout
+            ? Math.max(Kirigami.Units.largeSpacing, (root.height - root.keyboardUserListHeight - implicitHeight) / 2) + root.keyboardUserListHeight
+            : Kirigami.Units.largeSpacing
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.bottom: parent.bottom
+        height: root.compactKeyboardLayout ? implicitHeight : Math.max(0, root.height - y)
+        Item {
+            // Hiding notifications must not shrink the normal avatar-to-form gap.
+            visible: root.compactKeyboardLayout && root.showUserList
+            implicitHeight: notificationsLabel.implicitHeight
+        }
         PlasmaComponents3.Label {
             id: notificationsLabel
             visible: !root.keyboardActive
@@ -144,6 +157,7 @@ FocusScope {
                 Layout.fillWidth: true
             }
             Item {
+                visible: !root.compactKeyboardLayout
                 Layout.fillHeight: true
             }
         }
@@ -166,6 +180,7 @@ FocusScope {
             }
         }
         Item {
+            visible: !root.compactKeyboardLayout
             Layout.fillHeight: true
         }
     }
