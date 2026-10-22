@@ -25,4 +25,18 @@ if(BUILD_TESTING)
     target_include_directories(virtualkeyboardcontrollertest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
     target_link_libraries(virtualkeyboardcontrollertest PRIVATE Qt6::Test Qt6::Qml Qt6::GuiPrivate)
     add_test(NAME virtualkeyboardcontrollertest COMMAND virtualkeyboardcontrollertest)
+    add_executable(virtualkeyboardbackendtest
+        autotests/virtualkeyboardbackendtest.cpp virtualkeyboardcontroller.cpp virtualkeyboardcontroller.h)
+    target_include_directories(virtualkeyboardbackendtest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+    target_link_libraries(virtualkeyboardbackendtest PRIVATE Qt::Test Qt::Quick Qt::GuiPrivate)
+    find_program(XVFB_RUN_EXECUTABLE xvfb-run)
+    if(XVFB_RUN_EXECUTABLE)
+        add_test(NAME virtualkeyboardbackendtest COMMAND ${XVFB_RUN_EXECUTABLE} -a -s "-screen 0 1280x900x24"
+            ${CMAKE_COMMAND} -E env QT_QPA_PLATFORM=xcb SONIC_KEYBOARD_TEST_ISOLATED=1
+            $<TARGET_FILE:virtualkeyboardbackendtest>)
+    else()
+        add_test(NAME virtualkeyboardbackendtest COMMAND virtualkeyboardbackendtest)
+        set_tests_properties(virtualkeyboardbackendtest PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+    endif()
+    set_tests_properties(virtualkeyboardbackendtest PROPERTIES TIMEOUT 60)
 endif()
