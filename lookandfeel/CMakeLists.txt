@@ -28,3 +28,7 @@ qt6_add_shaders(components LNFSHADERS
         UserDelegate.frag.qsb
         WallpaperFader.frag.qsb
 )
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()

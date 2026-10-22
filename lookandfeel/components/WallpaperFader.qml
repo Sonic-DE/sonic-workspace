@@ -33,6 +33,9 @@ Item {
     MultiEffect {
         id: wallpaperBlur
         anchors.fill: parent
+        // This is a full-screen effect, not an item shadow. Automatic padding
+        // changes the captured bounds and exposes the sharp wallpaper edges.
+        autoPaddingEnabled: false
         blurEnabled: true
         blurMax: 50
         blur: wallpaperFader.factor
