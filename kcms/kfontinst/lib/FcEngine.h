@@ -21,6 +21,7 @@ class KConfig;
 typedef struct _XftFont XftFont;
 typedef struct _XftDraw XftDraw;
 typedef struct _XftColor XftColor;
+typedef struct _XDisplay Display;
 
 namespace KFI
 {
@@ -133,6 +134,8 @@ public:
     static const int constDefaultAlphaSize;
 
 private:
+    Display *xDisplay();
+    void closeFont(XftFont *&font);
     bool parse(const QString &name, quint32 style, int faceNo);
     XftFont *queryFont();
     XftFont *getFont(int size);
