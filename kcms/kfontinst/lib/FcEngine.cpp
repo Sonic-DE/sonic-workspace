@@ -15,11 +15,13 @@
 #include <QFile>
 #include <QFontDatabase>
 #include <QPainter>
+#include <QScreen>
 #include <QTextStream>
 #include <X11/Xft/Xft.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/Xrender.h>
 #include <math.h>
+#include <memory>
 #include <private/qtx11extras_p.h>
 // #define KFI_FC_DEBUG
 
@@ -32,13 +34,19 @@ bool CFcEngine::theirFcDirty(true);
 const int CFcEngine::constScalableSizes[] = {8, 10, 12, 24, 36, 48, 64, 72, 96, 0};
 const int CFcEngine::constDefaultAlphaSize = 24;
 
-static Display *xDisplay()
+static std::shared_ptr<Display> openXDisplay()
 {
-    static Display *s_display = nullptr;
-    if (!s_display) {
-        s_display = QX11Info::display();
-    }
-    return s_display;
+    // Reuse one owned connection across font engines in the worker. Each Xft
+    // instance also retains it, so static destruction cannot close the display
+    // while that instance still owns colors, pictures or pixmaps.
+    static const auto display = [] {
+        // Respect Qt's explicit -display selection on XCB, while also supporting
+        // offscreen thumbnail workers with DISPLAY but no Qt X11 connection.
+        auto *qtDisplay = QX11Info::display();
+        auto *connection = XOpenDisplay(qtDisplay ? DisplayString(qtDisplay) : nullptr);
+        return connection ? std::shared_ptr<Display>(connection, XCloseDisplay) : std::shared_ptr<Display>();
+    }();
+    return display;
 }
 
 static int fcToQtWeight(int weight)
@@ -123,7 +131,7 @@ inline bool equalSlant(int a, int b)
     return a == b || FC::slant(a) == FC::slant(b);
 }
 
-static void closeFont(XftFont *&font)
+void CFcEngine::closeFont(XftFont *&font)
 {
     if (font) {
         XftFontClose(xDisplay(), font);
@@ -135,12 +143,23 @@ class CFcEngine::Xft
 {
 public:
     struct Pix {
-        Pix()
+        explicit Pix(Display *display)
             : currentW(0)
             , currentH(0)
             , allocatedW(0)
             , allocatedH(0)
+            , m_display(display)
         {
+        }
+
+        ~Pix()
+        {
+            free();
+        }
+
+        Display *xDisplay() const
+        {
+            return m_display;
         }
 
         static int getSize(int s)
@@ -180,10 +199,16 @@ public:
 
         int currentW, currentH, allocatedW, allocatedH;
         Pixmap x11;
+        Display *m_display;
     };
 
     Xft();
     ~Xft();
+
+    Display *xDisplay() const
+    {
+        return m_display.get();
+    }
 
     bool init(const QColor &txt, const QColor &bgnd, int w, int h);
     void freeColors();
@@ -206,16 +231,23 @@ public:
     QImage toImage(int w, int h) const;
 
 private:
+    // The thumbnail worker uses Qt's offscreen platform even in X11 sessions.
+    // Own the connection instead of borrowing/caching Qt's XCB Display, so Xft
+    // resources remain valid independently of QApplication's lifetime.
+    std::shared_ptr<Display> m_display;
     XftDraw *m_draw;
-    XftColor m_txtColor, m_bgndColor;
+    XftColor m_txtColor{}, m_bgndColor{};
+    bool m_txtColorAllocated = false;
+    bool m_bgndColorAllocated = false;
     Pix m_pix;
     QImage::Format imageFormat;
 };
 
 CFcEngine::Xft::Xft()
+    : m_display(openXDisplay())
+    , m_draw(nullptr)
+    , m_pix(m_display.get())
 {
-    m_draw = nullptr;
-    m_txtColor.color.alpha = 0x0000;
     init(Qt::black, Qt::white, 64, 64);
 }
 
@@ -240,7 +272,8 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
         freeColors();
     }
 
-    if (0x0000 == m_txtColor.color.alpha) {
+    if (!m_txtColorAllocated || !m_bgndColorAllocated) {
+        freeColors();
         XRenderColor xrenderCol;
         Visual *visual = DefaultVisual(xDisplay(), 0);
         Colormap colorMap = DefaultColormap(xDisplay(), 0);
@@ -249,12 +282,19 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
         xrenderCol.green = bnd.green() << 8;
         xrenderCol.blue = bnd.green() << 8;
         xrenderCol.alpha = 0xFFFF;
-        XftColorAllocValue(xDisplay(), visual, colorMap, &xrenderCol, &m_bgndColor);
+        m_bgndColorAllocated = XftColorAllocValue(xDisplay(), visual, colorMap, &xrenderCol, &m_bgndColor);
+        if (!m_bgndColorAllocated) {
+            return false;
+        }
         xrenderCol.red = txt.red() << 8;
         xrenderCol.green = txt.green() << 8;
         xrenderCol.blue = txt.green() << 8;
         xrenderCol.alpha = 0xFFFF;
-        XftColorAllocValue(xDisplay(), visual, colorMap, &xrenderCol, &m_txtColor);
+        m_txtColorAllocated = XftColorAllocValue(xDisplay(), visual, colorMap, &xrenderCol, &m_txtColor);
+        if (!m_txtColorAllocated) {
+            freeColors();
+            return false;
+        }
     }
 
     XVisualInfo defaultVinfo;
@@ -324,9 +364,14 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 
 void CFcEngine::Xft::freeColors()
 {
-    XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_txtColor);
-    XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_bgndColor);
-    m_txtColor.color.alpha = 0x0000;
+    if (m_txtColorAllocated) {
+        XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_txtColor);
+        m_txtColorAllocated = false;
+    }
+    if (m_bgndColorAllocated) {
+        XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_bgndColor);
+        m_bgndColorAllocated = false;
+    }
 }
 
 bool CFcEngine::Xft::drawChar32Centre(XftFont *xftFont, quint32 ch, int w, int h) const
@@ -417,7 +462,7 @@ void CFcEngine::Xft::drawString(const QString &text, int x, int &y, int h) const
 
     if (xftFont) {
         drawString(xftFont, text, x, y, h);
-        closeFont(xftFont);
+        XftFontClose(xDisplay(), xftFont);
     }
 }
 
@@ -601,7 +646,9 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
 
 inline int point2Pixel(int point)
 {
-    return (point * QX11Info::appDpiX() + 36) / 72;
+    const auto *screen = QGuiApplication::primaryScreen();
+    const qreal dpi = screen ? screen->logicalDotsPerInchX() : 96;
+    return qRound(point * dpi / 72);
 }
 
 static bool hasStr(XftFont *font, QString &str)
@@ -1538,4 +1585,8 @@ CFcEngine::Xft *CFcEngine::xft()
     return m_xft;
 }
 
+Display *CFcEngine::xDisplay()
+{
+    return xft()->xDisplay();
+}
 }
