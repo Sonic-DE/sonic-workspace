@@ -16,7 +16,11 @@ Item {
     property Item footer
     property alias source: wallpaperBlur.source
     property real factor: 0
-    readonly property bool lightColorScheme: Math.max(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b) > 0.5
+    // The lockscreen's surrounding UI may use Complementary colors. The
+    // wallpaper tint must always follow the user's actual Window background.
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
+    readonly property color tintColor: Kirigami.Theme.backgroundColor
 
     property bool alwaysShowClock: false
 
@@ -52,29 +56,8 @@ Item {
             textureMirroring: ShaderEffectSource.NoMirroring
         }
 
-        readonly property real contrast: 0.8 * wallpaperFader.factor + (1 - wallpaperFader.factor)
-        readonly property real saturation: 1.5 * wallpaperFader.factor + (1 - wallpaperFader.factor)
-        readonly property real intensity: (wallpaperFader.lightColorScheme ? 1.6 : 0.7) * wallpaperFader.factor + (1 - wallpaperFader.factor)
-
-        readonly property real transl: (1.0 - contrast) / 2.0;
-        readonly property real rval: (1.0 - saturation) * 0.2126;
-        readonly property real gval: (1.0 - saturation) * 0.7152;
-        readonly property real bval: (1.0 - saturation) * 0.0722;
-
-        property var colorMatrix: Qt.matrix4x4(
-            contrast, 0,        0,        0.0,
-            0,        contrast, 0,        0.0,
-            0,        0,        contrast, 0.0,
-            transl,   transl,   transl,   1.0).times(Qt.matrix4x4(
-                rval + saturation, rval,     rval,     0.0,
-                gval,     gval + saturation, gval,     0.0,
-                bval,     bval,     bval + saturation, 0.0,
-                0,        0,        0,        1.0)).times(Qt.matrix4x4(
-                    intensity, 0,         0,         0,
-                    0,         intensity, 0,         0,
-                    0,         0,         intensity, 0,
-                    0,         0,         0,         1
-                ));
+        readonly property color tintColor: wallpaperFader.tintColor
+        readonly property real tintAmount: 0.35 * wallpaperFader.factor
 
         fragmentShader: "qrc:/qt/qml/org/kde/breeze/components/shaders/WallpaperFader.frag.qsb"
     }

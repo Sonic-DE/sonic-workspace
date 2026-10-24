@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 import QtQuick
+import org.kde.kirigami as Kirigami
 import "../components" as Components
 
 Rectangle {
@@ -14,6 +15,9 @@ Rectangle {
     property bool sourceLayered: true
     property bool blurred: false
     property alias fader: fader
+    property color windowBackground: "#2a2e32"
+    Kirigami.Theme.backgroundColor: "magenta"
+    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
     Image {
         id: wallpaper
@@ -35,6 +39,7 @@ Rectangle {
         mainStack: mainStack
         footer: footer
         clock: clock
+        Kirigami.Theme.backgroundColor: root.windowBackground
         state: root.blurred ? "on" : "off"
     }
 }
