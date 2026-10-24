@@ -125,7 +125,7 @@ private:
     QPointer<Plasma::Containment> m_containment = nullptr;
     int m_containmentScreenId = -1;
 
-    bool m_enteredEditMode;
+    bool m_enteredEditMode = false;
 
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     bool m_showPreviewBanner;
