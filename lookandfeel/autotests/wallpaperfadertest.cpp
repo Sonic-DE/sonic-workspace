@@ -38,6 +38,72 @@ class WallpaperFaderTest : public QObject {
     }
 
 private Q_SLOTS:
+    void windowColorTint_data()
+    {
+        QTest::addColumn<QColor>("background");
+        QTest::addColumn<QColor>("wallpaper");
+        const QColor neutral(128, 128, 128);
+        QTest::newRow("dark") << QColor("#181b28") << neutral;
+        QTest::newRow("light") << QColor("#eff0f1") << neutral;
+        QTest::newRow("saturated-blue") << QColor("#2020c0") << neutral;
+        QTest::newRow("warm") << QColor("#c06020") << neutral;
+        QTest::newRow("translucent") << QColor(32, 64, 192, 128) << neutral;
+        QTest::newRow("colored-wallpaper") << QColor("#181b28") << QColor(64, 160, 208);
+    }
+
+    void windowColorTint()
+    {
+        if (qgetenv("SONIC_WALLPAPER_TEST_ISOLATED") != "1") {
+            QSKIP("Rendered tint test requires the private Xvfb test wrapper");
+        }
+        QFETCH(QColor, background);
+        QFETCH(QColor, wallpaper);
+        QTemporaryDir fixture;
+        QVERIFY(fixture.isValid());
+        QImage image(320, 240, QImage::Format_RGB32);
+        image.fill(wallpaper);
+        const auto path = fixture.path() + QStringLiteral("/wallpaper.png");
+        QVERIFY(image.save(path));
+        QQuickView view;
+        view.setResizeMode(QQuickView::SizeRootObjectToView);
+        view.resize(image.size());
+        view.setInitialProperties({{QStringLiteral("testImage"), QUrl::fromLocalFile(path)}, {QStringLiteral("windowBackground"), background}});
+        view.setSource(QUrl::fromLocalFile(QStringLiteral(WALLPAPER_FADER_TEST_QML)));
+        QVERIFY2(view.status() == QQuickView::Ready, qPrintable(view.errors().isEmpty() ? QString() : view.errors().first().toString()));
+        view.show();
+        QVERIFY(QTest::qWaitForWindowExposed(&view));
+        auto *fader = view.rootObject()->property("fader").value<QQuickItem *>();
+        QVERIFY(fader);
+        QTRY_COMPARE(fader->property("tintColor").value<QColor>(), background);
+        const auto matches = [&view, wallpaper](const QColor &tint, double factor) {
+            const auto frame = view.grabWindow();
+            if (frame.isNull()) {
+                return false;
+            }
+            const auto actual = frame.pixelColor(frame.width() / 2, frame.height() / 2);
+            const double amount = 0.35 * factor * tint.alphaF();
+            const auto expected = [amount](int source, int tint) {
+                return qRound(source * (1 - amount) + tint * amount);
+            };
+            return std::abs(actual.red() - expected(wallpaper.red(), tint.red())) <= 2
+                && std::abs(actual.green() - expected(wallpaper.green(), tint.green())) <= 2
+                && std::abs(actual.blue() - expected(wallpaper.blue(), tint.blue())) <= 2 && actual.alpha() == 255;
+        };
+        QTRY_VERIFY(matches(background, 0));
+        QVERIFY(view.rootObject()->setProperty("blurred", true));
+        QTRY_COMPARE_WITH_TIMEOUT(fader->property("factor").toDouble(), 1.0, 5000);
+        QTRY_VERIFY_WITH_TIMEOUT(matches(background, 1), 5000);
+        QVERIFY(fader->setProperty("factor", 0.5));
+        QTRY_COMPARE_WITH_TIMEOUT(fader->property("factor").toDouble(), 0.5, 5000);
+        QTRY_VERIFY_WITH_TIMEOUT(matches(background, 0.5), 5000);
+        const QColor alternate("#883355");
+        QVERIFY(view.rootObject()->setProperty("windowBackground", alternate));
+        QTRY_VERIFY_WITH_TIMEOUT(matches(alternate, 0.5), 5000);
+        QVERIFY(view.rootObject()->setProperty("blurred", false));
+        QTRY_COMPARE_WITH_TIMEOUT(fader->property("factor").toDouble(), 0.0, 5000);
+        QTRY_VERIFY(matches(alternate, 0));
+    }
+
     void blurCoversEveryEdge_data()
     {
         QTest::addColumn<QSize>("size");
