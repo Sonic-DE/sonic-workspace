@@ -58,6 +58,6 @@ Name[zh_TW]=GMenuDBusMenuProxy
 Type=Application
 StartupNotify=false
 NoDisplay=true
-OnlyShowIn=KDE;
+OnlyShowIn=SonicDE;
 X-KDE-autostart-phase=1
 X-systemd-skip=true

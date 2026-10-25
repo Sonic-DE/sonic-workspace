@@ -64,9 +64,9 @@ private:
     Properties {
         id: plasmashellProps
         busType: DBus.BusType.Session
-        service: "org.kde.plasmashell"
-        path: "/PlasmaShell"
-        interface: "org.kde.PlasmaShell"
+        service: "org.sonicde.sonicshell"
+        path: "/SonicShell"
+        interface: "org.sonicde.SonicShell"
     }
 
     property bool editMode: Boolean(plasmashellProps.properties.editMode)

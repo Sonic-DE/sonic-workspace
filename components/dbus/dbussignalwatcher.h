@@ -31,9 +31,9 @@ class DBusSignalWatcher;
     \qml
     SignalWatcher {
         busType: BusType.Session
-        service: "org.kde.plasmashell"
-        path: "/PlasmaShell"
-        iface: "org.kde.PlasmaShell"
+        service: "org.sonicde.sonicshell"
+        path: "/SonicShell"
+        iface: "org.sonicde.SonicShell"
         function dbuswallpaperChanged(screenNum) {
             console.log(screenNum)
         }

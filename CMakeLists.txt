@@ -413,9 +413,15 @@ add_subdirectory(devicenotifications)
 
 add_subdirectory(ksecretprompter)
 
+# Remove only this renamed catalog's obsolete generated outputs on incremental
+# builds; ki18n_install installs the generated locale directory as a whole.
+file(GLOB obsolete_shell_catalogs "${CMAKE_CURRENT_BINARY_DIR}/locale/*/LC_MESSAGES/plasmashell.mo")
+if(obsolete_shell_catalogs)
+    file(REMOVE ${obsolete_shell_catalogs})
+endif()
 ki18n_install(po)
 
-install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
+install(FILES completions/sonicshell.zsh RENAME _sonicshell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
 
 ecm_qt_install_logging_categories(
     EXPORT PLASMAWORKSPACE

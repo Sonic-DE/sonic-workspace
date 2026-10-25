@@ -13,7 +13,7 @@
 class AccentColorService : public KDEDModule
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.plasmashell.accentColor")
+    Q_CLASSINFO("D-Bus Interface", "org.sonicde.sonicshell.accentColor")
 public:
     explicit AccentColorService(QObject *parent, const QList<QVariant> &);
 

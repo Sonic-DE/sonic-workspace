@@ -8,7 +8,7 @@
 import QtQuick
 import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.workspace.osd
+import org.sonicde.sonicshell.osd
 
 OsdWindow {
 

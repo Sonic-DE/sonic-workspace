@@ -1,15 +1,15 @@
 [Unit]
-Description=KDE Plasma Workspace
+Description=Sonic Shell
 After=plasma-ksmserver.service plasma-kcminit.service
 PartOf=graphical-session.target
 StartLimitIntervalSec=60s
 StartLimitBurst=3
 
 [Service]
-ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/plasmashell --no-respawn
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/sonicshell --no-respawn
 Restart=on-failure
 Type=dbus
-BusName=org.kde.plasmashell
+BusName=org.sonicde.sonicshell
 Slice=session.slice
 TimeoutSec=40sec
 

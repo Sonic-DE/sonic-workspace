@@ -53,6 +53,11 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
 
     for (const auto &[program, _] : s_programs.asKeyValueRange()) {
+        // Sonic Shell has no telemetry provider. Do not probe upstream Plasma
+        // as a substitute; retain its existing behavior in genuine KDE sessions.
+        if (program == u"plasmashell" && qgetenv("XDG_CURRENT_DESKTOP").split(':').contains(QByteArrayLiteral("SonicDE"))) {
+            continue;
+        }
         auto p = new QProcess(this);
         p->setProgram(program);
         p->setArguments({QStringLiteral("--feedback")});

@@ -37,7 +37,7 @@ target_sources(kcm_colors PRIVATE
 )
 
 
-qt_add_dbus_adaptor(plasma-accentcolor-service_DBUS_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.accentColor.xml
+qt_add_dbus_adaptor(plasma-accentcolor-service_DBUS_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.sonicde.sonicshell.accentColor.xml
                      accentColorService/accentColorService.h AccentColorService
                      accentcolor_service_adaptor AccentColorServiceAdaptor)
 
@@ -46,7 +46,7 @@ add_executable(plasma-apply-colorscheme)
 kconfig_add_kcfg_files(plasma-apply-colorscheme colorssettings.kcfgc GENERATE_MOC)
 qt_generate_dbus_interface(
     accentColorService/accentColorService.h
-    org.kde.plasmashell.accentColor.xml
+    org.sonicde.sonicshell.accentColor.xml
     OPTIONS -M
 )
 message(WARNING "${plasma-accentcolor-service_DBUS_SRCS}")
@@ -81,7 +81,7 @@ target_sources(plasma_accentcolor_service PRIVATE
     accentColorService/accentColorService.cpp
     colorsapplicator.cpp
     ../kcms-common.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.accentColor.xml
+    ${CMAKE_CURRENT_BINARY_DIR}/org.sonicde.sonicshell.accentColor.xml
     ${plasma-accentcolor-service_DBUS_SRCS}
 )
 target_link_libraries(plasma_accentcolor_service

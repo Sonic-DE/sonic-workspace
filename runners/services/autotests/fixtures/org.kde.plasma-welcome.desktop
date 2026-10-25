@@ -11,4 +11,4 @@ Keywords=Welcome;Wizard;Onboarding;Contribute;Get involved;
 Name=Welcome Center ServiceRunnerTest
 SingleMainWindow=true
 Type=Application
-OnlyShowIn=KDE;
+OnlyShowIn=SonicDE;

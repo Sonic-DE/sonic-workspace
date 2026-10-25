@@ -55,9 +55,9 @@
 #include "kconfigpropertymap.h"
 #include "osd.h"
 #include "panelview.h"
-#include "plasmashelladaptor.h"
 #include "screenpool.h"
 #include "shellcontainmentconfig.h"
+#include "sonicshelladaptor.h"
 #include "strutmanager.h"
 
 #if USE_SCRIPTING
@@ -145,12 +145,12 @@ void ShellCorona::init()
 
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(kPackage().filePath("defaults")), u"Desktop"_s);
     m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), u"Desktop"_s);
-    m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, QStringLiteral("org.kde.plasma.desktop"));
+    m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, QStringLiteral("org.sonicde.desktop"));
 
-    new PlasmaShellAdaptor(this);
+    new SonicShellAdaptor(this);
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
+    dbus.registerObject(QStringLiteral("/SonicShell"), this);
 
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
     // LookAndFeel package, if either is set, change the default theme
@@ -692,7 +692,7 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
         return;
     }
 
-    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QLatin1String("plasma-") + m_shell + QLatin1String("-appletsrc"), KConfig::SimpleConfig);
+    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QLatin1String("sonic-") + m_shell + QLatin1String("-appletsrc"), KConfig::SimpleConfig);
 
     m_lookAndFeelPackage.setPath(packageName);
 
@@ -802,7 +802,7 @@ void ShellCorona::load()
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
     // TODO: a kconf_update script is needed
-    QString configFileName(u"plasma-" + m_shell + u"-appletsrc");
+    QString configFileName(u"sonic-" + m_shell + u"-appletsrc");
 
     // Make sure all containments have screen numbers starting from 0 and are sequential
     sanitizeScreenLayout(configFileName);
@@ -3050,9 +3050,9 @@ void ShellCorona::activateTaskManagerEntry(int index)
 
 QString ShellCorona::defaultShell()
 {
-    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
+    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("sonicshellrc"));
     KConfigGroup startupConfGroup(startupConf, u"Shell"_s);
-    const QString defaultValue = qEnvironmentVariable("PLASMA_DEFAULT_SHELL", u"org.kde.plasma.desktop"_s);
+    const QString defaultValue = qEnvironmentVariable("SONIC_DEFAULT_SHELL", u"org.sonicde.desktop"_s);
     QString value = startupConfGroup.readEntry("ShellPackage", defaultValue);
 
     // In the global theme an empty value was written, make sure we still return a shell package
@@ -3061,9 +3061,9 @@ QString ShellCorona::defaultShell()
 
 void ShellCorona::refreshCurrentShell()
 {
-    KSharedConfig::openConfig(QStringLiteral("plasmashellrc"))->reparseConfiguration();
+    KSharedConfig::openConfig(QStringLiteral("sonicshellrc"))->reparseConfiguration();
     //  FIXME:   setShell(defaultShell());
-    QProcess::startDetached(u"plasmashell"_s, {u"--replace"_s});
+    QProcess::startDetached(u"sonicshell"_s, {u"--replace"_s});
 }
 
 bool ShellCorona::grabContainmentImage(const QString &name, int width, int height, const QString &targetPath)

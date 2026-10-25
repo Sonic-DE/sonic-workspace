@@ -570,7 +570,7 @@ void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)
     if (!usedInAccentColor()) {
         return;
     }
-    QDBusMessage applyAccentColor = QDBusMessage::createMethodCall(u"org.kde.plasmashell.accentColor"_s, u"/AccentColor"_s, QString(), u"setAccentColor"_s);
+    QDBusMessage applyAccentColor = QDBusMessage::createMethodCall(u"org.sonicde.sonicshell.accentColor"_s, u"/AccentColor"_s, QString(), u"setAccentColor"_s);
     applyAccentColor << accentColor.rgba();
     QDBusConnection::sessionBus().send(applyAccentColor);
 }

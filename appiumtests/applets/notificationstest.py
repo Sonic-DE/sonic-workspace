@@ -283,7 +283,7 @@ class NotificationsTest(unittest.TestCase):
                 "body": f"A notification with actions {i}",
                 "actions": ["action1", f"FooAction {i}", "action2", f"BarAction {i}"],
                 "hints": {
-                    "desktop-entry": GLib.Variant("s", "org.kde.plasmashell"),
+                    "desktop-entry": GLib.Variant("s", "org.sonicde.sonicshell"),
                 },
                 "timeout": 100,
             })
@@ -476,7 +476,7 @@ class NotificationsTest(unittest.TestCase):
                 "app_name": "Appium Test",
                 "summary": summary + str(i),
                 "hints": {
-                    "desktop-entry": GLib.Variant("s", "org.kde.plasmashell"),
+                    "desktop-entry": GLib.Variant("s", "org.sonicde.sonicshell"),
                 },
                 "timeout": 60 * 1000,
             })
@@ -488,7 +488,7 @@ class NotificationsTest(unittest.TestCase):
             "app_name": "Appium Test",
             "summary": "CriticalInDndMode",
             "hints": {
-                "desktop-entry": GLib.Variant("s", "org.kde.plasmashell"),
+                "desktop-entry": GLib.Variant("s", "org.sonicde.sonicshell"),
                 "urgency": GLib.Variant("i", 2),  # Critical
             },
         })

@@ -94,7 +94,7 @@ void ServiceRunnerTest::initTestCase()
     KSycoca::self()->ensureCacheValid();
 
     // Make sure noDisplay behaves consistently WRT OnlyShowIn etc.
-    QVERIFY(setenv("XDG_CURRENT_DESKTOP", "KDE", 1) == 0);
+    QVERIFY(setenv("XDG_CURRENT_DESKTOP", "SonicDE:KDE", 1) == 0);
     // NOTE: noDisplay also includes X-KDE-OnlyShowOnQtPlatforms which is a bit harder to fake
     //       and not currently under testing anyway.
 

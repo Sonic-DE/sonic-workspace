@@ -82,7 +82,7 @@ void WallpaperFileItemAction::setAsDesktopBackground(const QString &file)
                       "}")
                       .arg(file);
 
-    auto message = QDBusMessage::createMethodCall(u"org.kde.plasmashell"_s, u"/PlasmaShell"_s, u"org.kde.PlasmaShell"_s, u"evaluateScript"_s);
+    auto message = QDBusMessage::createMethodCall(u"org.sonicde.sonicshell"_s, u"/SonicShell"_s, u"org.sonicde.SonicShell"_s, u"evaluateScript"_s);
     message.setArguments(QVariantList() << QVariant(script));
     QDBusPendingCall pendingCall = QDBusConnection::sessionBus().asyncCall(message);
     auto watcher = new QDBusPendingCallWatcher(pendingCall, this);

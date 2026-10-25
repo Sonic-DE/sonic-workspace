@@ -210,7 +210,7 @@
         "Name[zh_TW]": "通知",
         "Website": "https://kde.org/plasma-desktop/"
     },
-    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "X-KDE-ParentApp": "org.sonicde.sonicshell",
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [

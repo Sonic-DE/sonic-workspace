@@ -31,7 +31,7 @@ LanguageListModel::LanguageListModel(QObject *parent)
      * and https://mail.kde.org/pipermail/kde-i18n-doc/2023-January/001340.html
      * for more info on the matter
      */
-    auto availableLanguages = KLocalizedString::availableDomainTranslations("plasmashell");
+    auto availableLanguages = KLocalizedString::availableDomainTranslations("sonicshell");
     if (availableLanguages.contains(QStringLiteral("pt"))) {
         availableLanguages.remove(QStringLiteral("pt"));
         availableLanguages.insert(QStringLiteral("pt_PT"));

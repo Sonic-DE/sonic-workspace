@@ -60,7 +60,7 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     // for KGlobalAccel...
     // keep in sync with globalshortcuts.cpp in notification plasmoid!
     m_toggleDoNotDisturbAction->setObjectName(QStringLiteral("toggle do not disturb"));
-    m_toggleDoNotDisturbAction->setProperty("componentName", QStringLiteral("plasmashell"));
+    m_toggleDoNotDisturbAction->setProperty("componentName", QStringLiteral("sonicshell"));
     m_toggleDoNotDisturbAction->setText(i18n("Toggle do not disturb"));
     m_toggleDoNotDisturbAction->setIcon(QIcon::fromTheme(QStringLiteral("notifications-disabled")));
 

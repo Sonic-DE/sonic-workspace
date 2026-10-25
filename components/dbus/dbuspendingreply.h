@@ -32,9 +32,9 @@ class DBusMessage;
     \qml
     // Get the current wallpaper
     const pendingReply = SessionBus.asyncCall({
-        "service": "org.kde.plasmashell",
-        "path": "/PlasmaShell",
-        "iface": "org.kde.PlasmaShell",
+        "service": "org.sonicde.sonicshell",
+        "path": "/SonicShell",
+        "iface": "org.sonicde.SonicShell",
         "member": "wallpaper",
         "signature": "(u)",
         "arguments": [

@@ -396,7 +396,7 @@ void setupPlasmaEnvironment()
     qputenv("KDE_FULL_SESSION", "true");
     qputenv("KDE_SESSION_VERSION", "6");
     qputenv("KDE_SESSION_UID", QByteArray::number(getuid()));
-    qputenv("XDG_CURRENT_DESKTOP", "KDE");
+    qputenv("XDG_CURRENT_DESKTOP", "SonicDE:KDE");
 
     qputenv("KDE_APPLICATIONS_AS_SCOPE", "1");
 

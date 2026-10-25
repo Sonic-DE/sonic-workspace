@@ -151,7 +151,7 @@ void ThemeComponentRepairCoordinator::checkComponents(bool retry)
     std::sort(fingerprintParts.begin(), fingerprintParts.end());
     const QString fingerprint =
         QString::fromLatin1(QCryptographicHash::hash(fingerprintParts.join(QLatin1Char('|')).toUtf8(), QCryptographicHash::Sha256).toHex());
-    auto stateConfig = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
+    auto stateConfig = KSharedConfig::openConfig(QStringLiteral("sonicshellrc"));
     KConfigGroup state(stateConfig, QStringLiteral("ThemeComponentRepair"));
     if (state.readEntry(QStringLiteral("LastNotificationFingerprint"), QString()) == fingerprint) {
         qCDebug(PLASMASHELL) << "Suppressing repeated theme repair notification" << fingerprint;
@@ -165,7 +165,7 @@ void ThemeComponentRepairCoordinator::checkComponents(bool retry)
                                           details.join(QLatin1Char('\n')),
                                           QStringLiteral("preferences-desktop-theme"),
                                           KNotification::Persistent,
-                                          QStringLiteral("plasmashell"));
+                                          QStringLiteral("sonicshell"));
     if (!m_notification) {
         qCWarning(PLASMASHELL) << "Failed to create theme repair notification";
         return;

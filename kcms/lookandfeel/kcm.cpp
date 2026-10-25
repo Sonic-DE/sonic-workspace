@@ -301,9 +301,9 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     connect(settings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
     handleLookAndFeelPackageChanged();
 
-    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                          QStringLiteral("/PlasmaShell"),
-                                                          QStringLiteral("org.kde.PlasmaShell"),
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.sonicde.sonicshell"),
+                                                          QStringLiteral("/SonicShell"),
+                                                          QStringLiteral("org.sonicde.SonicShell"),
                                                           QStringLiteral("immutable"));
     QDBusPendingCall async = QDBusConnection::sessionBus().asyncCall(message);
 

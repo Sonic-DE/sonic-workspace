@@ -51,7 +51,7 @@ class TestJob(KJob):
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
-    app.setDesktopFileName("org.kde.plasmashell")
+    app.setDesktopFileName("org.sonicde.sonicshell")
 
     tracker = KUiServerV2JobTracker(app)
     job = TestJob()

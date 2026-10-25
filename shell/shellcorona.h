@@ -51,7 +51,7 @@ class ShellCorona : public Plasma::Corona, QDBusContext
     Q_PROPERTY(QString shell READ shell NOTIFY shellChanged)
     Q_PROPERTY(int numScreens READ numScreens)
     Q_PROPERTY(PanelView *panelBeingConfigured READ panelBeingConfigured NOTIFY panelBeingConfiguredChanged)
-    Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
+    Q_CLASSINFO("D-Bus Interface", "org.sonicde.SonicShell")
 
 public:
     explicit ShellCorona(QObject *parent = nullptr);

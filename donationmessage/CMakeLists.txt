@@ -11,6 +11,7 @@ kcoreaddons_add_plugin(donationmessage
 )
 
 target_link_libraries(donationmessage
+    sonicshellmigration
     KF6::ConfigCore
     KF6::DBusAddons
     KF6::I18n

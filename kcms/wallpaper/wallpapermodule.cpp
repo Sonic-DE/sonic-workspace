@@ -62,7 +62,7 @@ WallpaperModule::~WallpaperModule()
 
 WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
-    , m_config(KSharedConfig::openConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/plasma-org.kde.plasma.desktop-appletsrc",
+    , m_config(KSharedConfig::openConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/sonic-org.sonicde.desktop-appletsrc",
                                          KConfig::OpenFlag::SimpleConfig))
     , m_activityConsumer(new KActivities::Consumer(this))
 {
@@ -120,22 +120,22 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
 
 void WallpaperModule::connectToPlasmaShell()
 {
-    const bool connected = QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.plasmashell"),
-                                                                 QStringLiteral("/PlasmaShell"),
-                                                                 QStringLiteral("org.kde.PlasmaShell"),
+    const bool connected = QDBusConnection::sessionBus().connect(QStringLiteral("org.sonicde.sonicshell"),
+                                                                 QStringLiteral("/SonicShell"),
+                                                                 QStringLiteral("org.sonicde.SonicShell"),
                                                                  QStringLiteral("wallpaperChanged"),
                                                                  this,
                                                                  SLOT(onWallpaperChanged(uint)));
     if (!connected) {
-        qCFatal(KCM_WALLPAPER_DEBUG) << "Could not connect to dbus service org.kde.plasmashell";
+        qCFatal(KCM_WALLPAPER_DEBUG) << "Could not connect to dbus service org.sonicde.sonicshell";
     }
 }
 
 void WallpaperModule::disconnectFromPlasmaShell()
 {
-    QDBusConnection::sessionBus().disconnect(QStringLiteral("org.kde.plasmashell"),
-                                             QStringLiteral("/PlasmaShell"),
-                                             QStringLiteral("org.kde.PlasmaShell"),
+    QDBusConnection::sessionBus().disconnect(QStringLiteral("org.sonicde.sonicshell"),
+                                             QStringLiteral("/SonicShell"),
+                                             QStringLiteral("org.sonicde.SonicShell"),
                                              QStringLiteral("wallpaperChanged"),
                                              this,
                                              SLOT(onWallpaperChanged(uint)));
@@ -325,7 +325,7 @@ void WallpaperModule::load()
 void WallpaperModule::save()
 {
     KQuickConfigModule::save();
-    auto iface = new QDBusInterface(u"org.kde.plasmashell"_s, u"/PlasmaShell"_s, u"org.kde.PlasmaShell"_s, QDBusConnection::sessionBus(), this);
+    auto iface = new QDBusInterface(u"org.sonicde.sonicshell"_s, u"/SonicShell"_s, u"org.sonicde.SonicShell"_s, QDBusConnection::sessionBus(), this);
     if (!iface->isValid()) {
         qCWarning(KCM_WALLPAPER_DEBUG) << qPrintable(QDBusConnection::sessionBus().lastError().message());
         return;

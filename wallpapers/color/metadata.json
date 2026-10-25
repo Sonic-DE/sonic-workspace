@@ -176,5 +176,5 @@
         "Website": "https://kde.org/plasma-desktop"
     },
     "Keywords": "",
-    "X-KDE-ParentApp": "org.kde.plasmashell"
+    "X-KDE-ParentApp": "org.sonicde.sonicshell"
 }

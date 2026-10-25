@@ -196,7 +196,8 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
                                               displayTime,
                                               timeZoneName);
 
-        QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.plasmashell"_s, u"/org/kde/osdService"_s, u"org.kde.osdService"_s, u"showText"_s);
+        QDBusMessage msg =
+            QDBusMessage::createMethodCall(u"org.sonicde.sonicshell"_s, u"/org/sonicde/osdService"_s, u"org.sonicde.osdService"_s, u"showText"_s);
         msg.setArguments({u"clock"_s, timeZoneOsdText});
         QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
     });

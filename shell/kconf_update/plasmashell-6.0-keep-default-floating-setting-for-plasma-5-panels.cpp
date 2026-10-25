@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <iostream>
 
+#include "migrationguard.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -20,10 +21,13 @@ using namespace Qt::StringLiterals;
  */
 int main()
 {
-    const KSharedConfigPtr configPtr = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"), KConfig::FullConfig);
+    if (!sonicShellImportCompleted()) {
+        return EXIT_SUCCESS;
+    }
+    const KSharedConfigPtr configPtr = KSharedConfig::openConfig(QStringLiteral("sonicshellrc"), KConfig::FullConfig);
     KConfigGroup views(configPtr, QStringLiteral("PlasmaViews"));
     if (!views.exists() || views.groupList().empty()) {
-        std::cout << "plasmashellrc doesn't have any PlasmaViews. No need to update config." << std::endl;
+        std::cout << "sonicshellrc doesn't have any PlasmaViews. No need to update config." << std::endl;
         return EXIT_SUCCESS;
     }
 

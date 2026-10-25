@@ -23,7 +23,7 @@ AccentColorService::AccentColorService(QObject *parent, const QList<QVariant> &)
     new AccentColorServiceAdaptor(this);
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(u"/AccentColor"_s, this);
-    dbus.registerService(u"org.kde.plasmashell.accentColor"_s);
+    dbus.registerService(u"org.sonicde.sonicshell.accentColor"_s);
 }
 
 void AccentColorService::setAccentColor(unsigned accentColor)

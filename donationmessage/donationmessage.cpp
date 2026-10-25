@@ -1,11 +1,13 @@
 /*
     SPDX-FileCopyrightText: 2024 Nate Graham <nate@kde.org>
+    SPDX-FileCopyrightText: 2026 SonicDE contributors
 
     SPDX-License-Identifier: GPL-3.0-or-later
 */
 
 #include "donationmessage.h"
 #include "donationmessage_debug.h"
+#include "legacyshellmigration.h"
 
 #include <QDate>
 #include <QLoggingCategory>
@@ -23,7 +25,7 @@ using namespace Qt::StringLiterals;
 K_PLUGIN_CLASS_WITH_JSON(DonationMessage, "donationmessage.json")
 
 // Otherwise KSharedConfig::openStateConfig() puts it in ~/.local/share/kded6
-static const QString STATE_FILE_NAME = QStandardPaths::writableLocation(QStandardPaths::GenericStateLocation) + u"/plasmashellstaterc"_s;
+static const QString STATE_FILE_NAME = QStandardPaths::writableLocation(QStandardPaths::GenericStateLocation) + u"/sonicshellstaterc"_s;
 static const QString DATE_FORMAT = u"yyyy-MM-dd"_s;
 static const QString GENERAL_GROUP_NAME = u"General"_s;
 static const QString SYSTEM_INSTALL_DATE_KEY_NAME = u"SystemInstallDate"_s;
@@ -36,6 +38,11 @@ static const QUrl DONATION_URL = QUrl(u"https://kde.org/donate/?app=plasma-donat
 DonationMessage::DonationMessage(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
 {
+    QString importError;
+    if (!SonicShellMigration::importState(SonicShellMigration::userPaths(), &importError)) {
+        qCWarning(DONATION_MESSAGE) << "Cannot import shell state; leaving it unchanged:" << importError;
+        return;
+    }
     const QDate currentDate = QDate::currentDate();
     const int currentYear = currentDate.year();
     const int currentMonth = currentDate.month();

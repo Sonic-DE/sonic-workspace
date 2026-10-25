@@ -101,9 +101,9 @@ int main(int argc, char **argv)
             out << "}";
 
             if (errorCode == EXIT_SUCCESS) {
-                auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                              QStringLiteral("/PlasmaShell"),
-                                                              QStringLiteral("org.kde.PlasmaShell"),
+                auto message = QDBusMessage::createMethodCall(QStringLiteral("org.sonicde.sonicshell"),
+                                                              QStringLiteral("/SonicShell"),
+                                                              QStringLiteral("org.sonicde.SonicShell"),
                                                               QStringLiteral("evaluateScript"));
                 message.setArguments(QVariantList() << QVariant(script));
                 auto reply = QDBusConnection::sessionBus().call(message);

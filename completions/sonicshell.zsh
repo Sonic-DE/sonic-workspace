@@ -1,6 +1,7 @@
-#compdef plasmashell
+#compdef sonicshell
 
 # SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
+# SPDX-FileCopyrightText: 2026 SonicDE contributors
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
@@ -40,10 +41,9 @@ function _plasma_list_packages() {
 _arguments -s \
   '(- *)'{-h,--help}'[Displays help on commandline options]' \
   '(- *)'{-v,--version}'[Displays version information]' \
-  '(- *)--feedback[Lists the available options for user feedback]' \
   '(-d --qmljsdebugger)'{-d,--qmljsdebugger}'[Enable QML Javascript debugger]' \
   '--replace[Replace an existing instance]' \
-  '(-n --no-respawn)'{-n,--no-respawn}'[Do not restart plasma-shell automatically after a crash]' \
-  '(-a --standalone)'{-a,--standalone}'[Load plasmashell as a standalone application, needs the shell-plugin option to be specified]' \
+  '(-n --no-respawn)'{-n,--no-respawn}'[Do not restart sonicshell automatically after a crash]' \
+  '(-a --standalone)'{-a,--standalone}'[Load sonicshell as a standalone application, needs the shell-plugin option to be specified]' \
   '(-p --shell-plugin)'{-p=,--shell-plugin=}'[Force loading the given shell plugin]::: _plasma_list_packages plugins "shell plugin" Plasma/Shell' \
   '--test=[Enables test mode and specifies the layout javascript file to set up the testing environment]::layout javascript file:_files -g "*.js"'

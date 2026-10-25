@@ -16,7 +16,7 @@ class ShellCorona;
 class StrutManager : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell.StrutManager")
+    Q_CLASSINFO("D-Bus Interface", "org.sonicde.SonicShell.StrutManager")
 
 public:
     explicit StrutManager(ShellCorona *plasmashellCorona);

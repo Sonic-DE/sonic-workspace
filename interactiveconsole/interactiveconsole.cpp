@@ -51,7 +51,7 @@ using namespace Qt::StringLiterals;
 // interactive help?
 static constexpr auto s_autosaveFileName(u"interactiveconsoleautosave.js");
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
-static const QString s_plasmaShellService = QStringLiteral("org.kde.plasmashell");
+static const QString s_plasmaShellService = QStringLiteral("org.sonicde.sonicshell");
 
 InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     : QDialog(parent)
@@ -536,8 +536,8 @@ void InteractiveConsole::evaluateScript()
 
     if (m_mode == PlasmaConsole) {
         QDBusMessage message = QDBusMessage::createMethodCall(s_plasmaShellService,
-                                                              QStringLiteral("/PlasmaShell"),
-                                                              QStringLiteral("org.kde.PlasmaShell"),
+                                                              QStringLiteral("/SonicShell"),
+                                                              QStringLiteral("org.sonicde.SonicShell"),
                                                               QStringLiteral("evaluateScript"));
         QList<QVariant> arguments;
         arguments << QVariant(m_editorPart->text());

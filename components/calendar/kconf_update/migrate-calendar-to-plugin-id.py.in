@@ -16,7 +16,7 @@ proc = subprocess.Popen(
         "@QTPATHS_PATH@",
         "--locate-file",
         "ConfigLocation",
-        "plasma-org.kde.plasma.desktop-appletsrc",
+        "sonic-org.sonicde.desktop-appletsrc",
     ],
     stdout=subprocess.PIPE,
 )

@@ -94,12 +94,12 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    // We aren't actually plasmashell, for all intents and purpose we are part of it though from the user perspective.
+    // We aren't actually sonicshell, but are part of it from the user perspective.
     if (int ret = ca_context_change_props(context,
                                           CA_PROP_APPLICATION_NAME,
-                                          "plasmashell",
+                                          "Sonic Shell",
                                           CA_PROP_APPLICATION_ID,
-                                          "org.kde.plasmashell.desktop",
+                                          "org.sonicde.sonicshell.desktop",
                                           CA_PROP_APPLICATION_ICON_NAME,
                                           "plasmashell",
                                           nullptr);

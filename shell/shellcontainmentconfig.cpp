@@ -430,7 +430,7 @@ QString ShellContainmentModel::containmentPreview(Plasma::Containment *containme
     m_corona->grabContainmentPreview(containment);
 
     // If not found, try to understand the configured wallpaper for the containment, assuming is using the Image plugin
-    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QLatin1String("plasma-") + m_corona->shell() + QLatin1String("-appletsrc"), KConfig::SimpleConfig);
+    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QLatin1String("sonic-") + m_corona->shell() + QLatin1String("-appletsrc"), KConfig::SimpleConfig);
     KConfigGroup containmentsGroup(conf, u"Containments"_s);
     KConfigGroup config = containmentsGroup.group(QString::number(containment->id()));
     auto wallpaperPlugin = config.readEntry("wallpaperplugin");

@@ -234,9 +234,9 @@ KLookAndFeelManifest KLookAndFeelManifest::snapshot()
     manifest.setDecorationLibrary(systemCG.readEntry("library", QStringLiteral("org.kde.silver")));
     manifest.setDecorationTheme(systemCG.readEntry("theme", QStringLiteral("Silver")));
 
-    const QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                                QStringLiteral("/PlasmaShell"),
-                                                                QStringLiteral("org.kde.PlasmaShell"),
+    const QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.sonicde.sonicshell"),
+                                                                QStringLiteral("/SonicShell"),
+                                                                QStringLiteral("org.sonicde.SonicShell"),
                                                                 QStringLiteral("dumpCurrentLayoutJS"));
     const QDBusMessage reply = QDBusConnection::sessionBus().call(message);
     if (reply.type() == QDBusMessage::ReplyMessage) {
@@ -339,7 +339,7 @@ void KLookAndFeelManifest::writeLayout(const QDir &contentsDirectory)
     const QDir layoutsDirectory(contentsDirectory.absoluteFilePath(QStringLiteral("layouts")));
     layoutsDirectory.mkpath(QStringLiteral("."));
 
-    QFile file(layoutsDirectory.absoluteFilePath(QStringLiteral("org.kde.plasma.desktop-layout.js")));
+    QFile file(layoutsDirectory.absoluteFilePath(QStringLiteral("org.sonicde.desktop-layout.js")));
     if (!file.open(QIODevice::WriteOnly)) {
         qWarning("Failed to open %s for writing: %s", qPrintable(file.fileName()), qPrintable(file.errorString()));
         return;

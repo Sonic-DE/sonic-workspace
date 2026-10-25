@@ -207,7 +207,7 @@
         "Name[zh_TW]": "數位時鐘",
         "Website": "https://kde.org/plasma-desktop"
     },
-    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "X-KDE-ParentApp": "org.sonicde.sonicshell",
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-Provides": [
         "org.kde.plasma.time",

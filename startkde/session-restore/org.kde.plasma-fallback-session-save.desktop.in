@@ -52,5 +52,5 @@ Name[zh_TW]=Plasma 工作階段儲存
 Icon=plasmashell
 Type=Application
 X-KDE-StartupNotify=false
-OnlyShowIn=KDE;
+OnlyShowIn=SonicDE;
 NoDisplay=true

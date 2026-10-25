@@ -131,9 +131,9 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
                                               m_wallpaperConfigModel,
                                               SLOT(repopulate()));
 
-        QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.plasmashell"),
-                                              QStringLiteral("/PlasmaShell"),
-                                              QStringLiteral("org.kde.PlasmaShell"),
+        QDBusConnection::sessionBus().connect(QStringLiteral("org.sonicde.sonicshell"),
+                                              QStringLiteral("/SonicShell"),
+                                              QStringLiteral("org.sonicde.SonicShell"),
                                               QStringLiteral("wallpaperChanged"),
                                               this,
                                               SLOT(onWallpaperChanged(uint)));

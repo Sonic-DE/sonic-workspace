@@ -61,6 +61,6 @@ Name[zh_TW]=XembedSniProxy
 Type=Application
 StartupNotify=false
 NoDisplay=true
-OnlyShowIn=KDE;
+OnlyShowIn=SonicDE;
 X-KDE-autostart-phase=0
 X-systemd-skip=true

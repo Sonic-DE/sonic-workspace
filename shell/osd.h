@@ -24,7 +24,7 @@ class ShellCorona;
 class Osd : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.osdService")
+    Q_CLASSINFO("D-Bus Interface", "org.sonicde.osdService")
 public:
     Osd(const KSharedConfig::Ptr &config, ShellCorona *corona);
     ~Osd() override;

@@ -8,7 +8,7 @@
 #include <QObject>
 #include <QtDBus>
 
-#define SERVICE_NAME "org.kde.plasmashell"
+#define SERVICE_NAME "org.sonicde.sonicshell"
 
 using namespace Qt::StringLiterals;
 
@@ -29,8 +29,8 @@ private:
 void SetWallPaperTest::printCurrentWallpaper()
 {
     QDBusMessage request = QDBusMessage::createMethodCall(QStringLiteral(SERVICE_NAME),
-                                                          QStringLiteral("/PlasmaShell"),
-                                                          QStringLiteral("org.kde.PlasmaShell"),
+                                                          QStringLiteral("/SonicShell"),
+                                                          QStringLiteral("org.sonicde.SonicShell"),
                                                           QStringLiteral("wallpaper"));
     request.setArguments({uint(0)});
 
@@ -54,15 +54,15 @@ void SetWallPaperTest::setWallpaper(const QString &wallpaperPath)
     printCurrentWallpaper();
 
     // find our remote
-    auto iface = new QDBusInterface(QStringLiteral(SERVICE_NAME), u"/PlasmaShell"_s, u"org.kde.PlasmaShell"_s, QDBusConnection::sessionBus(), this);
+    auto iface = new QDBusInterface(QStringLiteral(SERVICE_NAME), u"/SonicShell"_s, u"org.sonicde.SonicShell"_s, QDBusConnection::sessionBus(), this);
     if (!iface->isValid()) {
         fprintf(stderr, "%s\n", qPrintable(QDBusConnection::sessionBus().lastError().message()));
         QCoreApplication::instance()->quit();
     }
 
     const bool connected = QDBusConnection::sessionBus().connect(QStringLiteral(SERVICE_NAME),
-                                                                 QStringLiteral("/PlasmaShell"),
-                                                                 QStringLiteral("org.kde.PlasmaShell"),
+                                                                 QStringLiteral("/SonicShell"),
+                                                                 QStringLiteral("org.sonicde.SonicShell"),
                                                                  QStringLiteral("wallpaperChanged"),
                                                                  this,
                                                                  SLOT(onWallpaperChanged(uint)));

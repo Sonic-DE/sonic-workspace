@@ -5,7 +5,7 @@ Icon=preferences-system
 Type=Application
 X-DocPath=systemsettings/index.html
 StartupNotify=true
-OnlyShowIn=KDE;
+OnlyShowIn=SonicDE;
 
 GenericName=System Settings ServiceRunnerTest
 

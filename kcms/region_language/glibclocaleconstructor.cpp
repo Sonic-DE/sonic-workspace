@@ -97,7 +97,7 @@ void GlibcLocaleConstructor::constructGlibcLocaleMap()
         m_map.insert({plasmaLocale, toUTF8Locale(glibcLocale)});
     };
 
-    auto plasmaLocales = KLocalizedString::availableDomainTranslations(QByteArrayLiteral("plasmashell")).values();
+    auto plasmaLocales = KLocalizedString::availableDomainTranslations(QByteArrayLiteral("sonicshell")).values();
     for (const auto &plasmaLocale : plasmaLocales) {
         auto baseLocale = plasmaLocale.split(u'_')[0].split(u'@')[0];
         if (basem_map.contains(baseLocale)) {

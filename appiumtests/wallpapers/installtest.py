@@ -21,17 +21,17 @@ sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pard
 from GLibMainLoopThread import GLibMainLoopThread
 
 BIN_PATH: Final = os.path.join(os.getenv("CMAKE_BINARY_DIR", "/usr/bin/"), "plasma-apply-wallpaperimage")
-DBUS_XML_PATH: Final = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "shell/dbus/org.kde.PlasmaShell.xml")
+DBUS_XML_PATH: Final = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "shell/dbus/org.sonicde.SonicShell.xml")
 
 
 class OrgKdePlasmashell:
     """
-    D-Bus interfaces for org.kde.plasmashell
+    D-Bus interfaces for org.sonicde.sonicshell
     """
 
-    BUS_NAME: Final = "org.kde.plasmashell"
-    OBJECT_PATH: Final = "/PlasmaShell"
-    INTERFACE_NAME: Final = "org.kde.PlasmaShell"
+    BUS_NAME: Final = "org.sonicde.sonicshell"
+    OBJECT_PATH: Final = "/SonicShell"
+    INTERFACE_NAME: Final = "org.sonicde.SonicShell"
 
     connection: Gio.DBusConnection
 

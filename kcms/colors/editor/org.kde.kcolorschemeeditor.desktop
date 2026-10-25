@@ -167,5 +167,5 @@ Icon=preferences-desktop-color
 Type=Application
 Terminal=false
 NoDisplay=true
-OnlyShowIn=KDE;
+OnlyShowIn=SonicDE;
 Categories=Qt;KDE;Settings;X-KDE-settings-looknfeel;

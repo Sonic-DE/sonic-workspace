@@ -1,5 +1,10 @@
 set(USE_SCRIPTING 1)
 
+add_library(sonicshellmigration STATIC legacyshellmigration.cpp)
+set_target_properties(sonicshellmigration PROPERTIES POSITION_INDEPENDENT_CODE ON)
+target_include_directories(sonicshellmigration PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(sonicshellmigration PUBLIC Qt::Core)
+
 configure_file(config-ktexteditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktexteditor.h )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-plasma.h)
@@ -17,21 +22,21 @@ set(scripting_SRC
     scripting/widget.cpp
 )
 
-set(plasmashell_dbusXML dbus/org.kde.PlasmaShell.xml)
-qt_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
+set(sonicshell_dbusXML dbus/org.sonicde.SonicShell.xml)
+qt_add_dbus_adaptor(scripting_SRC ${sonicshell_dbusXML} shellcorona.h ShellCorona sonicshelladaptor)
 
-ecm_qt_declare_logging_category(plasmashell HEADER debug.h
+ecm_qt_declare_logging_category(sonicshell HEADER debug.h
                                                IDENTIFIER PLASMASHELL
-                                               CATEGORY_NAME kde.plasmashell
+                                                CATEGORY_NAME org.sonicde.sonicshell
                                                DEFAULT_SEVERITY Info
-                                               DESCRIPTION "plasmashell"
+                                                DESCRIPTION "Sonic Shell"
                                                EXPORT PLASMAWORKSPACE)
 
-ecm_qt_declare_logging_category(plasmashell HEADER screenpool-debug.h
+ecm_qt_declare_logging_category(sonicshell HEADER screenpool-debug.h
                                                IDENTIFIER SCREENPOOL
-                                               CATEGORY_NAME kde.plasmashell.screenpool
+                                                CATEGORY_NAME org.sonicde.sonicshell.screenpool
                                                DEFAULT_SEVERITY Info
-                                               DESCRIPTION "plasmashell screenpool"
+                                                DESCRIPTION "Sonic Shell screenpool"
                                                EXPORT PLASMAWORKSPACE
                                            )
 set (plasma_shell_SRCS
@@ -57,40 +62,33 @@ set (plasma_shell_SRCS
     ${scripting_SRC}
 )
 
-if (TARGET KF6::UserFeedbackCore)
-    set(plasma_shell_SRCS
-        ${plasma_shell_SRCS}
-        userfeedback.cpp
-    )
-endif()
-
 kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GENERATE_MOC)
 
-add_executable(plasmashell)
+add_executable(sonicshell)
 
-ecm_add_qml_module(plasmashell
-    URI "org.kde.plasma.shell"
+ecm_add_qml_module(sonicshell
+    URI "org.sonicde.sonicshell"
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES QtQuick
 )
 
-ecm_add_qml_module(plasmashell_osd
-    URI "org.kde.plasma.workspace.osd"
+ecm_add_qml_module(sonicshell_osd
+    URI "org.sonicde.sonicshell.osd"
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES QtQuick
 )
-ecm_target_qml_sources(plasmashell_osd SOURCES
+ecm_target_qml_sources(sonicshell_osd SOURCES
     qml/Osd.qml
     qml/OsdItem.qml
 )
-ecm_finalize_qml_module(plasmashell_osd)
+ecm_finalize_qml_module(sonicshell_osd)
 
-target_sources(plasmashell_osd PRIVATE
+target_sources(sonicshell_osd PRIVATE
     osdwindow.cpp
     osdwindow.h
 )
 
-target_link_libraries(plasmashell_osd PRIVATE
+target_link_libraries(sonicshell_osd PRIVATE
     Plasma::PlasmaQuick
 )
 
@@ -98,9 +96,9 @@ if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
 endif()
 
-target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
+target_sources(sonicshell PRIVATE ${plasma_shell_SRCS})
 
-target_link_libraries(plasmashell PRIVATE
+target_link_libraries(sonicshell PRIVATE
  KF6::ConfigCore # Activate KRunner on the desktop
  KF6::ConfigGui
  KF6::CoreAddons
@@ -128,30 +126,26 @@ target_link_libraries(plasmashell PRIVATE
  Qt::Quick
  Qt::DBus
 )
-target_link_libraries(plasmashell PRIVATE KF6::ConfigQml)
-if (TARGET KF6::UserFeedbackCore)
-    target_link_libraries(plasmashell PRIVATE KF6::UserFeedbackCore)
-    target_compile_definitions(plasmashell PRIVATE -DWITH_KUSERFEEDBACKCORE)
-endif()
+target_link_libraries(sonicshell PRIVATE KF6::ConfigQml sonicshellmigration)
 
-target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
-target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
+target_include_directories(sonicshell PRIVATE "${CMAKE_BINARY_DIR}")
+target_compile_definitions(sonicshell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
-target_link_libraries(plasmashell PRIVATE XCB::XCB XCB::RANDR)
+target_link_libraries(sonicshell PRIVATE XCB::XCB XCB::RANDR)
 
 if(PROJECT_VERSION_PATCH GREATER_EQUAL 80 OR PROJECT_VERSION_MINOR GREATER_EQUAL 80)
-    target_link_libraries(plasmashell PRIVATE KF6::KIOGui)
+    target_link_libraries(sonicshell PRIVATE KF6::KIOGui)
 endif()
 
-configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)
+configure_file(org.sonicde.sonicshell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.sonicde.sonicshell.desktop @ONLY)
 
-install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
-install(FILES plasmashell.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
-install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
+install(TARGETS sonicshell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.sonicde.sonicshell.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.sonicde.sonicshell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(FILES sonicshell.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
+install( FILES dbus/org.sonicde.SonicShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 
-ecm_install_configured_files(INPUT plasma-plasmashell.service.in @ONLY DESTINATION  ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
+ecm_install_configured_files(INPUT sonic-sonicshell.service.in @ONLY DESTINATION  ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 
 add_subdirectory(packageplugins)
 if(BUILD_TESTING)

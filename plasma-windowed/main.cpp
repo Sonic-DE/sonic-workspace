@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
                                          i18n("Force loading the given shell plugin"),
                                          QStringLiteral("plugin"),
-                                         QStringLiteral("org.kde.plasma.desktop"));
+                                         QStringLiteral("org.sonicde.desktop"));
     parser.addOption(shellPluginOption);
     parser.addPositionalArgument(QStringLiteral("applet"), i18n("The applet to open."));
     parser.addPositionalArgument(QStringLiteral("args"), i18n("Arguments to pass to the plasmoid."), QStringLiteral("[args...]"));

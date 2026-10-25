@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=XSession
 Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma-dev.sh -x11
-DesktopNames=KDE
+DesktopNames=SonicDE;KDE;
 Name=SonicDE (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ar]=SonicDE (تطوير, اكس11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[az]=SonicDE (Tərtib mərhələsində olan X11 ${CMAKE_INSTALL_FULL_BINDIR})

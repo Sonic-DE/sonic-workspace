@@ -29,7 +29,7 @@ Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     , m_corona(corona)
     , m_osdConfigGroup(config, u"OSD"_s)
 {
-    QDBusConnection::sessionBus().registerObject(u"/org/kde/osdService"_s, this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
+    QDBusConnection::sessionBus().registerObject(u"/org/sonicde/osdService"_s, this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 }
 
 Osd::~Osd() = default;
@@ -233,7 +233,7 @@ bool Osd::init()
         m_osdObject = new PlasmaQuick::SharedQmlEngine(this);
     }
 
-    m_osdObject->setSourceFromModule("org.kde.plasma.workspace.osd", "Osd");
+    m_osdObject->setSourceFromModule("org.sonicde.sonicshell.osd", "Osd");
 
     if (m_osdObject->status() != QQmlComponent::Ready) {
         qCWarning(PLASMASHELL) << "Failed to load OSD QML file";

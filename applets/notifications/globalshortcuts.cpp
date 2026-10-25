@@ -20,7 +20,7 @@ GlobalShortcuts::GlobalShortcuts(QObject *parent)
     , m_clearHistoryAction(new QAction(this))
 {
     m_toggleDoNotDisturbAction->setObjectName(QStringLiteral("toggle do not disturb"));
-    m_toggleDoNotDisturbAction->setProperty("componentName", QStringLiteral("plasmashell"));
+    m_toggleDoNotDisturbAction->setProperty("componentName", QStringLiteral("sonicshell"));
     m_toggleDoNotDisturbAction->setText(i18n("Toggle do not disturb"));
     m_toggleDoNotDisturbAction->setIcon(QIcon::fromTheme(QStringLiteral("notifications-disabled")));
     m_toggleDoNotDisturbAction->setShortcutContext(Qt::ApplicationShortcut);
@@ -29,7 +29,7 @@ GlobalShortcuts::GlobalShortcuts(QObject *parent)
     KGlobalAccel::self()->setGlobalShortcut(m_toggleDoNotDisturbAction, QKeySequence());
 
     m_clearHistoryAction->setObjectName(QStringLiteral("clear history"));
-    m_clearHistoryAction->setProperty("componentName", QStringLiteral("plasmashell"));
+    m_clearHistoryAction->setProperty("componentName", QStringLiteral("sonicshell"));
     m_clearHistoryAction->setText(i18nc("@action", "Clear Notification History"));
     m_clearHistoryAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
     m_clearHistoryAction->setShortcutContext(Qt::ApplicationShortcut);
@@ -43,9 +43,9 @@ GlobalShortcuts::~GlobalShortcuts() = default;
 void GlobalShortcuts::showDoNotDisturbOsd(bool doNotDisturb) const
 {
     QDBusMessage msg = QDBusMessage::createMethodCall( //
-        QStringLiteral("org.kde.plasmashell"),
-        QStringLiteral("/org/kde/osdService"),
-        QStringLiteral("org.kde.osdService"),
+        QStringLiteral("org.sonicde.sonicshell"),
+        QStringLiteral("/org/sonicde/osdService"),
+        QStringLiteral("org.sonicde.osdService"),
         QStringLiteral("showText"));
 
     const QString iconName = doNotDisturb ? QStringLiteral("notifications-disabled") : QStringLiteral("notifications");
@@ -59,9 +59,9 @@ void GlobalShortcuts::showDoNotDisturbOsd(bool doNotDisturb) const
 
 void GlobalShortcuts::showNotificationsHistoryCleaned() const
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                      QStringLiteral("/org/kde/osdService"),
-                                                      QStringLiteral("org.kde.osdService"),
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.sonicde.sonicshell"),
+                                                      QStringLiteral("/org/sonicde/osdService"),
+                                                      QStringLiteral("org.sonicde.osdService"),
                                                       QStringLiteral("showText"));
 
     const QString iconName = QStringLiteral("edit-clear-history");

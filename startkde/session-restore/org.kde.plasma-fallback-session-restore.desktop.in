@@ -49,8 +49,7 @@ Name[uk]=Відновлення сеансу Плазми
 Name[zh_CN]=Plasma 会话恢复
 Name[zh_TW]=Plasma 工作階段回復
 Icon=plasmashell
-OnlyShowIn=KDE;
+OnlyShowIn=SonicDE;
 Type=Application
 X-KDE-StartupNotify=false
 NoDisplay=true
-

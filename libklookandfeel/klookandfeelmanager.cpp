@@ -118,7 +118,7 @@ KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackag
                              || configProvides(conf, u"kdeglobals/General"_s, u"activeFont"_s));
 
         contents.setFlag(WindowPlacement, configProvides(conf, u"kwinrc/Windows"_s, u"Placement"_s));
-        contents.setFlag(ShellPackage, configProvides(conf, u"plasmashellrc/Shell"_s, u"ShellPackage"_s));
+        contents.setFlag(ShellPackage, configProvides(conf, u"sonicshellrc/Shell"_s, u"ShellPackage"_s));
 
         // TODO: Currently managed together within the "DesktopLayout" content
     }
@@ -166,7 +166,7 @@ void KLookAndFeelManager::setShellPackage(const QString &value)
         return;
     }
 
-    writeNewDefaults(QStringLiteral("plasmashellrc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
+    writeNewDefaults(QStringLiteral("sonicshellrc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
     m_plasmashellChanged = true;
 }
 
@@ -440,9 +440,9 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
     }
 
     if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
-        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                              QStringLiteral("/PlasmaShell"),
-                                                              QStringLiteral("org.kde.PlasmaShell"),
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.sonicde.sonicshell"),
+                                                              QStringLiteral("/SonicShell"),
+                                                              QStringLiteral("org.sonicde.SonicShell"),
                                                               QStringLiteral("loadLookAndFeelDefaultLayout"));
 
         QList<QVariant> args;
@@ -531,7 +531,7 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
         }
 
         if (itemsToApply.testFlag(ShellPackage)) {
-            group = KConfigGroup(conf, u"plasmashellrc"_s);
+            group = KConfigGroup(conf, u"sonicshellrc"_s);
             group = KConfigGroup(&group, u"Shell"_s);
             setShellPackage(group.readEntry("ShellPackage", QString()));
         }
@@ -603,7 +603,7 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
 
         if (m_plasmashellChanged) {
             QDBusMessage message =
-                QDBusMessage::createSignal(QStringLiteral("/PlasmaShell"), QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("refreshCurrentShell"));
+                QDBusMessage::createSignal(QStringLiteral("/SonicShell"), QStringLiteral("org.sonicde.SonicShell"), QStringLiteral("refreshCurrentShell"));
             QDBusConnection::sessionBus().send(message);
         }
 
