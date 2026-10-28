@@ -66,7 +66,8 @@ void AutoStart::loadAutoStartList()
 
     for (auto it = files.constBegin(); it != files.constEnd(); ++it) {
         PlasmaAutostart config(*it);
-        if (!config.autostarts(QStringLiteral("KDE"), PlasmaAutostart::CheckAll)) {
+        // Entries kept out of KDE (e.g. GNOME's polkit agent) stay out of SonicDE too.
+        if (!config.autostarts(QStringLiteral("SonicDE"), PlasmaAutostart::CheckAll) || config.excludedEnvironments().contains(QStringLiteral("KDE"))) {
             continue;
         }
 
