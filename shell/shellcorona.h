@@ -324,6 +324,7 @@ private:
 
     WId m_previousWId = 0;
     bool m_blockRestorePreviousWindow = false;
+    bool m_editModeShowedDesktop = false;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
