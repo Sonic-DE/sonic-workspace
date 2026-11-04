@@ -43,6 +43,7 @@ using namespace Qt::StringLiterals;
 {
     auto *hintLabel = new QLabel(text, parent);
     hintLabel->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
+    hintLabel->setTextFormat(Qt::RichText);
     hintLabel->setWordWrap(true);
     hintLabel->setAlignment(Qt::AlignLeft | Qt::AlignTop);
 
@@ -248,6 +249,7 @@ appear in the Klipper popup menu and can be executed."),
                                               "These actions appear in the popup menu \
 which can be configured on the <interface>Action Menu</interface> page."),
                                        this);
+        msg->setTextFormat(Qt::RichText);
         msg->setMessageType(KMessageWidget::Information);
         msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         msg->setWordWrap(true);
