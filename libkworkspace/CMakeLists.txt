@@ -27,6 +27,11 @@ qt_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/startkd
 qt_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/startkde/plasma-shutdown/org.kde.Shutdown.xml shutdown_interface)
 
 add_library(kworkspace ${kworkspace_LIB_SRCS})
+ecm_add_qml_module(kworkspace
+    URI "org.kde.kworkspace"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+)
 add_library(PW::KWorkspace ALIAS kworkspace)
 set_target_properties(kworkspace PROPERTIES
                              VERSION ${PROJECT_VERSION}
@@ -42,6 +47,7 @@ target_link_libraries(kworkspace
     PUBLIC
         Qt::Core
         KF6::CoreAddons
+        Qt::Qml
     PRIVATE
         Qt::DBus
         KF6::I18n
@@ -99,6 +105,8 @@ install(EXPORT libkworkspaceLibraryTargets
         NAMESPACE PW::
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibKWorkspaceLibraryTargets.cmake )
+
+ecm_finalize_qml_module(kworkspace)
 
 if(BUILD_TESTING)
     add_subdirectory(tests)
