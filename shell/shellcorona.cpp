@@ -2111,6 +2111,9 @@ void ShellCorona::insertActivity(const QString &id, const QString &plugin)
 {
     activityAdded(id);
 
+    // Set before switching: the switch creates the activity's containments.
+    m_activityContainmentPlugins.insert(id, plugin);
+
     // TODO: This needs to go away!
     // The containment creation API does not know when we have a
     // new activity to create a containment for, we need to pretend
@@ -2127,7 +2130,6 @@ void ShellCorona::insertActivity(const QString &id, const QString &plugin)
         QCoreApplication::processEvents();
     }
 
-    m_activityContainmentPlugins.insert(id, plugin);
     for (auto it = m_desktopViewForScreen.constBegin(); it != m_desktopViewForScreen.constEnd(); ++it) {
         Plasma::Containment *c = createContainmentForActivity(id, (*it)->containment()->screen());
         if (c) {
