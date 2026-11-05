@@ -5,9 +5,11 @@
 */
 
 #include "interactiveconsole.h"
+#include <KShell>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDebug>
+#include <QDir>
 
 int main(int argc, char **argv)
 {
@@ -20,6 +22,7 @@ int main(int argc, char **argv)
     QCommandLineOption kwinOpt(QStringLiteral("kwin"));
     parser.addOption(plasmaOpt);
     parser.addOption(kwinOpt);
+    parser.addPositionalArgument(QStringLiteral("file"), QStringLiteral("A script to open in the console"), QStringLiteral("[file]"));
     parser.addHelpOption();
     parser.process(app);
     if (parser.isSet(plasmaOpt) && parser.isSet(kwinOpt)) {
@@ -32,6 +35,9 @@ int main(int argc, char **argv)
     }
     // set to delete on close
     auto console = new InteractiveConsole(mode);
+    if (!parser.positionalArguments().isEmpty()) {
+        console->loadScript(QDir::current().absoluteFilePath(KShell::tildeExpand(parser.positionalArguments().constFirst())));
+    }
     console->show();
     return app.exec();
 }
