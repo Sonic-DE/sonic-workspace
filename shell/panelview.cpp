@@ -130,6 +130,8 @@ PanelView::~PanelView()
 {
     if (containment()) {
         m_corona->requestApplicationConfigSync();
+        // The window going away can change an applet's status while QQuickWindow is destroyed.
+        disconnect(containment(), nullptr, this, nullptr);
     }
 }
 
