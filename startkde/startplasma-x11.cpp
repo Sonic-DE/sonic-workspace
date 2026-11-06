@@ -58,6 +58,11 @@ int main(int argc, char **argv)
 
     setupPlasmaEnvironment();
 
+    // Prefer the QXLibre platform plugin, keeping any other value the user set.
+    const QByteArray qpaPlatform = qgetenv("QT_QPA_PLATFORM");
+    if (qpaPlatform.isEmpty() || qpaPlatform == "xcb")
+        qputenv("QT_QPA_PLATFORM", QByteArrayView("xlibre;xcb"));
+
     std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
     Q_UNUSED(ksplash)
 

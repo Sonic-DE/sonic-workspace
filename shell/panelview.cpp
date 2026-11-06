@@ -27,6 +27,7 @@
 #include <QQmlEngine>
 #include <QRegularExpression>
 #include <QScreen>
+#include <QWidget>
 
 #include <KLocalizedString>
 #include <KX11Extras>
@@ -75,6 +76,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::updateMask);
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::updateAdaptiveOpacityEnabled);
     connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateMask);
+    connect(this, &PanelView::backgroundCutoutChanged, this, &PanelView::updateMask);
     connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateEnabledBorders);
     // TODO: add finished/componentComplete signal to QuickViewSharedEngine,
     // so we exactly know when rootobject is available
@@ -492,6 +494,38 @@ void PanelView::setBackgroundHints(Plasma::Types::BackgroundHints hint)
     Q_EMIT backgroundHintsChanged();
 }
 
+QRect PanelView::backgroundCutout() const
+{
+    return m_backgroundCutout;
+}
+
+void PanelView::setBackgroundCutout(const QRect &cutout)
+{
+    if (m_backgroundCutout == cutout) {
+        return;
+    }
+
+    m_backgroundCutout = cutout;
+
+    Q_EMIT backgroundCutoutChanged();
+}
+
+bool PanelView::backgroundCutoutBlur() const
+{
+    return m_backgroundCutoutBlur;
+}
+
+void PanelView::setBackgroundCutoutBlur(bool blur)
+{
+    if (m_backgroundCutoutBlur == blur) {
+        return;
+    }
+
+    m_backgroundCutoutBlur = blur;
+
+    Q_EMIT backgroundCutoutChanged();
+}
+
 KSvg::FrameSvg::EnabledBorders PanelView::enabledBorders() const
 {
     return m_enabledBorders;
@@ -504,11 +538,6 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     }
 
     m_visibilityMode = mode;
-
-    disconnect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
-    if (edgeActivated()) {
-        connect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
-    }
 
     if (config().isValid() && config().parent().isValid()) {
         // panelVisibility is not resolution dependent, don't write to Defaults
@@ -973,16 +1002,22 @@ void PanelView::moveEvent(QMoveEvent *ev)
 
 void PanelView::keyPressEvent(QKeyEvent *event)
 {
-    // Press escape key to cancel focus on the panel
-    if (event->key() == Qt::Key_Escape) {
-        if (containment()->status() == Plasma::Types::AcceptingInputStatus) {
-            containment()->setStatus(Plasma::Types::PassiveStatus);
-        }
+    // A menu that didn't take the keyboard: the keys are for it.
+    if (QWidget *popup = QApplication::activePopupWidget()) {
+        QCoreApplication::sendEvent(popup, event);
+        return;
     }
 
     PlasmaQuick::ContainmentView::keyPressEvent(event);
     if (event->isAccepted()) {
         return;
+    }
+
+    // Press escape key to cancel focus on the panel, unless something in it used the key
+    if (event->key() == Qt::Key_Escape) {
+        if (containment()->status() == Plasma::Types::AcceptingInputStatus) {
+            containment()->setStatus(Plasma::Types::PassiveStatus);
+        }
     }
 
     // Catch arrows keyPress to have same behavior as tab/backtab
@@ -1316,20 +1351,25 @@ void PanelView::updateMask()
         mask = QRegion(QRect(screenPanelRect));
     }
 
+    const QRegion cutout = mask.intersected(m_backgroundCutout);
+    const QRegion blurCutout = m_backgroundCutoutBlur ? cutout : QRegion();
     if (m_backgroundHints == Plasma::Types::NoBackground) {
-        KWindowEffects::enableBlurBehind(this, false);
+        // An empty region would ask for the whole window.
+        KWindowEffects::enableBlurBehind(this, !blurCutout.isEmpty(), blurCutout);
         KWindowEffects::enableBackgroundContrast(this, false);
     } else {
         // We use mask for graphical effect which tightly  covers the panel
         // For the input region (QWindow::mask) screenPanelRect includes area around the floating
         // panel in order to respect Fitt's law
-        KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
+        const QRegion background = mask.subtracted(cutout);
+        const QRegion blur = m_theme.blurBehindEnabled() ? background.united(blurCutout) : blurCutout;
+        KWindowEffects::enableBlurBehind(this, !blur.isEmpty(), blur);
         KWindowEffects::enableBackgroundContrast(this,
                                                  m_theme.backgroundContrastEnabled(),
                                                  m_theme.backgroundContrast(),
                                                  m_theme.backgroundIntensity(),
                                                  m_theme.backgroundSaturation(),
-                                                 mask);
+                                                 background);
     }
 
     if (KX11Extras::compositingActive()) {
@@ -1540,6 +1580,11 @@ void PanelView::refreshContainment()
     // FEATURE 352476: cancel focus on the panel when clicking outside
     connect(this, &PanelView::activeFocusItemChanged, cont, [this, cont] {
         if (cont->status() == Plasma::Types::AcceptingInputStatus && !activeFocusItem()) {
+            // A menu or dialog of this panel took the focus: nothing outside was clicked.
+            const QWindow *focus = QGuiApplication::focusWindow();
+            if (focus && focus != this && (focus->type() == Qt::Popup || focus->transientParent() == this)) {
+                return;
+            }
             // BUG 454729: avoid switching to PassiveStatus in keyboard navigation
             cont->setStatus(Plasma::Types::ActiveStatus);
         }
@@ -1616,6 +1661,8 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
         KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
     } else if (status == Plasma::Types::AcceptingInputStatus) {
+        // The panel's shortcut opens it here, and closes it by leaving this status.
+        setAutoHideEnabled(false);
         m_corona->savePreviousWindow();
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
         KX11Extras::forceActiveWindow(winId());
@@ -1628,6 +1675,8 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
         }
     } else {
         if (status == Plasma::Types::PassiveStatus) {
+            // Closed on purpose: it goes even with the mouse over it.
+            m_containsMouse = false;
             m_corona->restorePreviousWindow();
         } else if (status == Plasma::Types::ActiveStatus) {
             m_corona->clearPreviousWindow();

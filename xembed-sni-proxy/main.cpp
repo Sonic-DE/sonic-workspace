@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 {
     // the whole point of this is to interact with X, if we are in any other session, force trying to connect to X
     // if the QPA can't load xcb, this app is useless anyway.
-    qputenv("QT_QPA_PLATFORM", "xcb");
+    qputenv("QT_QPA_PLATFORM", "xlibre;xcb");
 
     QGuiApplication::setDesktopSettingsAware(false);
     QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);

@@ -144,6 +144,17 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(bool floatingApplets READ floatingApplets WRITE setFloatingApplets NOTIFY floatingAppletsChanged)
 
+    /**
+     * Part of the window, for a widget that draws its own background there: the panel draws no
+     * background, blur or contrast in it. Empty for none.
+     */
+    Q_PROPERTY(QRect backgroundCutout READ backgroundCutout WRITE setBackgroundCutout NOTIFY backgroundCutoutChanged)
+
+    /**
+     * Whether what is behind the cutout gets blurred.
+     */
+    Q_PROPERTY(bool backgroundCutoutBlur READ backgroundCutoutBlur WRITE setBackgroundCutoutBlur NOTIFY backgroundCutoutChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -214,6 +225,11 @@ public:
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
 
+    QRect backgroundCutout() const;
+    void setBackgroundCutout(const QRect &cutout);
+    bool backgroundCutoutBlur() const;
+    void setBackgroundCutoutBlur(bool blur);
+
     KSvg::FrameSvg::EnabledBorders enabledBorders() const;
 
     VisibilityMode visibilityMode() const;
@@ -273,6 +289,7 @@ Q_SIGNALS:
     void maximumLengthChanged();
     void minimumLengthChanged();
     void backgroundHintsChanged();
+    void backgroundCutoutChanged();
     void enabledBordersChanged();
     void floatingChanged();
     void floatingAppletsChanged();
@@ -364,6 +381,8 @@ private:
     Plasma::Theme m_theme;
     QTimer m_unhideTimer;
     Plasma::Types::BackgroundHints m_backgroundHints;
+    QRect m_backgroundCutout;
+    bool m_backgroundCutoutBlur = false;
     KSvg::FrameSvg::EnabledBorders m_enabledBorders = KSvg::FrameSvg::AllBorders;
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;

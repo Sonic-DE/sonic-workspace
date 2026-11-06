@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
 
     // force xcb QPA plugin as ksmserver is very X11 specific
     const QByteArray origQpaPlatform = qgetenv("QT_QPA_PLATFORM");
-    qputenv("QT_QPA_PLATFORM", QByteArrayView("xcb"));
+    qputenv("QT_QPA_PLATFORM", QByteArrayView("xlibre;xcb"));
 
     QCoreApplication::setQuitLockEnabled(false);
     auto a = new QGuiApplication(argc, argv);
