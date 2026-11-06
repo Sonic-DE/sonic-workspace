@@ -91,7 +91,7 @@ if __name__ == '__main__':
     loop.start()
     dbus_interface = TestInterface()
 
-    player_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "appiumtests", "applets", "mediacontrollertest")
+    player_dir = os.path.dirname(os.path.abspath(__file__))
     assert os.path.exists(player_dir)
     with subprocess.Popen(["python3", os.path.join(player_dir, "mediaplayer.py"), os.path.join(player_dir, "player_b.json")], stdout=sys.stdout, stderr=sys.stderr) as player:
         TestInterface.pid = player.pid
@@ -104,7 +104,8 @@ if __name__ == '__main__':
             args += ["-import", CMAKE_BINARY_DIR]
 
         print("Starting test")
-        test_runner = subprocess.Popen(args, stdout=sys.stdout, stderr=sys.stderr)
+        # Leak checks are for the code under test; the Python interpreter frees little at exit.
+        test_runner = subprocess.Popen(args, stdout=sys.stdout, stderr=sys.stderr, env={**os.environ, "LD_PRELOAD": os.environ["QMLTEST_PRELOAD"]})
         try:
             result = test_runner.wait(timeout=60)
         except subprocess.TimeoutExpired as e:

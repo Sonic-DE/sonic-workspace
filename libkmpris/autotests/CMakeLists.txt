@@ -23,14 +23,14 @@ set_tests_properties(
     mprisdeclarativetest_Mpris2Model
     mprisdeclarativetest_MultiplexerModel
     PROPERTIES
-        ENVIRONMENT "LC_ALL=en_US.UTF-8;LD_PRELOAD=${LIBASAN_PATH};CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR}/bin;QMLTEST_PATH=$<TARGET_FILE:${QT_CMAKE_EXPORT_NAMESPACE}::qmltestrunner>"
+        ENVIRONMENT "LC_ALL=en_US.UTF-8;QMLTEST_PRELOAD=${LIBASAN_PATH};CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR}/bin;QMLTEST_PATH=$<TARGET_FILE:${QT_CMAKE_EXPORT_NAMESPACE}::qmltestrunner>"
 )
 
     find_program(xdotool_PATH xdotool)
     if(xdotool_PATH)
         add_test(NAME mediakeystest
             COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/mediakeystest.py ${KDE_INSTALL_FULL_LIBEXECDIR}/kglobalacceld
-            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../appiumtests
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         )
         set_tests_properties(mediakeystest PROPERTIES RUN_SERIAL ON)
     endif()
