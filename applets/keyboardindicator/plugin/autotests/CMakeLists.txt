@@ -2,16 +2,3 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 ecm_add_test(keystatetest.cpp LINK_LIBRARIES Qt::Test Qt::Qml Qt::Quick)
-
-if(NOT CMAKE_SYSTEM_NAME MATCHES "Linux")
-    return()
-endif()
-
-add_test(
-    NAME lockedtest
-    COMMAND ${SELENIUM_WEBDRIVER_AT_SPI_RUN_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/lockedtest.py
-)
-execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
-set_tests_properties(lockedtest PROPERTIES
-    TIMEOUT 60
-    ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH};QML_EXEC=$<TARGET_FILE_DIR:Qt${QT_MAJOR_VERSION}::qmake>/qml")

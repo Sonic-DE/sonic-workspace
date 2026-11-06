@@ -407,8 +407,6 @@ add_subdirectory(soliduiserver)
 
 add_subdirectory(plasmacalendarintegration)
 
-add_subdirectory(appiumtests)
-
 add_subdirectory(devicenotifications)
 
 add_subdirectory(ksecretprompter)

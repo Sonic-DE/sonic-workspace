@@ -18,10 +18,7 @@ from typing import Final
 
 from gi.repository import Gio, GLib
 
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "appiumtests", "utils"))
 from GLibMainLoopThread import GLibMainLoopThread
-
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "appiumtests", "applets", "mediacontrollertest"))
 from mediaplayer import (Mpris2, read_base_properties, read_player_metadata, read_player_properties)
 
 KDE_VERSION: Final = 6
@@ -81,7 +78,7 @@ class MediaKeysTest(unittest.TestCase):
         kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", ["mprisservice"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
         cls.assertTrue(kded_reply.get_child_value(0).get_boolean(), "mprisservice module is not loaded")
 
-        json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "appiumtests", "applets", "mediacontrollertest", "player_a.json")
+        json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "player_a.json")
         with open(json_path, "r", encoding="utf-8") as f:
             json_dict: dict[str, list | dict] = json.load(f)
         metadata: list[dict[str, GLib.Variant]] = read_player_metadata(json_dict)

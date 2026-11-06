@@ -20,7 +20,6 @@ from os import getpid
 from typing import Any, Final
 
 current_folder: Final = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(current_folder, os.pardir, os.pardir, "utils"))
 
 from gi.repository import Gio, GLib
 from GLibMainLoopThread import GLibMainLoopThread
@@ -153,7 +152,7 @@ class Mpris2:
         """
         self.connection = connection
 
-        dbus_folder: str = os.path.join(current_folder, os.pardir, os.pardir, os.pardir, "libkmpris", "dbus")
+        dbus_folder: str = os.path.join(current_folder, os.pardir, "dbus")
 
         with open(f"{dbus_folder}/org.freedesktop.DBus.Properties.xml", encoding="utf-8") as handler:
             properties_introspection_xml: str = '\n'.join(handler.readlines())
