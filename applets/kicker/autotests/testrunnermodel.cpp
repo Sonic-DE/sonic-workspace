@@ -35,7 +35,7 @@ void TestRunnerModel::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
 
-    QFileInfo desktopFile(QFINDTESTDATA("../../../../runners/services/autotests/fixtures/audacity.desktop"));
+    QFileInfo desktopFile(QFINDTESTDATA("../../../runners/services/autotests/fixtures/audacity.desktop"));
     QVERIFY(desktopFile.exists());
     const QString appsPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
     QDir(appsPath).removeRecursively();

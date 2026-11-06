@@ -17,6 +17,8 @@ if __name__ == '__main__':
     result: int = 1
 
     with subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "dbusservice.py")], stdout=sys.stdout, stderr=sys.stderr) as dbus_service:
+        # The tests call it right away.
+        subprocess.run(["gdbus", "wait", "--session", "--timeout", "30", "org.kde.KSplash"], check=True)
         args = [
             QMLTEST_PATH,
             "-input",

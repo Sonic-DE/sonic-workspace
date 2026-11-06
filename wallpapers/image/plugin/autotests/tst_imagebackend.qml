@@ -88,7 +88,7 @@ TestCase {
 
         verify(testPackage.toString().length > 0);
         imageWallpaper.image = testPackage;
-        verify(mediaProxy.modelImage.toString().indexOf("plasma-workspace/wallpapers/image/plugin/autotests/testdata/default/package/contents/images/1024x768.jpg") > 0);
+        verify(mediaProxy.modelImage.toString().indexOf("/wallpapers/image/plugin/autotests/testdata/default/package/contents/images/1024x768.jpg") > 0);
 
         const image = createTemporaryObject(mainImage, window, {source: mediaProxy.modelImage});
 
@@ -100,7 +100,7 @@ TestCase {
         // Change target size
         image.sourceSize = Qt.size(1920, 1080);
         mediaProxy.targetSize = image.sourceSize;
-        verify(mediaProxy.modelImage.toString().indexOf("plasma-workspace/wallpapers/image/plugin/autotests/testdata/default/package/contents/images/1920x1080.jpg") > 0);
+        verify(mediaProxy.modelImage.toString().indexOf("/wallpapers/image/plugin/autotests/testdata/default/package/contents/images/1920x1080.jpg") > 0);
         image.source = mediaProxy.modelImage;
         compare(image.status, Image.Ready);
 
