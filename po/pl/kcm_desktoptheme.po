@@ -157,26 +157,26 @@ msgstr "Edytuj wygląd…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Usuń wygląd Plazmy"
+msgid "Remove desktop style"
+msgstr "Usuń wygląd pulpitu"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Nie można usunąć bieżącego wyglądu Plazmy"
+msgid "Cannot delete the active desktop style"
+msgstr "Nie można usunąć bieżącego wyglądu pulpitu"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Nie można usunąć wyglądów Plazmy wgranych w całym systemie"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Nie można usunąć wyglądów pulpitu wgranych w całym systemie"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Nie usuwaj tego wyglądu Plazmy"
+msgid "Don’t delete this desktop style"
+msgstr "Nie usuwaj tego wyglądu pulpitu"
 
 #: ui/main.qml:189
 #, kde-format

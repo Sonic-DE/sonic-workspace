@@ -373,8 +373,8 @@ msgstr "Ikonas"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "„Plasma“ stils"
+msgid "Desktop Style"
+msgstr "Darbvirsmas stils"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

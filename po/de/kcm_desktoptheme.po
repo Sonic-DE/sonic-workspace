@@ -154,26 +154,26 @@ msgstr "Design bearbeiten …"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Plasma-Stil entfernen"
+msgid "Remove desktop style"
+msgstr "Arbeitsflächen-Stil entfernen"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Löschen des aktiven Plasma-Stils nicht möglich"
+msgid "Cannot delete the active desktop style"
+msgstr "Löschen des aktiven Arbeitsflächen-Stils nicht möglich"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Löschen von durch das System installierten Plasma-Stilen nicht möglich"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Löschen von durch das System installierten Arbeitsflächen-Stilen nicht möglich"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Diesen Plasma-Stil nicht löschen"
+msgid "Don’t delete this desktop style"
+msgstr "Diesen Arbeitsflächen-Stil nicht löschen"
 
 #: ui/main.qml:189
 #, kde-format

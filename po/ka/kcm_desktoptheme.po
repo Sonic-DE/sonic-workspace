@@ -146,26 +146,26 @@ msgstr "თემის ჩასწორება…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Plasma-ის სტილის წაშლა"
+msgid "Remove desktop style"
+msgstr "სამუშაო მაგიდის სტილის წაშლა"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "აქტიური Plasma-ის სტილის წაშლა შეუძლებელია"
+msgid "Cannot delete the active desktop style"
+msgstr "სამუშაო მაგიდის აქტიური სტილის წაშლა შეუძლებელია"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "სისტემასთან ერთად დაყენებული Plasma-ის სტილების წაშლა შეუძლებელია"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "სისტემასთან ერთად დაყენებული სამუშაო მაგიდის სტილების წაშლა შეუძლებელია"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "არ წაშალოთ ეს Plasma-ის სტილი"
+msgid "Don’t delete this desktop style"
+msgstr "არ წაშალოთ სამუშაო მაგიდის ეს სტილი"
 
 #: ui/main.qml:189
 #, kde-format

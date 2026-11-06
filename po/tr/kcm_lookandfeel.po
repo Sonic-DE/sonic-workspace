@@ -371,8 +371,8 @@ msgstr "Simgeler"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma biçemi"
+msgid "Desktop Style"
+msgstr "Masaüstü biçemi"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

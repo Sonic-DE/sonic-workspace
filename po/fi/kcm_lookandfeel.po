@@ -367,8 +367,8 @@ msgstr "Kuvakkeet"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma-tyyli"
+msgid "Desktop Style"
+msgstr "Työpöytätyyli"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

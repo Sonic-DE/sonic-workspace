@@ -369,8 +369,8 @@ msgstr "Piktogramoj"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma Stilo"
+msgid "Desktop Style"
+msgstr "Labortabla Stilo"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

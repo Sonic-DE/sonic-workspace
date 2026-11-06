@@ -84,8 +84,8 @@ msgstr "Pārslēgt dinamiskās tapetes:"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Ievērojot to, vai „Plasma“ izmanto gaišo vai tumšo stilu "
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Ievērojot to, vai darbvirsmas stils ir gaišs vai tumšs "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

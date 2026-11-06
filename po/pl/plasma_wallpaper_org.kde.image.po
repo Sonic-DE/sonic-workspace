@@ -80,8 +80,8 @@ msgstr "Przełączaj tapety:"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Na podstawie tego czy zestaw barw jest jasny czy ciemny"
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Na podstawie tego czy wygląd pulpitu jest jasny czy ciemny"
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

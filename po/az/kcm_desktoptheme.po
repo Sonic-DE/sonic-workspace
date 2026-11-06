@@ -146,30 +146,28 @@ msgid "Edit Theme…"
 msgstr "Mövzuya düzəliş…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Plama Üslubu"
+msgid "Remove desktop style"
+msgstr "İş masası üslubunu silmək"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Bu modul sizə Plasma Üslubunu seçməyə imkan verir."
+msgid "Cannot delete the active desktop style"
+msgstr "Aktiv iş masası üslubunu silmək mümkün deyil"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Sistemdə quraşdırılmış iş masası üslublarını silmək mümkün deyil"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Bu iş masası üslubunu silməmək"
 
 #: ui/main.qml:189
 #, kde-format

@@ -150,26 +150,26 @@ msgstr "Upravit motiv…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Odstranit styl Plasma"
+msgid "Remove desktop style"
+msgstr "Odstranit styl pracovní plochy"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Nelze smazat aktivní styl Plasma"
+msgid "Cannot delete the active desktop style"
+msgstr "Nelze smazat aktivní styl pracovní plochy"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Nelze smazat styly Plasma nainstalované v systému"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Nelze smazat styly pracovní plochy nainstalované v systému"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Nemazat tento styl Plasma"
+msgid "Don’t delete this desktop style"
+msgstr "Nemazat tento styl pracovní plochy"
 
 #: ui/main.qml:189
 #, kde-format

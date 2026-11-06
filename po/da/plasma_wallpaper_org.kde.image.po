@@ -82,8 +82,8 @@ msgstr "Sæt som baggrundsbillede..."
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Baseret på om Plasmatemaet er lyst eller mørkt "
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Baseret på om skrivebordsstilen er lys eller mørk "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

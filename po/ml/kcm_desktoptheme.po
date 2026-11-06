@@ -142,28 +142,28 @@ msgid "Edit Theme…"
 msgstr "പ്രമേയത്തിന്റെ ഇനം"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+msgid "Remove desktop style"
+msgstr "ഡെസ്ക്ടോപ്പ് ശൈലി നീക്കം ചെയ്യുക"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+msgid "Cannot delete the active desktop style"
+msgstr "സജീവമായ ഡെസ്ക്ടോപ്പ് ശൈലി നീക്കം ചെയ്യാനാവില്ല"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "സിസ്റ്റത്തിൽ ഇൻസ്റ്റാൾ ചെയ്ത ഡെസ്ക്ടോപ്പ് ശൈലികൾ നീക്കം ചെയ്യാനാവില്ല"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "ഈ ഡെസ്ക്ടോപ്പ് ശൈലി നീക്കം ചെയ്യരുത്"
 
 #: ui/main.qml:189
 #, fuzzy, kde-format

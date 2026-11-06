@@ -152,26 +152,26 @@ msgstr "Edita Thema..."
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Remove Stilo de Plasma"
+msgid "Remove desktop style"
+msgstr "Remove Stilo de scriptorio"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Non pote deler le stilo de Plasma active"
+msgid "Cannot delete the active desktop style"
+msgstr "Non pote deler le stilo de scriptorio active"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "No pote deler stilos de Plasma de systema installate"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "No pote deler stilos de scriptorio de systema installate"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Non dele iste Stilo de Plasma"
+msgid "Don’t delete this desktop style"
+msgstr "Non dele iste Stilo de scriptorio"
 
 #: ui/main.qml:189
 #, kde-format

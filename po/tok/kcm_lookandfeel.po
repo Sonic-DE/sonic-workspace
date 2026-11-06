@@ -356,7 +356,7 @@ msgstr ""
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
+msgid "Desktop Style"
 msgstr ""
 
 #: ui/MoreOptions.qml:76

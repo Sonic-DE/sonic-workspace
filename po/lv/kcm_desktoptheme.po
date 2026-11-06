@@ -149,30 +149,28 @@ msgid "Edit Theme…"
 msgstr "Rediģēt motīvu…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Ielādēt jaunu tēmu..."
+msgid "Remove desktop style"
+msgstr "Noņemt darbvirsmas stilu"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Aktīvā „Plasma“ stila nosaukums"
+msgid "Cannot delete the active desktop style"
+msgstr "Nevar izdzēst aktīvo darbvirsmas stilu"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Nevar izdzēst sistēmā instalētus darbvirsmas stilus"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Nedzēst šo darbvirsmas stilu"
 
 #: ui/main.qml:189
 #, kde-format

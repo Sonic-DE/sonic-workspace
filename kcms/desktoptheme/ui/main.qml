@@ -155,11 +155,11 @@ KCM.GridViewKCM {
             Kirigami.Action {
                 icon.name: "edit-delete"
                 tooltip: if (enabled) {
-                    return i18nc("@info:tooltip", "Remove Plasma style");
+                    return i18nc("@info:tooltip", "Remove desktop style");
                 } else if (delegate.GridView.isCurrentItem) {
-                    return i18nc("@info:tooltip", "Cannot delete the active Plasma style");
+                    return i18nc("@info:tooltip", "Cannot delete the active desktop style");
                 } else {
-                    return i18nc("@info:tooltip", "Cannot delete system-installed Plasma styles");
+                    return i18nc("@info:tooltip", "Cannot delete system-installed desktop styles");
                 }
                 enabled: model.isLocal && !delegate.GridView.isCurrentItem
                 visible: !model.pendingDeletion
@@ -167,7 +167,7 @@ KCM.GridViewKCM {
             },
             Kirigami.Action {
                 icon.name: "edit-undo"
-                tooltip: i18nc("@info:tooltip", "Don’t delete this Plasma style")
+                tooltip: i18nc("@info:tooltip", "Don’t delete this desktop style")
                 visible: model.pendingDeletion
                 onTriggered: model.pendingDeletion = false;
             }

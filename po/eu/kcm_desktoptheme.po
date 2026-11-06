@@ -151,26 +151,26 @@ msgstr "Editatu gaia…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Kendu Plasmaren estiloa"
+msgid "Remove desktop style"
+msgstr "Kendu mahaigaineko estiloa"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Ezin da aktibo dagoen Plasmaren estiloa ezabatu"
+msgid "Cannot delete the active desktop style"
+msgstr "Ezin da aktibo dagoen mahaigaineko estiloa ezabatu"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Ezin dira sistemarekin instalatutako Plasmaren estiloak ezabatu"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Ezin dira sistemarekin instalatutako mahaigaineko estiloak ezabatu"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Ez ezabatu Plasmaren estilo hau"
+msgid "Don’t delete this desktop style"
+msgstr "Ez ezabatu mahaigaineko estilo hau"
 
 #: ui/main.qml:189
 #, kde-format

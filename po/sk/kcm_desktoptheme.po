@@ -149,26 +149,26 @@ msgstr "Upraviť tému..."
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Štýl Plasma"
+msgid "Remove desktop style"
+msgstr "Odstrániť štýl pracovnej plochy"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Tento modul vám umožní vybrať Plasma štýl."
+msgid "Cannot delete the active desktop style"
+msgstr "Nie je možné odstrániť aktívny štýl pracovnej plochy"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Nie je možné delete system-installed Plasma styles"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Nie je možné odstrániť štýly pracovnej plochy nainštalované v systéme"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Neodstraňovať tento štýl Plasma"
+msgid "Don’t delete this desktop style"
+msgstr "Neodstraňovať tento štýl pracovnej plochy"
 
 #: ui/main.qml:189
 #, kde-format

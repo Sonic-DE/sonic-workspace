@@ -80,8 +80,8 @@ msgstr "Prepínanie dynamických tapiet:"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Na základe toho, či je štýl Plasma svetlý alebo tmavý "
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Na základe toho, či je štýl pracovnej plochy svetlý alebo tmavý "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

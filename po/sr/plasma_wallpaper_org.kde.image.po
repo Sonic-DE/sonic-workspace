@@ -94,8 +94,8 @@ msgstr "Добави нове тапете..."
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgid "Based on whether the desktop style is light or dark "
+msgstr "На основу тога да ли је стил површи светао или таман "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

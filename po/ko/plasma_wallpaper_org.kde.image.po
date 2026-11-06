@@ -79,8 +79,8 @@ msgstr "동적 배경 그림 전환:"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Plasma 스타일이 밝음인가 어두움인가에 따라서"
+msgid "Based on whether the desktop style is light or dark "
+msgstr "데스크톱 스타일이 밝음인가 어두움인가에 따라서"
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

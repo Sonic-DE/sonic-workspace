@@ -149,27 +149,26 @@ msgstr "Rediger tema …"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr ""
+msgid "Remove desktop style"
+msgstr "Fjern skrivebordsstil"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Navnet på gjeldende Plasma-stil"
+msgid "Cannot delete the active desktop style"
+msgstr "Kan ikke slette den aktive skrivebordsstilen"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Kan ikke slette systeminstallerte skrivebordsstiler"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Ikke slett denne skrivebordsstilen"
 
 #: ui/main.qml:189
 #, kde-format

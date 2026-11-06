@@ -377,8 +377,8 @@ msgstr "Піктограми"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Стиль Плазми"
+msgid "Desktop Style"
+msgstr "Стиль стільниці"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

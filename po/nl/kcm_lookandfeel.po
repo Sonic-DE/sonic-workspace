@@ -376,8 +376,8 @@ msgstr "Pictogrammen"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma-stijl"
+msgid "Desktop Style"
+msgstr "Bureaubladstijl"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

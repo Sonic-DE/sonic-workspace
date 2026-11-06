@@ -79,8 +79,8 @@ msgstr "மாறக்கூடிய பின்புலப்படங்�
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "நிறத்திட்டம் வெளிர்ந்தோ கருமையாகவோ இருப்பதைப் பொறுத்து "
+msgid "Based on whether the desktop style is light or dark "
+msgstr "பணிமேடை தோற்றத்திட்டம் வெளிர்ந்தோ கருமையாகவோ இருப்பதைப் பொறுத்து "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

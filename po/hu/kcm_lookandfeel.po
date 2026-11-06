@@ -373,8 +373,8 @@ msgstr "Ikonok"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma stílus"
+msgid "Desktop Style"
+msgstr "Asztali stílus"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

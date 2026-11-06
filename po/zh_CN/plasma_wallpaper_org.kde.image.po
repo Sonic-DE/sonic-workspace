@@ -80,8 +80,8 @@ msgstr "切换动态壁纸："
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "基于 Plasma 样式是深色/浅色 "
+msgid "Based on whether the desktop style is light or dark "
+msgstr "基于桌面样式是深色/浅色 "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

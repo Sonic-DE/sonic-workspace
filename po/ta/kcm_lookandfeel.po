@@ -367,8 +367,8 @@ msgstr "சின்னங்கள்"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "பிளாஸ்மா தோற்றத்திட்டம்"
+msgid "Desktop Style"
+msgstr "பணிமேடை தோற்றத்திட்டம்"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

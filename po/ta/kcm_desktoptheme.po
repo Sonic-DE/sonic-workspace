@@ -149,25 +149,25 @@ msgstr "தோற்றத்திட்டத்தை திருத்த�
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "பிளாஸ்மா தோற்றத்திட்டத்தை நீக்கு"
+msgid "Remove desktop style"
+msgstr "பணிமேடை தோற்றத்திட்டத்தை நீக்கு"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "செயலிலுள்ள தோற்றத்திட்டத்தை நீக்க முடியாது"
+msgid "Cannot delete the active desktop style"
+msgstr "செயலிலுள்ள பணிமேடை தோற்றத்திட்டத்தை நீக்க முடியாது"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "கணினி முழுவதற்கும் நிறுவப்பட்டுள்ள தோற்றத்திட்டத்தை நீக்க முடியாது"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "கணினி முழுவதற்கும் நிறுவப்பட்டுள்ள பணிமேடை தோற்றத்திட்டத்தை நீக்க முடியாது"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
+msgid "Don’t delete this desktop style"
 msgstr "இதை நீக்க வேண்டாம்"
 
 #: ui/main.qml:189

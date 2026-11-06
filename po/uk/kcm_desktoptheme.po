@@ -149,26 +149,26 @@ msgstr "Змінити тему…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Вилучити стиль Плазми"
+msgid "Remove desktop style"
+msgstr "Вилучити стиль стільниці"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Не можна вилучати активний стиль Плазми"
+msgid "Cannot delete the active desktop style"
+msgstr "Не можна вилучати активний стиль стільниці"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Не можна вилучати встановлені на рівні системи стилі Плазми"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Не можна вилучати встановлені на рівні системи стилі стільниці"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Не вилучати цей стиль Плазми"
+msgid "Don’t delete this desktop style"
+msgstr "Не вилучати цей стиль стільниці"
 
 #: ui/main.qml:189
 #, kde-format

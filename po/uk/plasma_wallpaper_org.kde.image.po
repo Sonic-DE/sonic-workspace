@@ -82,8 +82,8 @@ msgstr "Перемикати динамічні фонові зображенн�
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "На основі того, є стиль Плазми темним чи світлим"
+msgid "Based on whether the desktop style is light or dark "
+msgstr "На основі того, є стиль стільниці темним чи світлим"
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

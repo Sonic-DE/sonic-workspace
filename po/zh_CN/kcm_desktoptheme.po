@@ -144,26 +144,26 @@ msgstr "编辑主题…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "移除 Plasma 外观样式"
+msgid "Remove desktop style"
+msgstr "移除桌面外观样式"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "无法删除已激活的 Plasma 外观样式"
+msgid "Cannot delete the active desktop style"
+msgstr "无法删除已激活的桌面外观样式"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "无法删除系统安装的 Plasma 外观样式"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "无法删除系统安装的桌面外观样式"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "不要删除此 Plasma 外观样式"
+msgid "Don’t delete this desktop style"
+msgstr "不要删除此桌面外观样式"
 
 #: ui/main.qml:189
 #, kde-format

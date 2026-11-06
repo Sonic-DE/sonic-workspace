@@ -152,30 +152,28 @@ msgid "Edit Theme…"
 msgstr "Tema"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Dobavi nove teme..."
+msgid "Remove desktop style"
+msgstr "Ukloni stil radne površine"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Dobavi nove teme..."
+msgid "Cannot delete the active desktop style"
+msgstr "Nije moguće obrisati aktivni stil radne površine"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Nije moguće obrisati stilove radne površine instalirane u sistemu"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Nemoj obrisati ovaj stil radne površine"
 
 #: ui/main.qml:189
 #, kde-format

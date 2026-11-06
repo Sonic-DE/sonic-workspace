@@ -377,8 +377,8 @@ msgstr "Ikonoak"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasmaren estiloa"
+msgid "Desktop Style"
+msgstr "Mahaigaineko estiloa"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

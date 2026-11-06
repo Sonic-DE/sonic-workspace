@@ -153,30 +153,28 @@ msgid "Edit Theme…"
 msgstr "Нақышы"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Жаңа нақышы..."
+msgid "Remove desktop style"
+msgstr "Жұмыс үстелі стилін өшіру"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Жаңа нақышы..."
+msgid "Cannot delete the active desktop style"
+msgstr "Белсенді жұмыс үстелі стилін өшіру мүмкін емес"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Жүйеге орнатылған жұмыс үстелі стильдерін өшіру мүмкін емес"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Бұл жұмыс үстелі стилін өшірмеу"
 
 #: ui/main.qml:189
 #, fuzzy, kde-format

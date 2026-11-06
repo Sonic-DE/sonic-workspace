@@ -367,8 +367,8 @@ msgstr "चिह्नानि"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "प्लाज्मा शैली"
+msgid "Desktop Style"
+msgstr "डेस्कटॉप शैली"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

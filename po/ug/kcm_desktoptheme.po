@@ -149,30 +149,28 @@ msgid "Edit Theme…"
 msgstr "ئۆرنەك تەھرىر…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
+msgid "Remove desktop style"
+msgstr "ئۈستەلئۈستى ئۇسلۇبىنى چىقىرىۋېتىش"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "نۆۋەتتىكى Plasma ئۇسلۇبىنىڭ ئاتى"
+msgid "Cannot delete the active desktop style"
+msgstr "ئاكتىپ ئۈستەلئۈستى ئۇسلۇبىنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "سىستېمىغا ئورنىتىلغان ئۈستەلئۈستى ئۇسلۇبلىرىنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "بۇ ئۈستەلئۈستى ئۇسلۇبىنى ئۆچۈرمەڭ"
 
 #: ui/main.qml:189
 #, kde-format

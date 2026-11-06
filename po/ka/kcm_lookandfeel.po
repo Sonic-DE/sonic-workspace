@@ -369,8 +369,8 @@ msgstr "ხატულები"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma-ის სტილი"
+msgid "Desktop Style"
+msgstr "სამუშაო მაგიდის სტილი"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

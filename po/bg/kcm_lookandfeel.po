@@ -373,8 +373,8 @@ msgstr "Икони"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Стил на Plasma"
+msgid "Desktop Style"
+msgstr "Стил на работния плот"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

@@ -151,26 +151,26 @@ msgstr "Temayı Düzenle…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Plasma biçemini kaldır"
+msgid "Remove desktop style"
+msgstr "Masaüstü biçemini kaldır"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Etkin Plasma biçemi silinemez"
+msgid "Cannot delete the active desktop style"
+msgstr "Etkin masaüstü biçemi silinemez"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Sistem ile kurulu gelen Plasma biçemleri silinemez"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Sistem ile kurulu gelen masaüstü biçemleri silinemez"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Bu Plasma biçemini silme"
+msgid "Don’t delete this desktop style"
+msgstr "Bu masaüstü biçemini silme"
 
 #: ui/main.qml:189
 #, kde-format

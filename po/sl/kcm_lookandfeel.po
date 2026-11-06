@@ -374,8 +374,8 @@ msgstr "Ikone"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Slog Plasme"
+msgid "Desktop Style"
+msgstr "Slog namizja"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

@@ -371,8 +371,8 @@ msgstr "Nişanlar"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma üslubu"
+msgid "Desktop Style"
+msgstr "İş masası üslubu"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

@@ -360,8 +360,8 @@ msgstr "图标"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma 外观样式"
+msgid "Desktop Style"
+msgstr "桌面外观样式"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

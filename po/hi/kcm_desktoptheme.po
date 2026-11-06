@@ -150,30 +150,28 @@ msgid "Edit Theme…"
 msgstr "प्रसंग संपादित करें"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "प्लाज़्मा शैली"
+msgid "Remove desktop style"
+msgstr "डेस्कटॉप शैली हटाएँ"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "यह मॉड्यूल आपको प्लाज़्मा शैली चुनने देता है ।"
+msgid "Cannot delete the active desktop style"
+msgstr "सक्रिय डेस्कटॉप शैली को मिटाया नहीं जा सकता"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "सिस्टम में स्थापित डेस्कटॉप शैलियों को मिटाया नहीं जा सकता"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "इस डेस्कटॉप शैली को न मिटाएँ"
 
 #: ui/main.qml:189
 #, kde-format

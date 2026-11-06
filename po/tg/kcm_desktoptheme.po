@@ -146,30 +146,28 @@ msgid "Edit Theme…"
 msgstr "Таҳрир кардани мавзӯъ…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Услуби Плазма"
+msgid "Remove desktop style"
+msgstr "Тоза кардани услуби мизи корӣ"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Модули ҷорӣ ба шумо барои интихоб кардани услуби Плазма имкон медиҳад."
+msgid "Cannot delete the active desktop style"
+msgstr "Услуби фаъоли мизи кориро нест кардан мумкин нест"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Услубҳои мизи кории дар система насбшударо нест кардан мумкин нест"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Ин услуби мизи кориро нест накунед"
 
 #: ui/main.qml:189
 #, kde-format

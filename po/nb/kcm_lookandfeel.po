@@ -375,8 +375,8 @@ msgstr "Ikoner"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma-stil"
+msgid "Desktop Style"
+msgstr "Skrivebordsstil"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

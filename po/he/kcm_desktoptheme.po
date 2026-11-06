@@ -151,26 +151,26 @@ msgstr "עריכת ערכת עיצוב…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "הסרת סגנון פלזמה"
+msgid "Remove desktop style"
+msgstr "הסרת סגנון שולחן העבודה"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "לא ניתן למחוק את סגנון הפלזמה הפעיל"
+msgid "Cannot delete the active desktop style"
+msgstr "לא ניתן למחוק את סגנון שולחן העבודה הפעיל"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "לא ניתן למחוק סגנונות פלזמה מערכתיים"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "לא ניתן למחוק סגנונות שולחן עבודה מערכתיים"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "לא ניתן למחוק את סגנון הפלזמה הזה"
+msgid "Don’t delete this desktop style"
+msgstr "לא למחוק את סגנון שולחן העבודה הזה"
 
 #: ui/main.qml:189
 #, kde-format

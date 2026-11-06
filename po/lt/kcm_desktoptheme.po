@@ -156,26 +156,26 @@ msgstr "Taisyti apipavidalinimą…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Šalinti Plasma stilių"
+msgid "Remove desktop style"
+msgstr "Šalinti darbalaukio stilių"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Negalima ištrinti aktyvų Plasma stilių"
+msgid "Cannot delete the active desktop style"
+msgstr "Negalima ištrinti aktyvų darbalaukio stilių"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Negalima ištrinti sistemos įdiegtą Plasma stilių"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Negalima ištrinti sistemos įdiegtą darbalaukio stilių"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Neištrinti šio Plasma stiliaus"
+msgid "Don’t delete this desktop style"
+msgstr "Neištrinti šio darbalaukio stiliaus"
 
 #: ui/main.qml:189
 #, kde-format

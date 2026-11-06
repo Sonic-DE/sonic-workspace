@@ -84,8 +84,8 @@ msgstr "Setel sebagai Wallpaper"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Berdasarkan apakah gaya desktop terang atau gelap "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

@@ -155,26 +155,26 @@ msgstr "Téma szerkesztése…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Plasma stílus eltávolítása"
+msgid "Remove desktop style"
+msgstr "Asztali stílus eltávolítása"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Az aktív Plasma stílus nem törölhető"
+msgid "Cannot delete the active desktop style"
+msgstr "Az aktív asztali stílus nem törölhető"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "A rendszer által telepített Plasma stílusok nem törölhetők"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "A rendszer által telepített asztali stílusok nem törölhetők"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Ne törölje ezt a Plasma stílust"
+msgid "Don’t delete this desktop style"
+msgstr "Ne törölje ezt az asztali stílust"
 
 #: ui/main.qml:189
 #, kde-format

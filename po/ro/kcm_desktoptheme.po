@@ -151,26 +151,26 @@ msgstr "Modifică tematica…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Elimină stilul Plasma"
+msgid "Remove desktop style"
+msgstr "Elimină stilul de birou"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Stilul Plasma activ nu poate fi șters"
+msgid "Cannot delete the active desktop style"
+msgstr "Stilul de birou activ nu poate fi șters"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Stilurile Plasma instalate în sistem nu pot fi șterse"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Stilurile de birou instalate în sistem nu pot fi șterse"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Nu ștergeți acest stil Plasma"
+msgid "Don’t delete this desktop style"
+msgstr "Nu ștergeți acest stil de birou"
 
 #: ui/main.qml:189
 #, kde-format

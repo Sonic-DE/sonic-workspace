@@ -149,30 +149,28 @@ msgid "Edit Theme…"
 msgstr "Edit Theme…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Plasma Style"
+msgid "Remove desktop style"
+msgstr "Remove desktop style"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "This module lets you choose the Plasma style."
+msgid "Cannot delete the active desktop style"
+msgstr "Cannot delete the active desktop style"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Cannot delete system-installed desktop styles"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Don’t delete this desktop style"
 
 #: ui/main.qml:189
 #, kde-format

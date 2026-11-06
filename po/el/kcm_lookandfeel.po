@@ -372,8 +372,8 @@ msgstr "Εικονίδια"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Στυλ Plasma"
+msgid "Desktop Style"
+msgstr "Στυλ επιφάνειας εργασίας"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

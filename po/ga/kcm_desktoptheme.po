@@ -146,30 +146,28 @@ msgid "Edit Theme…"
 msgstr "Téama"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Faigh Téamaí Nua..."
+msgid "Remove desktop style"
+msgstr "Bain an stíl deisce"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Faigh Téamaí Nua..."
+msgid "Cannot delete the active desktop style"
+msgstr "Ní féidir an stíl deisce ghníomhach a scriosadh"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Ní féidir stíleanna deisce atá suiteáilte sa chóras a scriosadh"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Ná scrios an stíl deisce seo"
 
 #: ui/main.qml:189
 #, fuzzy, kde-format

@@ -80,12 +80,10 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Hərəkətli divar kağızlarını dəyişmək"
 
 #: imagepackage/contents/ui/config.qml:207
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Rəng sxeminin qaranlıq və işıqlı olmasına görə"
+msgid "Based on whether the desktop style is light or dark "
+msgstr "İş masası üslubunun qaranlıq və işıqlı olmasına görə"
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

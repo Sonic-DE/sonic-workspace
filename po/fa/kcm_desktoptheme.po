@@ -148,26 +148,26 @@ msgstr "باز کردن چهره"
 #, fuzzy, kde-format
 #| msgid "Get new Theme"
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
+msgid "Remove desktop style"
 msgstr "دریافت چهره‌ی جدید"
 
 #: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "This module lets you configure the desktop theme."
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
+msgid "Cannot delete the active desktop style"
 msgstr "این پیمانه به شما اجازه‌ی پیکربندی چهره‌ی رومیزی را می‌دهد."
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
+msgid "Cannot delete system-installed desktop styles"
 msgstr ""
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
+msgid "Don’t delete this desktop style"
 msgstr ""
 
 #: ui/main.qml:189

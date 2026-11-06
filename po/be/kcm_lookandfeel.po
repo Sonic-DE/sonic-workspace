@@ -375,8 +375,8 @@ msgstr "Значкі"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Стыль Plasma"
+msgid "Desktop Style"
+msgstr "Стыль працоўнага стала"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

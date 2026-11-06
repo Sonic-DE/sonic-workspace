@@ -359,8 +359,8 @@ msgstr "ਆਈਕਾਨ"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ"
+msgid "Desktop Style"
+msgstr "ਡੈਸਕਟਾਪ ਸਟਾਈਲ"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

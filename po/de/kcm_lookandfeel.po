@@ -378,8 +378,8 @@ msgstr "Symbole"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma-Stil"
+msgid "Desktop Style"
+msgstr "Arbeitsflächen-Stil"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

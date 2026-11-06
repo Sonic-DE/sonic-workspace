@@ -152,26 +152,26 @@ msgstr "Uredi teme…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Odstrani slog Plasme"
+msgid "Remove desktop style"
+msgstr "Odstrani slog namizja"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Ni mogoče izbrisati aktivnega sloga Plasme"
+msgid "Cannot delete the active desktop style"
+msgstr "Ni mogoče izbrisati aktivnega sloga namizja"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Ni mogoče izbrisati sistemsko nameščenih slogov Plasme"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Ni mogoče izbrisati sistemsko nameščenih slogov namizja"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Ne izbrišite tega sloga Plasme"
+msgid "Don’t delete this desktop style"
+msgstr "Ne izbrišite tega sloga namizja"
 
 #: ui/main.qml:189
 #, kde-format

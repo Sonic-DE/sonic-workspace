@@ -151,26 +151,26 @@ msgstr "Thema bewerken…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Plasma-stijl verwijderen"
+msgid "Remove desktop style"
+msgstr "Bureaubladstijl verwijderen"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Kan de actieve Plasma-stijl niet verwijderen"
+msgid "Cannot delete the active desktop style"
+msgstr "Kan de actieve bureaubladstijl niet verwijderen"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Kan door het systeem geïnstalleerde Plasma-stijlen niet verwijderen"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Kan door het systeem geïnstalleerde bureaubladstijlen niet verwijderen"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Deze Plasma-stijl niet verwijderen"
+msgid "Don’t delete this desktop style"
+msgstr "Deze bureaubladstijl niet verwijderen"
 
 #: ui/main.qml:189
 #, kde-format

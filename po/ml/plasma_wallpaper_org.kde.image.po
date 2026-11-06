@@ -87,8 +87,8 @@ msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള�
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgid "Based on whether the desktop style is light or dark "
+msgstr "ഡെസ്ക്ടോപ്പ് ശൈലി ഇളം നിറമാണോ ഇരുണ്ടതാണോ എന്നതിനെ അടിസ്ഥാനമാക്കി "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

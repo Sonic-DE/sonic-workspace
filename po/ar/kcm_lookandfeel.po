@@ -372,8 +372,8 @@ msgstr "الأيقونات"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "نمط بلازما"
+msgid "Desktop Style"
+msgstr "نمط سطح المكتب"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

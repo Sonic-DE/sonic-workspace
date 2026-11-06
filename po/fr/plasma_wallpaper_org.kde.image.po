@@ -93,8 +93,8 @@ msgstr "Basculer dynamiquement les fonds d'écran :"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Selon que le thème de couleurs est sombre ou clair"
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Selon que le style de bureau est sombre ou clair"
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

@@ -92,8 +92,8 @@ msgstr "Preuzimanje Pozadina"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Na osnovu toga je li stil radne površine svijetao ili taman "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

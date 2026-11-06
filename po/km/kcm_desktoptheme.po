@@ -148,26 +148,26 @@ msgstr "​ស្បែក"
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
+msgid "Remove desktop style"
 msgstr "យក​ស្បែក​ថ្មី..."
 
 #: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
+msgid "Cannot delete the active desktop style"
 msgstr "យក​ស្បែក​ថ្មី..."
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
+msgid "Cannot delete system-installed desktop styles"
 msgstr ""
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
+msgid "Don’t delete this desktop style"
 msgstr ""
 
 #: ui/main.qml:189

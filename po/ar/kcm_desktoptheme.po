@@ -147,26 +147,26 @@ msgstr "حرر السمة..."
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "أزل نمط بلازما"
+msgid "Remove desktop style"
+msgstr "أزل نمط سطح المكتب"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "لا يمكن حذف نمط بلازما النشط"
+msgid "Cannot delete the active desktop style"
+msgstr "لا يمكن حذف نمط سطح المكتب النشط"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "لا يمكن حذف أنماط بلازما المثبتة في النظام"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "لا يمكن حذف أنماط سطح المكتب المثبتة في النظام"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "لا تحذف نمط بلازما هذا"
+msgid "Don’t delete this desktop style"
+msgstr "لا تحذف نمط سطح المكتب هذا"
 
 #: ui/main.qml:189
 #, kde-format

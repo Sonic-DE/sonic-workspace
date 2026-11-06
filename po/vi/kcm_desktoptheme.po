@@ -150,30 +150,28 @@ msgid "Edit Theme…"
 msgstr "Sửa chủ đề…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Kiểu cách Plasma"
+msgid "Remove desktop style"
+msgstr "Xoá kiểu màn hình nền"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Khối này cho phép bạn chọn kiểu cách Plasma."
+msgid "Cannot delete the active desktop style"
+msgstr "Không thể xoá kiểu màn hình nền đang dùng"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Không thể xoá các kiểu màn hình nền được cài trong hệ thống"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Không xoá kiểu màn hình nền này"
 
 #: ui/main.qml:189
 #, kde-format

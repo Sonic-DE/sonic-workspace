@@ -369,8 +369,8 @@ msgstr "アイコン"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Plasma スタイル"
+msgid "Desktop Style"
+msgstr "デスクトップスタイル"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

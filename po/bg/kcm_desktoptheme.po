@@ -149,26 +149,26 @@ msgstr "Редактиране на тема…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Премахване на стил на Plasma"
+msgid "Remove desktop style"
+msgstr "Премахване на стил на работния плот"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Не може да се изтрие активния стил на Plasma"
+msgid "Cannot delete the active desktop style"
+msgstr "Не може да се изтрие активния стил на работния плот"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "Не могат да се изтрият инсталирани от системата стилове на Plasma"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Не могат да се изтрият инсталирани от системата стилове на работния плот"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr "Да не се изтрива този стил на Plasma"
+msgid "Don’t delete this desktop style"
+msgstr "Да не се изтрива този стил на работния плот"
 
 #: ui/main.qml:189
 #, kde-format

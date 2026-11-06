@@ -150,27 +150,26 @@ msgstr "Redakti Etoson…"
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr ""
+msgid "Remove desktop style"
+msgstr "Forigi labortablan stilon"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "Nomo de la aktuala Plasma-Stilo"
+msgid "Cannot delete the active desktop style"
+msgstr "Ne eblas forigi la aktivan labortablan stilon"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Ne eblas forigi labortablajn stilojn instalitajn en la sistemo"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Ne forigi ĉi tiun labortablan stilon"
 
 #: ui/main.qml:189
 #, kde-format

@@ -374,8 +374,8 @@ msgstr "Icones"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Stilo de Plasma"
+msgid "Desktop Style"
+msgstr "Stilo de scriptorio"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

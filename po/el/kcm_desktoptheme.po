@@ -156,31 +156,28 @@ msgid "Edit Theme…"
 msgstr "Επεξεργασία θέματος…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Get new Theme"
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr "Λήψη νέου θέματος"
+msgid "Remove desktop style"
+msgstr "Αφαίρεση στυλ επιφάνειας εργασίας"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "This module lets you configure the desktop theme."
+#, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr ""
-"Το άρθρωμα αυτό σας επιτρέπει τη διαμόρφωση του θέματος επιφάνειας εργασίας."
+msgid "Cannot delete the active desktop style"
+msgstr "Αδύνατη η διαγραφή του ενεργού στυλ επιφάνειας εργασίας"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Αδύνατη η διαγραφή στυλ επιφάνειας εργασίας που έχουν εγκατασταθεί στο σύστημα"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Να μη διαγραφεί αυτό το στυλ επιφάνειας εργασίας"
 
 #: ui/main.qml:189
 #, kde-format

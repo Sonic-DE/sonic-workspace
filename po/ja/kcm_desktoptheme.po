@@ -147,26 +147,26 @@ msgstr "テーマを編集..."
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr ""
+msgid "Remove desktop style"
+msgstr "デスクトップスタイルを削除"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr "現在使用中の Plasma スタイルは削除できません"
+msgid "Cannot delete the active desktop style"
+msgstr "現在使用中のデスクトップスタイルは削除できません"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr "システムがインストールした Plasma スタイルは削除できません"
+msgid "Cannot delete system-installed desktop styles"
+msgstr "システムがインストールしたデスクトップスタイルは削除できません"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "このデスクトップスタイルを削除しない"
 
 #: ui/main.qml:189
 #, kde-format

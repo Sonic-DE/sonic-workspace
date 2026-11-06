@@ -84,8 +84,8 @@ msgstr "Skipta um breytilegar bakgrunnsmyndir:"
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the Plasma style is light or dark "
-msgstr "Byggt á hvort stíll Plasma sé ljós eða dökkur "
+msgid "Based on whether the desktop style is light or dark "
+msgstr "Byggt á hvort skjáborðsstíll sé ljós eða dökkur "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format

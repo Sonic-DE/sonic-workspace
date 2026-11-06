@@ -374,8 +374,8 @@ msgstr "Biểu tượng"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
-msgid "Plasma Style"
-msgstr "Kiểu cách Plasma"
+msgid "Desktop Style"
+msgstr "Kiểu màn hình nền"
 
 #: ui/MoreOptions.qml:76
 #, kde-format

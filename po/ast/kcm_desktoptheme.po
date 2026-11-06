@@ -143,26 +143,26 @@ msgstr ""
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Remove Plasma style"
-msgstr ""
+msgid "Remove desktop style"
+msgstr "Quitar l'estilu del escritoriu"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active Plasma style"
-msgstr ""
+msgid "Cannot delete the active desktop style"
+msgstr "Nun se pue desaniciar l'estilu del escritoriu activu"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgid "Cannot delete system-installed desktop styles"
+msgstr "Nun se puen desaniciar los estilos del escritoriu instalaos nel sistema"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Don’t delete this Plasma style"
-msgstr ""
+msgid "Don’t delete this desktop style"
+msgstr "Nun desaniciar esti estilu del escritoriu"
 
 #: ui/main.qml:189
 #, kde-format

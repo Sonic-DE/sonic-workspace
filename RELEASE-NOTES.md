@@ -4,6 +4,7 @@ Sonic Workspace is the heart of the SonicDE desktop: it provides the desktop she
 
 ## Unreleased
 
+- Plasma Style is now called Desktop Style in System Settings, Global Theme and the wallpaper settings.
 - The desktop shell is now called Sonic Shell, and the desktop's apps and services carry SonicDE names throughout. Your existing panels, widgets, settings and shortcuts move over automatically.
 - When the on-screen keyboard is open on the login or lock screen, your picture stays visible and the picture and password field sit centered above the keyboard.
 - The blurred background on the login and lock screens now reaches all the way to the screen edges, with no gap around the borders.
