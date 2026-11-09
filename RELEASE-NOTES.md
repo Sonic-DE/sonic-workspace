@@ -2,16 +2,17 @@
 
 Sonic Workspace is the heart of the SonicDE desktop: it provides the desktop shell, panels, widgets, notifications, clipboard, login and lock screen look, and many of the system settings pages.
 
-## Unreleased
+## 6.8.2 (2026-11-10)
 
 - Plasma Style is now called Desktop Style in System Settings, Global Theme and the wallpaper settings.
 - The desktop shell is now called Sonic Shell, and the desktop's apps and services carry SonicDE names throughout. Your existing panels, widgets, settings and shortcuts move over automatically.
-- When the on-screen keyboard is open on the login or lock screen, your picture stays visible and the picture and password field sit centered above the keyboard.
-- The blurred background on the login and lock screens now reaches all the way to the screen edges, with no gap around the borders.
-- The darkened background behind the login and lock screens now picks up the colors of your chosen theme.
-- Font previews show up properly again in the file manager, and fixed a crash while those previews were being created.
 - A panel's keyboard shortcut now opens and closes an auto-hiding panel right away, and a panel keeps the keyboard while one of its menus or dialogs is open. Escape now goes to the menu or widget using it before it closes the panel.
-- Behind the scenes: new automated tests for the on-screen keyboard, and the desktop session uses QXLibre for X11 when it's installed, going back to Qt's own X11 support when it isn't. Panels can also leave their background out behind part of a widget.
+- Fixed the desktop shell crashing when a panel that had the keyboard was removed.
+- The startup splash screen now shows on a new account's first login, using Silver's splash, instead of failing to load.
+- Apps set to start automatically now start whether their autostart entry was made for SonicDE or for KDE.
+- A new activity now gets the desktop layout it was created with, instead of always the default one.
+- The desktop and window manager scripting consoles can now open a script file you give them.
+- Behind the scenes: the desktop session uses QXLibre for X11 when it's installed, going back to Qt's own X11 support when it isn't. Panels can also leave their background out behind part of a widget, automated tests were fixed, and tests that need Wayland were removed.
 
 ## 6.8.0.4 (2026-10-24)
 
