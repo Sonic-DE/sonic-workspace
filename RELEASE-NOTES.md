@@ -2,6 +2,10 @@
 
 Sonic Workspace is the heart of the SonicDE desktop: it provides the desktop shell, panels, widgets, notifications, clipboard, login and lock screen look, and many of the system settings pages.
 
+## Unreleased
+
+- Desktop Style settings has a new Configure Desktop Style… page. Its first settings choose how see-through panels, pop-ups, tooltips and desktop widgets are, for desktop styles that support them, such as Silver Light and Silver Dark.
+
 ## 6.8.2 (2026-11-10)
 
 - Plasma Style is now called Desktop Style in System Settings, Global Theme and the wallpaper settings.

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    SPDX-FileCopyrightText: 2026 Joseph Crowell <joseph.w.crowell@gmail.com>
+    SPDX-License-Identifier: GPL-2.0-or-later
+
+    The desktop-wide transparency of desktop styles that follow it (FollowDesktopThemeOpacity in their
+    colors file). Defaults as in sonic-frameworks-svg's ImageSetPrivate::readDesktopThemeOpacity().
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kdeglobals" />
+  <group name="DesktopThemeOpacity">
+    <entry name="enabled" key="Enabled" type="Bool">
+      <label>Use these values instead of the desktop style's own transparency</label>
+      <default>false</default>
+    </entry>
+    <entry name="panels" key="Panels" type="Int">
+      <label>Panel opacity</label>
+      <default>70</default>
+      <min>0</min>
+      <max>100</max>
+    </entry>
+    <entry name="popups" key="Popups" type="Int">
+      <label>Pop-up opacity</label>
+      <default>85</default>
+      <min>0</min>
+      <max>100</max>
+    </entry>
+    <entry name="tooltips" key="Tooltips" type="Int">
+      <label>Tooltip opacity</label>
+      <default>85</default>
+      <min>0</min>
+      <max>100</max>
+    </entry>
+    <entry name="widgets" key="Widgets" type="Int">
+      <label>Desktop widget opacity</label>
+      <default>80</default>
+      <min>0</min>
+      <max>100</max>
+    </entry>
+  </group>
+</kcfg>

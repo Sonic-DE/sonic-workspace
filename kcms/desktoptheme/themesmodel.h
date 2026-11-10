@@ -25,6 +25,7 @@ class ThemesModel : public QAbstractListModel
 
     Q_PROPERTY(QString selectedTheme READ selectedTheme WRITE setSelectedTheme NOTIFY selectedThemeChanged)
     Q_PROPERTY(int selectedThemeIndex READ selectedThemeIndex NOTIFY selectedThemeChanged)
+    Q_PROPERTY(bool selectedThemeFollowsDesktopThemeOpacity READ selectedThemeFollowsDesktopThemeOpacity NOTIFY selectedThemeChanged)
 
 public:
     ThemesModel(QObject *parent);
@@ -38,6 +39,7 @@ public:
         ColorTypeRole,
         IsLocalRole,
         PendingDeletionRole,
+        FollowsDesktopThemeOpacityRole,
     };
     Q_ENUM(Roles)
     enum ColorType {
@@ -57,6 +59,8 @@ public:
 
     int pluginIndex(const QString &pluginName) const;
     int selectedThemeIndex() const;
+    // The selected style's colors file has FollowDesktopThemeOpacity=true.
+    bool selectedThemeFollowsDesktopThemeOpacity() const;
 
     QStringList pendingDeletions() const;
     void removeRow(int row);
@@ -82,4 +86,5 @@ struct ThemesModelData {
     ThemesModel::ColorType type;
     bool isLocal;
     bool pendingDeletion;
+    bool followsDesktopThemeOpacity;
 };

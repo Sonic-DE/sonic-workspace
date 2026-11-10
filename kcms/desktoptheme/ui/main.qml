@@ -111,6 +111,11 @@ KCM.GridViewKCM {
 
     actions: [
         Kirigami.Action {
+            icon.name: "configure"
+            text: i18nc("@action:button", "Configure Desktop Style…")
+            onTriggered: kcm.push("ConfigureDesktopStyle.qml")
+        },
+        Kirigami.Action {
             text: i18n("Install from File…")
             icon.name: "document-import"
             onTriggered: fileDialogLoader.active = true

@@ -60,6 +60,8 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
         return item.isLocal;
     case PendingDeletionRole:
         return item.pendingDeletion;
+    case FollowsDesktopThemeOpacityRole:
+        return item.followsDesktopThemeOpacity;
     }
     return {};
 }
@@ -104,12 +106,19 @@ QHash<int, QByteArray> ThemesModel::roleNames() const
         {ColorTypeRole, QByteArrayLiteral("colorType")},
         {IsLocalRole, QByteArrayLiteral("isLocal")},
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
+        {FollowsDesktopThemeOpacityRole, QByteArrayLiteral("followsDesktopThemeOpacity")},
     };
 }
 
 QString ThemesModel::selectedTheme() const
 {
     return m_selectedTheme;
+}
+
+bool ThemesModel::selectedThemeFollowsDesktopThemeOpacity() const
+{
+    const int row = selectedThemeIndex();
+    return row >= 0 && row < m_data.count() && m_data.at(row).followsDesktopThemeOpacity;
 }
 
 void ThemesModel::setSelectedTheme(const QString &pluginName)
@@ -209,8 +218,10 @@ void ThemesModel::load()
             const QString colorsPath = themeRoot + QStringLiteral("/colors");
             const bool followsSystemColors = !QFileInfo::exists(colorsPath);
             ColorType type = FollowsColorTheme;
+            bool followsDesktopThemeOpacity = false;
             if (!followsSystemColors) {
                 const KSharedConfig::Ptr config = KSharedConfig::openConfig(colorsPath);
+                followsDesktopThemeOpacity = config->group(QStringLiteral("General")).readEntry("FollowDesktopThemeOpacity", false);
                 const QPalette palette = KColorScheme::createApplicationPalette(config);
                 const int windowBackgroundGray = qGray(palette.window().color().rgb());
                 if (windowBackgroundGray < 192) {
@@ -219,7 +230,7 @@ void ThemesModel::load()
                     type = LightTheme;
                 }
             }
-            ThemesModelData item{name, packageName, comment, type, isLocal, false};
+            ThemesModelData item{name, packageName, comment, type, isLocal, false, followsDesktopThemeOpacity};
             m_data.append(item);
         }
     }
