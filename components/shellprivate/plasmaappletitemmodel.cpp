@@ -148,6 +148,11 @@ QString PlasmaAppletItem::apiVersion() const
     return m_info.value(u"X-Plasma-API-Minimum-Version");
 }
 
+QStringList PlasmaAppletItem::hiddenWhilePlaced() const
+{
+    return m_info.value(u"X-SonicDE-HiddenWhilePlaced", QStringList());
+}
+
 bool PlasmaAppletItem::isRecent() const
 {
     QDir dir = QDir(m_info.fileName());
@@ -348,12 +353,14 @@ QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
     newRoleNames[IsSupportedRole] = QByteArrayLiteral("isSupported");
     newRoleNames[UnsupportedMessageRole] = QByteArrayLiteral("unsupportedMessage");
     newRoleNames[RecentRole] = QByteArrayLiteral("recent");
+    newRoleNames[HiddenRole] = QByteArrayLiteral("hidden");
     return newRoleNames;
 }
 
 void PlasmaAppletItemModel::populateModel()
 {
     clear();
+    m_hasPlacedRules = false;
 
     auto filter = [this](const KPluginMetaData &plugin) -> bool {
         const QStringList provides = plugin.value(u"X-Plasma-Provides", QStringList());
@@ -405,7 +412,9 @@ void PlasmaAppletItemModel::populateModel()
     for (const KPackage::Package &package : kPackages) {
         KPluginMetaData data = package.metadata();
         if (package.filePath("metadata").endsWith(u"metadata.desktop") && filter(data)) {
-            appendRow(new PlasmaAppletItem(data));
+            auto *item = new PlasmaAppletItem(data);
+            updateHidden(item);
+            appendRow(item);
         }
     }
     // Search all packages that have json metadata but not a correct Plasma/Applet and put them at the end: assume they are plasma5 plasmoids
@@ -415,10 +424,43 @@ void PlasmaAppletItemModel::populateModel()
         }));
 
     for (const KPluginMetaData &plugin : packages) {
-        appendRow(new PlasmaAppletItem(plugin));
+        auto *item = new PlasmaAppletItem(plugin);
+        updateHidden(item);
+        appendRow(item);
     }
 
     Q_EMIT modelPopulated();
+}
+
+void PlasmaAppletItemModel::setPlacedApplets(const QHash<QString, int> &placed)
+{
+    m_placed = placed;
+    for (int r = 0; r < rowCount(); ++r) {
+        if (auto *p = dynamic_cast<PlasmaAppletItem *>(item(r))) {
+            updateHidden(p);
+        }
+    }
+}
+
+bool PlasmaAppletItemModel::hasPlacedRules() const
+{
+    return m_hasPlacedRules;
+}
+
+void PlasmaAppletItemModel::updateHidden(PlasmaAppletItem *item)
+{
+    const QStringList ids = item->hiddenWhilePlaced();
+    if (ids.isEmpty()) {
+        return;
+    }
+    m_hasPlacedRules = true;
+    const bool hidden = std::ranges::any_of(ids, [this](const QString &id) {
+        return m_placed.value(id) > 0;
+    });
+    // Only on change, so the list doesn't re-filter for nothing.
+    if (item->data(HiddenRole).toBool() != hidden) {
+        item->setData(hidden, HiddenRole);
+    }
 }
 
 void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)

@@ -37,6 +37,8 @@ public:
     int running() const override;
     bool isLocal() const;
     bool isRecent() const;
+    // The widgets that, while placed anywhere, keep this one out of the list.
+    QStringList hiddenWhilePlaced() const;
     bool matches(const QString &pattern) const override;
     QStringList keywords() const override;
 
@@ -74,7 +76,8 @@ public:
         ApiVersionRole = Qt::UserRole + 13,
         IsSupportedRole = Qt::UserRole + 14,
         UnsupportedMessageRole = Qt::UserRole + 15,
-        RecentRole = Qt::UserRole + 16
+        RecentRole = Qt::UserRole + 16,
+        HiddenRole = Qt::UserRole + 17
     };
 
     explicit PlasmaAppletItemModel(QObject *parent = nullptr);
@@ -86,6 +89,10 @@ public:
     void setApplication(const QString &app);
     void setRunningApplets(const QHash<QString, int> &apps);
     void setRunningApplets(const QString &name, int count);
+    // Plugin id => count, over every screen and activity.
+    void setPlacedApplets(const QHash<QString, int> &placed);
+    // Some listed widget has X-SonicDE-HiddenWhilePlaced; without one, nothing is counted.
+    bool hasPlacedRules() const;
 
     QString &Application();
 
@@ -101,8 +108,12 @@ Q_SIGNALS:
     void modelPopulated();
 
 private:
+    void updateHidden(PlasmaAppletItem *item);
+
     QString m_application;
     QStringList m_provides;
+    QHash<QString, int> m_placed;
+    bool m_hasPlacedRules = false;
     KConfigGroup m_configGroup;
     bool m_startupCompleted : 1;
 

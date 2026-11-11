@@ -14,6 +14,9 @@
 #include <QQmlEngine>
 #include <QQmlExpression>
 #include <QQmlProperty>
+#include <QTimer>
+
+#include <memory>
 
 #include <KAuthorized>
 #include <KLazyLocalizedString>
@@ -64,10 +67,23 @@ public:
         QObject::connect(activitiesConsumer.get(), &Consumer::currentActivityChanged, q, [this] {
             initRunningApplets();
         });
+        // One recount after a burst of changes.
+        placedTimer.setSingleShot(true);
+        placedTimer.setInterval(0);
+        QObject::connect(&placedTimer, &QTimer::timeout, q, [this] {
+            refreshPlaced();
+        });
+        // A refill may bring or drop widgets with placement rules.
+        QObject::connect(&itemModel, &PlasmaAppletItemModel::modelPopulated, q, [this] {
+            placedTimer.start();
+        });
     }
 
     void initFilters();
     void initRunningApplets();
+    // Counts the widgets placed anywhere, on every screen and activity, and watches for changes.
+    void refreshPlaced();
+    void watchPlaced(Containment *containment, QHash<QString, int> &placed, bool removed = false);
     void screenAdded(int screen);
     void screenRemoved(int screen);
     void containmentDestroyed();
@@ -100,6 +116,10 @@ public:
     static QPointer<KNSWidgets::Dialog> newStuffDialog;
 
     std::unique_ptr<KActivities::Consumer> activitiesConsumer;
+
+    QTimer placedTimer;
+    // Context of the watch connections; not q, which removeContainment() disconnects from.
+    std::unique_ptr<QObject> placedWatcher;
 };
 
 QPointer<KNSWidgets::Dialog> WidgetExplorerPrivate::newStuffDialog;
@@ -286,6 +306,57 @@ void WidgetExplorerPrivate::initRunningApplets()
 
     // qDebug() << runningApplets;
     itemModel.setRunningApplets(runningApplets);
+    refreshPlaced();
+}
+
+void WidgetExplorerPrivate::refreshPlaced()
+{
+    // Nothing in the list depends on what is placed: no watching, no counting.
+    if (!containment || !containment->corona() || !itemModel.hasPlacedRules()) {
+        placedWatcher.reset();
+        return;
+    }
+    Plasma::Corona *corona = containment->corona();
+
+    // Dropping the old watcher drops its connections; the new walk connects what exists now.
+    placedWatcher = std::make_unique<QObject>();
+    QObject::connect(corona, &Plasma::Corona::containmentAdded, placedWatcher.get(), [this] {
+        placedTimer.start();
+    });
+
+    QHash<QString, int> placed;
+    const QList<Containment *> containments = corona->containments();
+    for (Containment *c : containments) {
+        // Reached through the applet holding it, so its panel's removal counts.
+        if (c->containmentType() != Plasma::Containment::CustomEmbedded) {
+            watchPlaced(c, placed);
+        }
+    }
+    itemModel.setPlacedApplets(placed);
+}
+
+void WidgetExplorerPrivate::watchPlaced(Containment *containment, QHash<QString, int> &placed, bool removed)
+{
+    removed = removed || containment->destroyed();
+    QObject *watcher = placedWatcher.get();
+    auto recount = [this] {
+        placedTimer.start();
+    };
+    QObject::connect(containment, &Plasma::Containment::appletAdded, watcher, recount);
+    QObject::connect(containment, &Plasma::Containment::appletRemoved, watcher, recount);
+    QObject::connect(containment, &Plasma::Applet::destroyedChanged, watcher, recount);
+
+    const QList<Applet *> applets = containment->applets();
+    for (Applet *applet : applets) {
+        QObject::connect(applet, &Plasma::Applet::destroyedChanged, watcher, recount);
+        // An embedded containment, such as the system tray, is the applet itself.
+        if (auto *child = qobject_cast<Containment *>(applet)) {
+            watchPlaced(child, placed, removed || applet->destroyed());
+        }
+        if (!removed && !applet->destroyed() && applet->pluginMetaData().isValid()) {
+            placed[applet->pluginMetaData().pluginId()]++;
+        }
+    }
 }
 
 void WidgetExplorerPrivate::screenAdded(int screen)

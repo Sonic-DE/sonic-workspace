@@ -281,6 +281,8 @@ private Q_SLOTS:
     void activateTaskManagerEntry(int index);
 
 private:
+    // Plugin ids of the widgets placed anywhere, on every screen and activity.
+    QSet<QString> placedAppletIds() const;
     void sanitizeScreenLayout(const QString &configFileName);
     void destroyDesktopsAndPanels();
     void updateStruts();

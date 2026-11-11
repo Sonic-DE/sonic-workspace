@@ -168,6 +168,10 @@ bool DefaultItemFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIn
     auto *item = (AbstractItem *)model->itemFromIndex(index);
     // qDebug() << "ITEM " << (item ? "IS NOT " : "IS") << " NULL\n";
 
+    if (item && item->data(PlasmaAppletItemModel::HiddenRole).toBool()) {
+        return false;
+    }
+
     return item && (m_filter.first.isEmpty() || item->passesFiltering(m_filter)) && (m_searchPattern.isEmpty() || item->matches(m_searchPattern));
 }
 

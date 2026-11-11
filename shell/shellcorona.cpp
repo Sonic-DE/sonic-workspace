@@ -66,6 +66,7 @@
 
 #include <algorithm>
 #include <chrono>
+#include <optional>
 #include <ranges>
 
 #ifndef NDEBUG
@@ -2324,10 +2325,40 @@ bool ShellCorona::isScreenUiReady(int screen)
     return true;
 }
 
+QSet<QString> ShellCorona::placedAppletIds() const
+{
+    QSet<QString> ids;
+    std::function<void(const Plasma::Containment *)> collect = [&](const Plasma::Containment *containment) {
+        if (containment->destroyed()) {
+            return;
+        }
+        const QList<Plasma::Applet *> applets = containment->applets();
+        for (const Plasma::Applet *applet : applets) {
+            if (applet->destroyed()) {
+                continue;
+            }
+            ids.insert(applet->pluginMetaData().pluginId());
+            // An embedded containment, such as the system tray, is the applet itself.
+            if (auto *child = qobject_cast<const Plasma::Containment *>(applet)) {
+                collect(child);
+            }
+        }
+    };
+    const QList<Plasma::Containment *> all = containments();
+    for (const Plasma::Containment *containment : all) {
+        // Reached through the applet holding it, so its panel's removal counts.
+        if (containment->containmentType() != Plasma::Containment::CustomEmbedded) {
+            collect(containment);
+        }
+    }
+    return ids;
+}
+
 void ShellCorona::populateAddPanelsMenu()
 {
     m_addPanelsMenu->clear();
     const KPluginMetaData emptyInfo;
+    std::optional<QSet<QString>> placed;
 
     const QList<KPluginMetaData> panelContainmentPlugins = Plasma::PluginLoader::listContainmentsMetaDataOfType(QStringLiteral("Panel"));
     QMap<QString, QPair<KPluginMetaData, KPluginMetaData>> sorted;
@@ -2343,6 +2374,17 @@ void ShellCorona::populateAddPanelsMenu()
     };
     const QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
     for (const auto &tpl : templates) {
+        const QStringList excludedBy = tpl.value(u"X-SonicDE-HiddenWhilePlaced", QStringList());
+        if (!excludedBy.isEmpty()) {
+            if (!placed) {
+                placed = placedAppletIds();
+            }
+            if (std::ranges::any_of(excludedBy, [&placed](const QString &id) {
+                    return placed->contains(id);
+                })) {
+                continue;
+            }
+        }
         sorted.insert(tpl.name(), qMakePair(emptyInfo, tpl));
     }
 
@@ -2424,8 +2466,24 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
     KConfigGroup targetGeneralConfig = targetConfig.group(QStringLiteral("General"));
     QString appletsOrder = targetGeneralConfig.readEntry(QStringLiteral("AppletOrder"), QStringLiteral());
     QStringList appletsOrderList = appletsOrder.split(QStringLiteral(";"));
+    std::optional<QSet<QString>> placed;
 
     for (auto applet : oldPanel->applets()) {
+        // A widget that can't have another copy stays out of the clone.
+        const QStringList excludedBy = applet->pluginMetaData().value(u"X-SonicDE-HiddenWhilePlaced", QStringList());
+        if (!excludedBy.isEmpty()) {
+            if (!placed) {
+                placed = placedAppletIds();
+            }
+            if (std::ranges::any_of(excludedBy, [&placed](const QString &id) {
+                    return placed->contains(id);
+                })) {
+                targetAppletsConfig.group(QString::number(applet->id())).deleteGroup();
+                appletsOrderList.removeAll(QString::number(applet->id()));
+                continue;
+            }
+        }
+
         auto newApplet = targetPanel->createApplet(applet->pluginName());
 
         for (int i = 0; i < appletsOrderList.size(); ++i) {
