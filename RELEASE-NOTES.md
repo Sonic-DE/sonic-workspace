@@ -5,6 +5,7 @@ Sonic Workspace is the heart of the SonicDE desktop: it provides the desktop she
 ## Unreleased
 
 - Desktop Style settings has a new Configure Desktop Style… page. Its first settings choose how see-through panels, pop-ups, tooltips and desktop widgets are, for desktop styles that support them, such as Silver Light and Silver Dark.
+- Upgrading SonicDE no longer adds its desktop shell's keyboard shortcuts to KDE Plasma's shortcut settings.
 - Behind the scenes: a widget or panel layout can be left out of Add Widgets and Add Panel, and out of cloned panels, while a widget it can't share the desktop with is placed.
 
 ## 6.8.2 (2026-11-10)

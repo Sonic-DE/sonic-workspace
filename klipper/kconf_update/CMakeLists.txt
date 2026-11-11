@@ -8,5 +8,5 @@ target_link_libraries(plasma6.3-update-clipboard-database-2-to-3 PRIVATE Qt::Gui
 install(FILES plasma6.3-update-clipboard-database-2-to-3.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS plasma6.3-update-clipboard-database-2-to-3 DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
 
-# The old shell-component shortcut cleanup is deliberately not installed: the
-# namespace import preserves original and custom bindings instead of deleting them.
+# The old shell-component shortcut cleanup is deliberately not installed: it would edit
+# KDE's kglobalshortcutsrc, and SonicDE's shortcut daemon keeps its own file.

@@ -83,15 +83,14 @@ private Q_SLOTS:
         QCOMPARE(read(p.config + QStringLiteral("/plasmashellrc")), source);
         QCOMPARE(read(p.config + QStringLiteral("/plasma-org.kde.plasma.desktop-appletsrc")), layout);
         QCOMPARE(read(p.state + QStringLiteral("/plasmashellstaterc")), state);
-        const auto updated = read(p.config + QStringLiteral("/kglobalshortcutsrc"));
-        QVERIFY(updated.startsWith(shortcuts));
-        QVERIFY(updated.contains("[sonicshell]\ncustom=Meta+Y,none,Shell"));
+        // Shortcuts belong to the shortcut daemon's own file; KDE's stays untouched.
+        QCOMPARE(read(p.config + QStringLiteral("/kglobalshortcutsrc")), shortcuts);
         QVERIFY(!(QFile::permissions(p.config + QStringLiteral("/sonicshellrc")) & QFileDevice::ReadOther));
         QCOMPARE(QFile::permissions(p.config + QStringLiteral("/sonicshellrc")), QFile::permissions(p.config + QStringLiteral("/plasmashellrc")));
         QCOMPARE(QFileInfo(p.config + QStringLiteral("/sonicshellrc")).ownerId(), QFileInfo(p.config + QStringLiteral("/plasmashellrc")).ownerId());
         QCOMPARE(QFileInfo(p.config + QStringLiteral("/sonicshellrc")).groupId(), QFileInfo(p.config + QStringLiteral("/plasmashellrc")).groupId());
         QVERIFY2(importSettings(p, QStringLiteral("org.sonicde.desktop"), &error), qPrintable(error));
-        QCOMPARE(read(p.config + QStringLiteral("/kglobalshortcutsrc")), updated);
+        QCOMPARE(read(p.config + QStringLiteral("/kglobalshortcutsrc")), shortcuts);
     }
 
     void preservesExistingDestinations()
@@ -298,7 +297,7 @@ private Q_SLOTS:
         QCOMPARE(read(p.config + QStringLiteral("/plasmashellrc")), source);
     }
 
-    void preservesUtf8BomAndShortcutGroups()
+    void preservesUtf8BomAndLeavesShortcuts()
     {
         QTemporaryDir directory;
         const auto p = paths(directory.path());
@@ -309,10 +308,7 @@ private Q_SLOTS:
         QString error;
         QVERIFY2(importSettings(p, {}, &error), qPrintable(error));
         QCOMPARE(read(p.config + QStringLiteral("/sonicshellrc")), QByteArray("\xef\xbb\xbf[Shell]\nShellPackage=org.sonicde.desktop\n"));
-        const auto result = read(p.config + QStringLiteral("/kglobalshortcutsrc"));
-        QVERIFY(result.startsWith(shortcuts));
-        QVERIFY(result.contains("[sonicshell]\ncustom=Meta+Y"));
-        QVERIFY(result.contains("[sonicshell][Extra]\nkeep=yes"));
+        QCOMPARE(read(p.config + QStringLiteral("/kglobalshortcutsrc")), shortcuts);
         QCOMPARE(read(p.config + QStringLiteral("/plasmashellrc")), source);
     }
 
@@ -374,11 +370,6 @@ private Q_SLOTS:
         QVERIFY(lock.tryLock(0));
         QVERIFY(!importSettings(p, QStringLiteral("org.sonicde.desktop"), &error, 0));
         QVERIFY(!QFileInfo::exists(p.config + QStringLiteral("/sonicshellrc")));
-        lock.unlock();
-        QLockFile shortcuts(p.config + QStringLiteral("/kglobalshortcutsrc.lock"));
-        QVERIFY(shortcuts.tryLock(0));
-        QVERIFY(!importSettings(p, QStringLiteral("org.sonicde.desktop"), &error, 0));
-        QVERIFY(!QFileInfo::exists(p.config + QStringLiteral("/sonicshellrc")));
     }
 
     void destinationFailureDoesNotInitializeDefaults()
@@ -419,7 +410,8 @@ private Q_SLOTS:
         QVERIFY(second.waitForFinished(15000));
         QCOMPARE(first.exitCode(), 0);
         QCOMPARE(second.exitCode(), 0);
-        QCOMPARE(read(p.config + QStringLiteral("/kglobalshortcutsrc")).count("[sonicshell]"), 1);
+        QVERIFY(QFileInfo::exists(p.config + QStringLiteral("/sonicshellrc")));
+        QVERIFY(!read(p.config + QStringLiteral("/kglobalshortcutsrc")).contains("[sonicshell]"));
     }
 };
 

@@ -14,7 +14,6 @@
 #include <QLockFile>
 #include <QProcess>
 #include <QRegularExpression>
-#include <QSaveFile>
 #include <QStandardPaths>
 #include <QTemporaryFile>
 #include <QUrl>
@@ -187,16 +186,6 @@ QString oldState(const Paths &paths)
     return exists(current) ? current : paths.data + QStringLiteral("/plasmashell/plasmashellstaterc");
 }
 
-bool isGroup(const QByteArray &line, const QByteArray &name)
-{
-    QByteArray header = '[' + name + ']';
-    if (line == header) {
-        return true;
-    }
-    header.append('[');
-    return line.startsWith(header);
-}
-
 bool completionRecord(const QString &path, const QString &shell, QString *error)
 {
     QFile file(path);
@@ -281,45 +270,6 @@ QByteArray remapDefaultPackage(const QByteArray &content)
     return updated;
 }
 
-bool planShortcuts(const Paths &paths, QByteArray *updated, bool *changed, QString *error)
-{
-    const QString path = paths.config + QStringLiteral("/kglobalshortcutsrc");
-    if (!exists(path)) {
-        return true;
-    }
-    QByteArray original;
-    if (!readConfig(path, &original, error)) {
-        return false;
-    }
-    QByteArray parsed = original;
-    if (parsed.startsWith("\xef\xbb\xbf")) {
-        parsed.remove(0, 3);
-    }
-    const auto lines = parsed.split('\n');
-    for (const auto &raw : lines) {
-        if (isGroup(raw.trimmed(), "sonicshell")) {
-            return true;
-        }
-    }
-    QByteArray imported;
-    bool inGroup = false;
-    for (const auto &raw : lines) {
-        const auto line = raw.trimmed();
-        if (line.startsWith('[')) {
-            inGroup = isGroup(line, "plasmashell");
-            if (inGroup) {
-                imported += "[sonicshell]" + line.mid(sizeof("[plasmashell]") - 1) + '\n';
-            }
-        } else if (inGroup) {
-            imported += raw + '\n';
-        }
-    }
-    if (!imported.isEmpty()) {
-        *updated = original + (original.endsWith('\n') ? QByteArray() : QByteArray("\n")) + imported;
-        *changed = true;
-    }
-    return true;
-}
 }
 
 Paths userPaths()
@@ -437,17 +387,6 @@ bool importSettings(const Paths &paths, const QString &requestedPackage, QString
         copy.content.replace(QUrl::fromLocalFile(oldData).toEncoded(), QUrl::fromLocalFile(newData).toEncoded());
         copy.content.replace(oldData.toUtf8(), newData.toUtf8());
     }
-    // This is the same lock used by KConfig's file backend. Read and append the
-    // component while holding it, preserving every other group and old binding.
-    QLockFile shortcutsLock(paths.config + QStringLiteral("/kglobalshortcutsrc.lock"));
-    if (!shortcutsLock.tryLock(lockTimeout)) {
-        return fail(error, QStringLiteral("Cannot lock shared shortcut configuration"));
-    }
-    QByteArray shortcuts;
-    bool shortcutsChanged = false;
-    if (!baseDone && !planShortcuts(paths, &shortcuts, &shortcutsChanged, error)) {
-        return false;
-    }
     // All legacy inputs have been validated before publishing any destination.
     // On interruption, already-published destinations are preserved on retry.
     if (!baseDone && exists(paths.data + QStringLiteral("/plasmashell"))) {
@@ -458,13 +397,6 @@ bool importSettings(const Paths &paths, const QString &requestedPackage, QString
     for (const auto &copy : copies) {
         if (!publish(copy, error)) {
             return false;
-        }
-    }
-    if (shortcutsChanged) {
-        QSaveFile file(paths.config + QStringLiteral("/kglobalshortcutsrc"));
-        file.setDirectWriteFallback(false);
-        if (!file.open(QIODevice::WriteOnly) || file.write(shortcuts) != shortcuts.size() || !file.commit()) {
-            return fail(error, QStringLiteral("Cannot atomically import shell shortcuts"));
         }
     }
     if (!baseDone
