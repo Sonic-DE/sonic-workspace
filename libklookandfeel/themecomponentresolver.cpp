@@ -140,7 +140,9 @@ bool ThemeComponentResolver::isAvailable(Type type, const QString &id)
     case Type::DesktopSwitcher:
         // Switcher layouts may be supplied by a look-and-feel package or a
         // dedicated tabbox package. Either is a valid third-party selection.
-        return dataDirectoryExists(QStringLiteral("plasma/look-and-feel/") + id) || dataDirectoryExists(QStringLiteral("kwin/tabbox/") + id);
+        // SonicWin installs its own layouts under kwin-x11/.
+        return dataDirectoryExists(QStringLiteral("plasma/look-and-feel/") + id) || dataDirectoryExists(QStringLiteral("kwin/tabbox/") + id)
+            || dataDirectoryExists(QStringLiteral("kwin-x11/tabbox/") + id);
     }
     return false;
 }
@@ -163,9 +165,10 @@ QString ThemeComponentResolver::fallback(Type type, bool dark)
     case Type::Decoration:
         return QStringLiteral("org.kde.silver");
     case Type::Splash:
+        return QStringLiteral("org.kde.silverlightbottompanel.desktop");
     case Type::WindowSwitcher:
     case Type::DesktopSwitcher:
-        return QStringLiteral("org.kde.silver.desktop");
+        return QStringLiteral("thumbnail_grid");
     }
     return {};
 }

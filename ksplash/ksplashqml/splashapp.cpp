@@ -54,7 +54,7 @@ SplashApp::SplashApp(int &argc, char **argv)
     if (m_theme.isEmpty()) {
         KConfigGroup ksplashCfg = KSharedConfig::openConfig()->group(QStringLiteral("KSplash"));
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
-            m_theme = ksplashCfg.readEntry("Theme", QStringLiteral("org.kde.silver.desktop"));
+            m_theme = ksplashCfg.readEntry("Theme", QStringLiteral("org.kde.silverlightbottompanel.desktop"));
         }
     }
 

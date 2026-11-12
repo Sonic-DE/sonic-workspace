@@ -26,3 +26,9 @@ target_sources(sonicde-6.0-repair-missing-theme-components PRIVATE sonicde-6.0-r
 target_link_libraries(sonicde-6.0-repair-missing-theme-components PRIVATE PW::KLookAndFeel KF6::ConfigCore Qt::Core)
 install(FILES sonicde-6.0-repair-missing-theme-components.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS sonicde-6.0-repair-missing-theme-components DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
+
+add_executable(sonicde-retire-silver-global-theme)
+target_sources(sonicde-retire-silver-global-theme PRIVATE sonicde-retire-silver-global-theme.cpp)
+target_link_libraries(sonicde-retire-silver-global-theme PRIVATE PW::KLookAndFeel KF6::ConfigCore Qt::Core)
+install(FILES sonicde-retire-silver-global-theme.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(TARGETS sonicde-retire-silver-global-theme DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)

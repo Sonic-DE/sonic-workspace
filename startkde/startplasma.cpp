@@ -554,7 +554,7 @@ QProcess *setupKSplash()
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             p = new QProcess;
             p->setProcessChannelMode(QProcess::ForwardedChannels);
-            p->start(QStringLiteral("ksplashqml"), {ksplashCfg.readEntry("Theme", QStringLiteral("org.kde.silver.desktop"))});
+            p->start(QStringLiteral("ksplashqml"), {ksplashCfg.readEntry("Theme", QStringLiteral("org.kde.silverlightbottompanel.desktop"))});
         }
     }
     return p;

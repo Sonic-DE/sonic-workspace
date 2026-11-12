@@ -74,6 +74,15 @@ private Q_SLOTS:
         QVERIFY(ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::LookAndFeel, QStringLiteral("vendor-no-metadata")));
     }
 
+    void acceptsSonicWinSwitchers()
+    {
+        const QString data = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+        QDir().mkpath(data + QStringLiteral("/kwin-x11/tabbox/sonic-switcher"));
+        QVERIFY(ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::WindowSwitcher, QStringLiteral("sonic-switcher")));
+        QVERIFY(ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::DesktopSwitcher, QStringLiteral("sonic-switcher")));
+        QVERIFY(!ThemeComponentResolver::isAvailable(ThemeComponentResolver::Type::WindowSwitcher, QStringLiteral("missing")));
+    }
+
     void selectsVariantFallbacks()
     {
         QCOMPARE(ThemeComponentResolver::fallback(ThemeComponentResolver::Type::ColorScheme, false), QStringLiteral("SilverLight"));

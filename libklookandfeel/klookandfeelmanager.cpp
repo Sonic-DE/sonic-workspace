@@ -85,7 +85,8 @@ KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackag
 {
     Contents contents = Empty;
 
-    contents.setFlag(SplashScreen, !pkg.filePath("splashmainscript").isEmpty());
+    // Only a splash of its own: every package inherits the default package's splash.
+    contents.setFlag(SplashScreen, pkg.filePath("splashmainscript").startsWith(pkg.path()));
 
     contents.setFlag(DesktopLayout, !pkg.filePath("layouts").isEmpty());
 

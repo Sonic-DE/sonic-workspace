@@ -227,8 +227,8 @@ KLookAndFeelManifest KLookAndFeelManifest::snapshot()
     manifest.setCursorTheme(systemCG.readEntry("cursorTheme", QStringLiteral("silver_cursors_light")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("kwinrc")), QStringLiteral("TabBox"));
-    manifest.setWindowSwitcher(systemCG.readEntry("LayoutName", QStringLiteral("org.kde.silver.desktop")));
-    manifest.setDesktopSwitcher(systemCG.readEntry("DesktopLayout", QStringLiteral("org.kde.silver.desktop")));
+    manifest.setWindowSwitcher(systemCG.readEntry("LayoutName", QStringLiteral("thumbnail_grid")));
+    manifest.setDesktopSwitcher(systemCG.readEntry("DesktopLayout", QStringLiteral("thumbnail_grid")));
 
     systemCG = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("kwinrc")), QStringLiteral("org.kde.kdecoration2"));
     manifest.setDecorationLibrary(systemCG.readEntry("library", QStringLiteral("org.kde.silver")));
