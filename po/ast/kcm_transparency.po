@@ -1,0 +1,142 @@
+# Asturian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Asturian\n"
+"Language: ast\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Escritoriu"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "L'estilu d'escritoriu esbilláu usa la so propia tresparencia. Los estilos d'escritoriu como Silver Light y Silver Dark usen estos axustes."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Usar estos axustes en cuenta de los del estilu d'escritoriu"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneles:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Ventanos emerxentes:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Conseyos:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widgets del escritoriu:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menús"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "L'estilu d'aplicaciones esbilláu dibuxa menús opacos. Los estilos d'aplicaciones Silver y Breeze usen esti axuste."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menús:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Barres de títulu"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "La decoración de ventanos esbillada dibuxa barres de títulu opaques. La decoración de ventanos Silver usa estos axustes."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Ventanu activu:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Ventanu inactivu:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Facer siempres opaques les barres de títulu de los ventanos maximizaos"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Desenfocar les barres de títulu tresparentes"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Aplicar esta opacidá a tola área de la testera (barres de ferramientes y de menús)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Axustar la barra de títulu al color de l'aplicación"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Esceiciones…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Tresparente"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opacu"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Esceiciones de les barres de títulu"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Anular:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Usar esta esceición"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Nome de l'aplicación o clase del ventanu (espresión regular)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Predeterminada"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Quitar la esceición"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Opacidá del ventanu activu:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Opacidá de los ventanos inactivos:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Aplicar esta opacidá a tola área de la testera"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Una esceición namás camuda los axustes de les barres de títulu, pa les aplicaciones que concasen con ella."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Amestar una esceición"

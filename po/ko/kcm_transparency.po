@@ -1,0 +1,142 @@
+# Korean translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Korean\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "바탕 화면"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "선택한 데스크톱 스타일은 자체 투명도를 사용합니다. Silver Light, Silver Dark와 같은 데스크톱 스타일이 이 설정을 사용합니다."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "데스크톱 스타일 자체 설정 대신 이 설정 사용"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "패널:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "팝업:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "도구 설명:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "바탕 화면 위젯:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "메뉴"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "선택한 프로그램 스타일은 불투명한 메뉴를 그립니다. Silver와 Breeze 프로그램 스타일이 이 설정을 사용합니다."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "메뉴:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "제목 표시줄"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "선택한 창 장식은 불투명한 제목 표시줄을 그립니다. Silver 창 장식이 이 설정을 사용합니다."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "활성 창:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "비활성 창:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "최대화된 창의 제목 표시줄을 항상 불투명하게 하기"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "투명한 제목 표시줄 흐리게 하기"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "이 불투명도를 전체 머리글 영역(도구 모음과 메뉴 표시줄)에 적용"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "제목 표시줄을 프로그램 색상에 맞추기"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "예외…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "투명"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "불투명"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "제목 표시줄 예외"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "재정의:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "이 예외 사용"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "프로그램 이름 또는 창 클래스(정규 표현식)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "기본값"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "예외 삭제"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "활성 창 불투명도:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "비활성 창 불투명도:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "이 불투명도를 전체 머리글 영역에 적용"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "예외는 일치하는 프로그램의 제목 표시줄 설정만 변경합니다."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "예외 추가"

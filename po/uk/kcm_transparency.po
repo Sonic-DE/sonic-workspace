@@ -1,0 +1,142 @@
+# Ukrainian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Стільниця"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Вибраний стиль стільниці використовує власну прозорість. Ці параметри використовують стилі стільниці, зокрема Silver Light і Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Використовувати ці параметри замість параметрів стилю стільниці"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Панелі:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Контекстні вікна:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Підказки:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Віджети стільниці:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Меню"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Вибраний стиль програм малює непрозорі меню. Цей параметр використовують стилі програм Silver і Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Меню:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Смужки заголовків"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Вибране обрамлення вікон малює непрозорі смужки заголовків. Ці параметри використовує обрамлення вікон Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Активне вікно:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Неактивне вікно:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Завжди робити непрозорими смужки заголовків максимізованих вікон"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Розмивати прозорі смужки заголовків"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Застосовувати цю непрозорість до всієї області заголовка (панелі інструментів і смужки меню)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Узгоджувати смужку заголовка з кольором програми"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Виключення…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Прозорий"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Непрозорий"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Виключення для смужок заголовків"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Перевизначити:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Використовувати це виключення"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Назва програми або клас вікна (формальний вираз)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Типове"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Вилучити виключення"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Непрозорість активного вікна:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Непрозорість неактивних вікон:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Застосовувати цю непрозорість до всієї області заголовка"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Виключення змінює лише параметри смужок заголовків для відповідних програм."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Додати виключення"

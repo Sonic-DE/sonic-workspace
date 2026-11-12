@@ -1,0 +1,142 @@
+# Dutch translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Bureaublad"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "De geselecteerde bureaubladstijl gebruikt zijn eigen transparantie. Bureaubladstijlen zoals Silver Light en Silver Dark gebruiken deze instellingen."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Deze instellingen gebruiken in plaats van die van de bureaubladstijl"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panelen:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Pop-ups:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Tekstballonnen:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Bureaubladwidgets:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menu's"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "De geselecteerde toepassingsstijl tekent ondoorzichtige menu's. De toepassingsstijlen Silver en Breeze gebruiken deze instelling."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menu's:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titelbalken"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "De geselecteerde vensterdecoratie tekent ondoorzichtige titelbalken. De vensterdecoratie Silver gebruikt deze instellingen."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Actief venster:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Inactief venster:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Titelbalken van gemaximaliseerde vensters altijd ondoorzichtig maken"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Transparante titelbalken vervagen"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Deze dekking op het hele kopgebied toepassen (werkbalken en menubalken)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Titelbalk aanpassen aan de kleur van de toepassing"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Uitzonderingen…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparant"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Ondoorzichtig"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Uitzonderingen voor titelbalken"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Overschrijven:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Deze uitzondering gebruiken"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Toepassingsnaam of vensterklasse (reguliere expressie)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standaard"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Uitzondering verwijderen"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Dekking van actief venster:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Dekking van inactieve vensters:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Deze dekking op het hele kopgebied toepassen"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Een uitzondering wijzigt alleen de instellingen van titelbalken, voor de toepassingen waarop ze van toepassing is."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Uitzondering toevoegen"

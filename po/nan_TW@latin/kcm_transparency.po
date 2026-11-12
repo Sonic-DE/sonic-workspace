@@ -1,0 +1,142 @@
+# Taiwanese (Latin script) translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Taiwanese\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Toh-bīn"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Kéng hó ê toh-bīn hong-keh iōng i ka-kī ê thàu-bîng-tōo. Silver Light kah Silver Dark tsit khuán ê toh-bīn hong-keh iōng tsia-ê siat-tīng."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Iōng tsia-ê siat-tīng tāi-thè toh-bīn hong-keh ka-kī ê siat-tīng"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Bīn-pang:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Tuānn-tshut sī-thang:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Kang-kū thê-sī:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Toh-bīn sió kang-kū:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Suán-tuann"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Kéng hó ê ìng-iōng thîng-sik hong-keh uē bô thàu-kng ê suán-tuann. Silver kah Breeze ìng-iōng thîng-sik hong-keh iōng tsit ê siat-tīng."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Suán-tuann:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Phiau-tê-lia̍t"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Kéng hó ê sī-thang tsong-sik uē bô thàu-kng ê phiau-tê-lia̍t. Silver sī-thang tsong-sik iōng tsia-ê siat-tīng."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Tsok-iōng tiong ê sī-thang:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Bô tsok-iōng ê sī-thang:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Tshiūnn-tuā-huà sī-thang ê phiau-tê-lia̍t it-ti̍t lóng bô thàu-kng"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Kā thàu-bîng ê phiau-tê-lia̍t bū-huà"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Kā tsit ê bô thàu-kng-tōo iōng tī kui ê thâu-khak khu (kang-kū-lia̍t kah suán-tuann-lia̍t)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Hōo phiau-tê-lia̍t phuè-ha̍p ìng-iōng thîng-sik ê sik"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Lē-guā…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Thàu-bîng"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Bô thàu-kng"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Phiau-tê-lia̍t lē-guā"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Khàm-kuè:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Iōng tsit ê lē-guā"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Ìng-iōng thîng-sik miâ-tshing ia̍h-sī sī-thang luī-pia̍t (tsìng-kui piáu-sī-sik)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Ī-siat"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "The̍h-tiāu lē-guā"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Tsok-iōng tiong sī-thang ê bô thàu-kng-tōo:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Bô tsok-iōng sī-thang ê bô thàu-kng-tōo:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Kā tsit ê bô thàu-kng-tōo iōng tī kui ê thâu-khak khu"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Lē-guā kan-na kái hù-ha̍p ê ìng-iōng thîng-sik ê phiau-tê-lia̍t siat-tīng."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ka lē-guā"

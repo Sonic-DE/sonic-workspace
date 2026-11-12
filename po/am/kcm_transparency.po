@@ -1,0 +1,142 @@
+# Amharic translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Amharic\n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "ዴስክቶፕ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "የተመረጠው የዴስክቶፕ ዘይቤ የራሱን ግልጽነት ይጠቀማል። እንደ Silver Light እና Silver Dark ያሉ የዴስክቶፕ ዘይቤዎች እነዚህን ቅንብሮች ይጠቀማሉ።"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "በዴስክቶፕ ዘይቤው ቅንብሮች ፋንታ እነዚህን ቅንብሮች ተጠቀም"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "ፓነሎች፦"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "ብቅ-ባዮች፦"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "ጠቃሚ ምክሮች፦"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "የዴስክቶፕ ዊጀቶች፦"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "ዝርዝሮች"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "የተመረጠው የመተግበሪያ ዘይቤ ግልጽ ያልሆኑ ዝርዝሮችን ይስላል። የ Silver እና Breeze መተግበሪያ ዘይቤዎች ይህን ቅንብር ይጠቀማሉ።"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "ዝርዝሮች፦"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "የአርእስት መደርደሪያዎች"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "የተመረጠው የመስኮት ማስጌጫ ግልጽ ያልሆኑ የአርእስት መደርደሪያዎችን ይስላል። የ Silver መስኮት ማስጌጫ እነዚህን ቅንብሮች ይጠቀማል።"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "ንቁ መስኮት፦"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "ንቁ ያልሆነ መስኮት፦"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "የተስፉ መስኮቶችን የአርእስት መደርደሪያዎች ሁልጊዜ ግልጽ ያልሆኑ አድርግ"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "ግልጽ የሆኑ የአርእስት መደርደሪያዎችን አደብዝዝ"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ይህን ግልጽ አለመሆን በሙሉ የራስጌ ቦታ ላይ ተግብር (የመሣሪያ መደርደሪያዎች እና የዝርዝር መደርደሪያዎች)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "የአርእስት መደርደሪያውን ከመተግበሪያው ቀለም ጋር አዛምድ"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ልዩ ሁኔታዎች…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "ግልጽ"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ግልጽ ያልሆነ"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "የአርእስት መደርደሪያ ልዩ ሁኔታዎች"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "ተካ፦"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ይህን ልዩ ሁኔታ ተጠቀም"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "የመተግበሪያ ስም ወይም የመስኮት ክፍል (መደበኛ አገላለጽ)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "ነባሪ"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ልዩ ሁኔታውን አስወግድ"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "የንቁ መስኮት ግልጽ አለመሆን፦"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "የንቁ ያልሆኑ መስኮቶች ግልጽ አለመሆን፦"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ይህን ግልጽ አለመሆን በሙሉ የራስጌ ቦታ ላይ ተግብር"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ልዩ ሁኔታ ለሚዛመዱት መተግበሪያዎች የአርእስት መደርደሪያ ቅንብሮችን ብቻ ይቀይራል።"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "ልዩ ሁኔታ ጨምር"

@@ -1,0 +1,142 @@
+# Thai translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "พื้นโต๊ะ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "รูปแบบพื้นโต๊ะที่เลือกใช้ความโปร่งใสของตัวเอง รูปแบบพื้นโต๊ะอย่าง Silver Light และ Silver Dark ใช้การตั้งค่าเหล่านี้"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "ใช้การตั้งค่าเหล่านี้แทนการตั้งค่าของรูปแบบพื้นโต๊ะ"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "แผง:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "หน้าต่างผุดขึ้น:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "คำแนะนำ:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "วิดเจ็ตพื้นโต๊ะ:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "เมนู"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "รูปแบบแอปพลิเคชันที่เลือกวาดเมนูแบบทึบ รูปแบบแอปพลิเคชัน Silver และ Breeze ใช้การตั้งค่านี้"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "เมนู:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "แถบหัวเรื่อง"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "การตกแต่งหน้าต่างที่เลือกวาดแถบหัวเรื่องแบบทึบ การตกแต่งหน้าต่าง Silver ใช้การตั้งค่าเหล่านี้"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "หน้าต่างที่ใช้งาน:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "หน้าต่างที่ไม่ได้ใช้งาน:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "ทำให้แถบหัวเรื่องของหน้าต่างที่ขยายใหญ่สุดทึบเสมอ"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "เบลอแถบหัวเรื่องที่โปร่งใส"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ใช้ความทึบนี้กับพื้นที่ส่วนหัวทั้งหมด (แถบเครื่องมือและแถบเมนู)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "ปรับแถบหัวเรื่องให้เข้ากับสีของแอปพลิเคชัน"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ข้อยกเว้น…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "โปร่งใส"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ทึบ"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "ข้อยกเว้นของแถบหัวเรื่อง"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "แทนที่:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ใช้ข้อยกเว้นนี้"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "ชื่อแอปพลิเคชันหรือคลาสหน้าต่าง (นิพจน์ปกติ)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "ค่าปริยาย"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ลบข้อยกเว้น"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "ความทึบของหน้าต่างที่ใช้งาน:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "ความทึบของหน้าต่างที่ไม่ได้ใช้งาน:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ใช้ความทึบนี้กับพื้นที่ส่วนหัวทั้งหมด"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ข้อยกเว้นจะเปลี่ยนเฉพาะการตั้งค่าแถบหัวเรื่อง สำหรับแอปพลิเคชันที่ตรงกัน"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "เพิ่มข้อยกเว้น"

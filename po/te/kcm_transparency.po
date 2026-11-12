@@ -1,0 +1,142 @@
+# Telugu translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Telugu\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "డెస్క్‌టాప్"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "ఎంచుకున్న డెస్క్‌టాప్ శైలి తన సొంత పారదర్శకతను వాడుతుంది. Silver Light, Silver Dark వంటి డెస్క్‌టాప్ శైలులు ఈ అమరికలను వాడతాయి."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "డెస్క్‌టాప్ శైలి అమరికలకు బదులు ఈ అమరికలను వాడు"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "ప్యానెళ్లు:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "పాప్-అప్‌లు:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "సూచనలు:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "డెస్క్‌టాప్ విడ్జెట్లు:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "మెనూలు"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "ఎంచుకున్న అనువర్తన శైలి అపారదర్శక మెనూలను గీస్తుంది. Silver, Breeze అనువర్తన శైలులు ఈ అమరికను వాడతాయి."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "మెనూలు:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "శీర్షిక పట్టీలు"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "ఎంచుకున్న విండో అలంకరణ అపారదర్శక శీర్షిక పట్టీలను గీస్తుంది. Silver విండో అలంకరణ ఈ అమరికలను వాడుతుంది."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "క్రియాశీల విండో:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "నిష్క్రియ విండో:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "గరిష్ఠీకరించిన విండోల శీర్షిక పట్టీలను ఎల్లప్పుడూ అపారదర్శకం చేయి"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "పారదర్శక శీర్షిక పట్టీలను మసకబార్చు"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ఈ అపారదర్శకతను మొత్తం శీర్షిక ప్రాంతానికి వర్తింపజేయి (పనిముట్ల పట్టీలు, మెనూ పట్టీలు)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "శీర్షిక పట్టీని అనువర్తన రంగుకు సరిపోల్చు"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "మినహాయింపులు…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "పారదర్శకం"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "అపారదర్శకం"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "శీర్షిక పట్టీ మినహాయింపులు"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "భర్తీ చేయి:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ఈ మినహాయింపును వాడు"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "అనువర్తనం పేరు లేదా విండో తరగతి (రెగ్యులర్ ఎక్స్‌ప్రెషన్)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "అప్రమేయం"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "మినహాయింపును తీసివేయి"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "క్రియాశీల విండో అపారదర్శకత:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "నిష్క్రియ విండోల అపారదర్శకత:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ఈ అపారదర్శకతను మొత్తం శీర్షిక ప్రాంతానికి వర్తింపజేయి"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "మినహాయింపు సరిపోలే అనువర్తనాలకు శీర్షిక పట్టీ అమరికలను మాత్రమే మారుస్తుంది."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "మినహాయింపును జోడించు"

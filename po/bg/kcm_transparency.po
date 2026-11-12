@@ -1,0 +1,142 @@
+# Bulgarian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Bulgarian\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Работен плот"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Избраният стил на работния плот използва собствена прозрачност. Тези настройки се използват от стилове на работния плот като Silver Light и Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Използване на тези настройки вместо тези на стила на работния плот"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Панели:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Изскачащи прозорци:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Подсказки:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Джаджи на работния плот:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Менюта"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Избраният стил на приложенията рисува непрозрачни менюта. Тази настройка се използва от стиловете на приложения Silver и Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Менюта:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Заглавни ленти"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Избраната декорация на прозорците рисува непрозрачни заглавни ленти. Тези настройки се използват от декорацията на прозорци Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Активен прозорец:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Неактивен прозорец:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Винаги непрозрачни заглавни ленти на максимизираните прозорци"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Размазване на прозрачните заглавни ленти"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Прилагане на тази непрозрачност към цялата горна област (ленти с инструменти и ленти с менюта)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Съгласуване на заглавната лента с цвета на приложението"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Изключения…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Прозрачно"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Непрозрачно"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Изключения за заглавните ленти"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Замяна:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Използване на това изключение"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Име на приложението или клас на прозореца (регулярен израз)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "По подразбиране"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Премахване на изключението"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Непрозрачност на активния прозорец:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Непрозрачност на неактивните прозорци:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Прилагане на тази непрозрачност към цялата горна област"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Изключението променя само настройките на заглавните ленти за съответстващите приложения."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Добавяне на изключение"

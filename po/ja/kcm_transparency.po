@@ -1,0 +1,142 @@
+# Japanese translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "デスクトップ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "選択したデスクトップスタイルは独自の透明度を使用します。Silver Light や Silver Dark などのデスクトップスタイルがこれらの設定を使用します。"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "デスクトップスタイル独自の設定の代わりにこれらの設定を使用する"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "パネル:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "ポップアップ:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "ツールチップ:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "デスクトップウィジェット:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "メニュー"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "選択したアプリケーションスタイルは不透明なメニューを描画します。Silver と Breeze のアプリケーションスタイルがこの設定を使用します。"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "メニュー:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "タイトルバー"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "選択したウィンドウの飾りは不透明なタイトルバーを描画します。Silver ウィンドウの飾りがこれらの設定を使用します。"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "アクティブウィンドウ:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "非アクティブウィンドウ:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "最大化したウィンドウのタイトルバーを常に不透明にする"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "透明なタイトルバーをぼかす"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "この不透明度をヘッダー領域全体 (ツールバーとメニューバー) に適用する"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "タイトルバーをアプリケーションの色に合わせる"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "例外…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "透明"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "不透明"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "タイトルバーの例外"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "上書き:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "この例外を使用する"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "アプリケーション名またはウィンドウクラス (正規表現)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "既定"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "例外を削除"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "アクティブウィンドウの不透明度:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "非アクティブウィンドウの不透明度:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "この不透明度をヘッダー領域全体に適用する"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "例外は、一致するアプリケーションのタイトルバーの設定だけを変更します。"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "例外を追加"

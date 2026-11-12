@@ -1,0 +1,142 @@
+# Walloon translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Walloon\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Scribanne"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Li stîle di scribanne tchoezi eploye si prôpe transparince. Les stîles di scribanne come Silver Light et Silver Dark eployèt ces apontiaedjes ci."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Eployî ces apontiaedjes ci al plaece di ceus do stîle di scribanne"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Scrans:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Purneas ki s' drovèt:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Racsegnes:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Ahesses do scribanne:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Dressêyes"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Li stîle d' programes tchoezi dessinne des dressêyes nén transparintes. Les stîles di programes Silver et Breeze eployèt cist apontiaedje ci."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Dressêyes:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Bårs di tite"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Li gåmeure di purneas tchoezeye dessinne des bårs di tite nén transparintes. Li gåmeure di purneas Silver eploye ces apontiaedjes ci."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Purnea en alaedje:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Purnea nén en alaedje:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Rinde todi nén transparintes les bårs di tite des purneas å pus grand"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Brouyî les bårs di tite transparintes"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Mete cisse nén transparince so tote li redjon d' tchinne (bårs d' usteyes et bårs di dressêyes)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Mete li bår di tite al coleur do programe"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Exceptions…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparint"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Nén transparint"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Exceptions des bårs di tite"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Passer pa dzeu:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Eployî ciste exception ci"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "No do programe ou classe do purnea (erîlêye ratourneure)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Prémetowe"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Oister l' exception"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Nén transparince do purnea en alaedje:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Nén transparince des purneas nén en alaedje:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Mete cisse nén transparince so tote li redjon d' tchinne"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Ene exception candje seulmint les apontiaedjes des bårs di tite, po les programes k' i corespondèt."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Radjouter ene exception"

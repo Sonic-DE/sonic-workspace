@@ -1,0 +1,142 @@
+# Nepali translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Nepali\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "डेस्कटप"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "चयन गरिएको डेस्कटप शैलीले आफ्नै पारदर्शिता प्रयोग गर्छ। Silver Light र Silver Dark जस्ता डेस्कटप शैलीहरूले यी सेटिङहरू प्रयोग गर्छन्।"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "डेस्कटप शैलीका आफ्नै सेटिङको सट्टा यी सेटिङ प्रयोग गर्नुहोस्"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "प्यानलहरू:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "पपअपहरू:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "उपकरणटिपहरू:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "डेस्कटप विजेटहरू:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "मेनुहरू"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "चयन गरिएको अनुप्रयोग शैलीले अपारदर्शी मेनुहरू बनाउँछ। Silver र Breeze अनुप्रयोग शैलीहरूले यो सेटिङ प्रयोग गर्छन्।"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "मेनुहरू:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "शीर्षकपट्टीहरू"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "चयन गरिएको सञ्झ्याल सजावटले अपारदर्शी शीर्षकपट्टीहरू बनाउँछ। Silver सञ्झ्याल सजावटले यी सेटिङहरू प्रयोग गर्छ।"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "सक्रिय सञ्झ्याल:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "निष्क्रिय सञ्झ्याल:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "अधिकतम गरिएका सञ्झ्यालका शीर्षकपट्टीहरू सधैँ अपारदर्शी बनाउनुहोस्"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "पारदर्शी शीर्षकपट्टीहरू धमिलो पार्नुहोस्"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "यो अपारदर्शिता सम्पूर्ण हेडर क्षेत्रमा लागू गर्नुहोस् (उपकरणपट्टी र मेनुपट्टी)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "शीर्षकपट्टीलाई अनुप्रयोगको रङसँग मिलाउनुहोस्"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "अपवादहरू…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "पारदर्शी"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "अपारदर्शी"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "शीर्षकपट्टी अपवादहरू"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "अधिलेखन:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "यो अपवाद प्रयोग गर्नुहोस्"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "अनुप्रयोगको नाम वा सञ्झ्याल वर्ग (नियमित अभिव्यक्ति)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "पूर्वनिर्धारित"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "अपवाद हटाउनुहोस्"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "सक्रिय सञ्झ्यालको अपारदर्शिता:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "निष्क्रिय सञ्झ्यालहरूको अपारदर्शिता:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "यो अपारदर्शिता सम्पूर्ण हेडर क्षेत्रमा लागू गर्नुहोस्"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "अपवादले मिल्ने अनुप्रयोगहरूका लागि शीर्षकपट्टीका सेटिङ मात्र परिवर्तन गर्छ।"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "अपवाद थप्नुहोस्"

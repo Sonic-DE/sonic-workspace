@@ -1,0 +1,142 @@
+# Serbian Ijekavian Latin translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Serbian\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Površ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Izabrani stil površi koristi sopstvenu providnost. Ove postavke koriste stilovi površi kao što su Silver Light i Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Koristi ove postavke umjesto postavki stila površi"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneli:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Iskačući prozori:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Oblačići:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Vidžeti površi:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Meniji"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Izabrani stil programa crta neprovidne menije. Ovu postavku koriste stilovi programa Silver i Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Meniji:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Naslovne trake"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Izabrana dekoracija prozora crta neprovidne naslovne trake. Ove postavke koristi dekoracija prozora Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktivni prozor:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Neaktivni prozor:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Naslovne trake maksimizovanih prozora uvijek neprovidne"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Zamuti providne naslovne trake"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Primijeni ovu neprovidnost na cijelu oblast zaglavlja (trake alatki i trake menija)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Uskladi naslovnu traku sa bojom programa"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Izuzeci…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Providno"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Neprovidno"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Izuzeci naslovnih traka"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Potisni:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Koristi ovaj izuzetak"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Ime programa ili klasa prozora (regularni izraz)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Podrazumijevani"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Ukloni izuzetak"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Neprovidnost aktivnog prozora:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Neprovidnost neaktivnih prozora:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Primijeni ovu neprovidnost na cijelu oblast zaglavlja"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Izuzetak mijenja samo postavke naslovnih traka, za programe kojima odgovara."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Dodaj izuzetak"

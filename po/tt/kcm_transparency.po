@@ -1,0 +1,142 @@
+# Tatar translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Tatar\n"
+"Language: tt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Эш өстәле"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Сайланган эш өстәле стиле үзенең үтә күренмәлелеген куллана. Бу көйләүләрне Silver Light һәм Silver Dark кебек эш өстәле стильләре куллана."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Эш өстәле стиле көйләүләре урынына боларны куллану"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Панельләр:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Калкып чыгучы тәрәзәләр:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Киңәшләр:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Эш өстәле виджетлары:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Менюлар"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Сайланган кушымта стиле үтә күренмәле булмаган менюлар ясый. Бу көйләүне Silver һәм Breeze кушымта стильләре куллана."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Менюлар:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Башлык тасмалары"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Сайланган тәрәзә бизәлеше үтә күренмәле булмаган башлык тасмалары ясый. Бу көйләүләрне Silver тәрәзә бизәлеше куллана."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Актив тәрәзә:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Актив булмаган тәрәзә:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Зурайтылган тәрәзәләрнең башлык тасмаларын һәрвакыт үтә күренмәле булмаган итү"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Үтә күренмәле башлык тасмаларын тоныклау"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Бу тонуклыкны бөтен башлык өлкәсенә куллану (кораллар тасмалары һәм меню тасмалары)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Башлык тасмасын кушымта төсенә туры китерү"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Искәрмәләр…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Үтә күренмәле"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Тонык"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Башлык тасмасы искәрмәләре"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Алыштыру:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Бу искәрмәне куллану"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Кушымта исеме яки тәрәзә сыйныфы (регуляр аңлатма)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Килешенгән"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Искәрмәне бетерү"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Актив тәрәзәнең тонуклыгы:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Актив булмаган тәрәзәләрнең тонуклыгы:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Бу тонуклыкны бөтен башлык өлкәсенә куллану"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Искәрмә туры килгән кушымталар өчен башлык тасмасы көйләүләрен генә үзгәртә."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Искәрмә өстәү"

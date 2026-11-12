@@ -1,0 +1,142 @@
+# Azerbaijani translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Azerbaijani\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "İş masası"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Seçilmiş iş masası üslubu öz şəffaflığından istifadə edir. Silver Light və Silver Dark kimi iş masası üslubları bu ayarlardan istifadə edir."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "İş masası üslubunun öz ayarları əvəzinə bu ayarlardan istifadə etmək"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panellər:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Açılan pəncərələr:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Məsləhətlər:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "İş masası vidjetləri:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menyular"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Seçilmiş tətbiq üslubu qeyri-şəffaf menyular çəkir. Silver və Breeze tətbiq üslubları bu ayardan istifadə edir."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menyular:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Başlıq zolaqları"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Seçilmiş pəncərə tərtibatı qeyri-şəffaf başlıq zolaqları çəkir. Silver pəncərə tərtibatı bu ayarlardan istifadə edir."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiv pəncərə:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Qeyri-aktiv pəncərə:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Böyüdülmüş pəncərələrin başlıq zolaqlarını həmişə qeyri-şəffaf etmək"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Şəffaf başlıq zolaqlarını bulanıqlaşdırmaq"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Bu qeyri-şəffaflığı bütün başlıq sahəsinə tətbiq etmək (alət panelləri və menyu zolaqları)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Başlıq zolağını tətbiqin rənginə uyğunlaşdırmaq"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "İstisnalar…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Şəffaf"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Qeyri-şəffaf"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Başlıq zolağı istisnaları"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Əvəzləmək:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Bu istisnadan istifadə etmək"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Tətbiqin adı və ya pəncərə sinfi (müntəzəm ifadə)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standart"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "İstisnanı silmək"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Aktiv pəncərənin qeyri-şəffaflığı:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Qeyri-aktiv pəncərələrin qeyri-şəffaflığı:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Bu qeyri-şəffaflığı bütün başlıq sahəsinə tətbiq etmək"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "İstisna yalnız uyğun gələn tətbiqlər üçün başlıq zolağı ayarlarını dəyişir."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "İstisna əlavə etmək"

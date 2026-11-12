@@ -1,0 +1,142 @@
+# Kurdish translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Kurdish\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Sermasê"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Şêwaza sermasê ya hilbijartî zelaliya xwe bi kar tîne. Şêwazên sermasê yên wek Silver Light û Silver Dark van mîhengan bi kar tînin."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Li şûna mîhengên şêwaza sermasê van mîhengan bi kar bîne"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panel:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Paceyên derdikevin:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Şîretên amûran:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widgetên sermasê:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menû"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Şêwaza sepanan a hilbijartî menûyên nezelal xêz dike. Şêwazên sepanan Silver û Breeze vê mîhengê bi kar tînin."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menû:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Darikên sernavê"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Xemilandina paceyê ya hilbijartî darikên sernavê yên nezelal xêz dike. Xemilandina paceyê Silver van mîhengan bi kar tîne."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Paceya çalak:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Paceya neçalak:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Darikên sernavê yên paceyên mezinkirî her tim nezelal bike"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Darikên sernavê yên zelal şêlû bike"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Vê nezelaliyê li tevahiya qada serî bisepîne (darikên amûran û darikên menûyê)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Darikê sernavê li gorî rengê sepanê bike"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Awarte…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Zelal"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Nezelal"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Awarteyên darikê sernavê"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Li ser binivîse:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Vê awarteyê bi kar bîne"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Navê sepanê an çîna paceyê (îfadeya birêkûpêk)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Pêşdanasînî"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Awarteyê rake"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Nezelaliya paceya çalak:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Nezelaliya paceyên neçalak:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Vê nezelaliyê li tevahiya qada serî bisepîne"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Awarte tenê mîhengên darikê sernavê diguherîne, ji bo sepanên ku pê re li hev tên."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Awarteyê lê zêde bike"

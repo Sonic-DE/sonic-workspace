@@ -14,7 +14,6 @@
 #include <QLoggingCategory>
 #include <QPointer>
 
-#include "desktopthemeopacitysettings.h"
 #include "desktopthemesettings.h"
 #include "themesmodel.h"
 
@@ -39,8 +38,6 @@ class KCMDesktopTheme : public KQuickManagedConfigModule
     Q_OBJECT
 
     Q_PROPERTY(DesktopThemeSettings *desktopThemeSettings READ desktopThemeSettings CONSTANT)
-    // The desktop-wide transparency of styles that follow it ([DesktopThemeOpacity] in kdeglobals).
-    Q_PROPERTY(DesktopThemeOpacitySettings *transparency READ transparency CONSTANT)
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
     Q_PROPERTY(ThemesModel *desktopThemeModel READ desktopThemeModel CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
@@ -51,7 +48,6 @@ public:
     ~KCMDesktopTheme() override;
 
     DesktopThemeSettings *desktopThemeSettings() const;
-    DesktopThemeOpacitySettings *transparency() const;
     ThemesModel *desktopThemeModel() const;
     FilterProxyModel *filteredModel() const;
 

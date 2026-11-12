@@ -1,0 +1,142 @@
+# Sinhala translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Sinhala\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "වැඩතලය"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "තෝරාගත් වැඩතල ශෛලිය තමන්ගේම පාරදෘශ්‍යතාව භාවිත කරයි. Silver Light සහ Silver Dark වැනි වැඩතල ශෛලීන් මෙම සැකසුම් භාවිත කරයි."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "වැඩතල ශෛලියේ සැකසුම් වෙනුවට මේවා භාවිත කරන්න"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "පුවරු:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "උත්පතන:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "මෙවලම් ඉඟි:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "වැඩතල විජට්:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "මෙනු"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "තෝරාගත් යෙදුම් ශෛලිය පාරාන්ධ මෙනු අඳියි. Silver සහ Breeze යෙදුම් ශෛලීන් මෙම සැකසුම භාවිත කරයි."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "මෙනු:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "සිරැසි තීරු"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "තෝරාගත් කවුළු සැරසිල්ල පාරාන්ධ සිරැසි තීරු අඳියි. Silver කවුළු සැරසිල්ල මෙම සැකසුම් භාවිත කරයි."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "සක්‍රිය කවුළුව:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "අක්‍රිය කවුළුව:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "විශාලනය කළ කවුළුවල සිරැසි තීරු සැමවිටම පාරාන්ධ කරන්න"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "පාරදෘශ්‍ය සිරැසි තීරු බොඳ කරන්න"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "මෙම පාරාන්ධතාව සම්පූර්ණ ශීර්ෂ ප්‍රදේශයට යොදන්න (මෙවලම් තීරු සහ මෙනු තීරු)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "සිරැසි තීරුව යෙදුමේ වර්ණයට ගළපන්න"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ව්‍යතිරේක…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "පාරදෘශ්‍ය"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "පාරාන්ධ"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "සිරැසි තීරු ව්‍යතිරේක"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "අභිබවන්න:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "මෙම ව්‍යතිරේකය භාවිත කරන්න"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "යෙදුමේ නම හෝ කවුළු පන්තිය (සාමාන්‍ය ප්‍රකාශනය)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "පෙරනිමි"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ව්‍යතිරේකය ඉවත් කරන්න"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "සක්‍රිය කවුළුවේ පාරාන්ධතාව:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "අක්‍රිය කවුළුවල පාරාන්ධතාව:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "මෙම පාරාන්ධතාව සම්පූර්ණ ශීර්ෂ ප්‍රදේශයට යොදන්න"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ව්‍යතිරේකයක් ගැළපෙන යෙදුම් සඳහා සිරැසි තීරු සැකසුම් පමණක් වෙනස් කරයි."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "ව්‍යතිරේකයක් එක් කරන්න"

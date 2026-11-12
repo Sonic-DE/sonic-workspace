@@ -1,0 +1,142 @@
+# Persian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Persian\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "میزکار"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "سبک میزکار برگزیده از شفافیت خودش استفاده می‌کند. سبک‌های میزکار مانند Silver Light و Silver Dark از این تنظیمات استفاده می‌کنند."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "استفاده از این تنظیمات به جای تنظیمات سبک میزکار"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "تابلوها:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "پنجره‌های بالاپر:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "راهنماهای ابزار:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ابزارک‌های میزکار:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "منوها"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "سبک برنامه‌های برگزیده منوهای مات می‌کشد. سبک‌های برنامه Silver و Breeze از این تنظیم استفاده می‌کنند."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "منوها:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "نوارهای عنوان"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "تزئین پنجره برگزیده نوارهای عنوان مات می‌کشد. تزئین پنجره Silver از این تنظیمات استفاده می‌کند."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "پنجره فعال:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "پنجره غیرفعال:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "همیشه نوار عنوان پنجره‌های بیشینه مات باشد"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "تار کردن نوارهای عنوان شفاف"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "اعمال این ماتی به کل ناحیه سرصفحه (نوارهای ابزار و نوارهای منو)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "هماهنگ کردن نوار عنوان با رنگ برنامه"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "استثناها…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "شفاف"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "٪"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "مات"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "استثناهای نوار عنوان"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "جایگزینی:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "استفاده از این استثنا"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "نام برنامه یا کلاس پنجره (عبارت باقاعده)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "پیش‌فرض"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "حذف استثنا"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "ماتی پنجره فعال:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "ماتی پنجره‌های غیرفعال:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "اعمال این ماتی به کل ناحیه سرصفحه"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "استثنا فقط تنظیمات نوار عنوان را برای برنامه‌هایی که با آن جور هستند تغییر می‌دهد."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "افزودن استثنا"

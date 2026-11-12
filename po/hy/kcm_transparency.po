@@ -1,0 +1,142 @@
+# Armenian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Armenian\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Աշխատասեղան"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Ընտրված աշխատասեղանի ոճն օգտագործում է իր թափանցիկությունը։ Այս կարգավորումներն օգտագործում են Silver Light և Silver Dark աշխատասեղանի ոճերը։"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Օգտագործել այս կարգավորումները աշխատասեղանի ոճի կարգավորումների փոխարեն"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Վահանակներ՝"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Ելնող պատուհաններ՝"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Հուշումներ՝"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Աշխատասեղանի վիջեթներ՝"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Ընտրացանկեր"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Ընտրված հավելվածների ոճը գծում է անթափանց ընտրացանկեր։ Այս կարգավորումն օգտագործում են Silver և Breeze հավելվածների ոճերը։"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Ընտրացանկեր՝"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Վերնագրի գոտիներ"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Ընտրված պատուհանի ձևավորումը գծում է անթափանց վերնագրի գոտիներ։ Այս կարգավորումներն օգտագործում է Silver պատուհանի ձևավորումը։"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Ակտիվ պատուհան՝"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Ոչ ակտիվ պատուհան՝"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Մեծացված պատուհանների վերնագրի գոտիները միշտ անթափանց դարձնել"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Մշուշել թափանցիկ վերնագրի գոտիները"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Կիրառել այս անթափանցությունը ողջ վերնամասի վրա (գործիքագոտիներ և ընտրացանկի գոտիներ)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Վերնագրի գոտին համապատասխանեցնել հավելվածի գույնին"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Բացառություններ…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Թափանցիկ"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Անթափանց"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Վերնագրի գոտու բացառություններ"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Վերագրել՝"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Օգտագործել այս բացառությունը"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Հավելվածի անուն կամ պատուհանի դաս (կանոնավոր արտահայտություն)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Լռելյայն"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Հեռացնել բացառությունը"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Ակտիվ պատուհանի անթափանցություն՝"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Ոչ ակտիվ պատուհանների անթափանցություն՝"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Կիրառել այս անթափանցությունը ողջ վերնամասի վրա"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Բացառությունը փոխում է միայն վերնագրի գոտու կարգավորումները՝ իրեն համապատասխանող հավելվածների համար։"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ավելացնել բացառություն"

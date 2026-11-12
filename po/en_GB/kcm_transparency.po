@@ -1,0 +1,142 @@
+# British English translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: British English\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Desktop"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Use these settings instead of the desktop style's own"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panels:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Pop-ups:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Tooltips:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Desktop widgets:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menus"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menus:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titlebars"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Active window:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Inactive window:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Always make maximised titlebars opaque"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Blur titlebars that have transparency"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Match the titlebar to the application colour"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Exceptions…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparent"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opaque"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Titlebar Exceptions"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Override:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Use this exception"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Application name or window class (regular expression)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Default"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Remove Exception"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Active window opacity:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Inactive window opacity:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Apply these opacity settings to the entire header area"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "An exception changes only the titlebar settings, for the applications it matches."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Add Exception"

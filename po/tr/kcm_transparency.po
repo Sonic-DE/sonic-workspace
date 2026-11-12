@@ -1,0 +1,142 @@
+# Turkish translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Masaüstü"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Seçili masaüstü biçemi kendi saydamlığını kullanır. Silver Light ve Silver Dark gibi masaüstü biçemleri bu ayarları kullanır."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Masaüstü biçeminin kendi ayarları yerine bu ayarları kullan"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneller:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Açılır pencereler:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Araç ipuçları:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Masaüstü araç takımları:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menüler"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Seçili uygulama biçemi opak menüler çizer. Silver ve Breeze uygulama biçemleri bu ayarı kullanır."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menüler:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Başlık çubukları"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Seçili pencere dekorasyonu opak başlık çubukları çizer. Silver pencere dekorasyonu bu ayarları kullanır."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Etkin pencere:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Etkin olmayan pencere:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Ekranı kaplayan pencerelerin başlık çubuklarını her zaman opak yap"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Saydam başlık çubuklarını bulanıklaştır"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Bu opaklığı tüm üst bilgi alanına uygula (araç çubukları ve menü çubukları)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Başlık çubuğunu uygulama rengiyle eşleştir"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "İstisnalar…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Saydam"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opak"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Başlık Çubuğu İstisnaları"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Geçersiz kıl:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Bu istisnayı kullan"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Uygulama adı veya pencere sınıfı (düzenli ifade)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Öntanımlı"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "İstisnayı Kaldır"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Etkin pencere opaklığı:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Etkin olmayan pencere opaklığı:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Bu opaklığı tüm üst bilgi alanına uygula"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Bir istisna, eşleştiği uygulamalar için yalnızca başlık çubuğu ayarlarını değiştirir."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "İstisna Ekle"

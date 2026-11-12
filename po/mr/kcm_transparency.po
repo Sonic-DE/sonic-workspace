@@ -1,0 +1,142 @@
+# Marathi translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Marathi\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "डेस्कटॉप"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "निवडलेली डेस्कटॉप शैली स्वतःची पारदर्शकता वापरते. Silver Light आणि Silver Dark सारख्या डेस्कटॉप शैली या सेटिंग्ज वापरतात."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "डेस्कटॉप शैलीच्या स्वतःच्या सेटिंग्जऐवजी या सेटिंग्ज वापरा"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "पटल:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "पॉप-अप:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "साधन सूचना:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "डेस्कटॉप विजेट:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "मेन्यू"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "निवडलेली अनुप्रयोग शैली अपारदर्शक मेन्यू काढते. Silver आणि Breeze अनुप्रयोग शैली ही सेटिंग वापरतात."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "मेन्यू:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "शीर्षक पट्ट्या"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "निवडलेली चौकट सजावट अपारदर्शक शीर्षक पट्ट्या काढते. Silver चौकट सजावट या सेटिंग्ज वापरते."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "सक्रिय चौकट:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "निष्क्रिय चौकट:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "कमाल केलेल्या चौकटींच्या शीर्षक पट्ट्या नेहमी अपारदर्शक ठेवा"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "पारदर्शक शीर्षक पट्ट्या धूसर करा"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ही अपारदर्शकता संपूर्ण शीर्ष भागाला लागू करा (साधनपट्ट्या आणि मेन्यू पट्ट्या)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "शीर्षक पट्टी अनुप्रयोगाच्या रंगाशी जुळवा"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "अपवाद…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "पारदर्शक"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "अपारदर्शक"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "शीर्षक पट्टी अपवाद"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "बदला:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "हा अपवाद वापरा"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "अनुप्रयोगाचे नाव किंवा चौकट वर्ग (रेग्युलर एक्सप्रेशन)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "मूलभूत"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "अपवाद काढा"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "सक्रिय चौकटीची अपारदर्शकता:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "निष्क्रिय चौकटींची अपारदर्शकता:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ही अपारदर्शकता संपूर्ण शीर्ष भागाला लागू करा"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "अपवाद फक्त जुळणाऱ्या अनुप्रयोगांसाठी शीर्षक पट्टीच्या सेटिंग्ज बदलतो."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "अपवाद जोडा"

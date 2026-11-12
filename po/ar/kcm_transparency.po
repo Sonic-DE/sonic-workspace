@@ -1,0 +1,142 @@
+# Arabic translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "سطح المكتب"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "يستخدم نمط سطح المكتب المحدد شفافيته الخاصة. تستخدم أنماط سطح المكتب مثل Silver Light وSilver Dark هذه الإعدادات."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "استخدم هذه الإعدادات بدلًا من إعدادات نمط سطح المكتب"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "اللوحات:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "النوافذ المنبثقة:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "التلميحات:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ودجات سطح المكتب:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "القوائم"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "يرسم نمط التطبيقات المحدد قوائم معتمة. يستخدم نمطا التطبيقات Silver وBreeze هذا الإعداد."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "القوائم:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "أشرطة العنوان"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "ترسم زخرفة النوافذ المحددة أشرطة عنوان معتمة. تستخدم زخرفة النوافذ Silver هذه الإعدادات."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "النافذة النشطة:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "النافذة غير النشطة:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "اجعل أشرطة عنوان النوافذ المكبرة معتمة دائمًا"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "موّه أشرطة العنوان الشفافة"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "طبّق هذا التعتيم على منطقة الترويسة كلها (أشرطة الأدوات وأشرطة القوائم)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "طابق شريط العنوان مع لون التطبيق"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "الاستثناءات…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "شفاف"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "٪"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "معتم"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "استثناءات أشرطة العنوان"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "تجاوز:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "استخدم هذا الاستثناء"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "اسم التطبيق أو صنف النافذة (تعبير نمطي)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "المبدئي"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "أزل الاستثناء"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "تعتيم النافذة النشطة:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "تعتيم النوافذ غير النشطة:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "طبّق هذا التعتيم على منطقة الترويسة كلها"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "يغيّر الاستثناء إعدادات أشرطة العنوان فقط، للتطبيقات التي يطابقها."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "أضف استثناءً"

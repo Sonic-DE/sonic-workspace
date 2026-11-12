@@ -1,0 +1,142 @@
+# Kashubian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Kashubian\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Pùlt"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Wëbróny wëzdrzatk pùltu brëkùje swòji przezérnoscë. Wëzdrzatczi pùltu taczé jak Silver Light ë Silver Dark brëkùją ne nastôwë."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Brëkùjë nëch nastôwów zamiast nastôwów wëzdrzatkù pùltu"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panele:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Wëskakùjącé òkna:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Pòdpòwiédzë:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Elementë pùltu:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Wëbróny wëzdrzatk aplikacjów rësëje nieprzezérné menu. Wëzdrzatczi aplikacjów Silver ë Breeze brëkùją ną nastôwã."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titlowé lëstwë"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Wëbróny òbtôczk òknów rësëje nieprzezérné titlowé lëstwë. Òbtôczk òknów Silver brëkùje ne nastôwë."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiwné òkno:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Nieaktiwné òkno:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Wiedno robi nieprzezérné titlowé lëstwë maksymalizowónëch òknów"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Rozmazëjë przezérné titlowé lëstwë"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Zastosëjë nã nieprzezérnosc do całégò wierzchnégò òbéńdzeniô (lëstwë nôrzãdzów ë menu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Dopasëjë titlową lëstwã do farwë aplikacëji"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Wëjimczi…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Przezérny"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Nieprzezérny"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Wëjimczi titlowëch lëstwów"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Zastãpi:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Brëkùjë negò wëjimkù"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Miono aplikacëji abò klasa òkna (regularny wësłowienié)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Domëslny"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Rëmôj wëjimk"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Nieprzezérnosc aktiwnégò òkna:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Nieprzezérnosc nieaktiwnëch òknów:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Zastosëjë nã nieprzezérnosc do całégò wierzchnégò òbéńdzeniô"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Wëjimk zmieniô le nastôwë titlowëch lëstwów, dlô aplikacjów, jaczé do niegò pasëją."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Dodôj wëjimk"

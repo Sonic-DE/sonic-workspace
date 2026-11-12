@@ -1,0 +1,142 @@
+# Polish translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Polish\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Pulpit"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Wybrany wygląd pulpitu używa własnej przezroczystości. Wyglądy pulpitu takie jak Silver Light i Silver Dark używają tych ustawień."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Używaj tych ustawień zamiast ustawień wyglądu pulpitu"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panele:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Okna wysuwne:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Podpowiedzi:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Elementy pulpitu:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Wybrany wygląd aplikacji rysuje nieprzezroczyste menu. Wyglądy aplikacji Silver i Breeze używają tego ustawienia."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Paski tytułowe"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Wybrany wystrój okien rysuje nieprzezroczyste paski tytułowe. Wystrój okien Silver używa tych ustawień."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Okno aktywne:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Okno nieaktywne:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Zawsze rób nieprzezroczyste paski tytułowe zmaksymalizowanych okien"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Rozmywaj przezroczyste paski tytułowe"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Stosuj tę nieprzezroczystość do całego nagłówka (paski narzędzi i paski menu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Dopasuj pasek tytułowy do koloru aplikacji"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Wyjątki…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Przezroczysty"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Nieprzezroczysty"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Wyjątki pasków tytułowych"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Zastąp:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Używaj tego wyjątku"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Nazwa aplikacji lub klasa okna (wyrażenie regularne)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Domyślny"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Usuń wyjątek"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Nieprzezroczystość okna aktywnego:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Nieprzezroczystość okien nieaktywnych:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Stosuj tę nieprzezroczystość do całego nagłówka"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Wyjątek zmienia tylko ustawienia pasków tytułowych, dla pasujących do niego aplikacji."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Dodaj wyjątek"

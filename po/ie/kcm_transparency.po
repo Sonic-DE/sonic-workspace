@@ -1,0 +1,142 @@
+# Interlingue translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Interlingue\n"
+"Language: ie\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Pupitre"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Li selectet stil de pupitre usa su propri transparentie. Stiles de pupitre quam Silver Light e Silver Dark usa ti parametres."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Usar ti parametres vice los del stil de pupitre"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Pannelles:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Fenestres emergent:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Suggestiones:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widgets de pupitre:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menús"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Li selectet stil de applicationes designa menús opac. Li stiles de applicationes Silver e Breeze usa ti parametre."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menús:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Barres de titul"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Li selectet decoration de fenestre designa barres de titul opac. Li decoration de fenestre Silver usa ti parametres."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Activ fenestre:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Ínactiv fenestre:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Sempre far opac li barres de titul de maximisat fenestres"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Confuser transparent barres de titul"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Applicar ti opacitá al tot area del cap (barres de instrumentarium e barres de menú)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Adaptar li barre de titul al color del application"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Exceptiones…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparent"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opac"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Exceptiones de barre de titul"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Supercalcar:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Usar ti exception"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Nómine de application o classe de fenestre (expression regulari)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Predefinit"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Remover li exception"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Opacitá del activ fenestre:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Opacitá del ínactiv fenestres:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Applicar ti opacitá al tot area del cap"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Un exception changea solmen li parametres del barre de titul, por li applicationes queles it concerne."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Adjunter un exception"

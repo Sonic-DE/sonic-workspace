@@ -1,0 +1,142 @@
+# Ganda translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Ganda\n"
+"Language: lg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Awakolerwa"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Enkula y'awakolerwa elondeddwa ekozesa obutangaavu bwayo. Enkula z'awakolerwa nga Silver Light ne Silver Dark zikozesa ensengeka zino."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Kozesa ensengeka zino mu kifo ky'ez'enkula y'awakolerwa"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Bbaawo:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Amadirisa agabbuka:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Obubaka obuyamba:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widget z'awakolerwa:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menyu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Enkula ya pulogulaamu elondeddwa ekuba menyu ezitali ntangaavu. Enkula za pulogulaamu Silver ne Breeze zikozesa ensengeka eno."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menyu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Emitendera gy'omutwe"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Okulungiya kw'eddirisa okulondeddwa kukuba emitendera gy'omutwe egitali mitangaavu. Okulungiya kw'eddirisa Silver kukozesa ensengeka zino."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Eddirisa erikola:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Eddirisa eritakola:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Bulijjo fuula emitendera gy'omutwe egy'amadirisa amagaziye obutaba mitangaavu"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Zibikira emitendera gy'omutwe emitangaavu"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Teekako obutatangaala buno ku kitundu kyonna eky'omutwe (emitendera gy'ebikozesebwa n'egya menyu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Kwataganya omutendera gw'omutwe ne langi ya pulogulaamu"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Ebyenjawulo…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Kitangaavu"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Si kitangaavu"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Ebyenjawulo by'omutendera gw'omutwe"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Sazaamu:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Kozesa ekyenjawulo kino"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Erinnya lya pulogulaamu oba ekika ky'eddirisa (ekigambo ekya bulijjo)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Ekya bulijjo"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Ggyawo ekyenjawulo"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Obutatangaala bw'eddirisa erikola:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Obutatangaala bw'amadirisa agatakola:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Teekako obutatangaala buno ku kitundu kyonna eky'omutwe"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Ekyenjawulo kikyusa ensengeka z'omutendera gw'omutwe zokka, ku pulogulaamu ze kikwatagana nazo."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Yongerako ekyenjawulo"

@@ -1,0 +1,142 @@
+# Chhattisgarhi translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Chhattisgarhi\n"
+"Language: hne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "डेस्कटाप"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "चुने गे डेस्कटाप सैली अपन पारदरसिता बउरथे। Silver Light अउ Silver Dark जइसन डेस्कटाप सैली ए सेटिंग ल बउरथें।"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "डेस्कटाप सैली के अपन सेटिंग के बदला मं ए सेटिंग ल बउरव"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "फलक:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "पाप-अप:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "औजार सुझाव:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "डेस्कटाप विजेट:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "मेन्यू"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "चुने गे अनुपरयोग सैली अपारदरसी मेन्यू बनाथे। Silver अउ Breeze अनुपरयोग सैली ए सेटिंग ल बउरथें।"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "मेन्यू:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "सीर्सक पट्टी"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "चुने गे विंडो सजावट अपारदरसी सीर्सक पट्टी बनाथे। Silver विंडो सजावट ए सेटिंग ल बउरथे।"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "सक्रिय विंडो:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "निस्क्रिय विंडो:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "सबले बड़े करे विंडो के सीर्सक पट्टी ल हमेसा अपारदरसी रखव"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "पारदरसी सीर्सक पट्टी ल धुंधला करव"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ए अपारदरसिता ल पूरा हेडर छेत्र मं लगाव (औजार पट्टी अउ मेन्यू पट्टी)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "सीर्सक पट्टी ल अनुपरयोग के रंग ले मिलाव"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "अपवाद…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "पारदरसी"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "अपारदरसी"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "सीर्सक पट्टी अपवाद"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "बदलव:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ए अपवाद ल बउरव"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "अनुपरयोग के नाम या विंडो वर्ग (रेगुलर एक्सप्रेसन)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "डिफाल्ट"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "अपवाद हटाव"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "सक्रिय विंडो के अपारदरसिता:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "निस्क्रिय विंडो के अपारदरसिता:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ए अपारदरसिता ल पूरा हेडर छेत्र मं लगाव"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "अपवाद मेल खावत अनुपरयोग मन बर सिरिफ सीर्सक पट्टी के सेटिंग बदलथे।"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "अपवाद जोड़व"

@@ -1,0 +1,142 @@
+# Hausa translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Hausa\n"
+"Language: ha\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Tebur"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Salon tebur da aka zaɓa yana amfani da nasa haske. Salon tebur kamar Silver Light da Silver Dark suna amfani da waɗannan saituna."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Yi amfani da waɗannan saituna maimakon na salon tebur"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Fanel:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Tagogin da ke bayyana:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Shawarwari:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widget na tebur:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Salon manhaja da aka zaɓa yana zana menu marasa haske. Salon manhaja Silver da Breeze suna amfani da wannan saiti."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Sandunan take"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Ƙawata taga da aka zaɓa tana zana sandunan take marasa haske. Ƙawata taga ta Silver tana amfani da waɗannan saituna."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Taga mai aiki:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Taga mara aiki:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Koyaushe a sa sandunan take na tagogin da aka faɗaɗa su zama marasa haske"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Dusashe sandunan take masu haske"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Aiwatar da wannan rashin haske a dukkan yankin kai (sandunan kayan aiki da sandunan menu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Daidaita sandar take da launin manhaja"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Keɓancewa…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Mai haske"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Mara haske"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Keɓancewar sandar take"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Maye gurbi:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Yi amfani da wannan keɓancewa"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Sunan manhaja ko ajin taga (furci na yau da kullum)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Tsoho"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Cire keɓancewa"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Rashin haske na taga mai aiki:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Rashin haske na tagogi marasa aiki:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Aiwatar da wannan rashin haske a dukkan yankin kai"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Keɓancewa tana canza saitunan sandar take kawai, ga manhajojin da suka dace da ita."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ƙara keɓancewa"

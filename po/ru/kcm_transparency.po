@@ -1,0 +1,142 @@
+# Russian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Рабочий стол"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Выбранный стиль рабочего стола использует собственную прозрачность. Эти параметры используют стили рабочего стола, например Silver Light и Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Использовать эти параметры вместо параметров стиля рабочего стола"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Панели:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Всплывающие окна:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Подсказки:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Виджеты рабочего стола:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Меню"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Выбранный стиль приложений рисует непрозрачные меню. Этот параметр используют стили приложений Silver и Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Меню:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Заголовки окон"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Выбранное оформление окон рисует непрозрачные заголовки. Эти параметры использует оформление окон Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Активное окно:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Неактивное окно:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Всегда делать непрозрачными заголовки развёрнутых окон"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Размывать прозрачные заголовки окон"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Применять эту непрозрачность ко всей верхней области (панели инструментов и строки меню)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Подбирать цвет заголовка под цвет приложения"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Исключения…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Прозрачный"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Непрозрачный"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Исключения для заголовков окон"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Заменить:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Использовать это исключение"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Имя приложения или класс окна (регулярное выражение)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "По умолчанию"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Удалить исключение"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Непрозрачность активного окна:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Непрозрачность неактивных окон:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Применять эту непрозрачность ко всей верхней области"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Исключение изменяет только параметры заголовков окон для подходящих приложений."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Добавить исключение"

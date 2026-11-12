@@ -1,0 +1,142 @@
+# Welsh translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Welsh\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Bwrdd gwaith"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Mae'r arddull bwrdd gwaith a ddewiswyd yn defnyddio ei thryloywder ei hun. Mae arddulliau bwrdd gwaith fel Silver Light a Silver Dark yn defnyddio'r gosodiadau hyn."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Defnyddio'r gosodiadau hyn yn lle rhai'r arddull bwrdd gwaith"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneli:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Ffenestri naid:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Cynghorion:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Teclynnau bwrdd gwaith:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Dewislenni"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Mae'r arddull rhaglenni a ddewiswyd yn llunio dewislenni afloyw. Mae arddulliau rhaglenni Silver a Breeze yn defnyddio'r gosodiad hwn."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Dewislenni:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Bariau teitl"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Mae'r addurn ffenestri a ddewiswyd yn llunio bariau teitl afloyw. Mae addurn ffenestri Silver yn defnyddio'r gosodiadau hyn."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Ffenestr weithredol:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Ffenestr anweithredol:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Gwneud bariau teitl ffenestri wedi'u mwyhau yn afloyw bob amser"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Pylu bariau teitl tryloyw"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Rhoi'r didreiddedd hwn ar holl ardal y pennawd (bariau offer a bariau dewislen)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Cydweddu'r bar teitl â lliw'r rhaglen"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Eithriadau…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Tryloyw"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Afloyw"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Eithriadau'r bar teitl"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Diystyru:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Defnyddio'r eithriad hwn"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Enw'r rhaglen neu ddosbarth y ffenestr (mynegiad rheolaidd)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Rhagosodedig"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Tynnu'r eithriad"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Didreiddedd y ffenestr weithredol:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Didreiddedd ffenestri anweithredol:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Rhoi'r didreiddedd hwn ar holl ardal y pennawd"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Mae eithriad yn newid gosodiadau'r bar teitl yn unig, ar gyfer y rhaglenni y mae'n cyfateb iddynt."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ychwanegu eithriad"

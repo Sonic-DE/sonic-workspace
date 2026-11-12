@@ -1,0 +1,142 @@
+# Uyghur translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Uyghur\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "ئۈستەلئۈستى"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "تاللانغان ئۈستەلئۈستى ئۇسلۇبى ئۆزىنىڭ سۈزۈكلۈكىنى ئىشلىتىدۇ. Silver Light ۋە Silver Dark غا ئوخشاش ئۈستەلئۈستى ئۇسلۇبلىرى بۇ تەڭشەكلەرنى ئىشلىتىدۇ."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "ئۈستەلئۈستى ئۇسلۇبىنىڭ تەڭشەكلىرىنىڭ ئورنىغا بۇلارنى ئىشلىتىش"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "تاختايلار:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "قاڭقىش كۆزنەكلىرى:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "قورال ئەسكەرتىشلىرى:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ئۈستەلئۈستى ۋىجېتلىرى:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "تىزىملىكلەر"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "تاللانغان پروگرامما ئۇسلۇبى سۈزۈك ئەمەس تىزىملىكلەرنى سىزىدۇ. Silver ۋە Breeze پروگرامما ئۇسلۇبلىرى بۇ تەڭشەكنى ئىشلىتىدۇ."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "تىزىملىكلەر:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "ماۋزۇ بالداقلىرى"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "تاللانغان كۆزنەك بېزىكى سۈزۈك ئەمەس ماۋزۇ بالداقلىرىنى سىزىدۇ. Silver كۆزنەك بېزىكى بۇ تەڭشەكلەرنى ئىشلىتىدۇ."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "ئاكتىپ كۆزنەك:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "ئاكتىپ ئەمەس كۆزنەك:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "چوڭايتىلغان كۆزنەكلەرنىڭ ماۋزۇ بالدىقىنى ھەمىشە سۈزۈك ئەمەس قىلىش"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "سۈزۈك ماۋزۇ بالداقلىرىنى غۇۋالاشتۇرۇش"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "بۇ سۈزۈكسىزلىكنى پۈتۈن باش رايونىغا قوللىنىش (قورال بالداقلىرى ۋە تىزىملىك بالداقلىرى)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "ماۋزۇ بالدىقىنى پروگراممىنىڭ رەڭگىگە ماسلاشتۇرۇش"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "مۇستەسنالار…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "سۈزۈك"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "سۈزۈك ئەمەس"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "ماۋزۇ بالدىقى مۇستەسنالىرى"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "قاپلاش:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "بۇ مۇستەسنانى ئىشلىتىش"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "پروگرامما ئاتى ياكى كۆزنەك تىپى (مۇنتىزىم ئىپادە)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "كۆڭۈلدىكى"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "مۇستەسنانى چىقىرىۋېتىش"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "ئاكتىپ كۆزنەكنىڭ سۈزۈكسىزلىكى:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "ئاكتىپ ئەمەس كۆزنەكلەرنىڭ سۈزۈكسىزلىكى:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "بۇ سۈزۈكسىزلىكنى پۈتۈن باش رايونىغا قوللىنىش"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "مۇستەسنا پەقەت ماس كەلگەن پروگراممىلار ئۈچۈن ماۋزۇ بالدىقى تەڭشەكلىرىنىلا ئۆزگەرتىدۇ."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "مۇستەسنا قوشۇش"

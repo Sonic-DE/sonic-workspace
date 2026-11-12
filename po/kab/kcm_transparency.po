@@ -1,0 +1,142 @@
+# Kabyle translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Kabyle\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Tanarit"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Aɣanib n tnarit yettwafernen yesseqdac afrawan-is. Iɣunab n tnarit am Silver Light d Silver Dark sseqdacen iɣewwaren-a."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Seqdec iɣewwaren-a deg wadeg n wid n uɣanib n tnarit"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Igalisen:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Isfuyla udhimen:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Tixutal:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Iwiǧiten n tnarit:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Umuɣen"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Aɣanib n yisnasen yettwafernen yesunuɣ umuɣen ur nfaw ara. Iɣunab n yisnasen Silver d Breeze sseqdacen aɣewwar-a."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Umuɣen:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Ifeggagen n uzwel"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Taɣawsa n usfaylu yettwafernen tesunuɣ ifeggagen n uzwel ur nfaw ara. Taɣawsa n usfaylu Silver tesseqdac iɣewwaren-a."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Asfaylu urmid:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Asfaylu arurmid:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Rred yal tikkelt ifeggagen n uzwel n yisfuyla yettusemɣaren ur nfaw ara"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Sefru ifeggagen n uzwel yettwaffen"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Snes tamagit-a ɣef temnaḍt n uqerru akk (ifeggagen n yifecka d yifeggagen n wumuɣ)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Semṣadi afeggag n uzwel d yini n usnas"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Tisuraf…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Yettwaffen"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Ur nfaw ara"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Tisuraf n ufeggag n uzwel"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Semselsi:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Seqdec tasureft-a"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Isem n usnas neɣ tasmilt n usfaylu (tanfalit tamagnut)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Amezwer"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Kkes tasureft"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Tamagit n usfaylu urmid:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Tamagit n yisfuyla irurmiden:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Snes tamagit-a ɣef temnaḍt n uqerru akk"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Tasureft tbeddel kan iɣewwaren n ufeggag n uzwel, i yisnasen yemṣadan yid-s."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Rnu tasureft"

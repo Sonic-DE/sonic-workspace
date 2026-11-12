@@ -1,0 +1,142 @@
+# Irish translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Irish\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Deasc"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Úsáideann an stíl deisce roghnaithe a trédhearcacht féin. Úsáideann stíleanna deisce ar nós Silver Light agus Silver Dark na socruithe seo."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Úsáid na socruithe seo in ionad socruithe na stíle deisce"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Painéil:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Preabfhuinneoga:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Leideanna uirlisí:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Giuirléidí deisce:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Roghchláir"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Tarraingíonn an stíl feidhmchláir roghnaithe roghchláir theimhneacha. Úsáideann na stíleanna feidhmchláir Silver agus Breeze an socrú seo."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Roghchláir:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Barraí teidil"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Tarraingíonn an maisiú fuinneoige roghnaithe barraí teidil teimhneacha. Úsáideann an maisiú fuinneoige Silver na socruithe seo."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Fuinneog ghníomhach:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Fuinneog neamhghníomhach:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Déan barraí teidil na bhfuinneog uasmhéadaithe teimhneach i gcónaí"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Doiléirigh barraí teidil trédhearcacha"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Cuir an teimhneacht seo i bhfeidhm ar an gceanntásc ar fad (barraí uirlisí agus barraí roghchláir)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Meaitseáil an barra teidil le dath an fheidhmchláir"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Eisceachtaí…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Trédhearcach"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Teimhneach"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Eisceachtaí an Bharra Teidil"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Sáraigh:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Úsáid an eisceacht seo"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Ainm an fheidhmchláir nó aicme na fuinneoige (slonn ionadaíochta)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Réamhshocrú"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Bain an Eisceacht"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Teimhneacht na fuinneoige gníomhaí:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Teimhneacht na bhfuinneog neamhghníomhach:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Cuir an teimhneacht seo i bhfeidhm ar an gceanntásc ar fad"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Ní athraíonn eisceacht ach socruithe an bharra teidil, do na feidhmchláir a mheaitseálann sí."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Cuir Eisceacht Leis"

@@ -1,0 +1,142 @@
+# Khmer translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Khmer\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "ផ្ទៃតុ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "រចនាប័ទ្មផ្ទៃតុដែលបានជ្រើសប្រើភាពថ្លារបស់ខ្លួនផ្ទាល់។ រចនាប័ទ្មផ្ទៃតុដូចជា Silver Light និង Silver Dark ប្រើការកំណត់ទាំងនេះ។"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "ប្រើការកំណត់ទាំងនេះជំនួសឲ្យការកំណត់របស់រចនាប័ទ្មផ្ទៃតុ"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "បន្ទះ៖"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "បង្អួចលេចឡើង៖"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "ព័ត៌មានជំនួយ៖"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ធាតុក្រាហ្វិកផ្ទៃតុ៖"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "ម៉ឺនុយ"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "រចនាប័ទ្មកម្មវិធីដែលបានជ្រើសគូរម៉ឺនុយស្រអាប់។ រចនាប័ទ្មកម្មវិធី Silver និង Breeze ប្រើការកំណត់នេះ។"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "ម៉ឺនុយ៖"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "របារចំណងជើង"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "ការតុបតែងបង្អួចដែលបានជ្រើសគូររបារចំណងជើងស្រអាប់។ ការតុបតែងបង្អួច Silver ប្រើការកំណត់ទាំងនេះ។"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "បង្អួចសកម្ម៖"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "បង្អួចអសកម្ម៖"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "ធ្វើឲ្យរបារចំណងជើងនៃបង្អួចដែលបានពង្រីកអតិបរមាស្រអាប់ជានិច្ច"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "ធ្វើឲ្យរបារចំណងជើងថ្លាព្រិល"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "អនុវត្តភាពស្រអាប់នេះលើតំបន់ក្បាលទាំងមូល (របារឧបករណ៍ និងរបារម៉ឺនុយ)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "ផ្គូផ្គងរបារចំណងជើងទៅនឹងពណ៌កម្មវិធី"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ករណីលើកលែង…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "ថ្លា"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ស្រអាប់"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "ករណីលើកលែងរបារចំណងជើង"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "បដិសេធ៖"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ប្រើករណីលើកលែងនេះ"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "ឈ្មោះកម្មវិធី ឬថ្នាក់បង្អួច (កន្សោមធម្មតា)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "លំនាំដើម"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "យកករណីលើកលែងចេញ"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "ភាពស្រអាប់នៃបង្អួចសកម្ម៖"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "ភាពស្រអាប់នៃបង្អួចអសកម្ម៖"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "អនុវត្តភាពស្រអាប់នេះលើតំបន់ក្បាលទាំងមូល"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ករណីលើកលែងផ្លាស់ប្ដូរតែការកំណត់របារចំណងជើង សម្រាប់កម្មវិធីដែលវាផ្គូផ្គង។"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "បន្ថែមករណីលើកលែង"

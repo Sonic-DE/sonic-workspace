@@ -1,6 +1,7 @@
 add_subdirectory(krdb)
 
 add_subdirectory(desktoptheme)
+add_subdirectory(transparency)
 add_subdirectory(icons)
 
 if(KF6UserFeedback_FOUND)

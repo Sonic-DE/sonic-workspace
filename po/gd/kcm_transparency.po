@@ -1,0 +1,142 @@
+# Scottish Gaelic translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Gaelic\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Deasg"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Cleachdaidh an stoidhle deasga a thagh thu a trìd-shoilleireachd fhèin. Cleachdaidh stoidhlichean deasga mar Silver Light is Silver Dark na roghainnean seo."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Cleachd na roghainnean seo an àite roghainnean na stoidhle deasga"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panailean:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Priob-uinneagan:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Gliocasan-sgrìn:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widgets an deasga:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Clàran-taghaidh"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Tarraingidh an stoidhle aplacaid a thagh thu clàran-taghaidh trìd-dhoilleir. Cleachdaidh na stoidhlichean aplacaid Silver is Breeze an roghainn seo."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Clàran-taghaidh:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Bàraichean-tiotail"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Tarraingidh sgeadachadh na h-uinneige a thagh thu bàraichean-tiotail trìd-dhoilleir. Cleachdaidh sgeadachadh uinneige Silver na roghainnean seo."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Uinneag ghnìomhach:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Uinneag neo-ghnìomhach:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Dèan bàraichean-tiotail nan uinneagan làn-mheudaichte trìd-dhoilleir an-còmhnaidh"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Dèan sgleò air bàraichean-tiotail trìd-shoilleir"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Cuir an trìd-dhoilleireachd seo air raon a' bhann-chinn air fad (bàraichean-inneal is bàraichean clàir-thaghaidh)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Co-fhreagair am bàr-tiotail ri dath na h-aplacaid"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Eisgeachdan…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Trìd-shoilleir"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Trìd-dhoilleir"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Eisgeachdan a' bhàr-tiotail"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Tar-àithn:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Cleachd an eisgeachd seo"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Ainm na h-aplacaid no clas na h-uinneige (eas-preisean riaghailteach)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Bun-roghainn"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Thoir air falbh an eisgeachd"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Trìd-dhoilleireachd na h-uinneige gnìomhaich:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Trìd-dhoilleireachd nan uinneagan neo-ghnìomhach:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Cuir an trìd-dhoilleireachd seo air raon a' bhann-chinn air fad"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Cha atharraich eisgeachd ach roghainnean a' bhàr-tiotail, airson nan aplacaidean a fhreagras ris."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Cuir eisgeachd ris"

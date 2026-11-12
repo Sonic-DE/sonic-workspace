@@ -1,0 +1,142 @@
+# French translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Bureau"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Le style de bureau sélectionné utilise sa propre transparence. Les styles de bureau comme Silver Light et Silver Dark utilisent ces paramètres."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Utiliser ces paramètres à la place de ceux du style de bureau"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Tableaux de bord :"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Fenêtres surgissantes :"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Infobulles :"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Composants graphiques du bureau :"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menus"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Le style d'application sélectionné dessine des menus opaques. Les styles d'application Silver et Breeze utilisent ce paramètre."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menus :"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Barres de titre"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "La décoration de fenêtre sélectionnée dessine des barres de titre opaques. La décoration de fenêtre Silver utilise ces paramètres."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Fenêtre active :"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Fenêtre inactive :"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Toujours rendre opaques les barres de titre des fenêtres maximisées"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Flouter les barres de titre transparentes"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Appliquer cette opacité à toute la zone d'en-tête (barres d'outils et barres de menus)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Accorder la barre de titre à la couleur de l'application"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Exceptions…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparent"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opaque"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Exceptions des barres de titre"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Remplacer :"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Utiliser cette exception"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Nom de l'application ou classe de fenêtre (expression rationnelle)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Par défaut"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Supprimer l'exception"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Opacité de la fenêtre active :"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Opacité des fenêtres inactives :"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Appliquer cette opacité à toute la zone d'en-tête"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Une exception ne modifie que les paramètres des barres de titre, pour les applications auxquelles elle correspond."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ajouter une exception"

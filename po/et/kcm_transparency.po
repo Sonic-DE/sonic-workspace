@@ -1,0 +1,142 @@
+# Estonian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Estonian\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Töölaud"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Valitud töölauastiil kasutab oma läbipaistvust. Neid seadistusi kasutavad töölauastiilid, näiteks Silver Light ja Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Nende seadistuste kasutamine töölauastiili omade asemel"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneelid:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Hüpikaknad:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Kohtspikrid:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Töölauavidinad:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menüüd"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Valitud rakendusestiil joonistab läbipaistmatud menüüd. Seda seadistust kasutavad rakendusestiilid Silver ja Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menüüd:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Tiitliribad"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Valitud akende dekoratsioon joonistab läbipaistmatud tiitliribad. Neid seadistusi kasutab akende dekoratsioon Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiivne aken:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Mitteaktiivne aken:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Maksimeeritud akende tiitliribad alati läbipaistmatud"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Läbipaistvate tiitliribade hägustamine"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Selle läbipaistmatuse rakendamine kogu päisealale (tööriista- ja menüüribad)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Tiitliriba sobitamine rakenduse värviga"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Erandid…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Läbipaistev"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Läbipaistmatu"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Tiitliribade erandid"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Tühistamine:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Selle erandi kasutamine"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Rakenduse nimi või akna klass (regulaaravaldis)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Vaikimisi"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Eemalda erand"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Aktiivse akna läbipaistmatus:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Mitteaktiivsete akende läbipaistmatus:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Selle läbipaistmatuse rakendamine kogu päisealale"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Erand muudab ainult tiitliriba seadistusi rakendustes, millele see vastab."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Lisa erand"

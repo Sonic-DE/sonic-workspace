@@ -1,0 +1,142 @@
+# Luxembourgish translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Luxembourgish\n"
+"Language: lb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Aarbechtsfläch"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "De gewielten Aarbechtsfläche-Stil benotzt seng eege Transparenz. Aarbechtsfläche-Stiler wéi Silver Light a Silver Dark benotzen dës Astellungen."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Dës Astellungen amplaz vun deene vum Aarbechtsfläche-Stil benotzen"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Leeschten:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Popup-Fënsteren:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Tipps:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Aarbechtsfläche-Widgeten:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menüen"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "De gewielten Applikatiounsstil zeechent net transparent Menüen. D'Applikatiounsstiler Silver a Breeze benotzen dës Astellung."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menüen:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titelleeschten"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "D'gewielt Fënsterdekoratioun zeechent net transparent Titelleeschten. D'Fënsterdekoratioun Silver benotzt dës Astellungen."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiv Fënster:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Inaktiv Fënster:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Titelleeschte vu maximéierte Fënstere ëmmer net transparent maachen"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Transparent Titelleeschten onschaarf maachen"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Dës Deckkraaft op de ganze Kappberäich uwenden (Geschir- a Menüleeschten)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Titelleescht un d'Faarf vun der Applikatioun upassen"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Ausnamen…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparent"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Net transparent"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Titelleeschten-Ausnamen"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Iwwerschreiwen:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Dës Ausnam benotzen"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Numm vun der Applikatioun oder Fënsterklass (reegelméissegen Ausdrock)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standard"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Ausnam ewechhuelen"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Deckkraaft vun der aktiver Fënster:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Deckkraaft vun den inaktive Fënsteren:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Dës Deckkraaft op de ganze Kappberäich uwenden"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Eng Ausnam ännert just d'Titelleeschten-Astellungen, fir d'Applikatiounen, op déi se passt."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ausnam derbäisetzen"

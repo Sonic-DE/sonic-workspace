@@ -1,0 +1,142 @@
+# Northern Sami translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Northern Sami\n"
+"Language: se\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Čállinbeavdi"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Válljejuvvon čállinbeavdestiila geavaha iežas čađačuovgivuođa. Čállinbeavdestiillat nugo Silver Light ja Silver Dark geavahit dáid heivehusaid."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Geavat dáid heivehusaid čállinbeavdestiilla iežas heivehusaid sadjái"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panelat:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Báhcci-láset:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Reaidoravvagat:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Čállinbeavdeáđat:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Fállut"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Válljejuvvon prográmmastiila sárgu čađačuovgameahttun fálluid. Prográmmastiillat Silver ja Breeze geavahit dán heivehusa."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Fállut:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Bajilčállosázut"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Válljejuvvon láseráhkkanus sárgu čađačuovgameahttun bajilčállosáttuid. Láseráhkkanus Silver geavaha dáid heivehusaid."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiivvalaš láse:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Passiivvalaš láse:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Dagat álo maksimerejuvvon láseid bajilčállosáttuid čađačuovgameahttumin"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Seavdnjeda čađačuovgi bajilčállosáttuid"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Geavat dán čađačuovgameahttunvuođa olles oaivevuovddis (reaidosázut ja fállosázut)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Heivet bajilčállosáttu prográmma ivdnái"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Spiehkastagat…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Čađačuovgi"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Čađačuovgameahttun"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Bajilčállosáttu spiehkastagat"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Badjelčále:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Geavat dán spiehkastaga"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Prográmma namma dahje láseluohkká (dábálašovdanbuktin)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standárda"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Sihko spiehkastaga"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Aktiivvalaš láse čađačuovgameahttunvuohta:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Passiivvalaš láseid čađačuovgameahttunvuohta:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Geavat dán čađačuovgameahttunvuođa olles oaivevuovddis"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Spiehkastat rievda dušše bajilčállosáttu heivehusaid, dain prográmmain maidda dat heive."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Lasit spiehkastaga"

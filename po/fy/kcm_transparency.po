@@ -1,0 +1,142 @@
+# Frisian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Frisian\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Buroblêd"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "De keazen buroblêdstyl brûkt syn eigen trochsichtigens. Buroblêdstilen lykas Silver Light en Silver Dark brûke dizze ynstellings."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Dizze ynstellings brûke yn stee fan dy fan de buroblêdstyl"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panielen:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Opdûkfinsters:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Arktips:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Buroblêdwidgets:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menu's"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "De keazen programmastyl tekenet net-trochsichtige menu's. De programmastilen Silver en Breeze brûke dizze ynstelling."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menu's:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titelbalken"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "De keazen finsterdekoraasje tekenet net-trochsichtige titelbalken. De finsterdekoraasje Silver brûkt dizze ynstellings."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktyf finster:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Net-aktyf finster:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Titelbalken fan maksimalisearre finsters altyd net-trochsichtich meitsje"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Trochsichtige titelbalken ferweakje"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Dizze dekking tapasse op it hiele kopgebiet (arkbalken en menubalken)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Titelbalke oanpasse oan de kleur fan it programma"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Utsûnderingen…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Trochsichtich"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Net-trochsichtich"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Utsûnderingen foar titelbalken"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Oerskriuwe:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Dizze útsûndering brûke"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Programmanamme of finsterklasse (reguliere ekspresje)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standert"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Utsûndering fuortsmite"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Dekking fan aktyf finster:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Dekking fan net-aktive finsters:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Dizze dekking tapasse op it hiele kopgebiet"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "In útsûndering feroaret allinnich de ynstellings fan titelbalken, foar de programma's dêr't er by past."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Utsûndering tafoegje"

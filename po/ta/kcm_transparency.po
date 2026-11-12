@@ -1,0 +1,142 @@
+# Tamil translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Tamil\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "பணிமேடை"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "தேர்ந்தெடுத்த பணிமேடைப் பாணி தன் சொந்த ஒளிபுகுதன்மையைப் பயன்படுத்துகிறது. Silver Light, Silver Dark போன்ற பணிமேடைப் பாணிகள் இந்த அமைப்புகளைப் பயன்படுத்துகின்றன."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "பணிமேடைப் பாணியின் அமைப்புகளுக்குப் பதிலாக இவற்றைப் பயன்படுத்து"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "பலகங்கள்:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "மேல்தோன்றும் சாளரங்கள்:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "குறிப்புகள்:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "பணிமேடை உருப்படிகள்:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "பட்டிகள்"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "தேர்ந்தெடுத்த செயலிப் பாணி ஒளிபுகா பட்டிகளை வரைகிறது. Silver, Breeze செயலிப் பாணிகள் இந்த அமைப்பைப் பயன்படுத்துகின்றன."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "பட்டிகள்:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "தலைப்புப் பட்டைகள்"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "தேர்ந்தெடுத்த சாளர அலங்காரம் ஒளிபுகா தலைப்புப் பட்டைகளை வரைகிறது. Silver சாளர அலங்காரம் இந்த அமைப்புகளைப் பயன்படுத்துகிறது."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "செயலிலுள்ள சாளரம்:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "செயலிலில்லாத சாளரம்:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "பெரிதாக்கிய சாளரங்களின் தலைப்புப் பட்டைகளை எப்போதும் ஒளிபுகாததாக்கு"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "ஒளிபுகும் தலைப்புப் பட்டைகளை மங்கலாக்கு"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "இந்த ஒளிபுகாமையை முழு தலைப்புப் பகுதிக்கும் பயன்படுத்து (கருவிப்பட்டைகள், பட்டிப் பட்டைகள்)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "தலைப்புப் பட்டையைச் செயலியின் நிறத்துக்குப் பொருத்து"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "விதிவிலக்குகள்…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "ஒளிபுகும்"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ஒளிபுகா"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "தலைப்புப் பட்டை விதிவிலக்குகள்"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "மேலெழுது:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "இந்த விதிவிலக்கைப் பயன்படுத்து"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "செயலியின் பெயர் அல்லது சாளர வகை (சுருங்குறித்தொடர்)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "இயல்பிருப்பு"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "விதிவிலக்கை நீக்கு"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "செயலிலுள்ள சாளரத்தின் ஒளிபுகாமை:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "செயலிலில்லாத சாளரங்களின் ஒளிபுகாமை:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "இந்த ஒளிபுகாமையை முழு தலைப்புப் பகுதிக்கும் பயன்படுத்து"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "விதிவிலக்கு பொருந்தும் செயலிகளுக்குத் தலைப்புப் பட்டை அமைப்புகளை மட்டுமே மாற்றுகிறது."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "விதிவிலக்கைச் சேர்"

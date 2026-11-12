@@ -33,7 +33,6 @@
 #include <algorithm>
 
 #include "desktopthemedata.h"
-#include "desktopthemeopacitysettings.h"
 #include "filterproxymodel.h"
 
 Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
@@ -48,7 +47,6 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data)
     , m_haveThemeExplorerInstalled(false)
 {
     qmlRegisterAnonymousType<DesktopThemeSettings>("org.kde.private.kcms.desktoptheme", 1);
-    qmlRegisterAnonymousType<DesktopThemeOpacitySettings>("org.kde.private.kcms.desktoptheme", 1);
     qmlRegisterUncreatableType<ThemesModel>("org.kde.private.kcms.desktoptheme", 1, 0, "ThemesModel", QStringLiteral("Cannot create ThemesModel"));
     qmlRegisterUncreatableType<FilterProxyModel>("org.kde.private.kcms.desktoptheme",
                                                  1,
@@ -73,24 +71,13 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data)
     connect(m_model, &ThemesModel::selectedThemeChanged, m_filteredModel, &FilterProxyModel::setSelectedTheme);
 
     m_filteredModel->setSourceModel(m_model);
-
-    // Desktop styles pick up a change at once through KConfigWatcher.
-    const auto items = transparency()->items();
-    for (KConfigSkeletonItem *item : items) {
-        item->setWriteFlags(KConfigBase::Notify);
-    }
 }
 
 KCMDesktopTheme::~KCMDesktopTheme() = default;
 
 DesktopThemeSettings *KCMDesktopTheme::desktopThemeSettings() const
 {
-    return m_data->desktopThemeSettings();
-}
-
-DesktopThemeOpacitySettings *KCMDesktopTheme::transparency() const
-{
-    return m_data->desktopThemeOpacitySettings();
+    return m_data->settings();
 }
 
 ThemesModel *KCMDesktopTheme::desktopThemeModel() const
@@ -212,13 +199,6 @@ void KCMDesktopTheme::save()
     // This is deliberately blocking so that we ensure Kwin has processed the
     // animation start event before we potentially trigger client side changes
     QDBusConnection::sessionBus().call(msg);
-
-    // Moving a transparency slider turns the setting on, as the titlebar's does.
-    KConfigSkeletonItem *enabledItem = transparency()->findItem(QStringLiteral("enabled"));
-    Q_ASSERT(enabledItem);
-    if (transparency()->isSaveNeeded() && !enabledItem->isSaveNeeded()) {
-        transparency()->setEnabled(true);
-    }
 
     KQuickManagedConfigModule::save();
     KSvg::ImageSet().setImageSetName(desktopThemeSettings()->name());

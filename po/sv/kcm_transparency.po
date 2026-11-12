@@ -1,0 +1,142 @@
+# Swedish translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Swedish\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Skrivbord"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Den valda skrivbordsstilen använder sin egen genomskinlighet. Skrivbordsstilar som Silver Light och Silver Dark använder de här inställningarna."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Använd de här inställningarna istället för skrivbordsstilens egna"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneler:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Rutor:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Verktygstips:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Skrivbordskomponenter:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menyer"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Den valda programstilen ritar ogenomskinliga menyer. Programstilarna Silver och Breeze använder den här inställningen."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menyer:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Namnlister"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Den valda fönsterdekorationen ritar ogenomskinliga namnlister. Fönsterdekorationen Silver använder de här inställningarna."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktivt fönster:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Inaktivt fönster:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Gör alltid namnlister för maximerade fönster ogenomskinliga"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Gör genomskinliga namnlister suddiga"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Använd den här ogenomskinligheten på hela rubrikområdet (verktygsrader och menyrader)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Anpassa namnlisten till programmets färg"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Undantag…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Genomskinlig"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Ogenomskinlig"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Undantag för namnlister"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Överskrid:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Använd det här undantaget"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Programnamn eller fönsterklass (reguljärt uttryck)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standard"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Ta bort undantag"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Ogenomskinlighet för aktivt fönster:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Ogenomskinlighet för inaktiva fönster:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Använd den här ogenomskinligheten på hela rubrikområdet"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Ett undantag ändrar bara namnlistens inställningar, för de program som det matchar."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Lägg till undantag"

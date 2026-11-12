@@ -1,0 +1,142 @@
+# Kazakh translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Kazakh\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Жұмыс үстелі"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Таңдалған жұмыс үстелі стилі өз мөлдірлігін қолданады. Бұл баптауларды Silver Light және Silver Dark сияқты жұмыс үстелі стильдері қолданады."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Жұмыс үстелі стилінің өз баптауларының орнына осы баптауларды қолдану"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Панельдер:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Қалқымалы терезелер:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Қалқымалы кеңестер:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Жұмыс үстелі виджеттері:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Мәзірлер"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Таңдалған қолданба стилі мөлдір емес мәзірлер салады. Бұл баптауды Silver және Breeze қолданба стильдері қолданады."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Мәзірлер:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Тақырып жолақтары"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Таңдалған терезе безендіруі мөлдір емес тақырып жолақтарын салады. Бұл баптауларды Silver терезе безендіруі қолданады."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Белсенді терезе:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Белсенді емес терезе:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Жайылған терезелердің тақырып жолақтарын әрқашан мөлдір емес ету"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Мөлдір тақырып жолақтарын бұлдырату"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Бұл мөлдір еместікті бүкіл тақырып аймағына қолдану (құралдар және мәзір панельдері)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Тақырып жолағын қолданба түсіне сәйкестендіру"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Ерекшеліктер…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Мөлдір"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Мөлдір емес"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Тақырып жолақтарының ерекшеліктері"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Алмастыру:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Осы ерекшелікті қолдану"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Қолданба атауы немесе терезе класы (тұрақты өрнек)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Әдетті"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Ерекшелікті өшіру"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Белсенді терезенің мөлдір еместігі:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Белсенді емес терезелердің мөлдір еместігі:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Бұл мөлдір еместікті бүкіл тақырып аймағына қолдану"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Ерекшелік сәйкес келетін қолданбалар үшін тек тақырып жолағының баптауларын өзгертеді."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ерекшелік қосу"

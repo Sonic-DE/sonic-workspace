@@ -1,0 +1,142 @@
+# Portuguese translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Portuguese\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Ambiente de trabalho"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "O estilo do ambiente de trabalho seleccionado usa a sua própria transparência. Estilos como o Silver Light e o Silver Dark usam estas definições."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Usar estas definições em vez das do estilo do ambiente de trabalho"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Painéis:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Janelas instantâneas:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Dicas:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Elementos do ambiente de trabalho:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menus"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "O estilo de aplicações seleccionado desenha menus opacos. Os estilos de aplicações Silver e Breeze usam esta definição."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menus:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Barras de título"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "A decoração de janelas seleccionada desenha barras de título opacas. A decoração de janelas Silver usa estas definições."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Janela activa:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Janela inactiva:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Tornar sempre opacas as barras de título das janelas maximizadas"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Desfocar as barras de título transparentes"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Aplicar esta opacidade a toda a área do cabeçalho (barras de ferramentas e de menu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Ajustar a barra de título à cor da aplicação"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Excepções…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparente"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opaco"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Excepções das barras de título"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Substituir:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Usar esta excepção"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Nome da aplicação ou classe da janela (expressão regular)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Predefinida"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Remover a excepção"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Opacidade da janela activa:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Opacidade das janelas inactivas:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Aplicar esta opacidade a toda a área do cabeçalho"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Uma excepção só altera as definições das barras de título, para as aplicações a que corresponde."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Adicionar uma excepção"

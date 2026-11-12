@@ -1,0 +1,142 @@
+# Burmese translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Burmese\n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "ဒက်စ်တော့"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "ရွေးထားသော ဒက်စ်တော့ ပုံစံသည် ၎င်း၏ကိုယ်ပိုင် ဖောက်ထွင်းမြင်နိုင်မှုကို သုံးသည်။ Silver Light နှင့် Silver Dark ကဲ့သို့ ဒက်စ်တော့ ပုံစံများသည် ဤဆက်တင်များကို သုံးသည်။"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "ဒက်စ်တော့ ပုံစံ၏ ကိုယ်ပိုင်ဆက်တင်များအစား ဤဆက်တင်များကို သုံးရန်"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "ပန်နယ်များ -"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "ပေါ့ပ်အပ်များ -"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "အကြံပြုချက်များ -"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ဒက်စ်တော့ ဝစ်ဂျက်များ -"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "မီနူးများ"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "ရွေးထားသော အက်ပ်ပုံစံသည် ဖောက်ထွင်းမမြင်ရသော မီနူးများကို ဆွဲသည်။ Silver နှင့် Breeze အက်ပ်ပုံစံများသည် ဤဆက်တင်ကို သုံးသည်။"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "မီနူးများ -"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "ခေါင်းစဉ်ဘားများ"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "ရွေးထားသော ဝင်းဒိုး အလှဆင်မှုသည် ဖောက်ထွင်းမမြင်ရသော ခေါင်းစဉ်ဘားများကို ဆွဲသည်။ Silver ဝင်းဒိုး အလှဆင်မှုသည် ဤဆက်တင်များကို သုံးသည်။"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "အသုံးပြုနေသော ဝင်းဒိုး -"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "အသုံးမပြုသော ဝင်းဒိုး -"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "အကြီးဆုံးချဲ့ထားသော ဝင်းဒိုးများ၏ ခေါင်းစဉ်ဘားကို အမြဲ ဖောက်ထွင်းမမြင်ရအောင် လုပ်ရန်"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "ဖောက်ထွင်းမြင်ရသော ခေါင်းစဉ်ဘားများကို မှုန်ဝါးစေရန်"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ဤ ဖောက်ထွင်းမမြင်ရမှုကို ခေါင်းပိုင်းဧရိယာတစ်ခုလုံးတွင် အသုံးချရန် (ကိရိယာဘားများ နှင့် မီနူးဘားများ)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "ခေါင်းစဉ်ဘားကို အက်ပ်၏ အရောင်နှင့် ကိုက်ညီစေရန်"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ခြွင်းချက်များ…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "ဖောက်ထွင်းမြင်ရသော"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ဖောက်ထွင်းမမြင်ရသော"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "ခေါင်းစဉ်ဘား ခြွင်းချက်များ"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "အစားထိုးရန် -"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ဤခြွင်းချက်ကို သုံးရန်"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "အက်ပ်အမည် သို့မဟုတ် ဝင်းဒိုး အမျိုးအစား (ပုံမှန်ဖော်ပြချက်)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "မူလ"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ခြွင်းချက်ကို ဖယ်ရှားရန်"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "အသုံးပြုနေသော ဝင်းဒိုး၏ ဖောက်ထွင်းမမြင်ရမှု -"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "အသုံးမပြုသော ဝင်းဒိုးများ၏ ဖောက်ထွင်းမမြင်ရမှု -"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ဤ ဖောက်ထွင်းမမြင်ရမှုကို ခေါင်းပိုင်းဧရိယာတစ်ခုလုံးတွင် အသုံးချရန်"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ခြွင်းချက်သည် ကိုက်ညီသော အက်ပ်များအတွက် ခေါင်းစဉ်ဘား ဆက်တင်များကိုသာ ပြောင်းလဲသည်။"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "ခြွင်းချက် ထည့်ရန်"

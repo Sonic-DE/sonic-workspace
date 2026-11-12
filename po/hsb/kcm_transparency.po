@@ -1,0 +1,142 @@
+# Upper Sorbian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Upper Sorbian\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Dźěłowy powjerch"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Wubrany stil dźěłoweho powjercha wužiwa swoju transparencu. Stile dźěłoweho powjercha kaž Silver Light a Silver Dark wužiwaja tute nastajenja."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Tute nastajenja město nastajenjow stila dźěłoweho powjercha wužiwać"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panele:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Wuskakowace wokna:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Pokiwy:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Elementy dźěłoweho powjercha:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Meni"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Wubrany stil aplikacijow rysuje njepřewidne meni. Stilaj aplikacijow Silver a Breeze wužiwataj tute nastajenje."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Meni:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titulowe lajsty"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Wubrana woknowa dekoracija rysuje njepřewidne titulowe lajsty. Woknowa dekoracija Silver wužiwa tute nastajenja."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiwne wokno:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Njeaktiwne wokno:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Titulowe lajsty maksimowanych woknow přeco njepřewidne činić"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Transparentne titulowe lajsty rozmazać"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Tutu njepřewidnosć na cyły hłowowy wobłuk nałožić (lajsty nastrojow a menijow)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Titulowu lajstu barbje aplikacije přiměrić"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Wuwzaća…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparentny"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Njepřewidny"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Wuwzaća titulowych lajstow"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Přepisać:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Tute wuwzaće wužiwać"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Mjeno aplikacije abo klasa wokna (regularny wuraz)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standard"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Wuwzaće wotstronić"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Njepřewidnosć aktiwneho wokna:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Njepřewidnosć njeaktiwnych woknow:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Tutu njepřewidnosć na cyły hłowowy wobłuk nałožić"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Wuwzaće změni jenož nastajenja titulowych lajstow, za aplikacije, na kotrež so hodźi."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Wuwzaće přidać"

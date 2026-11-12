@@ -1,0 +1,142 @@
+# Hebrew translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Hebrew\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "שולחן עבודה"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "סגנון שולחן העבודה הנבחר משתמש בשקיפות משלו. סגנונות שולחן עבודה כמו Silver Light ו־Silver Dark משתמשים בהגדרות האלה."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "להשתמש בהגדרות האלה במקום בהגדרות של סגנון שולחן העבודה"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "לוחות:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "חלונות קופצים:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "חלוניות עצה:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "יישומונים בשולחן העבודה:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "תפריטים"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "סגנון היישומים הנבחר מצייר תפריטים אטומים. סגנונות היישומים Silver ו־Breeze משתמשים בהגדרה הזאת."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "תפריטים:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "פסי כותרת"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "עיטור החלונות הנבחר מצייר פסי כותרת אטומים. עיטור החלונות Silver משתמש בהגדרות האלה."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "חלון פעיל:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "חלון לא פעיל:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "פסי הכותרת של חלונות מוגדלים תמיד אטומים"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "טשטוש פסי כותרת שקופים"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "להחיל את האטימות הזאת על כל אזור הכותרת (סרגלי כלים ותפריטים)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "התאמת פס הכותרת לצבע היישום"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "חריגות…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "שקוף"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "אטום"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "חריגות פסי כותרת"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "דריסה:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "להשתמש בחריגה הזאת"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "שם יישום או מחלקת חלון (ביטוי רגולרי)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "ברירת מחדל"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "הסרת חריגה"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "אטימות החלון הפעיל:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "אטימות החלונות הלא פעילים:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "להחיל את האטימות הזאת על כל אזור הכותרת"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "חריגה משנה רק את הגדרות פס הכותרת, ליישומים שהיא תואמת."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "הוספת חריגה"

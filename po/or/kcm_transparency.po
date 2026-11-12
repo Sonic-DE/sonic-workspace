@@ -1,0 +1,142 @@
+# Odia translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Odia\n"
+"Language: or\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "ଡେସ୍କଟପ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "ବଛାଯାଇଥିବା ଡେସ୍କଟପ ଶୈଳୀ ନିଜର ସ୍ୱଚ୍ଛତା ବ୍ୟବହାର କରେ। Silver Light ଏବଂ Silver Dark ଭଳି ଡେସ୍କଟପ ଶୈଳୀ ଏହି ସେଟିଂ ବ୍ୟବହାର କରନ୍ତି।"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "ଡେସ୍କଟପ ଶୈଳୀର ନିଜ ସେଟିଂ ବଦଳରେ ଏହି ସେଟିଂ ବ୍ୟବହାର କରନ୍ତୁ"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "ପ୍ୟାନେଲ:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "ପପ-ଅପ:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "ସାଧନ ସୂଚନା:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ଡେସ୍କଟପ ୱିଜେଟ:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "ତାଲିକା"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "ବଛାଯାଇଥିବା ପ୍ରୟୋଗ ଶୈଳୀ ଅସ୍ୱଚ୍ଛ ତାଲିକା ଆଙ୍କେ। Silver ଏବଂ Breeze ପ୍ରୟୋଗ ଶୈଳୀ ଏହି ସେଟିଂ ବ୍ୟବହାର କରନ୍ତି।"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "ତାଲିକା:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "ଶୀର୍ଷକ ପଟି"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "ବଛାଯାଇଥିବା ୱିଣ୍ଡୋ ସଜ୍ଜା ଅସ୍ୱଚ୍ଛ ଶୀର୍ଷକ ପଟି ଆଙ୍କେ। Silver ୱିଣ୍ଡୋ ସଜ୍ଜା ଏହି ସେଟିଂ ବ୍ୟବହାର କରେ।"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "ସକ୍ରିୟ ୱିଣ୍ଡୋ:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "ନିଷ୍କ୍ରିୟ ୱିଣ୍ଡୋ:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "ସର୍ବାଧିକ କରାଯାଇଥିବା ୱିଣ୍ଡୋର ଶୀର୍ଷକ ପଟି ସର୍ବଦା ଅସ୍ୱଚ୍ଛ କରନ୍ତୁ"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "ସ୍ୱଚ୍ଛ ଶୀର୍ଷକ ପଟିକୁ ଅସ୍ପଷ୍ଟ କରନ୍ତୁ"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ଏହି ଅସ୍ୱଚ୍ଛତା ସମଗ୍ର ଶୀର୍ଷ ଅଞ୍ଚଳରେ ପ୍ରୟୋଗ କରନ୍ତୁ (ସାଧନ ପଟି ଏବଂ ତାଲିକା ପଟି)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "ଶୀର୍ଷକ ପଟିକୁ ପ୍ରୟୋଗର ରଙ୍ଗ ସହିତ ମେଳ କରନ୍ତୁ"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ବ୍ୟତିକ୍ରମ…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "ସ୍ୱଚ୍ଛ"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ଅସ୍ୱଚ୍ଛ"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "ଶୀର୍ଷକ ପଟି ବ୍ୟତିକ୍ରମ"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "ନବଲିଖନ:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ଏହି ବ୍ୟତିକ୍ରମ ବ୍ୟବହାର କରନ୍ତୁ"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "ପ୍ରୟୋଗ ନାମ କିମ୍ବା ୱିଣ୍ଡୋ ଶ୍ରେଣୀ (ନିୟମିତ ଅଭିବ୍ୟକ୍ତି)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "ପୂର୍ବନିର୍ଦ୍ଧାରିତ"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ବ୍ୟତିକ୍ରମ କାଢ଼ନ୍ତୁ"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "ସକ୍ରିୟ ୱିଣ୍ଡୋର ଅସ୍ୱଚ୍ଛତା:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "ନିଷ୍କ୍ରିୟ ୱିଣ୍ଡୋର ଅସ୍ୱଚ୍ଛତା:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ଏହି ଅସ୍ୱଚ୍ଛତା ସମଗ୍ର ଶୀର୍ଷ ଅଞ୍ଚଳରେ ପ୍ରୟୋଗ କରନ୍ତୁ"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ବ୍ୟତିକ୍ରମ ମେଳ ଖାଉଥିବା ପ୍ରୟୋଗ ପାଇଁ କେବଳ ଶୀର୍ଷକ ପଟିର ସେଟିଂ ବଦଳାଏ।"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "ବ୍ୟତିକ୍ରମ ଯୋଗ କରନ୍ତୁ"

@@ -1,0 +1,142 @@
+# Romanian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Birou"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Stilul de birou ales folosește propria transparență. Stilurile de birou precum Silver Light și Silver Dark folosesc aceste configurări."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Folosește aceste configurări în locul celor ale stilului de birou"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panouri:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Ferestre contextuale:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Indicii:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Componente de birou:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Meniuri"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Stilul de aplicații ales desenează meniuri opace. Stilurile de aplicații Silver și Breeze folosesc această configurare."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Meniuri:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Bare de titlu"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Decorația de fereastră aleasă desenează bare de titlu opace. Decorația de fereastră Silver folosește aceste configurări."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Fereastra activă:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Fereastra inactivă:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Fă întotdeauna opace barele de titlu ale ferestrelor maximizate"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Estompează barele de titlu transparente"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Aplică această opacitate întregii zone de antet (bare de unelte și bare de meniu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Potrivește bara de titlu cu culoarea aplicației"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Excepții…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparent"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opac"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Excepții pentru barele de titlu"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Suprascrie:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Folosește această excepție"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Numele aplicației sau clasa ferestrei (expresie regulată)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Implicită"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Elimină excepția"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Opacitatea ferestrei active:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Opacitatea ferestrelor inactive:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Aplică această opacitate întregii zone de antet"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "O excepție schimbă doar configurările barelor de titlu, pentru aplicațiile cărora li se potrivește."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Adaugă o excepție"

@@ -1,0 +1,142 @@
+# Finnish translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Finnish\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Työpöytä"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Valittu työpöytätyyli käyttää omaa läpinäkyvyyttään. Näitä asetuksia käyttävät työpöytätyylit, kuten Silver Light ja Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Käytä näitä asetuksia työpöytätyylin omien sijaan"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneelit:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Ponnahdusikkunat:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Työkaluvihjeet:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Työpöytäsovelmat:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Valikot"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Valittu sovellustyyli piirtää läpinäkymättömät valikot. Tätä asetusta käyttävät sovellustyylit Silver ja Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Valikot:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Otsikkopalkit"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Valittu ikkunan kehys piirtää läpinäkymättömät otsikkopalkit. Näitä asetuksia käyttää ikkunan kehys Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiivinen ikkuna:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Passiivinen ikkuna:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Tee suurennettujen ikkunoiden otsikkopalkeista aina läpinäkymättömiä"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Sumenna läpinäkyvät otsikkopalkit"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Käytä tätä peittävyyttä koko otsakealueella (työkalurivit ja valikkorivit)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Sovita otsikkopalkki sovelluksen väriin"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Poikkeukset…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Läpinäkyvä"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Läpinäkymätön"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Otsikkopalkkien poikkeukset"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Ohita:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Käytä tätä poikkeusta"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Sovelluksen nimi tai ikkunaluokka (säännöllinen lauseke)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Oletus"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Poista poikkeus"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Aktiivisen ikkunan peittävyys:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Passiivisten ikkunoiden peittävyys:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Käytä tätä peittävyyttä koko otsakealueella"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Poikkeus muuttaa vain otsikkopalkkien asetuksia niille sovelluksille, joihin se täsmää."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Lisää poikkeus"

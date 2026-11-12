@@ -1,0 +1,142 @@
+# Czech translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Pracovní plocha"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Vybraný styl pracovní plochy používá vlastní průhlednost. Tato nastavení používají styly pracovní plochy jako Silver Light a Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Použít tato nastavení místo nastavení stylu pracovní plochy"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panely:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Vyskakovací okna:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Tipy:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widgety pracovní plochy:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Nabídky"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Vybraný styl aplikací kreslí neprůhledné nabídky. Toto nastavení používají styly aplikací Silver a Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Nabídky:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titulkové pruhy"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Vybraná dekorace oken kreslí neprůhledné titulkové pruhy. Tato nastavení používá dekorace oken Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktivní okno:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Neaktivní okno:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Titulkové pruhy maximalizovaných oken vždy neprůhledné"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Rozmazat průhledné titulkové pruhy"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Použít tuto neprůhlednost na celou oblast záhlaví (panely nástrojů a nabídek)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Přizpůsobit titulkový pruh barvě aplikace"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Výjimky…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Průhledné"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Neprůhledné"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Výjimky titulkových pruhů"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Přepsat:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Použít tuto výjimku"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Název aplikace nebo třída okna (regulární výraz)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Výchozí"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Odstranit výjimku"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Neprůhlednost aktivního okna:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Neprůhlednost neaktivních oken:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Použít tuto neprůhlednost na celou oblast záhlaví"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Výjimka mění pouze nastavení titulkových pruhů, a to pro aplikace, kterým odpovídá."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Přidat výjimku"

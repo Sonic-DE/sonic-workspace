@@ -1,0 +1,142 @@
+# Lithuanian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Lithuanian\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Darbalaukis"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Pasirinktas darbalaukio stilius naudoja savo skaidrumą. Šiuos nustatymus naudoja darbalaukio stiliai, pavyzdžiui, Silver Light ir Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Naudoti šiuos nustatymus vietoj darbalaukio stiliaus nustatymų"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Skydeliai:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Iškylantieji langai:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Paaiškinimai:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Darbalaukio valdikliai:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Meniu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Pasirinktas programų stilius piešia neskaidrius meniu. Šį nustatymą naudoja programų stiliai Silver ir Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Meniu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Antraštės juostos"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Pasirinkta langų dekoracija piešia neskaidrias antraštės juostas. Šiuos nustatymus naudoja langų dekoracija Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktyvus langas:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Neaktyvus langas:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Visada daryti išskleistų langų antraštės juostas neskaidrias"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Suliejimas skaidrioms antraštės juostoms"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Taikyti šį neskaidrumą visai antraštės sričiai (įrankių ir meniu juostoms)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Derinti antraštės juostą prie programos spalvos"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Išimtys…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Skaidrus"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Neskaidrus"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Antraštės juostų išimtys"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Nustelbti:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Naudoti šią išimtį"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Programos pavadinimas arba lango klasė (reguliarusis reiškinys)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Numatytoji"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Šalinti išimtį"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Aktyvaus lango neskaidrumas:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Neaktyvių langų neskaidrumas:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Taikyti šį neskaidrumą visai antraštės sričiai"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Išimtis keičia tik antraštės juostų nustatymus, ir tik jai atitinkančioms programoms."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Pridėti išimtį"

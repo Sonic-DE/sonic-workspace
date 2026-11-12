@@ -1,0 +1,142 @@
+# Low German translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Low Saxon\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Schriefdisch"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "De utsöchte Schriefdischstil bruukt sien egen Dörsichtigkeit. Schriefdischstilen as Silver Light un Silver Dark bruukt disse Instellen."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Disse Instellen bruken, nich de vun den Schriefdischstil"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panelen:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Opduukfinstern:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Kortinfos:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Schriefdisch-Lüttprogrammen:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menüs"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "De utsöchte Programmstil maalt nich dörsichtige Menüs. De Programmstilen Silver un Breeze bruukt disse Instellen."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menüs:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titelbalkens"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "De utsöchte Finsterdekoratschoon maalt nich dörsichtige Titelbalkens. De Finsterdekoratschoon Silver bruukt disse Instellen."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiv Finster:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Nich aktiv Finster:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Titelbalkens vun maximeert Finstern jümmers nich dörsichtig maken"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Dörsichtige Titelbalkens verwischen"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Disse Deckkraft op den heel Kopprebeet anwennen (Warktüüchbalkens un Menübalkens)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Titelbalken na de Klöör vun dat Programm instellen"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Utnahmen…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Dörsichtig"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Nich dörsichtig"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Titelbalken-Utnahmen"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Överschrieven:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Disse Utnahm bruken"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Programmnaam oder Finsterklass (regulöör Utdruck)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standard"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Utnahm wegdoon"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Deckkraft vun dat aktiv Finster:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Deckkraft vun de nich aktiv Finstern:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Disse Deckkraft op den heel Kopprebeet anwennen"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "En Utnahm ännert bloots de Titelbalken-Instellen, för de Programmen, op de se passt."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Utnahm tofögen"

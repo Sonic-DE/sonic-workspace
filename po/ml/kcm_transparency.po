@@ -1,0 +1,142 @@
+# Malayalam translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Malayalam\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "പണിയിടം"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "തിരഞ്ഞെടുത്ത പണിയിട ശൈലി സ്വന്തം സുതാര്യത ഉപയോഗിക്കുന്നു. Silver Light, Silver Dark പോലുള്ള പണിയിട ശൈലികൾ ഈ ക്രമീകരണങ്ങൾ ഉപയോഗിക്കുന്നു."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "പണിയിട ശൈലിയുടെ ക്രമീകരണങ്ങൾക്ക് പകരം ഇവ ഉപയോഗിക്കുക"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "പാളികൾ:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "പോപ്പ്-അപ്പുകൾ:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "സൂചനകൾ:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "പണിയിട വിഡ്ജറ്റുകൾ:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "മെനുകൾ"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "തിരഞ്ഞെടുത്ത പ്രയോഗ ശൈലി അതാര്യമായ മെനുകൾ വരയ്ക്കുന്നു. Silver, Breeze പ്രയോഗ ശൈലികൾ ഈ ക്രമീകരണം ഉപയോഗിക്കുന്നു."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "മെനുകൾ:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "തലക്കെട്ട് പട്ടകൾ"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "തിരഞ്ഞെടുത്ത ജാലക അലങ്കാരം അതാര്യമായ തലക്കെട്ട് പട്ടകൾ വരയ്ക്കുന്നു. Silver ജാലക അലങ്കാരം ഈ ക്രമീകരണങ്ങൾ ഉപയോഗിക്കുന്നു."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "സജീവ ജാലകം:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "നിർജ്ജീവ ജാലകം:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "വലുതാക്കിയ ജാലകങ്ങളുടെ തലക്കെട്ട് പട്ടകൾ എപ്പോഴും അതാര്യമാക്കുക"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "സുതാര്യമായ തലക്കെട്ട് പട്ടകൾ മങ്ങിക്കുക"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ഈ അതാര്യത മുഴുവൻ തലഭാഗത്തിനും ബാധകമാക്കുക (ഉപകരണപ്പട്ടകളും മെനു പട്ടകളും)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "തലക്കെട്ട് പട്ട പ്രയോഗത്തിന്റെ നിറവുമായി പൊരുത്തപ്പെടുത്തുക"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ഒഴിവാക്കലുകൾ…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "സുതാര്യം"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "അതാര്യം"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "തലക്കെട്ട് പട്ടയുടെ ഒഴിവാക്കലുകൾ"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "മറികടക്കുക:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ഈ ഒഴിവാക്കൽ ഉപയോഗിക്കുക"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "പ്രയോഗത്തിന്റെ പേര് അല്ലെങ്കിൽ ജാലക വിഭാഗം (റെഗുലർ എക്സ്പ്രഷൻ)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "സ്വതവേ"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ഒഴിവാക്കൽ നീക്കുക"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "സജീവ ജാലകത്തിന്റെ അതാര്യത:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "നിർജ്ജീവ ജാലകങ്ങളുടെ അതാര്യത:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ഈ അതാര്യത മുഴുവൻ തലഭാഗത്തിനും ബാധകമാക്കുക"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ഒഴിവാക്കൽ പൊരുത്തപ്പെടുന്ന പ്രയോഗങ്ങൾക്ക് തലക്കെട്ട് പട്ടയുടെ ക്രമീകരണങ്ങൾ മാത്രം മാറ്റുന്നു."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "ഒഴിവാക്കൽ ചേർക്കുക"

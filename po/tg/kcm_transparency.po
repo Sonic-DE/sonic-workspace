@@ -1,0 +1,142 @@
+# Tajik translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Tajik\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Мизи корӣ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Услуби интихобшудаи мизи корӣ шаффофияти худро истифода мебарад. Услубҳои мизи корӣ, ба монанди Silver Light ва Silver Dark, ин танзимотро истифода мебаранд."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Ба ҷои танзимоти услуби мизи корӣ ин танзимотро истифода барем"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Лавҳаҳо:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Равзанаҳои пайдошаванда:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Маслиҳатҳо:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Виҷетҳои мизи корӣ:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Менюҳо"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Услуби интихобшудаи барномаҳо менюҳои ношаффоф мекашад. Услубҳои барномаҳои Silver ва Breeze ин танзимро истифода мебаранд."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Менюҳо:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Навори сарлавҳаҳо"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Ороиши интихобшудаи равзана навори сарлавҳаҳои ношаффоф мекашад. Ороиши равзанаи Silver ин танзимотро истифода мебарад."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Равзанаи фаъол:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Равзанаи ғайрифаъол:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Навори сарлавҳаи равзанаҳои калоншударо ҳамеша ношаффоф кунем"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Навори сарлавҳаҳои шаффофро хира кунем"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Ин ношаффофиро ба тамоми минтақаи сарлавҳа татбиқ кунем (навори абзорҳо ва навори менюҳо)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Навори сарлавҳаро ба ранги барнома мувофиқ кунем"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Истисноҳо…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Шаффоф"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Ношаффоф"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Истисноҳои навори сарлавҳа"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Иваз кардан:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Ин истисноро истифода барем"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Номи барнома ё синфи равзана (ифодаи муқаррарӣ)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Пешфарз"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Тоза кардани истисно"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Ношаффофии равзанаи фаъол:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Ношаффофии равзанаҳои ғайрифаъол:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Ин ношаффофиро ба тамоми минтақаи сарлавҳа татбиқ кунем"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Истисно танҳо танзимоти навори сарлавҳаро барои барномаҳои мувофиқ иваз мекунад."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Илова кардани истисно"

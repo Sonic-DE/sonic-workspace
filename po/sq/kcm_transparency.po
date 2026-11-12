@@ -1,0 +1,142 @@
+# Albanian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Albanian\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Desktopi"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Stili i përzgjedhur i desktopit përdor tejdukshmërinë e vet. Këto rregullime përdoren nga stile desktopi si Silver Light dhe Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Përdor këto rregullime në vend të atyre të stilit të desktopit"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panele:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Flluska:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Ndihmëza:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widget-e desktopi:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Stili i përzgjedhur i aplikacioneve vizaton menu të patejdukshme. Ky rregullim përdoret nga stilet e aplikacioneve Silver dhe Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Shtylla titujsh"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Zbukurimi i përzgjedhur i dritareve vizaton shtylla titujsh të patejdukshme. Këto rregullime përdoren nga zbukurimi i dritareve Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Dritare aktive:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Dritare joaktive:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Bëji përherë të patejdukshme shtyllat e titujve të dritareve të maksimizuara"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Turbullo shtyllat e titujve që janë të tejdukshme"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Zbatoje këtë patejdukshmëri në krejt zonën e kryes (shtylla mjetesh dhe shtylla menush)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Përputhe shtyllën e titullit me ngjyrën e aplikacionit"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Përjashtime…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "I tejdukshëm"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "I patejdukshëm"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Përjashtime Shtylle Titujsh"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Anashkalo:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Përdor këtë përjashtim"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Emër aplikacioni ose klasë dritareje (shprehje e rregullt)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Parazgjedhje"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Hiqe Përjashtimin"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Patejdukshmëri dritareje aktive:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Patejdukshmëri dritaresh joaktive:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Zbatoje këtë patejdukshmëri në krejt zonën e kryes"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Një përjashtim ndryshon vetëm rregullimet e shtyllës së titullit, për aplikacionet me të cilat përputhet."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Shtoni Përjashtim"

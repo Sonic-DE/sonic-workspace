@@ -1,0 +1,142 @@
+# Pashto translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Pashto\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "سرپاڼه"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "ټاکل شوې سرپاڼې بڼه خپله روڼتیا کاروي. د Silver Light او Silver Dark په څېر د سرپاڼې بڼې دا امستنې کاروي."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "د سرپاڼې بڼې د خپلو امستنو پر ځای دا امستنې وکاروئ"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "چوکاټونه:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "راټوکېدونکې کړکۍ:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "لارښوونې:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "د سرپاڼې وېجټونه:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "غورنۍ"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "ټاکل شوې کاريال بڼه ناروڼې غورنۍ انځوروي. د Silver او Breeze کاريال بڼې دا امستنه کاروي."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "غورنۍ:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "سرلیک پټې"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "ټاکل شوې کړکۍ سینګار ناروڼې سرلیک پټې انځوروي. د Silver کړکۍ سینګار دا امستنې کاروي."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "فعاله کړکۍ:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "نافعاله کړکۍ:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "د لویو شویو کړکیو سرلیک پټې تل ناروڼې کړئ"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "روڼې سرلیک پټې تتې کړئ"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "دا ناروڼتیا په ټولې سرلیکې سیمې پلې کړئ (د اوزارو پټې او د غورنۍ پټې)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "سرلیک پټه د کاريال له رنګ سره سمه کړئ"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "استثناوې…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "روڼ"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "٪"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ناروڼ"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "د سرلیک پټې استثناوې"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "بدلول:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "دا استثنا وکاروئ"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "د کاريال نوم یا د کړکۍ ټولګی (منظم څرګندونه)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "تلواله"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "استثنا لرې کړئ"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "د فعالې کړکۍ ناروڼتیا:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "د نافعالو کړکیو ناروڼتیا:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "دا ناروڼتیا په ټولې سرلیکې سیمې پلې کړئ"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "استثنا یوازې د سرلیک پټې امستنې بدلوي، د هغو کاريالونو لپاره چې ورسره سمون خوري."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "استثنا ورزیاته کړئ"

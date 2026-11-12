@@ -1,0 +1,142 @@
+# Uzbek translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Ish stoli"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Tanlangan ish stoli uslubi o'z shaffofligidan foydalanadi. Silver Light va Silver Dark kabi ish stoli uslublari bu moslamalardan foydalanadi."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Ish stoli uslubining moslamalari o'rniga bularni ishlatish"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panellar:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Qalqib chiquvchi oynalar:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Maslahatlar:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Ish stoli vidjetlari:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menyular"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Tanlangan dastur uslubi xira menyular chizadi. Silver va Breeze dastur uslublari bu moslamadan foydalanadi."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menyular:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Sarlavha panellari"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Tanlangan oyna bezagi xira sarlavha panellarini chizadi. Silver oyna bezagi bu moslamalardan foydalanadi."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Faol oyna:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Faol bo'lmagan oyna:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Yoyilgan oynalarning sarlavha panellarini doim xira qilish"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Shaffof sarlavha panellarini xiralashtirish"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Bu xiralikni butun sarlavha qismiga qo'llash (asboblar paneli va menyu panellari)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Sarlavha panelini dastur rangiga moslash"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Istisnolar…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Shaffof"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Xira"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Sarlavha paneli istisnolari"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Almashtirish:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Bu istisnoni ishlatish"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Dastur nomi yoki oyna sinfi (muntazam ifoda)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standart"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Istisnoni olib tashlash"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Faol oyna xiraligi:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Faol bo'lmagan oynalar xiraligi:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Bu xiralikni butun sarlavha qismiga qo'llash"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Istisno faqat mos keladigan dasturlar uchun sarlavha paneli moslamalarini o'zgartiradi."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Istisno qo'shish"

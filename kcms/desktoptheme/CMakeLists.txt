@@ -13,10 +13,10 @@ target_sources(kcm_desktoptheme PRIVATE
 kcmutils_generate_module_data(kcm_desktoptheme
     MODULE_DATA_HEADER desktopthemedata.h
     MODULE_DATA_CLASS_NAME DesktopThemeData
-    SETTINGS_HEADERS desktopthemesettings.h desktopthemeopacitysettings.h
-    SETTINGS_CLASSES DesktopThemeSettings DesktopThemeOpacitySettings
+    SETTINGS_HEADERS desktopthemesettings.h
+    SETTINGS_CLASSES DesktopThemeSettings
 )
-kconfig_add_kcfg_files(kcm_desktoptheme desktopthemesettings.kcfgc desktopthemeopacitysettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_desktoptheme desktopthemesettings.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_desktoptheme PRIVATE
   Qt::Quick

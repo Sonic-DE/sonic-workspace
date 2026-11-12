@@ -1,0 +1,142 @@
+# Chinese (Hong Kong) translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Chinese (Hong Kong)\n"
+"Language: zh_HK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "桌面"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "所選的桌面風格使用自己的透明度。Silver Light 和 Silver Dark 等桌面風格會使用這些設定。"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "使用這些設定取代桌面風格本身的設定"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "面板："
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "彈出視窗："
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "工具提示："
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "桌面小工具："
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "選單"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "所選的應用程式風格會繪製不透明的選單。Silver 和 Breeze 應用程式風格會使用此設定。"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "選單："
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "標題列"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "所選的視窗裝飾會繪製不透明的標題列。Silver 視窗裝飾會使用這些設定。"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "使用中視窗："
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "非使用中視窗："
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "一律令最大化視窗的標題列不透明"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "模糊透明的標題列"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "將此不透明度套用到整個標頭區域（工具列和選單列）"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "令標題列配合應用程式顏色"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "例外…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "透明"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "不透明"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "標題列例外"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "覆寫："
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "使用此例外"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "應用程式名稱或視窗類別（正規表達式）"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "預設"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "移除例外"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "使用中視窗不透明度："
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "非使用中視窗不透明度："
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "將此不透明度套用到整個標頭區域"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "例外只會為符合的應用程式更改標題列設定。"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "新增例外"

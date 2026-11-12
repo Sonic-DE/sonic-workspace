@@ -1,0 +1,142 @@
+# Breton translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Breton\n"
+"Language: br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Burev"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Ar giz burev dibabet a implij e dreuzwelusted dezhañ. Ar c'hizioù burev evel Silver Light ha Silver Dark a implij an arventennoù-mañ."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Implijout an arventennoù-mañ e-lec'h re ar giz burev"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panelloù:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Prenestroù difoupus:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Tunioù:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widjetoù ar burev:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Lañserioù"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Ar giz arloadoù dibabet a dresañ lañserioù dizreuzwelus. Ar c'hizioù arloadoù Silver ha Breeze a implij an arventenn-mañ."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Lañserioù:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Barrennoù titl"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Ar c'hinkladur prenestroù dibabet a dresañ barrennoù titl dizreuzwelus. Ar c'hinkladur prenestroù Silver a implij an arventennoù-mañ."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Prenestr oberiant:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Prenestr dioberiant:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Lakaat barrennoù titl ar prenestroù brasaet dizreuzwelus bepred"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Lakaat ar barrennoù titl treuzwelus da vezañ dispis"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Arloañ an dizreuzwelusted-mañ d'an takad talbenn a-bezh (barrennoù ostilhoù ha barrennoù lañser)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Kenglotañ ar varrenn titl gant liv an arload"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Nemedennoù…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Treuzwelus"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Dizreuzwelus"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Nemedennoù ar varrenn titl"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Flastrañ:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Implijout an nemedenn-mañ"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Anv an arload pe rummad ar prenestr (droienn reolataet)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Dre ziouer"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Dilemel an nemedenn"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Dizreuzwelusted ar prenestr oberiant:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Dizreuzwelusted ar prenestroù dioberiant:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Arloañ an dizreuzwelusted-mañ d'an takad talbenn a-bezh"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Un nemedenn ne cheñch nemet arventennoù ar varrenn titl, evit an arloadoù a glot ganti."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Ouzhpennañ un nemedenn"

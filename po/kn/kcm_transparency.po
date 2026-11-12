@@ -1,0 +1,142 @@
+# Kannada translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Kannada\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "ಗಣಕತೆರೆ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "ಆಯ್ಕೆ ಮಾಡಿದ ಗಣಕತೆರೆ ಶೈಲಿ ತನ್ನದೇ ಪಾರದರ್ಶಕತೆಯನ್ನು ಬಳಸುತ್ತದೆ. Silver Light ಮತ್ತು Silver Dark ನಂತಹ ಗಣಕತೆರೆ ಶೈಲಿಗಳು ಈ ಸಂಯೋಜನೆಗಳನ್ನು ಬಳಸುತ್ತವೆ."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "ಗಣಕತೆರೆ ಶೈಲಿಯ ಸ್ವಂತ ಸಂಯೋಜನೆಗಳ ಬದಲಿಗೆ ಇವನ್ನು ಬಳಸು"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "ಫಲಕಗಳು:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "ಪುಟಿಕೆ ಕಿಟಕಿಗಳು:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "ಉಪಕರಣ ಸುಳಿವುಗಳು:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ಗಣಕತೆರೆ ವಿಜೆಟ್‌ಗಳು:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "ಪರಿವಿಡಿಗಳು"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "ಆಯ್ಕೆ ಮಾಡಿದ ಅನ್ವಯ ಶೈಲಿ ಅಪಾರದರ್ಶಕ ಪರಿವಿಡಿಗಳನ್ನು ಬರೆಯುತ್ತದೆ. Silver ಮತ್ತು Breeze ಅನ್ವಯ ಶೈಲಿಗಳು ಈ ಸಂಯೋಜನೆಯನ್ನು ಬಳಸುತ್ತವೆ."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "ಪರಿವಿಡಿಗಳು:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಗಳು"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "ಆಯ್ಕೆ ಮಾಡಿದ ಕಿಟಕಿ ಅಲಂಕಾರ ಅಪಾರದರ್ಶಕ ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಗಳನ್ನು ಬರೆಯುತ್ತದೆ. Silver ಕಿಟಕಿ ಅಲಂಕಾರ ಈ ಸಂಯೋಜನೆಗಳನ್ನು ಬಳಸುತ್ತದೆ."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "ಸಕ್ರಿಯ ಕಿಟಕಿ:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "ನಿಷ್ಕ್ರಿಯ ಕಿಟಕಿ:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "ಗರಿಷ್ಠಗೊಳಿಸಿದ ಕಿಟಕಿಗಳ ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಗಳನ್ನು ಯಾವಾಗಲೂ ಅಪಾರದರ್ಶಕವಾಗಿಸು"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "ಪಾರದರ್ಶಕ ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಗಳನ್ನು ಮಸುಕಾಗಿಸು"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ಈ ಅಪಾರದರ್ಶಕತೆಯನ್ನು ಸಂಪೂರ್ಣ ತಲೆಬರಹ ಪ್ರದೇಶಕ್ಕೆ ಅನ್ವಯಿಸು (ಉಪಕರಣಪಟ್ಟಿಗಳು ಮತ್ತು ಪರಿವಿಡಿ ಪಟ್ಟಿಗಳು)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯನ್ನು ಅನ್ವಯದ ಬಣ್ಣಕ್ಕೆ ಹೊಂದಿಸು"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ವಿನಾಯಿತಿಗಳು…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "ಪಾರದರ್ಶಕ"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "ಅಪಾರದರ್ಶಕ"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿ ವಿನಾಯಿತಿಗಳು"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "ಅತಿಕ್ರಮಿಸು:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ಈ ವಿನಾಯಿತಿಯನ್ನು ಬಳಸು"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "ಅನ್ವಯದ ಹೆಸರು ಅಥವಾ ಕಿಟಕಿ ವರ್ಗ (ನಿಯಮಿತ ಅಭಿವ್ಯಕ್ತಿ)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ವಿನಾಯಿತಿ ತೆಗೆದುಹಾಕು"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "ಸಕ್ರಿಯ ಕಿಟಕಿಯ ಅಪಾರದರ್ಶಕತೆ:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "ನಿಷ್ಕ್ರಿಯ ಕಿಟಕಿಗಳ ಅಪಾರದರ್ಶಕತೆ:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ಈ ಅಪಾರದರ್ಶಕತೆಯನ್ನು ಸಂಪೂರ್ಣ ತಲೆಬರಹ ಪ್ರದೇಶಕ್ಕೆ ಅನ್ವಯಿಸು"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ವಿನಾಯಿತಿ ಹೊಂದಾಣಿಕೆಯಾಗುವ ಅನ್ವಯಗಳಿಗೆ ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿಯ ಸಂಯೋಜನೆಗಳನ್ನು ಮಾತ್ರ ಬದಲಾಯಿಸುತ್ತದೆ."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "ವಿನಾಯಿತಿ ಸೇರಿಸು"

@@ -1,0 +1,142 @@
+# Georgian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Georgian\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "სამუშაო მაგიდა"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "არჩეული სამუშაო მაგიდის სტილი საკუთარ გამჭვირვალობას იყენებს. ამ პარამეტრებს იყენებს ისეთი სტილები, როგორიცაა Silver Light და Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "სამუშაო მაგიდის სტილის პარამეტრების ნაცვლად ამ პარამეტრების გამოყენება"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "პანელები:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "ამომხტარი ფანჯრები:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "მინიშნებები:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "სამუშაო მაგიდის ვიჯეტები:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "მენიუები"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "არჩეული აპლიკაციების სტილი გაუმჭვირვალე მენიუებს ხატავს. ამ პარამეტრს იყენებს აპლიკაციების სტილები Silver და Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "მენიუები:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "სათაურის ზოლები"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "არჩეული ფანჯრის დეკორაცია გაუმჭვირვალე სათაურის ზოლებს ხატავს. ამ პარამეტრებს იყენებს ფანჯრის დეკორაცია Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "აქტიური ფანჯარა:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "არააქტიური ფანჯარა:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "გადიდებული ფანჯრების სათაურის ზოლები ყოველთვის გაუმჭვირვალე იყოს"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "გამჭვირვალე სათაურის ზოლების გაბუნდოვნება"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "ამ გაუმჭვირვალობის გადატარება მთელ თავსართის არეზე (ხელსაწყოთა და მენიუს ზოლები)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "სათაურის ზოლის მორგება აპლიკაციის ფერზე"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "გამონაკლისები…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "გამჭვირვალე"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "გაუმჭვირვალე"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "სათაურის ზოლის გამონაკლისები"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "გადაფარვა:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "ამ გამონაკლისის გამოყენება"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "აპლიკაციის სახელი ან ფანჯრის კლასი (რეგულარული გამოსახულება)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "ნაგულისხმევი"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "გამონაკლისის წაშლა"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "აქტიური ფანჯრის გაუმჭვირვალობა:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "არააქტიური ფანჯრების გაუმჭვირვალობა:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "ამ გაუმჭვირვალობის გადატარება მთელ თავსართის არეზე"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "გამონაკლისი მხოლოდ სათაურის ზოლის პარამეტრებს ცვლის, შესაბამისი აპლიკაციებისთვის."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "გამონაკლისის დამატება"

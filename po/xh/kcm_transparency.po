@@ -1,0 +1,142 @@
+# Xhosa translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Xhosa\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Idesktop"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Isitayile sedesktop esikhethiweyo sisebenzisa ukubonakala kwaso. Izitayile zedesktop ezifana neSilver Light neSilver Dark zisebenzisa ezi setingi."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Sebenzisa ezi setingi endaweni yezo zesitayile sedesktop"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Iiphaneli:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Iifestile ezivelayo:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Iingcebiso:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Iiwijethi zedesktop:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Iimenyu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Isitayile sesicelo esikhethiweyo sizoba iimenyu ezingabonakaliyo. Izitayile zezicelo iSilver neBreeze zisebenzisa le setingi."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Iimenyu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Imivalo yesihloko"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Umhombiso wefestile okhethiweyo uzoba imivalo yesihloko engabonakaliyo. Umhombiso wefestile iSilver usebenzisa ezi setingi."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Ifestile esebenzayo:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Ifestile engasebenziyo:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Soloko wenza imivalo yesihloko yeefestile ezandisiweyo ingabonakali"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Fiphaza imivalo yesihloko ebonakalayo"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Sebenzisa oku kungabonakali kuyo yonke indawo yentloko (imivalo yezixhobo nemivalo yemenyu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Hambelanisa umvalo wesihloko nombala wesicelo"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Izinto ezikhethekileyo…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Ibonakala"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Ayibonakali"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Izinto ezikhethekileyo zomvalo wesihloko"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Bhala ngaphezulu:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Sebenzisa le nto ikhethekileyo"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Igama lesicelo okanye udidi lwefestile (intetho eqhelekileyo)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Okungagqibekanga"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Susa into ekhethekileyo"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Ukungabonakali kwefestile esebenzayo:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Ukungabonakali kweefestile ezingasebenziyo:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Sebenzisa oku kungabonakali kuyo yonke indawo yentloko"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Into ekhethekileyo itshintsha kuphela iisetingi zomvalo wesihloko, kwizicelo ehambelana nazo."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Yongeza into ekhethekileyo"

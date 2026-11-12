@@ -1,0 +1,142 @@
+# Hungarian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Hungarian\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Asztal"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "A kiválasztott asztalstílus a saját átlátszóságát használja. Ezeket a beállításokat olyan asztalstílusok használják, mint a Silver Light és a Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Ezen beállítások használata az asztalstílus sajátjai helyett"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panelek:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Felugró ablakok:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Buboréksúgók:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Asztali elemek:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menük"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "A kiválasztott alkalmazásstílus átlátszatlan menüket rajzol. Ezt a beállítást a Silver és a Breeze alkalmazásstílus használja."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menük:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Címsorok"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "A kiválasztott ablakdekoráció átlátszatlan címsorokat rajzol. Ezeket a beállításokat a Silver ablakdekoráció használja."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktív ablak:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Inaktív ablak:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "A teljes méretű ablakok címsora mindig átlátszatlan"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Az átlátszó címsorok elmosása"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Ezen átlátszatlanság alkalmazása a teljes fejlécterületre (eszköztárak és menüsorok)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "A címsor igazítása az alkalmazás színéhez"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Kivételek…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Átlátszó"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Átlátszatlan"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Címsorkivételek"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Felülbírálás:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "A kivétel használata"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Alkalmazásnév vagy ablakosztály (reguláris kifejezés)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Alapértelmezett"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Kivétel eltávolítása"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Az aktív ablak átlátszatlansága:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Az inaktív ablakok átlátszatlansága:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Ezen átlátszatlanság alkalmazása a teljes fejlécterületre"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "A kivétel csak a címsorbeállításokat módosítja, az illeszkedő alkalmazásoknál."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Kivétel hozzáadása"

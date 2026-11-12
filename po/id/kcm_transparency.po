@@ -1,0 +1,142 @@
+# Indonesian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Desktop"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Gaya desktop yang dipilih menggunakan transparansinya sendiri. Gaya desktop seperti Silver Light dan Silver Dark menggunakan pengaturan ini."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Gunakan pengaturan ini alih-alih milik gaya desktop"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panel:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Sembulan:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Tooltip:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Widget desktop:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menu"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Gaya aplikasi yang dipilih menggambar menu yang buram. Gaya aplikasi Silver dan Breeze menggunakan pengaturan ini."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menu:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Bilah judul"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Dekorasi jendela yang dipilih menggambar bilah judul yang buram. Dekorasi jendela Silver menggunakan pengaturan ini."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Jendela aktif:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Jendela tidak aktif:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Selalu buat buram bilah judul jendela yang dimaksimalkan"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Kaburkan bilah judul yang transparan"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Terapkan opasitas ini ke seluruh area kepala (bilah alat dan bilah menu)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Sesuaikan bilah judul dengan warna aplikasi"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Pengecualian…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Transparan"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Buram"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Pengecualian Bilah Judul"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Timpa:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Gunakan pengecualian ini"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Nama aplikasi atau kelas jendela (ekspresi reguler)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Baku"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Hapus Pengecualian"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Opasitas jendela aktif:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Opasitas jendela tidak aktif:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Terapkan opasitas ini ke seluruh area kepala"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Pengecualian hanya mengubah pengaturan bilah judul, untuk aplikasi yang cocok."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Tambah Pengecualian"

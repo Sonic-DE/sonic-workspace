@@ -1,0 +1,142 @@
+# Belarusian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Працоўны стол"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Выбраны стыль працоўнага стала выкарыстоўвае ўласную празрыстасць. Гэтыя налады выкарыстоўваюць стылі працоўнага стала, напрыклад Silver Light і Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Выкарыстоўваць гэтыя налады замест налад стылю працоўнага стала"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Панэлі:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Выплыўныя вокны:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Падказкі:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Віджэты працоўнага стала:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Меню"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Выбраны стыль праграм малюе непразрыстыя меню. Гэту наладу выкарыстоўваюць стылі праграм Silver і Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Меню:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Загалоўкі акон"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Выбранае аздабленне акон малюе непразрыстыя загалоўкі. Гэтыя налады выкарыстоўвае аздабленне акон Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Актыўнае акно:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Неактыўнае акно:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Заўсёды рабіць непразрыстымі загалоўкі разгорнутых акон"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Размываць празрыстыя загалоўкі акон"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Ужываць гэту непразрыстасць да ўсёй верхняй вобласці (панэлі інструментаў і радкі меню)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Падбіраць колер загалоўка пад колер праграмы"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Выключэнні…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Празрысты"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Непразрысты"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Выключэнні для загалоўкаў акон"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Замяніць:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Выкарыстоўваць гэта выключэнне"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Назва праграмы або клас акна (рэгулярны выраз)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Прадвызначанае"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Выдаліць выключэнне"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Непразрыстасць актыўнага акна:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Непразрыстасць неактыўных акон:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Ужываць гэту непразрыстасць да ўсёй верхняй вобласці"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Выключэнне змяняе толькі налады загалоўкаў акон для адпаведных праграм."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Дадаць выключэнне"

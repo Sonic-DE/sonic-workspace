@@ -1,0 +1,142 @@
+# Latvian translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Latvian\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Darbvirsma"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Izvēlētais darbvirsmas stils izmanto savu caurspīdīgumu. Šos iestatījumus izmanto darbvirsmas stili, piemēram, Silver Light un Silver Dark."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Izmantot šos iestatījumus darbvirsmas stila iestatījumu vietā"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneļi:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Uznirstošie logi:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Rīku padomi:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Darbvirsmas logdaļas:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Izvēlnes"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Izvēlētais lietotņu stils zīmē necaurspīdīgas izvēlnes. Šo iestatījumu izmanto lietotņu stili Silver un Breeze."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Izvēlnes:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Virsrakstjoslas"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Izvēlētā logu dekorācija zīmē necaurspīdīgas virsrakstjoslas. Šos iestatījumus izmanto logu dekorācija Silver."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktīvais logs:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Neaktīvais logs:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Vienmēr padarīt maksimizētu logu virsrakstjoslas necaurspīdīgas"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Izpludināt caurspīdīgās virsrakstjoslas"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Piemērot šo necaurspīdīgumu visam galvenes apgabalam (rīkjoslām un izvēlņu joslām)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Saskaņot virsrakstjoslu ar lietotnes krāsu"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Izņēmumi…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Caurspīdīgs"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Necaurspīdīgs"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Virsrakstjoslu izņēmumi"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Pārrakstīt:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Izmantot šo izņēmumu"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Lietotnes nosaukums vai loga klase (regulārā izteiksme)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Noklusējuma"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Noņemt izņēmumu"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Aktīvā loga necaurspīdīgums:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Neaktīvo logu necaurspīdīgums:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Piemērot šo necaurspīdīgumu visam galvenes apgabalam"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Izņēmums maina tikai virsrakstjoslu iestatījumus tām lietotnēm, kurām tas atbilst."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Pievienot izņēmumu"

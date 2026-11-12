@@ -1,0 +1,142 @@
+# Norwegian Nynorsk translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Norwegian Nynorsk\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Skrivebord"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Den valde skrivebordsstilen brukar sin eigen gjennomsiktigheit. Skrivebordsstilar som Silver Light og Silver Dark brukar desse innstillingane."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Bruk desse innstillingane i staden for skrivebordsstilen sine eigne"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panel:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Sprettopp-vindauge:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Verktøytips:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Skrivebordskomponentar:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menyar"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Den valde programstilen teiknar ugjennomsiktige menyar. Programstilane Silver og Breeze brukar denne innstillinga."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menyar:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Tittellinjer"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Den valde vindaugspynten teiknar ugjennomsiktige tittellinjer. Vindaugspynten Silver brukar desse innstillingane."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktivt vindauge:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Inaktivt vindauge:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Gjer alltid tittellinjer i maksimerte vindauge ugjennomsiktige"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Gjer gjennomsiktige tittellinjer uskarpe"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Bruk denne ugjennomsiktigheita på heile toppområdet (verktøylinjer og menylinjer)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Tilpass tittellinja til fargen på programmet"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Unntak …"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Gjennomsiktig"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Ugjennomsiktig"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Unntak for tittellinjer"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Overstyr:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Bruk dette unntaket"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Programnamn eller vindaugsklasse (regulært uttrykk)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Standard"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Fjern unntak"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Ugjennomsiktigheit for aktivt vindauge:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Ugjennomsiktigheit for inaktive vindauge:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Bruk denne ugjennomsiktigheita på heile toppområdet"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Eit unntak endrar berre innstillingane for tittellinjer, for programma det passar til."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Legg til unntak"

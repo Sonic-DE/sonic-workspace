@@ -1,0 +1,142 @@
+# Basque translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Basque\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Mahaigaina"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Hautatutako mahaigaineko estiloak bere gardentasuna erabiltzen du. Silver Light eta Silver Dark bezalako mahaigaineko estiloek ezarpen hauek erabiltzen dituzte."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Erabili ezarpen hauek mahaigaineko estiloarenen ordez"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Panelak:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Gainerakorrak:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Argibideak:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Mahaigaineko trepetak:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menuak"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Hautatutako aplikazio-estiloak menu opakuak marrazten ditu. Silver eta Breeze aplikazio-estiloek ezarpen hau erabiltzen dute."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menuak:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titulu-barrak"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Hautatutako leiho-apaindurak titulu-barra opakuak marrazten ditu. Silver leiho-apaindurak ezarpen hauek erabiltzen ditu."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Leiho aktiboa:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Leiho ez-aktiboa:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Egin beti opaku leiho maximizatuen titulu-barrak"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Lausotu titulu-barra gardenak"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Aplikatu opakutasun hau goiburuko eremu osoari (tresna-barrak eta menu-barrak)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Egokitu titulu-barra aplikazioaren kolorera"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Salbuespenak…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Gardena"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Opakua"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Titulu-barren salbuespenak"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Gainidatzi:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Erabili salbuespen hau"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Aplikazioaren izena edo leiho-klasea (adierazpen erregularra)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Lehenetsia"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Kendu salbuespena"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Leiho aktiboaren opakutasuna:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Leiho ez-aktiboen opakutasuna:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Aplikatu opakutasun hau goiburuko eremu osoari"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Salbuespen batek titulu-barren ezarpenak soilik aldatzen ditu, bat datozen aplikazioetan."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Gehitu salbuespena"

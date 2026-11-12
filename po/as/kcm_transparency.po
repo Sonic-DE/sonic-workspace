@@ -1,0 +1,142 @@
+# Assamese translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Assamese\n"
+"Language: as\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "ডেস্কটপ"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "বাছনি কৰা ডেস্কটপ শৈলীয়ে নিজৰ স্বচ্ছতা ব্যৱহাৰ কৰে। Silver Light আৰু Silver Dark-ৰ দৰে ডেস্কটপ শৈলীয়ে এই ছেটিংসমূহ ব্যৱহাৰ কৰে।"
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "ডেস্কটপ শৈলীৰ নিজৰ ছেটিঙৰ সলনি এইবোৰ ব্যৱহাৰ কৰক"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "পেনেলসমূহ:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "পপ-আপসমূহ:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "সঁজুলি-ইংগিত:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ডেস্কটপ উইজেট:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "মেনুসমূহ"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "বাছনি কৰা এপ্লিকেচন শৈলীয়ে অস্বচ্ছ মেনু আঁকে। Silver আৰু Breeze এপ্লিকেচন শৈলীয়ে এই ছেটিং ব্যৱহাৰ কৰে।"
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "মেনুসমূহ:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "শিৰোনাম দণ্ড"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "বাছনি কৰা উইন্ডো সজ্জাই অস্বচ্ছ শিৰোনাম দণ্ড আঁকে। Silver উইন্ডো সজ্জাই এই ছেটিংসমূহ ব্যৱহাৰ কৰে।"
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "সক্ৰিয় উইন্ডো:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "নিষ্ক্ৰিয় উইন্ডো:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "সৰ্বাধিক কৰা উইন্ডোৰ শিৰোনাম দণ্ড সদায় অস্বচ্ছ কৰক"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "স্বচ্ছ শিৰোনাম দণ্ড অস্পষ্ট কৰক"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "এই অস্বচ্ছতা সমগ্ৰ হেডাৰ অঞ্চলত প্ৰয়োগ কৰক (সঁজুলিদণ্ড আৰু মেনু দণ্ড)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "শিৰোনাম দণ্ড এপ্লিকেচনৰ ৰঙৰ সৈতে মিলাওক"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ব্যতিক্ৰমসমূহ…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "স্বচ্ছ"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "অস্বচ্ছ"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "শিৰোনাম দণ্ডৰ ব্যতিক্ৰম"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "অভাৰৰাইড:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "এই ব্যতিক্ৰম ব্যৱহাৰ কৰক"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "এপ্লিকেচনৰ নাম বা উইন্ডো শ্ৰেণী (নিয়মিত অভিব্যক্তি)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "অবিকল্পিত"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "ব্যতিক্ৰম আঁতৰাওক"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "সক্ৰিয় উইন্ডোৰ অস্বচ্ছতা:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "নিষ্ক্ৰিয় উইন্ডোৰ অস্বচ্ছতা:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "এই অস্বচ্ছতা সমগ্ৰ হেডাৰ অঞ্চলত প্ৰয়োগ কৰক"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ব্যতিক্ৰমে মিল খোৱা এপ্লিকেচনৰ বাবে কেৱল শিৰোনাম দণ্ডৰ ছেটিং সলনি কৰে।"
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "ব্যতিক্ৰম যোগ কৰক"

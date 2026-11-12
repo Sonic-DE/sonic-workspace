@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    SPDX-FileCopyrightText: 2026 Joseph Crowell <joseph.w.crowell@gmail.com>
+    SPDX-License-Identifier: GPL-2.0-or-later
+
+    The menu opacity every style that draws see-through menus follows (KToolsArea::menuOpacity()).
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kdeglobals" />
+  <group name="Menus">
+    <entry name="opacity" key="Opacity" type="Int">
+      <label>Menu opacity</label>
+      <default>100</default>
+      <min>0</min>
+      <max>100</max>
+    </entry>
+  </group>
+</kcfg>

@@ -1,0 +1,142 @@
+# Icelandic translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Skjáborð"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Valinn skjáborðsstíll notar eigið gegnsæi. Skjáborðsstílar á borð við Silver Light og Silver Dark nota þessar stillingar."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Nota þessar stillingar í stað stillinga skjáborðsstílsins"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Spjöld:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Sprettigluggar:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Verkfæravísbendingar:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Skjáborðsgræjur:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Valmyndir"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Valinn forritastíll teiknar ógegnsæjar valmyndir. Forritastílarnir Silver og Breeze nota þessa stillingu."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Valmyndir:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titilstikur"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Valin gluggaskreyting teiknar ógegnsæjar titilstikur. Gluggaskreytingin Silver notar þessar stillingar."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Virkur gluggi:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Óvirkur gluggi:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Hafa titilstikur hámarkaðra glugga alltaf ógegnsæjar"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Móða gegnsæjar titilstikur"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Nota þessa ógagnsæi á allt hausasvæðið (verkfærastikur og valmyndastikur)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Laga titilstikuna að lit forritsins"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Undantekningar…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Gegnsætt"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Ógegnsætt"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Undantekningar titilstiku"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Taka fram fyrir:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Nota þessa undantekningu"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Heiti forrits eða gluggaflokkur (regluleg segð)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Sjálfgefið"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Fjarlægja undantekningu"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Ógagnsæi virks glugga:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Ógagnsæi óvirkra glugga:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Nota þessa ógagnsæi á allt hausasvæðið"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Undantekning breytir einungis stillingum titilstiku, fyrir þau forrit sem hún passar við."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Bæta við undantekningu"

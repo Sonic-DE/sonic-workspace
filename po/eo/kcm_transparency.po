@@ -1,0 +1,142 @@
+# Esperanto translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Esperanto\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Labortablo"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "La elektita labortabla stilo uzas sian propran travideblecon. Labortablaj stiloj kiel Silver Light kaj Silver Dark uzas ĉi tiujn agordojn."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Uzi ĉi tiujn agordojn anstataŭ tiujn de la labortabla stilo"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Paneloj:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Ŝprucfenestroj:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Ŝpruchelpiloj:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Labortablaj fenestraĵoj:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Menuoj"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "La elektita aplikaĵa stilo desegnas netravideblajn menuojn. La aplikaĵaj stiloj Silver kaj Breeze uzas ĉi tiun agordon."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Menuoj:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Titolbretoj"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "La elektita fenestra ornamo desegnas netravideblajn titolbretojn. La fenestra ornamo Silver uzas ĉi tiujn agordojn."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Aktiva fenestro:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Neaktiva fenestro:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Ĉiam fari netravideblaj la titolbretojn de maksimumigitaj fenestroj"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Malklarigi travideblajn titolbretojn"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Apliki ĉi tiun opakecon al la tuta kapa areo (ilobretoj kaj menubretoj)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Kongruigi la titolbreton kun la koloro de la aplikaĵo"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Esceptoj…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Travidebla"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Netravidebla"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Esceptoj de titolbretoj"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Anstataŭigi:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Uzi ĉi tiun escepton"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Nomo de aplikaĵo aŭ fenestra klaso (regula esprimo)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Defaŭlta"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Forigi escepton"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Opakeco de aktiva fenestro:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Opakeco de neaktivaj fenestroj:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Apliki ĉi tiun opakecon al la tuta kapa areo"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Escepto ŝanĝas nur la agordojn de titolbretoj, por la aplikaĵoj kiujn ĝi kongruas."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Aldoni escepton"

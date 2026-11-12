@@ -1,0 +1,142 @@
+# Toki Pona translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Toki Pona\n"
+"Language: tok\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "supa lawa"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "nasin lukin pi supa lawa ni li kepeken lukin kon ona. nasin lukin pi supa lawa sama Silver Light en Silver Dark li kepeken ijo ni."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "o kepeken ijo ni. o kepeken ala ijo pi nasin lukin pi supa lawa"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "palisa:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "lipu kama:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "toki sona lili:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "ilo lili pi supa lawa:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "lipu wile"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "nasin lukin ilo ni li sitelen e lipu wile pi lukin kon ala. nasin lukin ilo Silver en Breeze li kepeken ijo ni."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "lipu wile:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "palisa nimi"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "selo lipu ni li sitelen e palisa nimi pi lukin kon ala. selo lipu Silver li kepeken ijo ni."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "lipu pali:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "lipu pi pali ala:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "tenpo ale la palisa nimi pi lipu suli ale li lukin kon ala"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "o pimeja lili e palisa nimi pi lukin kon"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "o pana e lukin kon ni tawa sewi ale (palisa ilo en palisa pi lipu wile)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "palisa nimi o kule sama ilo"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "ijo ante…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "lukin kon"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "lukin kon ala"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "ijo ante pi palisa nimi"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "o ante:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "o kepeken ijo ante ni"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "nimi ilo anu kulupu lipu (nasin nimi)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "meso"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "o weka e ijo ante"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "lukin kon ala pi lipu pali:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "lukin kon ala pi lipu pi pali ala:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "o pana e lukin kon ni tawa sewi ale"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "ijo ante li ante e ijo pi palisa nimi taso, tawa ilo pi nimi sama."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "o pana e ijo ante"

@@ -1,0 +1,142 @@
+# Greek translation of kcm_transparency.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_transparency\n"
+"PO-Revision-Date: 2026-11-12 00:00+0000\n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "@title:group"
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+msgctxt "@info"
+msgid "The selected desktop style uses its own transparency. Desktop styles such as Silver Light and Silver Dark use these settings."
+msgstr "Το επιλεγμένο στιλ επιφάνειας εργασίας χρησιμοποιεί τη δική του διαφάνεια. Στιλ επιφάνειας εργασίας όπως τα Silver Light και Silver Dark χρησιμοποιούν αυτές τις ρυθμίσεις."
+
+msgctxt "@option:check"
+msgid "Use these settings instead of the desktop style's own"
+msgstr "Χρήση αυτών των ρυθμίσεων αντί για εκείνες του στιλ επιφάνειας εργασίας"
+
+msgctxt "@label:slider"
+msgid "Panels:"
+msgstr "Πίνακες:"
+
+msgctxt "@label:slider"
+msgid "Pop-ups:"
+msgstr "Αναδυόμενα:"
+
+msgctxt "@label:slider"
+msgid "Tooltips:"
+msgstr "Υποδείξεις:"
+
+msgctxt "@label:slider"
+msgid "Desktop widgets:"
+msgstr "Γραφικά συστατικά επιφάνειας εργασίας:"
+
+msgctxt "@title:group"
+msgid "Menus"
+msgstr "Μενού"
+
+msgctxt "@info"
+msgid "The selected application style draws opaque menus. The Silver and Breeze application styles use this setting."
+msgstr "Το επιλεγμένο στιλ εφαρμογών σχεδιάζει αδιαφανή μενού. Τα στιλ εφαρμογών Silver και Breeze χρησιμοποιούν αυτή τη ρύθμιση."
+
+msgctxt "@label:slider"
+msgid "Menus:"
+msgstr "Μενού:"
+
+msgctxt "@title:group"
+msgid "Titlebars"
+msgstr "Γραμμές τίτλου"
+
+msgctxt "@info"
+msgid "The selected window decoration draws opaque titlebars. The Silver window decoration uses these settings."
+msgstr "Η επιλεγμένη διακόσμηση παραθύρων σχεδιάζει αδιαφανείς γραμμές τίτλου. Η διακόσμηση παραθύρων Silver χρησιμοποιεί αυτές τις ρυθμίσεις."
+
+msgctxt "@label:slider"
+msgid "Active window:"
+msgstr "Ενεργό παράθυρο:"
+
+msgctxt "@label:slider"
+msgid "Inactive window:"
+msgstr "Ανενεργό παράθυρο:"
+
+msgctxt "checkbox label"
+msgid "Always make maximized titlebars opaque"
+msgstr "Πάντα αδιαφανείς γραμμές τίτλου στα μεγιστοποιημένα παράθυρα"
+
+msgctxt "checkbox label"
+msgid "Blur titlebars that have transparency"
+msgstr "Θόλωση διαφανών γραμμών τίτλου"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area (toolbars and menu bars)"
+msgstr "Εφαρμογή αυτής της αδιαφάνειας σε όλη την περιοχή κεφαλίδας (γραμμές εργαλείων και μενού)"
+
+msgctxt "checkbox label"
+msgid "Match the titlebar to the application colour"
+msgstr "Ταίριασμα της γραμμής τίτλου με το χρώμα της εφαρμογής"
+
+msgctxt "@action:button"
+msgid "Exceptions…"
+msgstr "Εξαιρέσεις…"
+
+msgctxt "@label:slider end"
+msgid "Transparent"
+msgstr "Διαφανές"
+
+msgctxt "@label percent sign after an opacity value"
+msgid "%"
+msgstr "%"
+
+msgctxt "@label:slider end"
+msgid "Opaque"
+msgstr "Αδιαφανές"
+
+msgctxt "@title"
+msgid "Titlebar Exceptions"
+msgstr "Εξαιρέσεις γραμμών τίτλου"
+
+msgctxt "@option:check override a setting"
+msgid "Override:"
+msgstr "Παράκαμψη:"
+
+msgctxt "@info:tooltip"
+msgid "Use this exception"
+msgstr "Χρήση αυτής της εξαίρεσης"
+
+msgctxt "@info:placeholder"
+msgid "Application name or window class (regular expression)"
+msgstr "Όνομα εφαρμογής ή κλάση παραθύρου (κανονική έκφραση)"
+
+msgctxt "@label a built-in exception"
+msgid "Default"
+msgstr "Προεπιλογή"
+
+msgctxt "@action:button"
+msgid "Remove Exception"
+msgstr "Αφαίρεση εξαίρεσης"
+
+msgctxt "@option:check"
+msgid "Active window opacity:"
+msgstr "Αδιαφάνεια ενεργού παραθύρου:"
+
+msgctxt "@option:check"
+msgid "Inactive window opacity:"
+msgstr "Αδιαφάνεια ανενεργών παραθύρων:"
+
+msgctxt "checkbox label"
+msgid "Apply these opacity settings to the entire header area"
+msgstr "Εφαρμογή αυτής της αδιαφάνειας σε όλη την περιοχή κεφαλίδας"
+
+msgctxt "@info"
+msgid "An exception changes only the titlebar settings, for the applications it matches."
+msgstr "Μια εξαίρεση αλλάζει μόνο τις ρυθμίσεις γραμμών τίτλου, για τις εφαρμογές που ταιριάζει."
+
+msgctxt "@action:button"
+msgid "Add Exception"
+msgstr "Προσθήκη εξαίρεσης"
