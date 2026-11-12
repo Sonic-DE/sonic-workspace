@@ -121,6 +121,7 @@ private:
                           KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
     void
     writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    bool writeThemeDefaults(const KConfigGroup &theme, const QString &filename, const QString &group, const QStringList &keys);
     static KConfig configDefaults(const QString &filename);
 
     Mode m_mode = Mode::Apply;

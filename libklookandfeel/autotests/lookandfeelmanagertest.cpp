@@ -11,8 +11,10 @@
 #include <KPackage/Package>
 #include <KPackage/PackageJob>
 #include <KPackage/PackageLoader>
+#include <KSharedConfig>
 #include <KSycoca>
 #include <QSignalSpy>
+#include <QTemporaryDir>
 #include <QTest>
 
 using namespace Qt::StringLiterals;
@@ -38,6 +40,7 @@ private Q_SLOTS:
     void testSplashScreen();
     void testWindowSwitcher();
     void testSave();
+    void testThemeTransparency();
 
 private:
     QDir m_configDir;
@@ -245,6 +248,82 @@ void LookAndFeelManagerTest::testSave()
     cgd = KConfigGroup(&kwinConfigDefault, u"TabBox"_s);
     QCOMPARE(cg.readEntry("LayoutName", QString()), QString());
     QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
+}
+
+static KPackage::Package writeTestTheme(const QTemporaryDir &dir, const QByteArray &defaults, const QByteArray &layoutDefaults = {})
+{
+    QDir(dir.path()).mkpath(u"contents/layouts"_s);
+    if (!layoutDefaults.isEmpty()) {
+        QFile layout(dir.filePath(u"contents/layouts/defaults"_s));
+        layout.open(QIODevice::WriteOnly);
+        layout.write(layoutDefaults);
+        layout.close();
+    }
+    QFile metadata(dir.filePath(u"metadata.json"_s));
+    metadata.open(QIODevice::WriteOnly);
+    metadata.write(R"({"KPackageStructure": "Plasma/LookAndFeel", "KPlugin": {"Id": "org.kde.test.transparency", "Name": "Test"}})");
+    metadata.close();
+    QFile file(dir.filePath(u"contents/defaults"_s));
+    file.open(QIODevice::WriteOnly);
+    file.write(defaults);
+    file.close();
+
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(u"Plasma/LookAndFeel"_s);
+    package.setPath(dir.path());
+    return package;
+}
+
+void LookAndFeelManagerTest::testThemeTransparency()
+{
+    const QByteArray parts =
+        "[kdeglobals][KDE]\nwidgetStyle=Fusion\n"
+        "[plasmarc][Theme]\nname=testValue\n"
+        "[kwinrc][org.kde.kdecoration2]\nlibrary=org.kde.test\n";
+    const QByteArray buttons = "[kwinrc][org.kde.kdecoration2]\nButtonsOnLeft=MN\n";
+    const KLookAndFeelManager::Contents mask =
+        KLookAndFeelManager::WidgetStyle | KLookAndFeelManager::PlasmaTheme | KLookAndFeelManager::WindowDecoration | KLookAndFeelManager::TitlebarLayout;
+    const QString defaultsDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/"_s;
+
+    KSharedConfigPtr user = KSharedConfig::openConfig(u"kdeglobals"_s);
+    user->group(u"ToolsArea"_s).writeEntry("ActiveOpacity", 55);
+    user->sync();
+
+    QTemporaryDir withValues;
+    const KPackage::Package themed = writeTestTheme(withValues,
+                                                    parts
+                                                        + "[kdeglobals][Menus]\nOpacity=70\n"
+                                                          "[kdeglobals][DesktopThemeOpacity]\nPanels=50\n"
+                                                          "[kdeglobals][ToolsArea]\nActiveOpacity=80\n"
+                                                          "[silver/silverrc][Windeco]\nButtonIconStyle=StyleArk\n",
+                                                    buttons + "ApplicationMenuStyle=AlwaysShown\n");
+    QVERIFY(themed.isValid());
+    m_lookAndFeel->save(themed, mask);
+
+    KConfig defaults(defaultsDir + u"kdeglobals"_s, KConfig::SimpleConfig);
+    QCOMPARE(defaults.group(u"Menus"_s).readEntry("Opacity", 0), 70);
+    QCOMPARE(defaults.group(u"DesktopThemeOpacity"_s).readEntry("Panels", 0), 50);
+    QCOMPARE(defaults.group(u"ToolsArea"_s).readEntry("ActiveOpacity", 0), 80);
+    QCOMPARE(KConfig(defaultsDir + u"silver/silverrc"_s, KConfig::SimpleConfig).group(u"Windeco"_s).readEntry("ButtonIconStyle"), u"StyleArk"_s);
+    QCOMPARE(KConfig(defaultsDir + u"kwinrc"_s, KConfig::SimpleConfig).group(u"org.kde.kdecoration2"_s).readEntry("ApplicationMenuStyle"), u"AlwaysShown"_s);
+    user->reparseConfiguration();
+    QVERIFY(!user->group(u"ToolsArea"_s).hasKey("ActiveOpacity"));
+
+    // A theme without them takes the earlier theme's values away, not the user's own.
+    user->group(u"Menus"_s).writeEntry("Opacity", 40);
+    user->sync();
+    QTemporaryDir withoutValues;
+    const KPackage::Package plain = writeTestTheme(withoutValues, parts, buttons);
+    QVERIFY(plain.isValid());
+    m_lookAndFeel->save(plain, mask);
+
+    defaults.reparseConfiguration();
+    QVERIFY(!defaults.group(u"Menus"_s).hasKey("Opacity"));
+    QVERIFY(!defaults.group(u"DesktopThemeOpacity"_s).hasKey("Panels"));
+    QVERIFY(!defaults.group(u"ToolsArea"_s).hasKey("ActiveOpacity"));
+    QVERIFY(!KConfig(defaultsDir + u"silver/silverrc"_s, KConfig::SimpleConfig).group(u"Windeco"_s).hasKey("ButtonIconStyle"));
+    QVERIFY(!KConfig(defaultsDir + u"kwinrc"_s, KConfig::SimpleConfig).group(u"org.kde.kdecoration2"_s).hasKey("ApplicationMenuStyle"));
+    user->reparseConfiguration();
+    QCOMPARE(user->group(u"Menus"_s).readEntry("Opacity", 0), 40);
 }
 
 QTEST_MAIN(LookAndFeelManagerTest)

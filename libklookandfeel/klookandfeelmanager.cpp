@@ -390,6 +390,29 @@ void KLookAndFeelManager::writeNewDefaults(KConfigGroup &group,
     }
 }
 
+bool KLookAndFeelManager::writeThemeDefaults(const KConfigGroup &theme, const QString &filename, const QString &group, const QStringList &keys)
+{
+    KSharedConfigPtr config = KSharedConfig::openConfig(filename);
+    KConfigGroup configGroup(config, group);
+    KConfig configDefault(configDefaults(filename));
+    KConfigGroup defaultGroup(&configDefault, group);
+
+    bool changed = false;
+    for (const QString &key : keys) {
+        const QString value = theme.readEntry(key, QString());
+        if (!value.isEmpty()) {
+            writeNewDefaults(configGroup, defaultGroup, key, value, KConfig::Notify);
+            changed = true;
+        } else if (defaultGroup.hasKey(key)) {
+            // A previous theme's value; the user's own setting stays.
+            defaultGroup.deleteEntry(key, KConfig::Notify);
+            defaultGroup.sync();
+            changed = true;
+        }
+    }
+    return changed;
+}
+
 KConfig KLookAndFeelManager::configDefaults(const QString &filename)
 {
     return KConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults/") + filename, KConfig::SimpleConfig);
@@ -459,6 +482,7 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
         if (itemsToApply.testFlag(TitlebarLayout)) {
             group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
             setTitlebarLayout(group.readEntry("ButtonsOnLeft", QString()), group.readEntry("ButtonsOnRight", QString()));
+            writeThemeDefaults(group, u"kwinrc"_s, u"org.kde.kdecoration2"_s, {u"ApplicationMenuStyle"_s});
         }
         if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
             group = KConfigGroup(conf, u"kwinrc"_s);
@@ -468,6 +492,7 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
     }
     if (!package.filePath("defaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
+        bool transparencyChanged = false;
         KConfigGroup group(conf, u"kdeglobals"_s);
         group = KConfigGroup(&group, u"KDE"_s);
         if (itemsToApply.testFlag(WidgetStyle)) {
@@ -478,6 +503,10 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             }
 
             setWidgetStyle(widgetStyle);
+
+            // Transparency and title bar icons come with the part that draws them.
+            const KConfigGroup menus = KConfigGroup(conf, u"kdeglobals"_s).group(u"Menus"_s);
+            transparencyChanged |= writeThemeDefaults(menus, u"kdeglobals"_s, u"Menus"_s, {u"Opacity"_s});
         }
 
         if (itemsToApply.testFlag(Colors)) {
@@ -511,6 +540,9 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             group = KConfigGroup(conf, u"plasmarc"_s);
             group = KConfigGroup(&group, u"Theme"_s);
             setPlasmaTheme(group.readEntry("name", QString()));
+
+            const KConfigGroup opacity = KConfigGroup(conf, u"kdeglobals"_s).group(u"DesktopThemeOpacity"_s);
+            writeThemeDefaults(opacity, u"kdeglobals"_s, u"DesktopThemeOpacity"_s, {u"Enabled"_s, u"Panels"_s, u"Popups"_s, u"Tooltips"_s, u"Widgets"_s});
         }
 
         if (itemsToApply.testFlag(Cursors)) {
@@ -550,6 +582,20 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
                                 group.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")),
                                 group.readEntry("NoPlugin", false));
 #endif
+
+            const KConfigGroup toolsArea = KConfigGroup(conf, u"kdeglobals"_s).group(u"ToolsArea"_s);
+            transparencyChanged |= writeThemeDefaults(toolsArea,
+                                                      u"kdeglobals"_s,
+                                                      u"ToolsArea"_s,
+                                                      {u"Enabled"_s,
+                                                       u"ActiveOpacity"_s,
+                                                       u"InactiveOpacity"_s,
+                                                       u"ApplyOpacityToHeader"_s,
+                                                       u"MatchApplicationColor"_s,
+                                                       u"BlurBehind"_s,
+                                                       u"OpaqueWhenMaximized"_s});
+            const KConfigGroup windeco = KConfigGroup(conf, u"silver/silverrc"_s).group(u"Windeco"_s);
+            writeThemeDefaults(windeco, u"silver/silverrc"_s, u"Windeco"_s, {u"ButtonIconStyle"_s});
         }
 
         if (itemsToApply.testFlag(Fonts)) {
@@ -606,6 +652,11 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             QDBusMessage message =
                 QDBusMessage::createSignal(QStringLiteral("/SonicShell"), QStringLiteral("org.sonicde.SonicShell"), QStringLiteral("refreshCurrentShell"));
             QDBusConnection::sessionBus().send(message);
+        }
+
+        // Applications and widget styles reread [ToolsArea] and [Menus] on a palette change.
+        if (transparencyChanged) {
+            notifyKcmChange(GlobalChangeType::PaletteChanged);
         }
 
         runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
