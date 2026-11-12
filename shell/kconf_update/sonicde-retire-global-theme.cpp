@@ -4,8 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-// The plain Silver global theme is gone: repoint settings naming it, kdedefaults/ included,
-// quietly instead of through the theme repair's notification.
+// Usage: sonicde-retire-global-theme <retired id> <light replacement> <dark replacement>
+// Repoints settings naming a removed global theme, kdedefaults/ included, quietly instead
+// of through the theme repair's notification.
 
 #include "../../libklookandfeel/themecomponentresolver.h"
 
@@ -21,9 +22,14 @@ int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
 
-    const QString retired = u"org.kde.silver.desktop"_s;
-    const QString light = u"org.kde.silverlightbottompanel.desktop"_s;
-    const QString dark = u"org.kde.silverdarkbottompanel.desktop"_s;
+    const QStringList args = app.arguments();
+    if (args.size() != 4) {
+        return 1;
+    }
+    const QString &retired = args.at(1);
+    const QString &light = args.at(2);
+    const QString &dark = args.at(3);
+    const QString splash = u"org.kde.silverlightbottompanel.desktop"_s;
     const QString switcher = u"thumbnail_grid"_s;
 
     struct Entry {
@@ -36,7 +42,7 @@ int main(int argc, char **argv)
         {u"kdeglobals"_s, u"KDE"_s, u"LookAndFeelPackage"_s, ThemeComponentResolver::isDarkConfiguration() ? dark : light},
         {u"kdeglobals"_s, u"KDE"_s, u"DefaultLightLookAndFeel"_s, light},
         {u"kdeglobals"_s, u"KDE"_s, u"DefaultDarkLookAndFeel"_s, dark},
-        {u"ksplashrc"_s, u"KSplash"_s, u"Theme"_s, light},
+        {u"ksplashrc"_s, u"KSplash"_s, u"Theme"_s, splash},
         {u"kwinrc"_s, u"TabBox"_s, u"LayoutName"_s, switcher},
         {u"kwinrc"_s, u"TabBox"_s, u"DesktopLayout"_s, switcher},
     };

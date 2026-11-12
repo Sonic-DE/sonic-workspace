@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Joseph Crowell <joseph.w.crowell@gmail.com>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+Version=6
+
+Id=sonicde-retire-silver-global-theme
+ScriptArguments=org.kde.silver.desktop org.kde.silverlightbottompanel.desktop org.kde.silverdarkbottompanel.desktop
+Script=sonicde-retire-global-theme
+
+Id=sonicde-retire-bigscreen-global-theme
+ScriptArguments=org.kde.plasma.bigscreen org.sonicde.silver.tv.light org.sonicde.silver.tv.dark
+Script=sonicde-retire-global-theme
