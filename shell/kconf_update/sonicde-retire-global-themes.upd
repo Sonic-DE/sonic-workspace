@@ -10,3 +10,7 @@ Script=sonicde-retire-global-theme
 Id=sonicde-retire-bigscreen-global-theme
 ScriptArguments=org.kde.plasma.bigscreen org.sonicde.silver.tv.light org.sonicde.silver.tv.dark
 Script=sonicde-retire-global-theme
+
+Id=sonicde-retire-silver-mobile-global-theme
+ScriptArguments=org.kde.silver.mobile org.sonicde.silver.mobile.light org.sonicde.silver.mobile.dark
+Script=sonicde-retire-global-theme
