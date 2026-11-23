@@ -8,7 +8,7 @@ Sonic Workspace is the heart of the SonicDE desktop: it provides the desktop she
 - Upgrading SonicDE no longer adds its desktop shell's keyboard shortcuts to KDE Plasma's shortcut settings.
 - If you used the plain "Silver" global theme, which has been removed, you're quietly moved to Silver Light - Bottom Panel (or Silver Dark - Bottom Panel with a dark colour scheme) when you log in, along with its splash screen and window switcher.
 - Global themes can now bring their own transparency settings, Silver titlebar button icons and application menu style in the titlebar. Switching to a theme without them removes the earlier theme's values but keeps the ones you set yourself.
-- Behind the scenes: a widget or panel layout can be left out of Add Widgets and Add Panel, and out of cloned panels, while a widget it can't share the desktop with is placed. The theme repair now recognises SonicWin's own window switchers. The media keys test no longer leaves programs running behind it.
+- Behind the scenes: a widget or panel layout can be left out of Add Widgets and Add Panel, and out of cloned panels, while a widget it can't share the desktop with is placed. The theme repair now recognises SonicWin's own window switchers.
 
 ## 6.8.2 (2026-11-10)
 
