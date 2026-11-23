@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import os
+import signal
 import subprocess
 import sys
 import time
@@ -38,6 +39,26 @@ def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
     return reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean()
 
 
+def stop_process(process: subprocess.Popen) -> None:
+    """
+    Ends a daemon the test started in a session of its own, with everything it started in turn
+    (kded launches programs such as plasma-welcome, which would keep the test's output open)
+    """
+    def signal_group(sig: signal.Signals) -> None:
+        try:
+            os.killpg(process.pid, sig)
+        except ProcessLookupError:
+            pass
+
+    signal_group(signal.SIGTERM)
+    signal_group(signal.SIGCONT)
+    try:
+        process.wait(5)
+    except subprocess.TimeoutExpired:
+        pass
+    signal_group(signal.SIGKILL)
+    process.wait()
+
 class MediaKeysTest(unittest.TestCase):
     """
     Tests for the media global shortcuts
@@ -52,18 +73,22 @@ class MediaKeysTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
+        # Class cleanups also run when setUpClass fails, so nothing started here outlives the test.
         cls.loop_thread = GLibMainLoopThread()
         cls.loop_thread.start()
+        cls.addClassCleanup(cls.loop_thread.quit)
 
         # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
 
         # Start KGlobalAccel daemon service
         if not name_has_owner(session_bus, "org.kde.kglobalaccel"):
-            cls.kglobalacceld = subprocess.Popen([KGLOBALACCELD_PATH])
+            cls.kglobalacceld = subprocess.Popen([KGLOBALACCELD_PATH], start_new_session=True)
+            cls.addClassCleanup(stop_process, cls.kglobalacceld)
 
         if not name_has_owner(session_bus, f"org.kde.kded{KDE_VERSION}"):
-            cls.kded = subprocess.Popen([f"kded{KDE_VERSION}"])
+            cls.kded = subprocess.Popen([f"kded{KDE_VERSION}"], start_new_session=True)
+            cls.addClassCleanup(stop_process, cls.kded)
             kded_started: bool = False
             for _ in range(10):
                 if name_has_owner(session_bus, f"org.kde.kded{KDE_VERSION}"):
@@ -75,7 +100,8 @@ class MediaKeysTest(unittest.TestCase):
 
         cls.assertTrue(name_has_owner(session_bus, "org.kde.kglobalaccel"), "kglobalacceld is not started")
 
-        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", ["mprisservice"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
+        # A freshly started kded is still loading its other modules, which takes seconds on a slow machine.
+        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", ["mprisservice"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 30000)
         cls.assertTrue(kded_reply.get_child_value(0).get_boolean(), "mprisservice module is not loaded")
 
         json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "player_a.json")
@@ -86,19 +112,9 @@ class MediaKeysTest(unittest.TestCase):
         current_index: int = 1
         player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
         cls.mpris_interface = Mpris2(metadata, base_properties, player_properties, current_index)
+        cls.addClassCleanup(cls.mpris_interface.quit)
         cls.mpris_interface.registered_event.wait(timeout=10)
         time.sleep(1)  # Make sure kded receives the player
-
-    @classmethod
-    def tearDownClass(cls) -> None:
-        cls.mpris_interface.quit()
-        cls.loop_thread.quit()
-        if cls.kded:
-            subprocess.check_call([f"kquitapp{KDE_VERSION}", f"kded{KDE_VERSION}"])
-            cls.kded.wait(5)
-        if cls.kglobalacceld:
-            subprocess.check_call([f"kquitapp{KDE_VERSION}", "kglobalaccel"])
-            cls.kglobalacceld.wait(5)
 
     def setUp(self) -> None:
         pass
