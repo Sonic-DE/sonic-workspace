@@ -405,7 +405,12 @@ void setupPlasmaEnvironment()
     // Add kdedefaults dir to allow config defaults overriding from a writable location
     QByteArray currentConfigDirs = qgetenv("XDG_CONFIG_DIRS");
     if (currentConfigDirs.isEmpty()) {
+#ifdef Q_OS_FREEBSD
+        // Packages install their autostart and defaults under /usr/local/etc/xdg.
+        currentConfigDirs = "/usr/local/etc/xdg:/etc/xdg";
+#else
         currentConfigDirs = "/etc/xdg";
+#endif
     }
     const QString extraConfigDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults");
     QDir().mkpath(extraConfigDir);

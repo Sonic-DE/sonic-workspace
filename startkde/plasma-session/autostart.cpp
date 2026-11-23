@@ -65,6 +65,13 @@ void AutoStart::loadAutoStartList()
     }
 
     for (auto it = files.constBegin(); it != files.constEnd(); ++it) {
+#ifdef Q_OS_FREEBSD
+        // GhostBSD's network tray manages the cards beside sonic-network-manager, and clicking
+        // its icon in our panel locks the pointer.
+        if (it.key() == QLatin1String("networkmgr.desktop")) {
+            continue;
+        }
+#endif
         PlasmaAutostart config(*it);
         // Entries kept out of KDE (e.g. GNOME's polkit agent) stay out of SonicDE too.
         if (!config.autostarts(QStringLiteral("SonicDE"), PlasmaAutostart::CheckAll) || config.excludedEnvironments().contains(QStringLiteral("KDE"))) {

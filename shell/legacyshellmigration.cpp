@@ -93,10 +93,18 @@ bool copyPreservingMetadata(const QString &source, const QString &destination, b
     QProcess process;
     // Let the copy operation retain metadata; do not apply permissions or
     // ownership separately. Existing user data is never a copy target.
+#ifdef Q_OS_LINUX
     QStringList arguments{recursive ? QStringLiteral("-a") : QStringLiteral("--preserve=mode,ownership")};
     if (recursive) {
         arguments << QStringLiteral("--no-clobber");
     }
+#else
+    // BSD cp has no GNU long options: -p keeps mode and ownership, -n never overwrites.
+    QStringList arguments{recursive ? QStringLiteral("-a") : QStringLiteral("-p")};
+    if (recursive) {
+        arguments << QStringLiteral("-n");
+    }
+#endif
     arguments << QStringLiteral("--") << source << destination;
     process.start(QStringLiteral("cp"), arguments);
     if (!process.waitForStarted() || !process.waitForFinished(-1) || process.exitStatus() != QProcess::NormalExit || process.exitCode() != 0) {
